@@ -1,4 +1,4 @@
-# Install script for directory: /home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/curlpp-0.8.1/extras
+# Install script for directory: /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/extras
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -43,10 +43,10 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE FILE PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE FILES "/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/cmake-build-debug/curlpp-0.8.1/extras/curlpp-config")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE FILE PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE FILES "/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/curlpp-0.8.1/extras/curlpp-config")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/cmake-build-debug/curlpp-0.8.1/extras/curlpp.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/curlpp-0.8.1/extras/curlpp.pc")
 endif()
 

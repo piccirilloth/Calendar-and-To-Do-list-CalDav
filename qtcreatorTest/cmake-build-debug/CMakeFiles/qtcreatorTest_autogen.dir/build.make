@@ -53,10 +53,10 @@ RM = /snap/clion/169/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest
+CMAKE_SOURCE_DIR = /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/cmake-build-debug
+CMAKE_BINARY_DIR = /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug
 
 # Utility rule file for qtcreatorTest_autogen.
 
@@ -67,8 +67,8 @@ include CMakeFiles/qtcreatorTest_autogen.dir/compiler_depend.make
 include CMakeFiles/qtcreatorTest_autogen.dir/progress.make
 
 CMakeFiles/qtcreatorTest_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target qtcreatorTest"
-	/snap/clion/169/bin/cmake/linux/bin/cmake -E cmake_autogen /home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles/qtcreatorTest_autogen.dir/AutogenInfo.json Debug
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target qtcreatorTest"
+	/snap/clion/169/bin/cmake/linux/bin/cmake -E cmake_autogen /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles/qtcreatorTest_autogen.dir/AutogenInfo.json Debug
 
 qtcreatorTest_autogen: CMakeFiles/qtcreatorTest_autogen
 qtcreatorTest_autogen: CMakeFiles/qtcreatorTest_autogen.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/qtcreatorTest_autogen.dir/clean:
 .PHONY : CMakeFiles/qtcreatorTest_autogen.dir/clean
 
 CMakeFiles/qtcreatorTest_autogen.dir/depend:
-	cd /home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest /home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest /home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/cmake-build-debug /home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/cmake-build-debug /home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles/qtcreatorTest_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles/qtcreatorTest_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/qtcreatorTest_autogen.dir/depend
 

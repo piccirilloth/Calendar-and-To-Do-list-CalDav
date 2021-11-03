@@ -31,7 +31,7 @@ public:
     QWidget *centralwidget;
     QGroupBox *groupBox;
     QPushButton *pushButton_login;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
     QLabel *label;
@@ -47,29 +47,30 @@ public:
     {
         if (loginwindow->objectName().isEmpty())
             loginwindow->setObjectName(QString::fromUtf8("loginwindow"));
-        loginwindow->resize(800, 494);
+        loginwindow->resize(613, 317);
         centralwidget = new QWidget(loginwindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
+        centralwidget->setGeometry(QRect(0, 0, 631, 321));
         groupBox = new QGroupBox(centralwidget);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
         groupBox->setGeometry(QRect(170, 60, 291, 201));
         pushButton_login = new QPushButton(groupBox);
         pushButton_login->setObjectName(QString::fromUtf8("pushButton_login"));
         pushButton_login->setGeometry(QRect(10, 160, 271, 26));
-        widget = new QWidget(groupBox);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(10, 50, 271, 101));
-        verticalLayout = new QVBoxLayout(widget);
+        layoutWidget = new QWidget(groupBox);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(10, 50, 271, 101));
+        verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        label = new QLabel(widget);
+        label = new QLabel(layoutWidget);
         label->setObjectName(QString::fromUtf8("label"));
 
         horizontalLayout->addWidget(label);
 
-        lineEdit_username = new QLineEdit(widget);
+        lineEdit_username = new QLineEdit(layoutWidget);
         lineEdit_username->setObjectName(QString::fromUtf8("lineEdit_username"));
 
         horizontalLayout->addWidget(lineEdit_username);
@@ -79,12 +80,12 @@ public:
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        label_2 = new QLabel(widget);
+        label_2 = new QLabel(layoutWidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
 
         horizontalLayout_2->addWidget(label_2);
 
-        lineEdit_password = new QLineEdit(widget);
+        lineEdit_password = new QLineEdit(layoutWidget);
         lineEdit_password->setObjectName(QString::fromUtf8("lineEdit_password"));
 
         horizontalLayout_2->addWidget(lineEdit_password);
@@ -97,8 +98,10 @@ public:
         menubar->setGeometry(QRect(0, 0, 572, 23));
         statusbar = new QStatusBar(loginwindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
+        statusbar->setGeometry(QRect(0, 0, 3, 23));
         toolBar = new QToolBar(loginwindow);
         toolBar->setObjectName(QString::fromUtf8("toolBar"));
+        toolBar->setGeometry(QRect(0, 0, 8, 17));
 
         retranslateUi(loginwindow);
 
@@ -107,7 +110,7 @@ public:
 
     void retranslateUi(QDialog *loginwindow)
     {
-        loginwindow->setWindowTitle(QApplication::translate("loginwindow", "MainWindow", nullptr));
+        loginwindow->setWindowTitle(QApplication::translate("loginwindow", "Log In", nullptr));
         groupBox->setTitle(QApplication::translate("loginwindow", "LogIn", nullptr));
         pushButton_login->setText(QApplication::translate("loginwindow", "LogIn", nullptr));
         label->setText(QApplication::translate("loginwindow", "UserName", nullptr));

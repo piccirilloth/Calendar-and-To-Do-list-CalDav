@@ -87,7 +87,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Calendar", nullptr));
         loginButton->setText(QApplication::translate("MainWindow", "Login", nullptr));
         menuLogi->setTitle(QApplication::translate("MainWindow", "Login", nullptr));
         toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", nullptr));

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/cmake-build-debug -I/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest -I/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_static_lib_autogen/include -I/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/curlpp-0.8.1/include
+CXX_INCLUDES = -I/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug -I/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest -I/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_static_lib_autogen/include -I/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include
 
 CXX_FLAGS = -g -std=c++11
 

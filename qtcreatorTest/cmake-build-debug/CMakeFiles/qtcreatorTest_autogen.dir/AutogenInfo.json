@@ -1,15 +1,15 @@
 {
-	"BUILD_DIR" : "/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_autogen",
-	"CMAKE_BINARY_DIR" : "/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/cmake-build-debug",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/cmake-build-debug",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest",
+	"BUILD_DIR" : "/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_autogen",
+	"CMAKE_BINARY_DIR" : "/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest",
 	"CMAKE_EXECUTABLE" : "/snap/clion/169/bin/cmake/linux/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/CMakeLists.txt",
+		"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/CMakeLists.txt",
 		"/snap/clion/169/bin/cmake/linux/share/cmake-3.20/Modules/CMakeDetermineSystem.cmake",
 		"/snap/clion/169/bin/cmake/linux/share/cmake-3.20/Modules/CMakeSystem.cmake.in",
-		"/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles/3.20.2/CMakeSystem.cmake",
+		"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles/3.20.2/CMakeSystem.cmake",
 		"/snap/clion/169/bin/cmake/linux/share/cmake-3.20/Modules/CMakeUnixFindMake.cmake",
 		"/snap/clion/169/bin/cmake/linux/share/cmake-3.20/Modules/CMakeSystemSpecificInitialize.cmake",
 		"/snap/clion/169/bin/cmake/linux/share/cmake-3.20/Modules/CMakeDetermineCXXCompiler.cmake",
@@ -56,7 +56,7 @@
 		"/snap/clion/169/bin/cmake/linux/share/cmake-3.20/Modules/CMakeFindBinUtils.cmake",
 		"/snap/clion/169/bin/cmake/linux/share/cmake-3.20/Modules/Compiler/GNU-FindBinUtils.cmake",
 		"/snap/clion/169/bin/cmake/linux/share/cmake-3.20/Modules/CMakeCXXCompiler.cmake.in",
-		"/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles/3.20.2/CMakeCXXCompiler.cmake",
+		"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles/3.20.2/CMakeCXXCompiler.cmake",
 		"/snap/clion/169/bin/cmake/linux/share/cmake-3.20/Modules/CMakeSystemSpecificInformation.cmake",
 		"/snap/clion/169/bin/cmake/linux/share/cmake-3.20/Modules/CMakeGenericSystem.cmake",
 		"/snap/clion/169/bin/cmake/linux/share/cmake-3.20/Modules/CMakeInitializeConfigs.cmake",
@@ -84,7 +84,7 @@
 		"/snap/clion/169/bin/cmake/linux/share/cmake-3.20/Modules/CMakeDetermineCompileFeatures.cmake",
 		"/snap/clion/169/bin/cmake/linux/share/cmake-3.20/Modules/Internal/FeatureTesting.cmake",
 		"/snap/clion/169/bin/cmake/linux/share/cmake-3.20/Modules/CMakeCXXCompiler.cmake.in",
-		"/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles/3.20.2/CMakeCXXCompiler.cmake",
+		"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles/3.20.2/CMakeCXXCompiler.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake",
@@ -143,57 +143,57 @@
 		"/snap/clion/169/bin/cmake/linux/share/cmake-3.20/Modules/FindPackageHandleStandardArgs.cmake",
 		"/snap/clion/169/bin/cmake/linux/share/cmake-3.20/Modules/FindPackageMessage.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest",
+	"CMAKE_SOURCE_DIR" : "/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest",
 	"DEP_FILE" : "",
 	"DEP_FILE_RULE_NAME" : "",
 	"HEADERS" : 
 	[
 		[
-			"/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/Headers/API.h",
+			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/API.h",
 			"MU",
 			"D2MWKIZDYH/moc_API.cpp",
 			null
 		],
 		[
-			"/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/Headers/Date.h",
+			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/Date.h",
 			"MU",
 			"D2MWKIZDYH/moc_Date.cpp",
 			null
 		],
 		[
-			"/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/Headers/Vcalendar.h",
+			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/Vcalendar.h",
 			"MU",
 			"D2MWKIZDYH/moc_Vcalendar.cpp",
 			null
 		],
 		[
-			"/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/Headers/Vevent.h",
+			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/Vevent.h",
 			"MU",
 			"D2MWKIZDYH/moc_Vevent.cpp",
 			null
 		],
 		[
-			"/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/Headers/Vtodo.h",
+			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/Vtodo.h",
 			"MU",
 			"D2MWKIZDYH/moc_Vtodo.cpp",
 			null
 		],
 		[
-			"/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/Headers/loginwindow.h",
+			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/loginwindow.h",
 			"MU",
 			"D2MWKIZDYH/moc_loginwindow.cpp",
 			null
 		],
 		[
-			"/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/Headers/mainwindow.h",
+			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/mainwindow.h",
 			"MU",
 			"D2MWKIZDYH/moc_mainwindow.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
@@ -204,9 +204,9 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/cmake-build-debug",
-		"/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest",
-		"/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/curlpp-0.8.1/include",
+		"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug",
+		"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest",
+		"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include",
 		"/usr/include/x86_64-linux-gnu/qt5",
 		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
 		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
@@ -231,56 +231,56 @@
 		"-c",
 		"/snap/clion/169/bin/cmake/linux/share/cmake-3.20/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 4,
-	"PARSE_CACHE_FILE" : "/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles/qtcreatorTest_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles/qtcreatorTest_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
 	"QT_UIC_EXECUTABLE" : "/usr/lib/qt5/bin/uic",
 	"QT_VERSION_MAJOR" : 5,
 	"QT_VERSION_MINOR" : 12,
-	"SETTINGS_FILE" : "/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles/qtcreatorTest_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles/qtcreatorTest_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
 		[
-			"/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/Sources/API.cpp",
+			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Sources/API.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/Sources/Date.cpp",
+			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Sources/Date.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/Sources/Vcalendar.cpp",
+			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Sources/Vcalendar.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/Sources/Vevent.cpp",
+			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Sources/Vevent.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/Sources/Vtodo.cpp",
+			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Sources/Vtodo.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/Sources/loginwindow.cpp",
+			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Sources/loginwindow.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/Sources/mainwindow.cpp",
+			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Sources/mainwindow.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/oscar/Scrivania/provaprova/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/main.cpp",
+			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/main.cpp",
 			"MU",
 			null
 		]
