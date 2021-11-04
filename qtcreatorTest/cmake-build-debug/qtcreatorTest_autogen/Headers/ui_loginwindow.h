@@ -30,8 +30,6 @@ class Ui_loginwindow
 public:
     QWidget *centralwidget;
     QGroupBox *groupBox;
-    QPushButton *pushButton_login;
-    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
     QLabel *label;
@@ -39,6 +37,10 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_2;
     QLineEdit *lineEdit_password;
+    QHBoxLayout *horizontalLayout_3;
+    QLabel *label_3;
+    QLineEdit *lineEdit_calendarName;
+    QPushButton *pushButton_login;
     QMenuBar *menubar;
     QStatusBar *statusbar;
     QToolBar *toolBar;
@@ -50,27 +52,20 @@ public:
         loginwindow->resize(613, 317);
         centralwidget = new QWidget(loginwindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        centralwidget->setGeometry(QRect(0, 0, 631, 321));
+        centralwidget->setGeometry(QRect(-10, 0, 631, 321));
         groupBox = new QGroupBox(centralwidget);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(170, 60, 291, 201));
-        pushButton_login = new QPushButton(groupBox);
-        pushButton_login->setObjectName(QString::fromUtf8("pushButton_login"));
-        pushButton_login->setGeometry(QRect(10, 160, 271, 26));
-        layoutWidget = new QWidget(groupBox);
-        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 50, 271, 101));
-        verticalLayout = new QVBoxLayout(layoutWidget);
+        groupBox->setGeometry(QRect(170, 40, 281, 221));
+        verticalLayout = new QVBoxLayout(groupBox);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        label = new QLabel(layoutWidget);
+        label = new QLabel(groupBox);
         label->setObjectName(QString::fromUtf8("label"));
 
         horizontalLayout->addWidget(label);
 
-        lineEdit_username = new QLineEdit(layoutWidget);
+        lineEdit_username = new QLineEdit(groupBox);
         lineEdit_username->setObjectName(QString::fromUtf8("lineEdit_username"));
 
         horizontalLayout->addWidget(lineEdit_username);
@@ -80,18 +75,39 @@ public:
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        label_2 = new QLabel(layoutWidget);
+        label_2 = new QLabel(groupBox);
         label_2->setObjectName(QString::fromUtf8("label_2"));
 
         horizontalLayout_2->addWidget(label_2);
 
-        lineEdit_password = new QLineEdit(layoutWidget);
+        lineEdit_password = new QLineEdit(groupBox);
         lineEdit_password->setObjectName(QString::fromUtf8("lineEdit_password"));
+        lineEdit_password->setEchoMode(QLineEdit::PasswordEchoOnEdit);
 
         horizontalLayout_2->addWidget(lineEdit_password);
 
 
         verticalLayout->addLayout(horizontalLayout_2);
+
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        label_3 = new QLabel(groupBox);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+
+        horizontalLayout_3->addWidget(label_3);
+
+        lineEdit_calendarName = new QLineEdit(groupBox);
+        lineEdit_calendarName->setObjectName(QString::fromUtf8("lineEdit_calendarName"));
+
+        horizontalLayout_3->addWidget(lineEdit_calendarName);
+
+
+        verticalLayout->addLayout(horizontalLayout_3);
+
+        pushButton_login = new QPushButton(groupBox);
+        pushButton_login->setObjectName(QString::fromUtf8("pushButton_login"));
+
+        verticalLayout->addWidget(pushButton_login);
 
         menubar = new QMenuBar(loginwindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -112,9 +128,11 @@ public:
     {
         loginwindow->setWindowTitle(QApplication::translate("loginwindow", "Log In", nullptr));
         groupBox->setTitle(QApplication::translate("loginwindow", "LogIn", nullptr));
-        pushButton_login->setText(QApplication::translate("loginwindow", "LogIn", nullptr));
         label->setText(QApplication::translate("loginwindow", "UserName", nullptr));
         label_2->setText(QApplication::translate("loginwindow", "Password", nullptr));
+        label_3->setText(QApplication::translate("loginwindow", "Calendar name", nullptr));
+        lineEdit_calendarName->setText(QString());
+        pushButton_login->setText(QApplication::translate("loginwindow", "LogIn", nullptr));
         toolBar->setWindowTitle(QApplication::translate("loginwindow", "toolBar", nullptr));
     } // retranslateUi
 

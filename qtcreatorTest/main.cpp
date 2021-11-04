@@ -182,8 +182,7 @@ void shareCalendar() {
            "    </D:sharee>\n"
            "</D:share-resource>";
     try {
-        handle.setOpt(curlpp::Options::Url(
-                std::string("http://192.168.1.8/progetto/calendarserver.php/calendars/lorenzo/home")));
+        handle.setOpt(curlpp::Options::Url(std::string("http://192.168.1.8/progetto/calendarserver.php/calendars/lorenzo/home")));
         handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
         handle.setOpt(new curlpp::options::UserPwd("lorenzo:pintaldi"));
         handle.setOpt(new curlpp::Options::CustomRequest("POST"));
