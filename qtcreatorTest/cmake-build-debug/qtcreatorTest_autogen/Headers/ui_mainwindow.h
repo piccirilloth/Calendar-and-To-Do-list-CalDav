@@ -67,7 +67,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1505, 25));
+        menubar->setGeometry(QRect(0, 0, 1505, 22));
         menuLogi = new QMenu(menubar);
         menuLogi->setObjectName(QString::fromUtf8("menuLogi"));
         MainWindow->setMenuBar(menubar);
@@ -89,7 +89,7 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Calendar", nullptr));
         loginButton->setText(QApplication::translate("MainWindow", "Login", nullptr));
-        menuLogi->setTitle(QApplication::translate("MainWindow", "Login", nullptr));
+        menuLogi->setTitle(QApplication::translate("MainWindow", "Home", nullptr));
         toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", nullptr));
     } // retranslateUi
 

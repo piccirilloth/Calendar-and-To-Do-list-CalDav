@@ -3,6 +3,10 @@
 
 CMakeFiles/qtcreatorTest.dir/Sources/API.cpp.o: \
  ../Headers/API.h \
+ ../Headers/Date.h \
+ ../Headers/Vcalendar.h \
+ ../Headers/Vevent.h \
+ ../Headers/Vtodo.h \
  ../curlpp-0.8.1/include/curlpp/Easy.hpp \
  ../curlpp-0.8.1/include/curlpp/Easy.inl \
  ../curlpp-0.8.1/include/curlpp/Exception.hpp \
@@ -43,6 +47,10 @@ CMakeFiles/qtcreatorTest.dir/Sources/Vtodo.cpp.o: \
  ../Sources/Vtodo.cpp
 CMakeFiles/qtcreatorTest.dir/Sources/loginwindow.cpp.o: \
  ../Headers/API.h \
+ ../Headers/Date.h \
+ ../Headers/Vcalendar.h \
+ ../Headers/Vevent.h \
+ ../Headers/Vtodo.h \
  ../Headers/loginwindow.h \
  ../curlpp-0.8.1/include/curlpp/Easy.hpp \
  ../curlpp-0.8.1/include/curlpp/Easy.inl \
@@ -213,6 +221,15 @@ CMakeFiles/qtcreatorTest.dir/Sources/loginwindow.cpp.o: \
  qtcreatorTest_autogen/Headers/ui_loginwindow.h
 CMakeFiles/qtcreatorTest.dir/Sources/mainwindow.cpp.o: \
  ../Headers/API.h \
+ ../curlpp-0.8.1/include/utilspp/clone_ptr.hpp \
+ ../Headers/API.h \
+ ../Headers/Date.h \
+ ../Headers/Vcalendar.h \
+ ../Headers/Vevent.h \
+ ../Headers/Vtodo.h \
+ ../Headers/loginwindow.h \
+ ../Headers/mainwindow.h \
+ ../Sources/mainwindow.cpp \
  ../curlpp-0.8.1/include/curlpp/Easy.hpp \
  ../curlpp-0.8.1/include/curlpp/Easy.inl \
  ../curlpp-0.8.1/include/curlpp/Exception.hpp \
@@ -232,10 +249,6 @@ CMakeFiles/qtcreatorTest.dir/Sources/mainwindow.cpp.o: \
  ../curlpp-0.8.1/include/curlpp/internal/OptionSetter.hpp \
  ../curlpp-0.8.1/include/curlpp/internal/OptionSetter.inl \
  ../curlpp-0.8.1/include/curlpp/internal/SList.hpp \
- ../curlpp-0.8.1/include/utilspp/clone_ptr.hpp \
- ../Headers/loginwindow.h \
- ../Headers/mainwindow.h \
- ../Sources/mainwindow.cpp \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
@@ -393,7 +406,14 @@ CMakeFiles/qtcreatorTest.dir/Sources/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
  qtcreatorTest_autogen/Headers/ui_mainwindow.h
 CMakeFiles/qtcreatorTest.dir/main.cpp.o: \
+ ../Headers/API.h \
  ../curlpp-0.8.1/include/utilspp/clone_ptr.hpp \
+ ../Headers/API.h \
+ ../Headers/Date.h \
+ ../Headers/Vcalendar.h \
+ ../Headers/Vevent.h \
+ ../Headers/Vtodo.h \
+ ../Headers/loginwindow.h \
  ../Headers/mainwindow.h \
  ../curlpp-0.8.1/include/curlpp/Easy.hpp \
  ../curlpp-0.8.1/include/curlpp/Easy.inl \
@@ -519,10 +539,14 @@ CMakeFiles/qtcreatorTest.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs_win.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdesktopwidget.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h \
@@ -550,6 +574,11 @@ CMakeFiles/qtcreatorTest.dir/qtcreatorTest_autogen/mocs_compilation.cpp.o: \
  ../curlpp-0.8.1/include/curlpp/internal/OptionSetter.inl \
  ../curlpp-0.8.1/include/curlpp/internal/SList.hpp \
  ../curlpp-0.8.1/include/utilspp/clone_ptr.hpp \
+ ../Headers/API.h \
+ ../Headers/Date.h \
+ ../Headers/Vcalendar.h \
+ ../Headers/Vevent.h \
+ ../Headers/Vtodo.h \
  ../Headers/loginwindow.h \
  ../Headers/mainwindow.h \
  qtcreatorTest_autogen/D2MWKIZDYH/moc_loginwindow.cpp \

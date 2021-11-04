@@ -4,7 +4,13 @@
 
 #include "Headers/API.h"
 
-API::API(std::string IPADDRESS): IPADDRESS(IPADDRESS) {}
+std::string API::IPADDRESS = "192.168.1.7";
+std::string API::username = "";
+std::string API::password = "";
+bool API::loggedIn = false;
+std::list<Vcalendar> API::calendars;
+
+API::API() {}
 
 std::string API::login(std::string const &username, std::string const &password) {
     curlpp::Cleanup init;

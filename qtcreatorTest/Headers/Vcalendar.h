@@ -12,6 +12,7 @@
 
 class Vcalendar {
 private:
+    std::string xml;
     std::string name;
     std::string etag;
     std::string version;
@@ -20,7 +21,8 @@ private:
     std::list<Vevent> events;
     std::list<Vtodo> todos;
 public:
-    Vcalendar(string obj);
+    Vcalendar(std::string const &obj);
+    std::string getXml();
 };
 
 

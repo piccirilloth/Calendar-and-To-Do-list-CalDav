@@ -21,9 +21,10 @@ private:
     Ui::loginwindow *ui;
     API *api;
 
+signals:
+    void changeUser();
 
 private slots:
-
     void on_pushButton_login_clicked();
 };
 

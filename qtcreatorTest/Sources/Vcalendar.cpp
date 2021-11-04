@@ -3,3 +3,11 @@
 //
 
 #include "Headers/Vcalendar.h"
+
+Vcalendar::Vcalendar(std::string const &obj) {
+    xml = obj;
+}
+
+std::string Vcalendar::getXml() {
+    return xml;
+}
