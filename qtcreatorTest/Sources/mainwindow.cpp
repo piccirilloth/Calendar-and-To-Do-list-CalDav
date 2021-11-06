@@ -33,7 +33,8 @@ void MainWindow::setUpPage() {
 void MainWindow::change_login_button() {
     std::list<Vcalendar> l = api->getCalendars();
     ui->listWidget_2->clear();
-    ui->listWidget_2->addItem(QString(l.back().getXml().c_str()));
+    for(Vcalendar value : l)
+        ui->listWidget_2->addItem(QString(value.getXml().c_str()));
     ui->loginButton->setText(QString("Change user"));
 }
 

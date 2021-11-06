@@ -25,19 +25,21 @@ void loginwindow::on_pushButton_login_clicked() {
     QString password = ui->lineEdit_password->text();
     std::string res = api->login(username.toStdString(), password.toStdString());
     if(username.toStdString().empty() || password.toStdString().empty())
-        QMessageBox::information(this, "Error", "Username or password cannot be left empty");
-    else if(std::string(res.c_str()).find("Username or password was incorrect") == std::string::npos || std::string(res.c_str()).find("Principal with name") == std::string::npos)
-    {
-        QMessageBox::information(this, "Error", res.c_str());
+        QMessageBox::information(this, "Error", "Username, password or calendar name cannot be left empty");
+    else if(res.find("Username or password was incorrect") != std::string::npos)
+        QMessageBox::information(this, "Error", "Username or password are incorrect");
+    else if(res.find("Principal with name") != std::string::npos)
+        QMessageBox::information(this, "Error", "Username or password are incorrect");
+    else {
+        //QMessageBox::information(this, "Error", res.c_str());
         api->setUsername(username.toStdString());
-        api->setPassword(username.toStdString());
+        api->setPassword(password.toStdString());
         api->setLoggedIn(true);
         api->clearCalendars();
-        api->addCalendar(Vcalendar(std::string(res.c_str())));
+        std::list<std::string> names = api->retrieveAllCalendars();
+        for(std::string value : names)
+            api->addCalendar(Vcalendar(value));
         emit changeUser();
         this->close();
     }
-    else
-        QMessageBox::information(this, "Error", res.c_str());
-
 }

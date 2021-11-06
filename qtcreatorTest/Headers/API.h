@@ -68,6 +68,7 @@ public:
 public:
     API();
     std::string login(std::string const &username, std::string const &password);
+    std::list<std::string> retrieveAllCalendars();
 };
 
 

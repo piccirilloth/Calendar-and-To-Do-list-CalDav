@@ -8,6 +8,7 @@
 #include "curlpp-0.8.1/include/curlpp/Easy.hpp"
 #include "curlpp-0.8.1/include/curlpp/Options.hpp"
 #include "curlpp-0.8.1/include/curlpp/Exception.hpp"
+#include "Headers/API.h"
 
 void createCalendar() {
     curlpp::Cleanup init;
@@ -200,13 +201,9 @@ void shareCalendar() {
     }
 }
 
-
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
     MainWindow w;
     w.show();
-    //w.setUpPage();
-    //shareCalendar();
-    //deleteCalendar();
     return a.exec();
 }
