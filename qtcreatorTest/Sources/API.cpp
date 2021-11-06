@@ -83,13 +83,14 @@ std::list<std::string> API::retrieveAllCalendars() {
         int pos = -1;
         std::string res = str.str();
         char *response = res.data();
+        int len = link.length();
         while((pos = res.find(link, pos+1)) != std::string::npos) {
             std::string name = "";
             int i=pos;
-            if(response[i+link.length()] == '<')
+            if(response[i+len] == '<')
                 continue;
-            while(response[i+link.length()] != '/') {
-                name.push_back(response[i + link.length()]);
+            while(response[i+len] != '/') {
+                name.push_back(response[i + len]);
                 i++;
             }
             if(name != "inbox" && name != "outbox")
