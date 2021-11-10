@@ -295,6 +295,12 @@
 		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/Vtodo.h">
 			<Option target="qtcreatorTest"/>
 		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/createcalendarform.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/createcalendarform.ui">
+			<Option target="qtcreatorTest"/>
+		</Unit>
 		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/loginwindow.h">
 			<Option target="qtcreatorTest"/>
 		</Unit>
@@ -320,6 +326,9 @@
 			<Option target="qtcreatorTest"/>
 		</Unit>
 		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Sources/Vtodo.cpp">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Sources/createcalendarform.cpp">
 			<Option target="qtcreatorTest"/>
 		</Unit>
 		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Sources/loginwindow.cpp">

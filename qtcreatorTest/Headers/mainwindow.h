@@ -5,6 +5,7 @@
 #include "loginwindow.h"
 #include "Vcalendar.h"
 #include "API.h"
+#include "createcalendarform.h"
 #include <list>
 
 QT_BEGIN_NAMESPACE
@@ -22,7 +23,9 @@ public:
 
 private slots:
     void on_loginButton_clicked();
-    void change_login_button();
+    void afterLogin();
+    void on_createCalendarButton_clicked();
+    void updateCalendars();
 
 private:
     Ui::MainWindow *ui;

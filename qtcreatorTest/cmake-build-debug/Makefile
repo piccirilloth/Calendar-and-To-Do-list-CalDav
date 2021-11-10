@@ -359,6 +359,30 @@ Sources/Vtodo.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/Vtodo.cpp.s
 .PHONY : Sources/Vtodo.cpp.s
 
+Sources/createcalendarform.o: Sources/createcalendarform.cpp.o
+.PHONY : Sources/createcalendarform.o
+
+# target to build an object file
+Sources/createcalendarform.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/createcalendarform.cpp.o
+.PHONY : Sources/createcalendarform.cpp.o
+
+Sources/createcalendarform.i: Sources/createcalendarform.cpp.i
+.PHONY : Sources/createcalendarform.i
+
+# target to preprocess a source file
+Sources/createcalendarform.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/createcalendarform.cpp.i
+.PHONY : Sources/createcalendarform.cpp.i
+
+Sources/createcalendarform.s: Sources/createcalendarform.cpp.s
+.PHONY : Sources/createcalendarform.s
+
+# target to generate assembly for a file
+Sources/createcalendarform.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/createcalendarform.cpp.s
+.PHONY : Sources/createcalendarform.cpp.s
+
 Sources/loginwindow.o: Sources/loginwindow.cpp.o
 .PHONY : Sources/loginwindow.o
 
@@ -860,6 +884,9 @@ help:
 	@echo "... Sources/Vtodo.o"
 	@echo "... Sources/Vtodo.i"
 	@echo "... Sources/Vtodo.s"
+	@echo "... Sources/createcalendarform.o"
+	@echo "... Sources/createcalendarform.i"
+	@echo "... Sources/createcalendarform.s"
 	@echo "... Sources/loginwindow.o"
 	@echo "... Sources/loginwindow.i"
 	@echo "... Sources/loginwindow.s"

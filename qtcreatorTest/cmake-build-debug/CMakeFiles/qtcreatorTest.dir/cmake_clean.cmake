@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/qtcreatorTest.dir/Sources/Vcalendar.cpp.o"
   "CMakeFiles/qtcreatorTest.dir/Sources/Vevent.cpp.o"
   "CMakeFiles/qtcreatorTest.dir/Sources/Vtodo.cpp.o"
+  "CMakeFiles/qtcreatorTest.dir/Sources/createcalendarform.cpp.o"
   "CMakeFiles/qtcreatorTest.dir/Sources/loginwindow.cpp.o"
   "CMakeFiles/qtcreatorTest.dir/Sources/mainwindow.cpp.o"
   "CMakeFiles/qtcreatorTest.dir/main.cpp.o"

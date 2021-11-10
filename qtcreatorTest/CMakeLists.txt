@@ -33,7 +33,7 @@ set(PROJECT_SOURCES
         Sources/mainwindow.cpp
         Headers/mainwindow.h
         Headers/mainwindow.ui
-        Sources/Date.cpp Headers/Date.h Sources/Vcalendar.cpp Headers/Vcalendar.h Sources/Vevent.cpp Headers/Vevent.h Sources/Vtodo.cpp Headers/Vtodo.h Sources/loginwindow.cpp Headers/loginwindow.h Headers/loginwindow.ui Sources/API.cpp Headers/API.h)
+        Sources/Date.cpp Headers/Date.h Sources/Vcalendar.cpp Headers/Vcalendar.h Sources/Vevent.cpp Headers/Vevent.h Sources/Vtodo.cpp Headers/Vtodo.h Sources/loginwindow.cpp Headers/loginwindow.h Headers/loginwindow.ui Sources/API.cpp Headers/API.h Sources/createcalendarform.cpp Headers/createcalendarform.h Headers/createcalendarform.ui)
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(qtcreatorTest

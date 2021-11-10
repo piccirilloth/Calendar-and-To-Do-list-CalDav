@@ -34,6 +34,7 @@ public:
     QFrame *propic;
     QListWidget *listWidget_2;
     QPushButton *loginButton;
+    QPushButton *createCalendarButton;
     QMenuBar *menubar;
     QMenu *menuLogi;
     QStatusBar *statusbar;
@@ -64,6 +65,11 @@ public:
         loginButton->setObjectName(QString::fromUtf8("loginButton"));
         loginButton->setGeometry(QRect(10, 10, 261, 51));
         loginButton->setStyleSheet(QString::fromUtf8("font: 87 16pt \"SF Pro\";"));
+        createCalendarButton = new QPushButton(centralwidget);
+        createCalendarButton->setObjectName(QString::fromUtf8("createCalendarButton"));
+        createCalendarButton->setEnabled(false);
+        createCalendarButton->setGeometry(QRect(960, 0, 101, 41));
+        createCalendarButton->setFlat(false);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -89,6 +95,7 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Calendar", nullptr));
         loginButton->setText(QApplication::translate("MainWindow", "Login", nullptr));
+        createCalendarButton->setText(QApplication::translate("MainWindow", "Crate a calendar", nullptr));
         menuLogi->setTitle(QApplication::translate("MainWindow", "Home", nullptr));
         toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", nullptr));
     } // retranslateUi

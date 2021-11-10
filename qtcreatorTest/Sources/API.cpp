@@ -105,3 +105,32 @@ std::list<std::string> API::retrieveAllCalendars() {
     }
     return calendarNames;
 }
+
+void API::createCalendar(std::string const &calendarName) {
+    curlpp::Cleanup init;
+    curlpp::Easy handle;
+    std::list<std::string> headers;
+    std::string result;
+    std::string body;
+    std::ostringstream str;
+    headers.push_back("Content-Type: application/xml; charset=utf-8");
+    try {
+        handle.setOpt(curlpp::Options::Url(
+                std::string("http://" + IPADDRESS + "/progetto/calendarserver.php/calendars/" + username + "/" + calendarName)));
+        handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_DIGEST));
+        handle.setOpt(new curlpp::options::UserPwd(username + ":" + password));
+        handle.setOpt(new curlpp::Options::CustomRequest("MKCALENDAR"));
+        handle.setOpt(new curlpp::Options::PostFields(body));
+        handle.setOpt(new curlpp::Options::PostFieldSize(body.length()));
+        handle.setOpt(new curlpp::Options::HttpHeader(headers));
+        handle.setOpt(curlpp::Options::WriteStream(&str));
+        handle.perform();
+        std::cout << str.str() << '\n';
+    }
+    catch (cURLpp::RuntimeError &e) {
+        std::cout << e.what() << std::endl;
+    }
+    catch (cURLpp::LogicError &e) {
+        std::cout << e.what() << std::endl;
+    }
+}
