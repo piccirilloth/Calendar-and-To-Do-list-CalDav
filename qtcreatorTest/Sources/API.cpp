@@ -58,7 +58,7 @@ std::list<std::string> API::retrieveAllCalendars() {
     std::string body;
     std::ostringstream str;
     std::list<std::string> calendarNames;
-    std::string link = "calendarserver.php/calendars/" + username + "/";
+
     headers.push_back("Depth: 1");
     headers.push_back("Prefer: return-minimal");
     headers.push_back("Content-Type: application/xml; charset=utf-8");
@@ -80,28 +80,35 @@ std::list<std::string> API::retrieveAllCalendars() {
         handle.setOpt(new curlpp::Options::HttpHeader(headers));
         handle.setOpt(curlpp::Options::WriteStream(&str));
         handle.perform();
-        int pos = -1;
         std::string res = str.str();
-        char *response = res.data();
-        int len = link.length();
-        while((pos = res.find(link, pos+1)) != std::string::npos) {
-            std::string name = "";
-            int i=pos;
-            if(response[i+len] == '<')
-                continue;
-            while(response[i+len] != '/') {
-                name.push_back(response[i + len]);
-                i++;
-            }
-            if(name != "inbox" && name != "outbox")
-                calendarNames.push_back(name);
-        }
+        calendarNames = getNames(res);
     }
     catch (cURLpp::RuntimeError &e) {
         std::cout << e.what() << std::endl;
     }
     catch (cURLpp::LogicError &e) {
         std::cout << e.what() << std::endl;
+    }
+    return calendarNames;
+}
+
+std::list<std::string> API::getNames(std::string const &result) {
+    std::list<std::string> calendarNames;
+    int pos = -1;
+    std::string link = "calendarserver.php/calendars/" + username + "/";
+    const char *response = result.data();
+    int len = link.length();
+    while((pos = result.find(link, pos+1)) != std::string::npos) {
+        std::string name = "";
+        int i=pos;
+        if(response[i+len] == '<')
+            continue;
+        while(response[i+len] != '/') {
+            name.push_back(response[i + len]);
+            i++;
+        }
+        if(name != "inbox" && name != "outbox")
+            calendarNames.push_back(name);
     }
     return calendarNames;
 }

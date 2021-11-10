@@ -70,6 +70,7 @@ public:
     std::string login(std::string const &username, std::string const &password);
     std::list<std::string> retrieveAllCalendars();
     void createCalendar(std::string const &calndarName);
+    std::list<std::string> getNames(std::string const &result);
     std::list<std::string> deleteCalendar(std::string const &name);
 };
 
