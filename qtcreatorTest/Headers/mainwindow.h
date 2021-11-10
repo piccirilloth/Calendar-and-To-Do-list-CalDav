@@ -26,6 +26,7 @@ private slots:
     void afterLogin();
     void on_createCalendarButton_clicked();
     void updateCalendars();
+    void ProvideContextMenu(const QPoint &pos);
 
 private:
     Ui::MainWindow *ui;

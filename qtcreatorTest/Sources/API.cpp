@@ -134,3 +134,17 @@ void API::createCalendar(std::string const &calendarName) {
         std::cout << e.what() << std::endl;
     }
 }
+
+std::list<std::string> API::deleteCalendar(const std::string &name) {
+    curlpp::Cleanup init;
+    curlpp::Easy handle;
+    std::ostringstream str;
+    handle.setOpt(curlpp::Options::Url(
+            std::string("http://" + IPADDRESS + "/progetto/calendarserver.php/calendars/" + username + "/" + name + "/")));
+    handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
+    handle.setOpt(new curlpp::options::UserPwd(username + ":" + password));
+    handle.setOpt(new curlpp::Options::CustomRequest("DELETE"));
+    handle.setOpt(curlpp::Options::WriteStream(&str));
+    handle.perform();
+    return retrieveAllCalendars();
+}

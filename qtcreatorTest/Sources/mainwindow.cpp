@@ -8,7 +8,9 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow), login(nullptr)
 {
     ui->setupUi(this);
+    ui->listWidget_2->setContextMenuPolicy(Qt::CustomContextMenu);
     api = new API();
+    connect(ui->listWidget_2, SIGNAL(customContextMenuRequested(const QPoint &)), this, SLOT(ProvideContextMenu(const QPoint &)));
 }
 
 MainWindow::~MainWindow()
@@ -51,5 +53,21 @@ void MainWindow::updateCalendars() {
     ui->listWidget_2->clear();
     for(Vcalendar value : l)
         ui->listWidget_2->addItem(QString(value.getXml().c_str()));
+}
+
+void MainWindow::ProvideContextMenu(const QPoint &pos) {
+    QPoint item = ui->listWidget_2->mapToGlobal(pos);
+    QMenu subMenu;
+    subMenu.addAction("Delete");
+    QAction* rightClickItem = subMenu.exec(item);
+    if (rightClickItem && rightClickItem->text().contains("Delete") )
+    {
+        std::string name = ui->listWidget_2->currentItem()->text().toStdString();
+        std::list<std::string> list = api->deleteCalendar(name);
+        api->clearCalendars();
+        for(std::string v : list)
+            api->addCalendar(Vcalendar(v)); //TODO: complete the Vcalendar constructor
+        ui->listWidget_2->takeItem(ui->listWidget_2->indexAt(pos).row());
+    }
 }
 

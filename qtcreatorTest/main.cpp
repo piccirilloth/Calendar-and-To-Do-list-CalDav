@@ -51,20 +51,6 @@ void downloadCalendars() {
 
 }
 
-void deleteCalendar() {
-    curlpp::Cleanup init;
-    curlpp::Easy handle;
-    std::ostringstream str;
-    handle.setOpt(curlpp::Options::Url(
-            std::string("http://192.168.1.8/progetto/calendarserver.php/calendars/oscar/25646748-fa41-4384-88a6-b62d1a6e8f16")));
-    handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
-    handle.setOpt(new curlpp::options::UserPwd("oscar:piccirillo"));
-    handle.setOpt(new curlpp::Options::CustomRequest("DELETE"));
-    handle.setOpt(curlpp::Options::WriteStream(&str));
-    handle.perform();
-    std::cout << str.str() << '\n';
-}
-
 void updateCalendar() {
     curlpp::Cleanup init;
     curlpp::Easy handle;
@@ -153,36 +139,6 @@ void shareCalendar() {
         handle.setOpt(new curlpp::Options::HttpHeader(headers));
         handle.setOpt(curlpp::Options::WriteStream(&str));
         handle.perform();
-    }
-    catch (cURLpp::RuntimeError &e) {
-        std::cout << e.what() << std::endl;
-    }
-    catch (cURLpp::LogicError &e) {
-        std::cout << e.what() << std::endl;
-    }
-}
-
-void createCalendar() {
-    curlpp::Cleanup init;
-    curlpp::Easy handle;
-    std::list<std::string> headers;
-    std::string result;
-    std::string body;
-    std::ostringstream str;
-    headers.push_back("Content-Type: text/calendar; charset=utf-8");
-    body = "";
-    try {
-        handle.setOpt(curlpp::Options::Url(
-                std::string("http://192.168.1.7/progetto/calendarserver.php/calendars/oscar/newCal")));
-        handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_DIGEST));
-        handle.setOpt(new curlpp::options::UserPwd("oscar:piccirillo"));
-        handle.setOpt(new curlpp::Options::CustomRequest("POST"));
-        handle.setOpt(new curlpp::Options::PostFields(body));
-        handle.setOpt(new curlpp::Options::PostFieldSize(body.length()));
-        handle.setOpt(new curlpp::Options::HttpHeader(headers));
-        handle.setOpt(curlpp::Options::WriteStream(&str));
-        handle.perform();
-        std::cout << str.str() << '\n';
     }
     catch (cURLpp::RuntimeError &e) {
         std::cout << e.what() << std::endl;

@@ -95,7 +95,7 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Calendar", nullptr));
         loginButton->setText(QApplication::translate("MainWindow", "Login", nullptr));
-        createCalendarButton->setText(QApplication::translate("MainWindow", "Crate a calendar", nullptr));
+        createCalendarButton->setText(QApplication::translate("MainWindow", "Create a calendar", nullptr));
         menuLogi->setTitle(QApplication::translate("MainWindow", "Home", nullptr));
         toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", nullptr));
     } // retranslateUi
