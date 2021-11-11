@@ -552,9 +552,9 @@ FAQ
   3.11 How do I POST with a different Content-Type?
 
   You can always replace the internally generated headers with -H/--header.
-  To make a simple HTTP POST with text/xml as content-type, do something like:
+  To make a simple HTTP POST with text/icsText as content-type, do something like:
 
-        curl -d "datatopost" -H "Content-Type: text/xml" [URL]
+        curl -d "datatopost" -H "Content-Type: text/icsText" [URL]
 
   3.12 Why do FTP-specific features over HTTP proxy fail?
 

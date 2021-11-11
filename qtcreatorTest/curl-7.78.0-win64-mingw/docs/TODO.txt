@@ -996,14 +996,14 @@
 
 18.8 Consider convenience options for JSON and XML?
 
- Could we add `--xml` or `--json` to add headers needed to call rest API:
+ Could we add `--icsText` or `--json` to add headers needed to call rest API:
 
- `--xml` adds -H 'Content-Type: application/xml' -H "Accept: application/xml" and
+ `--icsText` adds -H 'Content-Type: application/icsText' -H "Accept: application/icsText" and
  `--json` adds -H 'Content-Type: application/json' -H "Accept: application/json"
 
  Setting Content-Type when doing a GET or any other method without a body
  would be a bit strange I think - so maybe only add CT for requests with body?
- Maybe plain `--xml` and ` --json` are a bit too brief and generic. Maybe
+ Maybe plain `--icsText` and ` --json` are a bit too brief and generic. Maybe
  `--http-json` etc?
 
  See https://github.com/curl/curl/issues/5203

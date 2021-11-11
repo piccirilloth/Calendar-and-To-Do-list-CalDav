@@ -36,7 +36,7 @@ void MainWindow::afterLogin() {
     std::list<Vcalendar> l = api->getCalendars();
     ui->listWidget_2->clear();
     for(Vcalendar value : l)
-        ui->listWidget_2->addItem(QString(value.getXml().c_str()));
+        ui->listWidget_2->addItem(QString(value.getName().c_str()));
     ui->loginButton->setText(QString("Change user"));
     ui->createCalendarButton->setEnabled(true);
 }
@@ -52,7 +52,7 @@ void MainWindow::updateCalendars() {
     std::list<Vcalendar> l = api->getCalendars();
     ui->listWidget_2->clear();
     for(Vcalendar value : l)
-        ui->listWidget_2->addItem(QString(value.getXml().c_str()));
+        ui->listWidget_2->addItem(QString(value.getName().c_str()));
 }
 
 void MainWindow::ProvideContextMenu(const QPoint &pos) {

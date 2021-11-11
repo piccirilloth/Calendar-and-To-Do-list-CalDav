@@ -65,12 +65,16 @@ public:
         API::loggedIn = loggedIn;
     }
 
+    //void createEmptyIcs(std::string const &calendarName);
+
+    std::list<std::string> getNames(std::string const &result);
+
 public:
     API();
     std::string login(std::string const &username, std::string const &password);
     std::list<std::string> retrieveAllCalendars();
-    void createCalendar(std::string const &calndarName);
-    std::list<std::string> getNames(std::string const &result);
+    void createEmptyCalendar(std::string const &calendarName);
+
     std::list<std::string> deleteCalendar(std::string const &name);
 };
 

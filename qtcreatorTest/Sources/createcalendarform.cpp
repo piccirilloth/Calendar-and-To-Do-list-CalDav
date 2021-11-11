@@ -28,13 +28,13 @@ void CreateCalendarForm::on_pushButton_create_clicked() {
         std::list<Vcalendar> l = api->getCalendars();
         bool flag = false;
         for(Vcalendar v : l)
-            if(v.getXml() == name.toStdString())
+            if(v.getName() == name.toStdString())
                 flag = true;
         if(flag)
             QMessageBox::information(this, "Error", "duplicated name");
         else
         {
-            api->createCalendar(name.toStdString());
+            api->createEmptyCalendar(name.toStdString());
             std::list<std::string> names = api->retrieveAllCalendars();
             api->clearCalendars();
             for(std::string value : names)

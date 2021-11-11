@@ -599,9 +599,9 @@
  request.
 
  For example, you can change the POST request to a PROPFIND and send the data
- as `Content-Type: text/xml` (instead of the default Content-Type) like this:
+ as `Content-Type: text/icsText` (instead of the default Content-Type) like this:
 
-    curl --data "<xml>" --header "Content-Type: text/xml" \
+    curl --data "<icsText>" --header "Content-Type: text/icsText" \
       --request PROPFIND example.com
 
  You can delete a default header by providing one without content. Like you

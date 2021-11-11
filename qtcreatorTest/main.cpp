@@ -17,10 +17,10 @@ void downloadCalendars() {
     std::string result;
     std::string body;
     std::ostringstream str;
-    headers.push_back("Content-Type: application/xml; charset=utf-8");
+    headers.push_back("Content-Type: application/icsText; charset=utf-8");
     headers.push_back("Depth: 1");
     headers.push_back("Prefer: return-minimal");
-    body = "<c:calendar-query xmlns:d=\"DAV:\" xmlns:c=\"urn:ietf:params:xml:ns:caldav\">\n"
+    body = "<c:calendar-query xmlns:d=\"DAV:\" xmlns:c=\"urn:ietf:params:icsText:ns:caldav\">\n"
            "    <d:prop>\n"
            "        <d:getetag />\n"
            "        <c:calendar-data />\n"
@@ -97,7 +97,7 @@ void shareCalendar() {
     std::string result;
     std::string body;
     std::ostringstream str;
-    headers.push_back("Content-Type: application/davsharing+xml; charset=\"utf-8\"");
+    headers.push_back("Content-Type: application/davsharing+icsText; charset=\"utf-8\"");
     //headers.push_back("If-None-Match: *");
     /*body = "BEGIN:VCALENDAR\r\n"
            "VERSION:2.0\r\n"
@@ -116,7 +116,7 @@ void shareCalendar() {
            "END:VEVENT\r\n"
            "END:VCALENDAR\r\n";*/
 
-    body = "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n"
+    body = "<?icsText version=\"1.0\" encoding=\"utf-8\" ?>\n"
            "<D:share-resource xmlns:D=\"DAV:\">\n"
            "    <D:sharee>\n"
            "        <D:href>mailto:piccipicc@gmail.com</D:href>\n"

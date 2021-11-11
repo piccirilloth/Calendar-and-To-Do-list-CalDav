@@ -12,7 +12,7 @@
 
 class Vcalendar {
 private:
-    std::string xml;
+    std::string icsText;
     std::string name;
     std::string etag;
     std::string version;
@@ -22,7 +22,7 @@ private:
     std::list<Vtodo> todos;
 public:
     Vcalendar(std::string const &obj);
-    std::string getXml();
+    std::string getName();
 };
 
 
