@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.12.8
+** Created by: Qt User Interface Compiler version 5.15.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -93,11 +93,11 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Calendar", nullptr));
-        loginButton->setText(QApplication::translate("MainWindow", "Login", nullptr));
-        createCalendarButton->setText(QApplication::translate("MainWindow", "Create a calendar", nullptr));
-        menuLogi->setTitle(QApplication::translate("MainWindow", "Home", nullptr));
-        toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Calendar", nullptr));
+        loginButton->setText(QCoreApplication::translate("MainWindow", "Login", nullptr));
+        createCalendarButton->setText(QCoreApplication::translate("MainWindow", "Create a calendar", nullptr));
+        menuLogi->setTitle(QCoreApplication::translate("MainWindow", "Home", nullptr));
+        toolBar->setWindowTitle(QCoreApplication::translate("MainWindow", "toolBar", nullptr));
     } // retranslateUi
 
 };

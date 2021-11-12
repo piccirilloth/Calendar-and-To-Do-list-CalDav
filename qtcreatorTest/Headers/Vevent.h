@@ -13,6 +13,7 @@ private:
     Date dtstart; //date when the event starts
     string uid;
     string summary;
+    string description;
     // string description;
     Date dtend;
 public:

@@ -10,17 +10,17 @@
 #include "curlpp-0.8.1/include/curlpp/Exception.hpp"
 #include "Headers/API.h"
 
-void downloadCalendars() {
+std::string downloadCalendars() {
     curlpp::Cleanup init;
     curlpp::Easy handle;
     std::list<std::string> headers;
     std::string result;
     std::string body;
     std::ostringstream str;
-    headers.push_back("Content-Type: application/icsText; charset=utf-8");
+    headers.push_back("Content-Type: application/xml; charset=utf-8");
     headers.push_back("Depth: 1");
     headers.push_back("Prefer: return-minimal");
-    body = "<c:calendar-query xmlns:d=\"DAV:\" xmlns:c=\"urn:ietf:params:icsText:ns:caldav\">\n"
+    body = "<c:calendar-query xmlns:d=\"DAV:\" xmlns:c=\"urn:ietf:params:xml:ns:caldav\">\n"
            "    <d:prop>\n"
            "        <d:getetag />\n"
            "        <c:calendar-data />\n"
@@ -31,16 +31,15 @@ void downloadCalendars() {
            "</c:calendar-query>";
     try {
         handle.setOpt(curlpp::Options::Url(
-                std::string("http://192.168.1.6/progetto/calendarserver.php/calendars/admin/home/")));
+                std::string("http://192.168.1.13/progetto/calendarserver.php/calendars/lorenzo/home")));
         handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
-        handle.setOpt(new curlpp::options::UserPwd("admin:admin"));
+        handle.setOpt(new curlpp::options::UserPwd("lorenzo:pintaldi"));
         handle.setOpt(new curlpp::Options::CustomRequest("REPORT"));
         handle.setOpt(new curlpp::Options::PostFields(body));
         handle.setOpt(new curlpp::Options::PostFieldSize(body.length()));
         handle.setOpt(new curlpp::Options::HttpHeader(headers));
         handle.setOpt(curlpp::Options::WriteStream(&str));
         handle.perform();
-        std::cout << str.str() << '\n';
     }
     catch (cURLpp::RuntimeError &e) {
         std::cout << e.what() << std::endl;
@@ -48,6 +47,7 @@ void downloadCalendars() {
     catch (cURLpp::LogicError &e) {
         std::cout << e.what() << std::endl;
     }
+    return str.str();
 
 }
 
@@ -72,9 +72,9 @@ void updateCalendar() {
            "END:VCALENDAR\r\n";
     try {
         handle.setOpt(curlpp::Options::Url(
-                std::string("http://192.168.1.6/progetto/calendarserver.php/calendars/admin/home/cal.ics")));
+                std::string("http://192.168.1.13/progetto/calendarserver.php/calendars/lorenzo/home/cal.ics")));
         handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
-        handle.setOpt(new curlpp::options::UserPwd("admin:admin"));
+        handle.setOpt(new curlpp::options::UserPwd("lorenzo:pintaldi"));
         handle.setOpt(new curlpp::Options::CustomRequest("PUT"));
         handle.setOpt(new curlpp::Options::PostFields(body));
         handle.setOpt(new curlpp::Options::PostFieldSize(body.length()));
@@ -149,8 +149,11 @@ void shareCalendar() {
 }
 
 int main(int argc, char *argv[]) {
-    QApplication a(argc, argv);
+    /*QApplication a(argc, argv);
     MainWindow w;
     w.show();
-    return a.exec();
+    return a.exec();*/
+    Vcalendar tmp(downloadCalendars());
+    //std::cout << tmp << '\n';
+    return 0;
 }

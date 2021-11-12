@@ -1,5 +1,36 @@
-/home/nzazzo/Scrivania/PDS/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_autogen/D2MWKIZDYH/moc_mainwindow.cpp: /home/nzazzo/Scrivania/PDS/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/Headers/mainwindow.h \
-  /home/nzazzo/Scrivania/PDS/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_autogen/moc_predefs.h \
+/home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_autogen/D2MWKIZDYH/moc_mainwindow.cpp: /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/mainwindow.h \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_autogen/moc_predefs.h \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/API.h \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/Date.h \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/Vcalendar.h \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/Vevent.h \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/Vtodo.h \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/createcalendarform.h \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/loginwindow.h \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/Easy.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/Easy.inl \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/Exception.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/Form.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/Option.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/Option.inl \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/OptionBase.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/Options.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/Types.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/cURLpp.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/internal/CurlHandle.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/internal/CurlHandle.inl \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/internal/OptionContainer.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/internal/OptionContainer.inl \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/internal/OptionContainerType.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/internal/OptionList.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/internal/OptionSetter.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/internal/OptionSetter.inl \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/internal/SList.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/utilspp/clone_ptr.hpp \
+  /usr/include/asm-generic/bitsperlong.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/asm-generic/socket.h \
+  /usr/include/asm-generic/sockios.h \
   /usr/include/assert.h \
   /usr/include/c++/10/algorithm \
   /usr/include/c++/10/array \
@@ -34,6 +65,7 @@
   /usr/include/c++/10/bits/hash_bytes.h \
   /usr/include/c++/10/bits/invoke.h \
   /usr/include/c++/10/bits/ios_base.h \
+  /usr/include/c++/10/bits/istream.tcc \
   /usr/include/c++/10/bits/iterator_concepts.h \
   /usr/include/c++/10/bits/list.tcc \
   /usr/include/c++/10/bits/locale_classes.h \
@@ -59,6 +91,7 @@
   /usr/include/c++/10/bits/shared_ptr.h \
   /usr/include/c++/10/bits/shared_ptr_atomic.h \
   /usr/include/c++/10/bits/shared_ptr_base.h \
+  /usr/include/c++/10/bits/sstream.tcc \
   /usr/include/c++/10/bits/std_abs.h \
   /usr/include/c++/10/bits/std_function.h \
   /usr/include/c++/10/bits/stl_algo.h \
@@ -90,13 +123,16 @@
   /usr/include/c++/10/bits/unique_ptr.h \
   /usr/include/c++/10/bits/uses_allocator.h \
   /usr/include/c++/10/bits/vector.tcc \
+  /usr/include/c++/10/cassert \
   /usr/include/c++/10/cctype \
   /usr/include/c++/10/clocale \
   /usr/include/c++/10/compare \
   /usr/include/c++/10/concepts \
   /usr/include/c++/10/cstddef \
   /usr/include/c++/10/cstdint \
+  /usr/include/c++/10/cstdio \
   /usr/include/c++/10/cstdlib \
+  /usr/include/c++/10/ctime \
   /usr/include/c++/10/cwchar \
   /usr/include/c++/10/cwctype \
   /usr/include/c++/10/debug/assertions.h \
@@ -114,6 +150,8 @@
   /usr/include/c++/10/initializer_list \
   /usr/include/c++/10/ios \
   /usr/include/c++/10/iosfwd \
+  /usr/include/c++/10/iostream \
+  /usr/include/c++/10/istream \
   /usr/include/c++/10/iterator \
   /usr/include/c++/10/limits \
   /usr/include/c++/10/list \
@@ -128,6 +166,7 @@
   /usr/include/c++/10/pstl/glue_memory_defs.h \
   /usr/include/c++/10/pstl/glue_numeric_defs.h \
   /usr/include/c++/10/ranges \
+  /usr/include/c++/10/sstream \
   /usr/include/c++/10/stdexcept \
   /usr/include/c++/10/stdlib.h \
   /usr/include/c++/10/streambuf \
@@ -140,16 +179,26 @@
   /usr/include/c++/10/utility \
   /usr/include/c++/10/vector \
   /usr/include/ctype.h \
+  /usr/include/endian.h \
   /usr/include/features.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/stddef.h \
   /usr/include/locale.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
+  /usr/include/stdio.h \
   /usr/include/string.h \
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
+  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
+  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
+  /usr/include/x86_64-linux-gnu/asm/socket.h \
+  /usr/include/x86_64-linux-gnu/asm/sockios.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
   /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
   /usr/include/x86_64-linux-gnu/bits/endian.h \
   /usr/include/x86_64-linux-gnu/bits/endianness.h \
@@ -161,7 +210,13 @@
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/bits/sockaddr.h \
+  /usr/include/x86_64-linux-gnu/bits/socket.h \
+  /usr/include/x86_64-linux-gnu/bits/socket_type.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
@@ -172,15 +227,22 @@
   /usr/include/x86_64-linux-gnu/bits/types.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
@@ -189,6 +251,7 @@
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -202,6 +265,13 @@
   /usr/include/x86_64-linux-gnu/c++/10/bits/gthr-default.h \
   /usr/include/x86_64-linux-gnu/c++/10/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/10/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/curl/curl.h \
+  /usr/include/x86_64-linux-gnu/curl/curlver.h \
+  /usr/include/x86_64-linux-gnu/curl/easy.h \
+  /usr/include/x86_64-linux-gnu/curl/multi.h \
+  /usr/include/x86_64-linux-gnu/curl/options.h \
+  /usr/include/x86_64-linux-gnu/curl/system.h \
+  /usr/include/x86_64-linux-gnu/curl/urlapi.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
@@ -282,14 +352,22 @@
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/sys/socket.h \
+  /usr/include/x86_64-linux-gnu/sys/time.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
   /usr/lib/gcc/x86_64-linux-gnu/10/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/10/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/10/include/stddef.h \

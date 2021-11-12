@@ -1,26 +1,30 @@
-/home/nzazzo/Scrivania/PDS/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_autogen/D2MWKIZDYH/moc_loginwindow.cpp: /home/nzazzo/Scrivania/PDS/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/Headers/loginwindow.h \
-  /home/nzazzo/Scrivania/PDS/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_autogen/moc_predefs.h \
-  /home/nzazzo/Scrivania/PDS/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/Headers/API.h \
-  /home/nzazzo/Scrivania/PDS/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/Easy.hpp \
-  /home/nzazzo/Scrivania/PDS/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/Easy.inl \
-  /home/nzazzo/Scrivania/PDS/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/Exception.hpp \
-  /home/nzazzo/Scrivania/PDS/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/Form.hpp \
-  /home/nzazzo/Scrivania/PDS/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/Option.hpp \
-  /home/nzazzo/Scrivania/PDS/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/Option.inl \
-  /home/nzazzo/Scrivania/PDS/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/OptionBase.hpp \
-  /home/nzazzo/Scrivania/PDS/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/Options.hpp \
-  /home/nzazzo/Scrivania/PDS/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/Types.hpp \
-  /home/nzazzo/Scrivania/PDS/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/cURLpp.hpp \
-  /home/nzazzo/Scrivania/PDS/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/internal/CurlHandle.hpp \
-  /home/nzazzo/Scrivania/PDS/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/internal/CurlHandle.inl \
-  /home/nzazzo/Scrivania/PDS/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/internal/OptionContainer.hpp \
-  /home/nzazzo/Scrivania/PDS/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/internal/OptionContainer.inl \
-  /home/nzazzo/Scrivania/PDS/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/internal/OptionContainerType.hpp \
-  /home/nzazzo/Scrivania/PDS/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/internal/OptionList.hpp \
-  /home/nzazzo/Scrivania/PDS/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/internal/OptionSetter.hpp \
-  /home/nzazzo/Scrivania/PDS/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/internal/OptionSetter.inl \
-  /home/nzazzo/Scrivania/PDS/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/internal/SList.hpp \
-  /home/nzazzo/Scrivania/PDS/Calendar-and-To-Do-list-with-CalDav/qtcreatorTest/curlpp-0.8.1/include/utilspp/clone_ptr.hpp \
+/home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_autogen/D2MWKIZDYH/moc_loginwindow.cpp: /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/loginwindow.h \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_autogen/moc_predefs.h \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/API.h \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/Date.h \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/Vcalendar.h \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/Vevent.h \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/Vtodo.h \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/Easy.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/Easy.inl \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/Exception.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/Form.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/Option.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/Option.inl \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/OptionBase.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/Options.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/Types.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/cURLpp.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/internal/CurlHandle.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/internal/CurlHandle.inl \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/internal/OptionContainer.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/internal/OptionContainer.inl \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/internal/OptionContainerType.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/internal/OptionList.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/internal/OptionSetter.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/internal/OptionSetter.inl \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/internal/SList.hpp \
+  /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/utilspp/clone_ptr.hpp \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/posix_types.h \
   /usr/include/asm-generic/socket.h \
@@ -124,7 +128,9 @@
   /usr/include/c++/10/concepts \
   /usr/include/c++/10/cstddef \
   /usr/include/c++/10/cstdint \
+  /usr/include/c++/10/cstdio \
   /usr/include/c++/10/cstdlib \
+  /usr/include/c++/10/ctime \
   /usr/include/c++/10/cwchar \
   /usr/include/c++/10/cwctype \
   /usr/include/c++/10/debug/assertions.h \

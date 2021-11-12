@@ -1,10 +1,17 @@
-/snap/clion/169/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest
+/snap/clion/169/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest
+-- The CXX compiler identification is GNU 10.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
 -- curlpp version=[0.8.1]
 -- curlpp version num=[000801]
 -- Looking for CURL
--- Found CURL version: 7.68.0
+-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.74.0")  
+-- Found CURL version: 7.74.0
 -- Using CURL include dir(s): /usr/include/x86_64-linux-gnu
 -- Using CURL lib(s): /usr/lib/x86_64-linux-gnu/libcurl.so
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug
+-- Build files have been written to: /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug
