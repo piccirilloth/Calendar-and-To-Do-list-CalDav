@@ -19,18 +19,18 @@ private:
     static std::string username;
     static std::string password;
     static bool loggedIn;
-    static std::list<Vcalendar> calendars;
+    static std::list<std::string> calendarNames;
 public:
-    void addCalendar(Vcalendar cal) {
-        calendars.push_back(cal);
+    void addCalendar(std::string cal) {
+        calendarNames.push_back(cal);
     }
 
-    std::list<Vcalendar> getCalendars() {
-        return calendars;
+    std::list<std::string> getCalendars() {
+        return calendarNames;
     }
 
     void clearCalendars() {
-        calendars.clear();
+        calendarNames.clear();
     }
 
     const std::string &getIpaddress() const {

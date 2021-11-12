@@ -21,8 +21,13 @@ private:
     std::list<Vevent> events;
     std::list<Vtodo> todos;
 public:
-    explicit Vcalendar(std::string const &response);
+    explicit Vcalendar(std::string const &name);
+    Vcalendar();
     std::string getName();
+
+    void addEvent(Vevent const &event);
+
+    void addTodo(Vtodo const &todo);
 
     const string &getIcsText() const;
 
@@ -39,6 +44,22 @@ public:
     const list <Vtodo> &getTodos() const;
 
     friend ostream& operator<<(ostream &os, const Vcalendar &vcal);
+
+    void setIcsText(const string &icsText);
+
+    void setName(const string &name);
+
+    void setEtag(const string &etag);
+
+    void setVersion(const string &version);
+
+    void setProdid(const string &prodid);
+
+    void setCalscale(const string &calscale);
+
+    void setEvents(const list <Vevent> &events);
+
+    void setTodos(const list <Vtodo> &todos);
 
 };
 

@@ -244,7 +244,7 @@ cannot control or disable.
 
 The path part of an IMAP request not only specifies the mailbox to list or
 select, but can also be used to check the `UIDVALIDITY` of the mailbox, to
-specify the `UID`, `SECTION` and `PARTIAL` octets of the message to fetch and
+specify the `UID_TODO`, `SECTION` and `PARTIAL` octets of the message to fetch and
 to specify what messages to search for.
 
 A top level folder list:
@@ -257,7 +257,7 @@ A folder list on the user's inbox:
 
 Select the user's inbox and fetch message with uid = 1:
 
-    imap://user:password@mail.example.com/INBOX/;UID=1
+    imap://user:password@mail.example.com/INBOX/;UID_TODO=1
 
 Select the user's inbox and fetch the first message in the mail box:
 
@@ -266,15 +266,15 @@ Select the user's inbox and fetch the first message in the mail box:
 Select the user's inbox, check the `UIDVALIDITY` of the mailbox is 50 and
 fetch message 2 if it is:
 
-    imap://user:password@mail.example.com/INBOX;UIDVALIDITY=50/;UID=2
+    imap://user:password@mail.example.com/INBOX;UIDVALIDITY=50/;UID_TODO=2
 
 Select the user's inbox and fetch the text portion of message 3:
 
-    imap://user:password@mail.example.com/INBOX/;UID=3/;SECTION=TEXT
+    imap://user:password@mail.example.com/INBOX/;UID_TODO=3/;SECTION=TEXT
 
 Select the user's inbox and fetch the first 1024 octets of message 4:
 
-    imap://user:password@mail.example.com/INBOX/;UID=4/;PARTIAL=0.1024
+    imap://user:password@mail.example.com/INBOX/;UID_TODO=4/;PARTIAL=0.1024
 
 Select the user's inbox and check for NEW messages:
 

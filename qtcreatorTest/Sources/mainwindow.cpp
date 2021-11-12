@@ -33,10 +33,10 @@ void MainWindow::setUpPage() {
 }
 
 void MainWindow::afterLogin() {
-    std::list<Vcalendar> l = api->getCalendars();
+    std::list<std::string> l = api->getCalendars();
     ui->listWidget_2->clear();
-    for(Vcalendar value : l)
-        ui->listWidget_2->addItem(QString(value.getName().c_str()));
+    for(std::string value : l)
+        ui->listWidget_2->addItem(QString(value.c_str()));
     ui->loginButton->setText(QString("Change user"));
     ui->createCalendarButton->setEnabled(true);
 }
@@ -49,10 +49,10 @@ void MainWindow::on_createCalendarButton_clicked() {
 }
 
 void MainWindow::updateCalendars() {
-    std::list<Vcalendar> l = api->getCalendars();
+    std::list<std::string> l = api->getCalendars();
     ui->listWidget_2->clear();
-    for(Vcalendar value : l)
-        ui->listWidget_2->addItem(QString(value.getName().c_str()));
+    for(std::string value : l)
+        ui->listWidget_2->addItem(QString(value.c_str()));
 }
 
 void MainWindow::ProvideContextMenu(const QPoint &pos) {
@@ -66,7 +66,7 @@ void MainWindow::ProvideContextMenu(const QPoint &pos) {
         std::list<std::string> list = api->deleteCalendar(name);
         api->clearCalendars();
         for(std::string v : list)
-            api->addCalendar(Vcalendar(v)); //TODO: complete the Vcalendar constructor
+            api->addCalendar(v); //TODO: complete the Vcalendar constructor
         ui->listWidget_2->takeItem(ui->listWidget_2->indexAt(pos).row());
     }
 }

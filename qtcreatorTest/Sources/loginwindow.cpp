@@ -6,7 +6,7 @@
 
 #include "Headers/loginwindow.h"
 #include "../Headers/ui_loginwindow.h"
-
+#include "Headers/IcsParser.h"
 
 loginwindow::loginwindow(QWidget *parent) :
     QDialog(parent), ui(new Ui::loginwindow) {
@@ -18,7 +18,6 @@ loginwindow::~loginwindow() {
     delete ui;
     delete api;
 }
-
 
 void loginwindow::on_pushButton_login_clicked() {
     QString username = ui->lineEdit_username->text();
@@ -32,13 +31,15 @@ void loginwindow::on_pushButton_login_clicked() {
         QMessageBox::information(this, "Error", "Username or password are incorrect");
     else {
         //QMessageBox::information(this, "Error", res.c_str());
+        IcsParser parser(res);
         api->setUsername(username.toStdString());
         api->setPassword(password.toStdString());
         api->setLoggedIn(true);
         api->clearCalendars();
-        std::list<std::string> names = api->retrieveAllCalendars();
-        for(std::string value : names)
-            api->addCalendar(Vcalendar(value));
+        std::list<std::string> names = api->retrieveAllCalendars(); //return only calendar names
+        for(std::string value : names) {
+            api->addCalendar(value);
+        }
         emit changeUser();
         this->close();
     }

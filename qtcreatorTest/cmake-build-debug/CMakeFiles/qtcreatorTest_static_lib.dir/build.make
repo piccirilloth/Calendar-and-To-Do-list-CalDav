@@ -53,10 +53,10 @@ RM = /snap/clion/169/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest
+CMAKE_SOURCE_DIR = /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug
+CMAKE_BINARY_DIR = /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/qtcreatorTest_static_lib.dir/depend.make
@@ -68,172 +68,172 @@ include CMakeFiles/qtcreatorTest_static_lib.dir/flags.make
 
 CMakeFiles/qtcreatorTest_static_lib.dir/qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.o: CMakeFiles/qtcreatorTest_static_lib.dir/flags.make
 CMakeFiles/qtcreatorTest_static_lib.dir/qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.o: qtcreatorTest_static_lib_autogen/mocs_compilation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/qtcreatorTest_static_lib.dir/qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest_static_lib.dir/qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.o -c /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_static_lib_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/qtcreatorTest_static_lib.dir/qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest_static_lib.dir/qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.o -c /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_static_lib_autogen/mocs_compilation.cpp
 
 CMakeFiles/qtcreatorTest_static_lib.dir/qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qtcreatorTest_static_lib.dir/qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_static_lib_autogen/mocs_compilation.cpp > CMakeFiles/qtcreatorTest_static_lib.dir/qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_static_lib_autogen/mocs_compilation.cpp > CMakeFiles/qtcreatorTest_static_lib.dir/qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/qtcreatorTest_static_lib.dir/qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qtcreatorTest_static_lib.dir/qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_static_lib_autogen/mocs_compilation.cpp -o CMakeFiles/qtcreatorTest_static_lib.dir/qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_static_lib_autogen/mocs_compilation.cpp -o CMakeFiles/qtcreatorTest_static_lib.dir/qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Easy.cpp.o: CMakeFiles/qtcreatorTest_static_lib.dir/flags.make
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Easy.cpp.o: ../curlpp-0.8.1/src/curlpp/Easy.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Easy.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Easy.cpp.o -c /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Easy.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Easy.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Easy.cpp.o -c /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Easy.cpp
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Easy.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Easy.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Easy.cpp > CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Easy.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Easy.cpp > CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Easy.cpp.i
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Easy.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Easy.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Easy.cpp -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Easy.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Easy.cpp -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Easy.cpp.s
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Exception.cpp.o: CMakeFiles/qtcreatorTest_static_lib.dir/flags.make
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Exception.cpp.o: ../curlpp-0.8.1/src/curlpp/Exception.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Exception.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Exception.cpp.o -c /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Exception.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Exception.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Exception.cpp.o -c /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Exception.cpp
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Exception.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Exception.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Exception.cpp > CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Exception.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Exception.cpp > CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Exception.cpp.i
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Exception.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Exception.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Exception.cpp -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Exception.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Exception.cpp -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Exception.cpp.s
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Form.cpp.o: CMakeFiles/qtcreatorTest_static_lib.dir/flags.make
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Form.cpp.o: ../curlpp-0.8.1/src/curlpp/Form.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Form.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Form.cpp.o -c /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Form.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Form.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Form.cpp.o -c /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Form.cpp
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Form.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Form.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Form.cpp > CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Form.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Form.cpp > CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Form.cpp.i
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Form.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Form.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Form.cpp -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Form.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Form.cpp -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Form.cpp.s
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Info.cpp.o: CMakeFiles/qtcreatorTest_static_lib.dir/flags.make
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Info.cpp.o: ../curlpp-0.8.1/src/curlpp/Info.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Info.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Info.cpp.o -c /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Info.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Info.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Info.cpp.o -c /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Info.cpp
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Info.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Info.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Info.cpp > CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Info.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Info.cpp > CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Info.cpp.i
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Info.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Info.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Info.cpp -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Info.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Info.cpp -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Info.cpp.s
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Multi.cpp.o: CMakeFiles/qtcreatorTest_static_lib.dir/flags.make
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Multi.cpp.o: ../curlpp-0.8.1/src/curlpp/Multi.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Multi.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Multi.cpp.o -c /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Multi.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Multi.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Multi.cpp.o -c /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Multi.cpp
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Multi.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Multi.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Multi.cpp > CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Multi.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Multi.cpp > CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Multi.cpp.i
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Multi.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Multi.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Multi.cpp -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Multi.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Multi.cpp -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Multi.cpp.s
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/OptionBase.cpp.o: CMakeFiles/qtcreatorTest_static_lib.dir/flags.make
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/OptionBase.cpp.o: ../curlpp-0.8.1/src/curlpp/OptionBase.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/OptionBase.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/OptionBase.cpp.o -c /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/OptionBase.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/OptionBase.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/OptionBase.cpp.o -c /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/OptionBase.cpp
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/OptionBase.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/OptionBase.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/OptionBase.cpp > CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/OptionBase.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/OptionBase.cpp > CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/OptionBase.cpp.i
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/OptionBase.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/OptionBase.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/OptionBase.cpp -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/OptionBase.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/OptionBase.cpp -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/OptionBase.cpp.s
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Options.cpp.o: CMakeFiles/qtcreatorTest_static_lib.dir/flags.make
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Options.cpp.o: ../curlpp-0.8.1/src/curlpp/Options.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Options.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Options.cpp.o -c /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Options.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Options.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Options.cpp.o -c /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Options.cpp
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Options.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Options.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Options.cpp > CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Options.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Options.cpp > CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Options.cpp.i
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Options.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Options.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Options.cpp -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Options.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/Options.cpp -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Options.cpp.s
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/cURLpp.cpp.o: CMakeFiles/qtcreatorTest_static_lib.dir/flags.make
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/cURLpp.cpp.o: ../curlpp-0.8.1/src/curlpp/cURLpp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/cURLpp.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/cURLpp.cpp.o -c /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/cURLpp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/cURLpp.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/cURLpp.cpp.o -c /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/cURLpp.cpp
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/cURLpp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/cURLpp.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/cURLpp.cpp > CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/cURLpp.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/cURLpp.cpp > CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/cURLpp.cpp.i
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/cURLpp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/cURLpp.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/cURLpp.cpp -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/cURLpp.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/cURLpp.cpp -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/cURLpp.cpp.s
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.o: CMakeFiles/qtcreatorTest_static_lib.dir/flags.make
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.o: ../curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.o -c /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.o -c /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp > CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp > CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.i
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.s
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.o: CMakeFiles/qtcreatorTest_static_lib.dir/flags.make
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.o: ../curlpp-0.8.1/src/curlpp/internal/OptionList.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.o -c /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.o -c /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp > CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp > CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.i
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.s
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.o: CMakeFiles/qtcreatorTest_static_lib.dir/flags.make
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.o: ../curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.o -c /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.o -c /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp > CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp > CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.i
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.s
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/SList.cpp.o: CMakeFiles/qtcreatorTest_static_lib.dir/flags.make
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/SList.cpp.o: ../curlpp-0.8.1/src/curlpp/internal/SList.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/SList.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/SList.cpp.o -c /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/internal/SList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/SList.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/SList.cpp.o -c /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/internal/SList.cpp
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/SList.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/SList.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/internal/SList.cpp > CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/SList.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/internal/SList.cpp > CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/SList.cpp.i
 
 CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/SList.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/SList.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/internal/SList.cpp -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/SList.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/src/curlpp/internal/SList.cpp -o CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/SList.cpp.s
 
 # Object files for target qtcreatorTest_static_lib
 qtcreatorTest_static_lib_OBJECTS = \
@@ -269,7 +269,7 @@ libqtcreatorTest_static_lib.a: CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.
 libqtcreatorTest_static_lib.a: CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/SList.cpp.o
 libqtcreatorTest_static_lib.a: CMakeFiles/qtcreatorTest_static_lib.dir/build.make
 libqtcreatorTest_static_lib.a: CMakeFiles/qtcreatorTest_static_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX static library libqtcreatorTest_static_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX static library libqtcreatorTest_static_lib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/qtcreatorTest_static_lib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/qtcreatorTest_static_lib.dir/link.txt --verbose=$(VERBOSE)
 
@@ -282,6 +282,6 @@ CMakeFiles/qtcreatorTest_static_lib.dir/clean:
 .PHONY : CMakeFiles/qtcreatorTest_static_lib.dir/clean
 
 CMakeFiles/qtcreatorTest_static_lib.dir/depend:
-	cd /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles/qtcreatorTest_static_lib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles/qtcreatorTest_static_lib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/qtcreatorTest_static_lib.dir/depend
 

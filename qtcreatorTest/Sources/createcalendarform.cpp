@@ -25,10 +25,10 @@ void CreateCalendarForm::on_pushButton_create_clicked() {
     if(name.toStdString().size() > 30)
         QMessageBox::information(this, "Error", "maximum name size: 30");
     else {
-        std::list<Vcalendar> l = api->getCalendars();
+        std::list<std::string> l = api->getCalendars();
         bool flag = false;
-        for(Vcalendar v : l)
-            if(v.getName() == name.toStdString())
+        for(std::string v : l)
+            if(v == name.toStdString())
                 flag = true;
         if(flag)
             QMessageBox::information(this, "Error", "duplicated name");
@@ -38,7 +38,7 @@ void CreateCalendarForm::on_pushButton_create_clicked() {
             std::list<std::string> names = api->retrieveAllCalendars();
             api->clearCalendars();
             for(std::string value : names)
-                api->addCalendar(Vcalendar(value));
+                api->addCalendar(value);
             emit createCalendar();
             this->close();
         }

@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "qtcreatorTest_autogen"
   "CMakeFiles/qtcreatorTest.dir/Sources/API.cpp.o"
   "CMakeFiles/qtcreatorTest.dir/Sources/Date.cpp.o"
+  "CMakeFiles/qtcreatorTest.dir/Sources/IcsParser.cpp.o"
   "CMakeFiles/qtcreatorTest.dir/Sources/Vcalendar.cpp.o"
   "CMakeFiles/qtcreatorTest.dir/Sources/Vevent.cpp.o"
   "CMakeFiles/qtcreatorTest.dir/Sources/Vtodo.cpp.o"

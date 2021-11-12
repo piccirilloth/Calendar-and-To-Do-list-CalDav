@@ -9,6 +9,7 @@
 #include "curlpp-0.8.1/include/curlpp/Options.hpp"
 #include "curlpp-0.8.1/include/curlpp/Exception.hpp"
 #include "Headers/API.h"
+#include "Headers/IcsParser.h"
 
 std::string downloadCalendars() {
     curlpp::Cleanup init;
@@ -31,7 +32,7 @@ std::string downloadCalendars() {
            "</c:calendar-query>";
     try {
         handle.setOpt(curlpp::Options::Url(
-                std::string("http://192.168.1.13/progetto/calendarserver.php/calendars/lorenzo/home")));
+                std::string("http://192.168.1.7/progetto/calendarserver.php/calendars/oscar/home")));
         handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
         handle.setOpt(new curlpp::options::UserPwd("lorenzo:pintaldi"));
         handle.setOpt(new curlpp::Options::CustomRequest("REPORT"));
@@ -63,8 +64,8 @@ void updateCalendar() {
            "VERSION:2.0\r\n"
            "CALSCALE:GREGORIAN\r\n"
            "BEGIN:VEVENT\r\n"
-           "UID:132456-34365\r\n"
-           "SUMMARY:Weekly meeting\r\n"
+           "UID_TODO:132456-34365\r\n"
+           "SUMMARY_TODO:Weekly meeting\r\n"
            "DTSTART:20120101T120000\r\n"
            "DURATION:PT1H\r\n"
            "RRULE:FREQ=WEEKLY\r\n"
@@ -97,19 +98,19 @@ void shareCalendar() {
     std::string result;
     std::string body;
     std::ostringstream str;
-    headers.push_back("Content-Type: application/davsharing+icsText; charset=\"utf-8\"");
+    headers.push_back("Content-Type: application/davsharing+xml; charset=\"utf-8\"");
     //headers.push_back("If-None-Match: *");
     /*body = "BEGIN:VCALENDAR\r\n"
            "VERSION:2.0\r\n"
            "PRODID:-//Sabre//Sabre VObject 4.2.2//EN\r\n"
            "BEGIN:VEVENT\r\n"
-           "UID:9263504FD3AD\r\n"
+           "UID_TODO:9263504FD3AD\r\n"
            "SEQUENCE:0\r\n"
-           "DTSTAMP:20090602T185254Z\r\n"
+           "DTSTAMP_TODO:20090602T185254Z\r\n"
            "DTSTART:20090602T160000Z\r\n"
            "DTEND:20090602T170000Z\r\n"
            "TRANSP:OPAQUE\r\n"
-           "SUMMARY:Lunch\r\n"
+           "SUMMARY_TODO:Lunch\r\n"
            "ORGANIZER;CN=\"lorenzo\":lore.pinta998@gmail.com\r\n"
            "ATTENDEE;CN=\"oscar\";CUTYPE=INDIVIDUAL;PARTSTAT=ACCEPTED:\r\n"
            " piccipicc@gmail.com\r\n"
@@ -153,7 +154,27 @@ int main(int argc, char *argv[]) {
     MainWindow w;
     w.show();
     return a.exec();*/
-    Vcalendar tmp(downloadCalendars());
-    //std::cout << tmp << '\n';
+    std::string ics = "BEGIN:VCALENDAR\n"
+                      "VERSION:2.0\n"
+                      "PRODID:-//Sabre//Sabre VObject 4.2.2//EN\n"
+                      "BEGIN:VEVENT\n"
+                      "UID:9263504FD3AD\n"
+                      "SEQUENCE:0\n"
+                      "DTSTAMP:20090602T185254Z\n"
+                      "DTSTART:20090602T160000Z\n"
+                      "DTEND:20090602T170000Z\n"
+                      "TRANSP:OPAQUE\n"
+                      "SUMMARY:Lunch\n"
+                      "END:VEVENT\n"
+                      "BEGIN:VTODO\n"
+                      "UID:132456762153245\n"
+                      "SUMMARY:Do the dishes\n"
+                      "DUE:20121028T115600Z\n"
+                      "END:VTODO\n"
+                      "END:VCALENDAR\n";
+    Vcalendar tmp("prova");
+    IcsParser parser(ics);
+    parser.getVCalendar(std::ref(tmp));
+    std::cout << tmp << '\n';
     return 0;
 }

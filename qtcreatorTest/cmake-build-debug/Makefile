@@ -57,10 +57,10 @@ RM = /snap/clion/169/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest
+CMAKE_SOURCE_DIR = /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug
+CMAKE_BINARY_DIR = /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nzazzo/Scrivania/PDS_Updated/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -286,6 +286,30 @@ Sources/Date.s: Sources/Date.cpp.s
 Sources/Date.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/Date.cpp.s
 .PHONY : Sources/Date.cpp.s
+
+Sources/IcsParser.o: Sources/IcsParser.cpp.o
+.PHONY : Sources/IcsParser.o
+
+# target to build an object file
+Sources/IcsParser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/IcsParser.cpp.o
+.PHONY : Sources/IcsParser.cpp.o
+
+Sources/IcsParser.i: Sources/IcsParser.cpp.i
+.PHONY : Sources/IcsParser.i
+
+# target to preprocess a source file
+Sources/IcsParser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/IcsParser.cpp.i
+.PHONY : Sources/IcsParser.cpp.i
+
+Sources/IcsParser.s: Sources/IcsParser.cpp.s
+.PHONY : Sources/IcsParser.s
+
+# target to generate assembly for a file
+Sources/IcsParser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/IcsParser.cpp.s
+.PHONY : Sources/IcsParser.cpp.s
 
 Sources/Vcalendar.o: Sources/Vcalendar.cpp.o
 .PHONY : Sources/Vcalendar.o
@@ -875,6 +899,9 @@ help:
 	@echo "... Sources/Date.o"
 	@echo "... Sources/Date.i"
 	@echo "... Sources/Date.s"
+	@echo "... Sources/IcsParser.o"
+	@echo "... Sources/IcsParser.i"
+	@echo "... Sources/IcsParser.s"
 	@echo "... Sources/Vcalendar.o"
 	@echo "... Sources/Vcalendar.i"
 	@echo "... Sources/Vcalendar.s"

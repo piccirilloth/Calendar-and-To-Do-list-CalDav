@@ -4,11 +4,11 @@
 
 #include "Headers/API.h"
 
-std::string API::IPADDRESS = "192.168.1.13";
+std::string API::IPADDRESS = "192.168.1.7";
 std::string API::username = "";
 std::string API::password = "";
 bool API::loggedIn = false;
-std::list<Vcalendar> API::calendars;
+std::list<std::string> API::calendarNames;
 
 API::API() {}
 
@@ -21,7 +21,7 @@ std::string API::login(std::string const &username, std::string const &password)
     std::ostringstream str;
     headers.push_back("Depth: 1");
     headers.push_back("Prefer: return-minimal");
-    headers.push_back("Content-Type: application/icsText; charset=utf-8");
+    headers.push_back("Content-Type: application/xml; charset=utf-8");
     body = "<d:propfind xmlns:d=\"DAV:\" xmlns:cs=\"http://calendarserver.org/ns/\" xmlns:c=\"urn:ietf:params:icsText:ns:caldav\">\n"
            "  <d:prop>\n"
            "     <d:resourcetype />\n"
@@ -61,7 +61,7 @@ std::list<std::string> API::retrieveAllCalendars() {
 
     headers.push_back("Depth: 1");
     headers.push_back("Prefer: return-minimal");
-    headers.push_back("Content-Type: application/icsText; charset=utf-8");
+    headers.push_back("Content-Type: application/xml; charset=utf-8");
     body = "<d:propfind xmlns:d=\"DAV:\" xmlns:cs=\"http://calendarserver.org/ns/\" xmlns:c=\"urn:ietf:params:icsText:ns:caldav\">\n"
            "  <d:prop>\n"
            "     <d:resourcetype />\n"
@@ -120,7 +120,7 @@ void API::createEmptyCalendar(std::string const &calendarName) {
     std::string result;
     std::string body;
     std::ostringstream str;
-    headers.push_back("Content-Type: application/icsText; charset=utf-8");
+    headers.push_back("Content-Type: application/xml; charset=utf-8");
     try {
         handle.setOpt(curlpp::Options::Url(
                 std::string("http://" + IPADDRESS + "/progetto/calendarserver.php/calendars/" + username + "/" + calendarName)));

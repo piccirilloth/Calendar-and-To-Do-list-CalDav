@@ -184,10 +184,10 @@
    Kerberos 5 (4) and External.
  - list the folders of a mailbox
  - select a mailbox with support for verifying the UIDVALIDITY
- - fetch e-mails with support for specifying the UID and SECTION
+ - fetch e-mails with support for specifying the UID_TODO and SECTION
  - upload e-mails via the append command
  - enhanced command support for: EXAMINE, CREATE, DELETE, RENAME, STATUS,
-   STORE, COPY and UID via custom requests
+   STORE, COPY and UID_TODO via custom requests
  - via http-proxy
 
 ## IMAPS (1)
