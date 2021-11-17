@@ -20,6 +20,7 @@ private:
     std::string calscale;
     std::list<Vevent> events;
     std::list<Vtodo> todos;
+    long nextUid;
 public:
     explicit Vcalendar(std::string const &name);
     Vcalendar();
@@ -28,6 +29,10 @@ public:
     void addEvent(Vevent const &event);
 
     void addTodo(Vtodo const &todo);
+
+    long getNextUid() const;
+
+    void setNextUid(long nextUid);
 
     const string &getIcsText() const;
 

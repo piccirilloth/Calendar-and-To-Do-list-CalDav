@@ -68,12 +68,12 @@ public:
         createCalendarButton = new QPushButton(centralwidget);
         createCalendarButton->setObjectName(QString::fromUtf8("createCalendarButton"));
         createCalendarButton->setEnabled(false);
-        createCalendarButton->setGeometry(QRect(960, 0, 101, 41));
+        createCalendarButton->setGeometry(QRect(960, 0, 121, 41));
         createCalendarButton->setFlat(false);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1505, 22));
+        menubar->setGeometry(QRect(0, 0, 1505, 23));
         menuLogi = new QMenu(menubar);
         menuLogi->setObjectName(QString::fromUtf8("menuLogi"));
         MainWindow->setMenuBar(menubar);

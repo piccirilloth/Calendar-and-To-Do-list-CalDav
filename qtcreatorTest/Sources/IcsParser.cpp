@@ -256,6 +256,18 @@ void IcsParser::getVCalendar(Vcalendar &calendar) {
             }
         }
     }
+    long max = -1;
+    for(Vevent ev : calendar.getEvents()) {
+        long v = std::stol(ev.getUid());
+        if(v > max)
+            max = v;
+    }
+    for(Vtodo td : calendar.getTodos()) {
+        long v = std::stol(td.getUid());
+        if(v > max)
+            max = v;
+    }
+    calendar.setNextUid(max+1);
 }
 
 std::string IcsParser::getIcsFileVevent(const Vcalendar &calendar, const std::string &uid) {

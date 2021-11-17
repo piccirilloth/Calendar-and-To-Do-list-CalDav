@@ -64,23 +64,24 @@ void updateCalendar() {
     body = "BEGIN:VCALENDAR\r\n"
            "VERSION:2.0\r\n"
            "PRODID:-//Sabre//Sabre VObject 4.2.2//EN\r\n"
-           /*"BEGIN:VEVENT\r\n"
+           "BEGIN:VEVENT\r\n"
            "SEQUENCE:0\r\n"
+           "UID:12"
            "DTSTAMP:20090602T185254Z\r\n"
            "DTSTART:20090602T160000Z\r\n"
            "DTEND:20090602T170000Z\r\n"
            "TRANSP:OPAQUE\r\n"
            "SUMMARY:Lunch\r\n"
-           "END:VEVENT\r\n"*/
-           "BEGIN:VTODO\r\n"
-           "UID:132456762153245\r\n"
+           "END:VEVENT\r\n"
+           /*"BEGIN:VTODO\r\n"
+           "UID:1\r\n"
            "SUMMARY:Do the dishes\r\n"
            "DUE:20121028T115600Z\r\n"
-           "END:VTODO\r\n"
+           "END:VTODO\r\n"*/
            "END:VCALENDAR\r\n";
     try {
         handle.setOpt(curlpp::Options::Url(
-                std::string("http://192.168.1.7/progetto/calendarserver.php/calendars/oscar/calendar1/cal1.ics")));
+                std::string("http://192.168.1.7/progetto/calendarserver.php/calendars/oscar/calendar1/cal.ics")));
         handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
         handle.setOpt(new curlpp::options::UserPwd("oscar:piccirillo"));
         handle.setOpt(new curlpp::Options::CustomRequest("PUT"));
@@ -158,34 +159,18 @@ void shareCalendar() {
 }
 
 int main(int argc, char *argv[]) {
-    /*QApplication a(argc, argv);
+    updateCalendar();
+    QApplication a(argc, argv);
     MainWindow w;
     w.show();
-    return a.exec();*/
-    std::string ics = "BEGIN:VCALENDAR\r\n"
-                      "VERSION:2.0\r\n"
-                      "PRODID:-//Sabre//Sabre VObject 4.2.2//EN\r\n"
-                      "BEGIN:VEVENT\r\n"
-                      "UID:9263504FD3AD\r\n"
-                      "SEQUENCE:0\r\n"
-                      "DTSTAMP:20090602T185254Z\r\n"
-                      "DTSTART:20090602T160000Z\r\n"
-                      "DTEND:20090602T170000Z\r\n"
-                      "TRANSP:OPAQUE\r\n"
-                      "SUMMARY:Lunch\r\n"
-                      "END:VEVENT\r\n"
-                      /*"BEGIN:VTODO\r\n"
-                      "UID:132456762153245\r\n"
-                      "SUMMARY:Do the dishes\r\n"
-                      "DUE:20121028T115600Z\r\n"
-                      "END:VTODO\r\n"*/
-                      "END:VCALENDAR\r\n";
-    Vcalendar tmp("prova");
+    return a.exec();
+
+    /*Vcalendar tmp("prova");
     IcsParser parser(downloadCalendars());
     parser.getVCalendar(std::ref(tmp));
     std::cout << tmp << '\n';
     //updateCalendar();
     std::cout << parser.getIcsFileVevent(tmp, "sabre-vobject-e7df1a0c-3642-4a41-bb66-08c39330ae89") << '\n';
     std::cout << parser.getIcsFileVtodo(tmp, "132456762153245") << '\n';
-    return 0;
+    return 0;*/
 }

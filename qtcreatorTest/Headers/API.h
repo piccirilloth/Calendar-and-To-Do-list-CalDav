@@ -12,6 +12,7 @@
 #include "../curlpp-0.8.1/include/curlpp/Options.hpp"
 #include "../curlpp-0.8.1/include/curlpp/Exception.hpp"
 #include "Vcalendar.h"
+#include "IcsParser.h"
 
 class API {
 private:
@@ -74,7 +75,7 @@ public:
     std::string login(std::string const &username, std::string const &password);
     std::list<std::string> retrieveAllCalendars();
     void createEmptyCalendar(std::string const &calendarName);
-
+    Vcalendar downloadCalendarObjects(std::string const &calendarName);
     std::list<std::string> deleteCalendar(std::string const &name);
 };
 

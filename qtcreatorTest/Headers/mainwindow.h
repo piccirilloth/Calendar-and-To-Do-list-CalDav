@@ -27,10 +27,12 @@ private slots:
     void on_createCalendarButton_clicked();
     void updateCalendars();
     void ProvideContextMenu(const QPoint &pos);
+    void on_dbclick();
 
 private:
     Ui::MainWindow *ui;
     loginwindow *login;
     API *api;
+    Vcalendar currentCalendar;
 };
 #endif // MAINWINDOW_H

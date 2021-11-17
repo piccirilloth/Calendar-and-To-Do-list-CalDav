@@ -93,3 +93,11 @@ ostream &operator<<(ostream &os, const Vcalendar &vcal) {
         os << event.getUid() << '\n';
     return os;
 }
+
+long Vcalendar::getNextUid() const {
+    return nextUid;
+}
+
+void Vcalendar::setNextUid(long nextUid) {
+    Vcalendar::nextUid = nextUid;
+}

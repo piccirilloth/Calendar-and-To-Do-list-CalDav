@@ -4,6 +4,7 @@
 CMakeFiles/qtcreatorTest.dir/Sources/API.cpp.o: \
  ../Headers/API.h \
  ../Headers/Date.h \
+ ../Headers/IcsParser.h \
  ../Headers/Vcalendar.h \
  ../Headers/Vevent.h \
  ../Headers/Vtodo.h \
@@ -55,6 +56,7 @@ CMakeFiles/qtcreatorTest.dir/Sources/Vtodo.cpp.o: \
 CMakeFiles/qtcreatorTest.dir/Sources/createcalendarform.cpp.o: \
  ../Headers/API.h \
  ../Headers/Date.h \
+ ../Headers/IcsParser.h \
  ../Headers/Vcalendar.h \
  ../Headers/Vevent.h \
  ../Headers/Vtodo.h \
@@ -395,6 +397,7 @@ CMakeFiles/qtcreatorTest.dir/Sources/mainwindow.cpp.o: \
  ../curlpp-0.8.1/include/utilspp/clone_ptr.hpp \
  ../Headers/API.h \
  ../Headers/Date.h \
+ ../Headers/IcsParser.h \
  ../Headers/Vcalendar.h \
  ../Headers/Vevent.h \
  ../Headers/Vtodo.h \
@@ -731,6 +734,7 @@ CMakeFiles/qtcreatorTest.dir/qtcreatorTest_autogen/mocs_compilation.cpp.o: \
  ../curlpp-0.8.1/include/utilspp/clone_ptr.hpp \
  ../Headers/API.h \
  ../Headers/Date.h \
+ ../Headers/IcsParser.h \
  ../Headers/Vcalendar.h \
  ../Headers/Vevent.h \
  ../Headers/Vtodo.h \

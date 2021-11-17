@@ -11,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->listWidget_2->setContextMenuPolicy(Qt::CustomContextMenu);
     api = new API();
     connect(ui->listWidget_2, SIGNAL(customContextMenuRequested(const QPoint &)), this, SLOT(ProvideContextMenu(const QPoint &)));
+    connect(ui->listWidget_2, SIGNAL(itemDoubleClicked(QListWidgetItem*)), this, SLOT(on_dbclick()));
 }
 
 MainWindow::~MainWindow()
@@ -66,8 +67,18 @@ void MainWindow::ProvideContextMenu(const QPoint &pos) {
         std::list<std::string> list = api->deleteCalendar(name);
         api->clearCalendars();
         for(std::string v : list)
-            api->addCalendar(v); //TODO: complete the Vcalendar constructor
+            api->addCalendar(v);
         ui->listWidget_2->takeItem(ui->listWidget_2->indexAt(pos).row());
     }
+}
+
+void MainWindow::on_dbclick() {
+    QString calendarName = ui->listWidget_2->currentItem()->text();
+    currentCalendar = api->downloadCalendarObjects(calendarName.toStdString());
+    ui->listWidget->clear();
+    for(Vevent ev : currentCalendar.getEvents()) //todo: change here for manage events and todos
+        ui->listWidget->addItem(QString(ev.getSummary().c_str()));
+    for(Vtodo td : currentCalendar.getTodos())
+        ui->listWidget->addItem(QString(td.getSummary().c_str()));
 }
 
