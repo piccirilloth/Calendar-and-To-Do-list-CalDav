@@ -15,10 +15,10 @@ string Date::Format() const {
 }
 
 Date::operator string() const {
-    char Temp[15];
+    char Temp[16];
     sprintf(Temp, "%.4d%.2d%.2d", Data[YEAR], Data[MONTH], Data[DAY]);
     if (WithTime == true)
-        sprintf(Temp+8, "T%.2d%.2d%.2d", Data[HOUR], Data[MINUTE], Data[SECOND]);
+        sprintf(Temp+8, "T%.2d%.2d%.2dZ", Data[HOUR], Data[MINUTE], Data[SECOND]);
     return string(Temp);
 }
 

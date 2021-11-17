@@ -15,8 +15,8 @@ public:
     IcsParser(std::string const &icsFile);
     IcsParser(Vcalendar const &calendar);
     void getVCalendar(Vcalendar &calendar);
-    std::string getIcsFile(Vcalendar const &calendar);
-
+    std::string getIcsFileVevent(Vcalendar const &calendar, const std::string &uid);
+    std::string getIcsFileVtodo(Vcalendar const &calendar, const std::string &uid);
 };
 
 

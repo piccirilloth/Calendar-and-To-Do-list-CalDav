@@ -6,6 +6,40 @@
 
 #IncludeRegexTransform: 
 
+../Headers/Date.h
+string
+-
+cstdio
+-
+ctime
+-
+
+../Headers/IcsParser.h
+iostream
+-
+Vcalendar.h
+../Headers/Vcalendar.h
+
+../Headers/Vcalendar.h
+Date.h
+../Headers/Date.h
+Vevent.h
+../Headers/Vevent.h
+Vtodo.h
+../Headers/Vtodo.h
+list
+-
+
+../Headers/Vevent.h
+Date.h
+../Headers/Date.h
+
+../Headers/Vtodo.h
+Date.h
+../Headers/Date.h
+iostream
+-
+
 ../curlpp-0.8.1/include/utilspp/clone_ptr.hpp
 cassert
 -
@@ -89,6 +123,10 @@ createcalendarform.h
 /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/createcalendarform.h
 list
 -
+
+/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Sources/IcsParser.cpp
+Headers/IcsParser.h
+/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Sources/Headers/IcsParser.h
 
 /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include/curlpp/Easy.hpp
 internal/CurlHandle.hpp
@@ -245,6 +283,8 @@ Headers/API.h
 /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/API.h
 Headers/IcsParser.h
 /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/IcsParser.h
+Headers/Date.h
+-
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
 QtCore/qglobal.h

@@ -578,6 +578,7 @@ CMakeFiles/qtcreatorTest.dir/Sources/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
  qtcreatorTest_autogen/Headers/ui_mainwindow.h
 CMakeFiles/qtcreatorTest.dir/main.cpp.o: \
+ ../Headers/Date.h \
  ../curlpp-0.8.1/include/utilspp/clone_ptr.hpp \
  ../Headers/API.h \
  ../Headers/Date.h \
