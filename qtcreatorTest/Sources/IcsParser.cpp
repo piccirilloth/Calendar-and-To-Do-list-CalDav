@@ -4,7 +4,9 @@
 
 #include "Headers/IcsParser.h"
 
-IcsParser::IcsParser(const std::string &icsFile): icsFile(icsFile) { }
+#include <utility>
+
+IcsParser::IcsParser(std::string icsFile): icsFile(std::move(icsFile)) { }
 
 enum CalendarAttributes {
     VERSION,
@@ -257,12 +259,12 @@ void IcsParser::getVCalendar(Vcalendar &calendar) {
         }
     }
     long max = -1;
-    for(Vevent ev : calendar.getEvents()) {
+    for(const Vevent& ev : calendar.getEvents()) {
         long v = std::stol(ev.getUid());
         if(v > max)
             max = v;
     }
-    for(Vtodo td : calendar.getTodos()) {
+    for(const Vtodo& td : calendar.getTodos()) {
         long v = std::stol(td.getUid());
         if(v > max)
             max = v;
@@ -273,22 +275,22 @@ void IcsParser::getVCalendar(Vcalendar &calendar) {
 std::string IcsParser::getIcsFileVevent(const Vcalendar &calendar, const std::string &uid) {
     Vevent event;
     bool found = false;
-    for(Vevent ev : calendar.getEvents())
+    for(const Vevent& ev : calendar.getEvents())
         if(ev.getUid() == uid) {
             found = true;
             event = ev;
         }
-    if(found == false)
-        return "The event does not exist";
+    if(!found)
+        return ""; //error
     std::string retValue = "BEGIN:VCALENDAR\r\n";
-    if(calendar.getVersion() != "")
+    if(!calendar.getVersion().empty())
         retValue.append("VERSION:" + calendar.getVersion() + "\r\n");
-    if(calendar.getProdid() != "")
+    if(!calendar.getProdid().empty())
         retValue.append("PRODID:" + calendar.getProdid() + "\r\n");
     retValue.append("BEGIN:VEVENT\r\n");
-    if(event.getUid() != "")
+    if(!event.getUid().empty())
         retValue.append("UID:" + event.getUid() + "\r\n");
-    if(event.getSequence() != "")
+    if(!event.getSequence().empty())
         retValue.append("SEQUENCE:" + event.getSequence() + "\r\n");
     if(static_cast<std::string>(event.getDtstamp()) != "00000000")
         retValue.append("DTSTAMP:" + static_cast<std::string>(event.getDtstamp()) + "\r\n");
@@ -296,9 +298,9 @@ std::string IcsParser::getIcsFileVevent(const Vcalendar &calendar, const std::st
         retValue.append("DTSTART:" + static_cast<std::string>(event.getDtstart()) + "\r\n");
     if(static_cast<std::string>(event.getDtend()) != "00000000")
         retValue.append("DTEND:" + static_cast<std::string>(event.getDtend()) + "\r\n");
-    if(event.getTransp() != "")
+    if(!event.getTransp().empty())
         retValue.append("TRANSP:" + event.getTransp() + "\r\n");
-    if(event.getSummary() != "")
+    if(!event.getSummary().empty())
         retValue.append("SUMMARY:" + event.getSummary() + "\r\n");
     retValue.append("END:VEVENT\r\n");
     retValue.append("END:VCALENDAR\r\n");
@@ -308,34 +310,39 @@ std::string IcsParser::getIcsFileVevent(const Vcalendar &calendar, const std::st
 std::string IcsParser::getIcsFileVtodo(const Vcalendar &calendar, const std::string &uid) {
     Vtodo todo;
     bool found = false;
-    for(Vtodo td : calendar.getTodos())
+    for(const Vtodo& td : calendar.getTodos())
         if(td.getUid() == uid) {
             found = true;
             todo = td;
         }
-    if(found == false)
-        return "The event does not exist";
+    if(!found)
+        return "";
     std::string retValue = "BEGIN:VCALENDAR\r\n";
-    if(calendar.getVersion() != "")
+    if(!calendar.getVersion().empty())
         retValue.append("VERSION:" + calendar.getVersion() + "\r\n");
-    if(calendar.getProdid() != "")
+    if(!calendar.getProdid().empty())
         retValue.append("PRODID:" + calendar.getProdid() + "\r\n");
     retValue.append("BEGIN:VTODO\r\n");
-    if(todo.getUid() != "")
+    if(!todo.getUid().empty())
         retValue.append("UID:" + todo.getUid() + "\r\n");
     if(static_cast<std::string>(todo.getDtstamp()) != "00000000")
         retValue.append("DTSTAMP:" + static_cast<std::string>(todo.getDtstamp()) + "\r\n");
-    if(static_cast<std::string>(todo.getDue()) != "00000000")
-        retValue.append("DTSTART:" + static_cast<std::string>(todo.getDue()) + "\r\n");
     if(static_cast<std::string>(todo.getDtstart()) != "00000000")
-        retValue.append("DTEND:" + static_cast<std::string>(todo.getDtstart()) + "\r\n");
+        retValue.append("DTSTART:" + static_cast<std::string>(todo.getDue()) + "\r\n");
+    if(static_cast<std::string>(todo.getDue()) != "00000000")
+        retValue.append("DTDUE:" + static_cast<std::string>(todo.getDtstart()) + "\r\n");
     if(static_cast<std::string>(todo.getCompleted()) != "00000000")
-        retValue.append("DTEND:" + static_cast<std::string>(todo.getCompleted()) + "\r\n");
-    if(todo.getSummary() != "")
+        retValue.append("DTCOMPLETED:" + static_cast<std::string>(todo.getCompleted()) + "\r\n"); //todo: check completed
+    if(!todo.getSummary().empty())
         retValue.append("SUMMARY:" + todo.getSummary() + "\r\n");
     retValue.append("END:VTODO\r\n");
     retValue.append("END:VCALENDAR\r\n");
     return retValue;
 }
+
+IcsParser::IcsParser() {
+
+}
+
 
 

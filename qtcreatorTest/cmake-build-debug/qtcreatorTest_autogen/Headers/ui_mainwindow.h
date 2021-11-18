@@ -10,14 +10,11 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QCalendarWidget>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenu>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
@@ -35,8 +32,6 @@ public:
     QListWidget *listWidget_2;
     QPushButton *loginButton;
     QPushButton *createCalendarButton;
-    QMenuBar *menubar;
-    QMenu *menuLogi;
     QStatusBar *statusbar;
     QToolBar *toolBar;
 
@@ -52,7 +47,7 @@ public:
         calendarWidget->setGeometry(QRect(290, 0, 641, 631));
         listWidget = new QListWidget(centralwidget);
         listWidget->setObjectName(QString::fromUtf8("listWidget"));
-        listWidget->setGeometry(QRect(965, 91, 531, 541));
+        listWidget->setGeometry(QRect(950, 90, 531, 541));
         propic = new QFrame(centralwidget);
         propic->setObjectName(QString::fromUtf8("propic"));
         propic->setGeometry(QRect(1370, 0, 121, 80));
@@ -71,20 +66,12 @@ public:
         createCalendarButton->setGeometry(QRect(960, 0, 121, 41));
         createCalendarButton->setFlat(false);
         MainWindow->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(MainWindow);
-        menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1505, 23));
-        menuLogi = new QMenu(menubar);
-        menuLogi->setObjectName(QString::fromUtf8("menuLogi"));
-        MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
         toolBar = new QToolBar(MainWindow);
         toolBar->setObjectName(QString::fromUtf8("toolBar"));
         MainWindow->addToolBar(Qt::TopToolBarArea, toolBar);
-
-        menubar->addAction(menuLogi->menuAction());
 
         retranslateUi(MainWindow);
 
@@ -96,7 +83,6 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Calendar", nullptr));
         loginButton->setText(QApplication::translate("MainWindow", "Login", nullptr));
         createCalendarButton->setText(QApplication::translate("MainWindow", "Create a calendar", nullptr));
-        menuLogi->setTitle(QApplication::translate("MainWindow", "Home", nullptr));
         toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", nullptr));
     } // retranslateUi
 

@@ -7,6 +7,7 @@
 #include "API.h"
 #include "createcalendarform.h"
 #include <list>
+#include "IcsParser.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -28,6 +29,7 @@ private slots:
     void updateCalendars();
     void ProvideContextMenu(const QPoint &pos);
     void on_dbclick();
+    void selectedDateChange();
 
 private:
     Ui::MainWindow *ui;
