@@ -12,11 +12,13 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QCalendarWidget>
-#include <QtWidgets/QFrame>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
@@ -28,10 +30,16 @@ public:
     QWidget *centralwidget;
     QCalendarWidget *calendarWidget;
     QListWidget *listWidget;
-    QFrame *propic;
     QListWidget *listWidget_2;
     QPushButton *loginButton;
     QPushButton *createCalendarButton;
+    QListWidget *listWidget_Events;
+    QLabel *label;
+    QLabel *label_2;
+    QWidget *widget;
+    QHBoxLayout *horizontalLayout;
+    QLabel *label_3;
+    QTextBrowser *textBrowser_calName;
     QStatusBar *statusbar;
     QToolBar *toolBar;
 
@@ -39,32 +47,61 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1505, 707);
+        MainWindow->resize(1317, 516);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         calendarWidget = new QCalendarWidget(centralwidget);
         calendarWidget->setObjectName(QString::fromUtf8("calendarWidget"));
-        calendarWidget->setGeometry(QRect(290, 0, 641, 631));
+        calendarWidget->setGeometry(QRect(290, 0, 521, 471));
         listWidget = new QListWidget(centralwidget);
         listWidget->setObjectName(QString::fromUtf8("listWidget"));
-        listWidget->setGeometry(QRect(950, 90, 531, 541));
-        propic = new QFrame(centralwidget);
-        propic->setObjectName(QString::fromUtf8("propic"));
-        propic->setGeometry(QRect(1370, 0, 121, 80));
-        propic->setFrameShape(QFrame::StyledPanel);
-        propic->setFrameShadow(QFrame::Raised);
+        listWidget->setGeometry(QRect(820, 50, 241, 421));
         listWidget_2 = new QListWidget(centralwidget);
         listWidget_2->setObjectName(QString::fromUtf8("listWidget_2"));
-        listWidget_2->setGeometry(QRect(10, 80, 261, 551));
+        listWidget_2->setGeometry(QRect(10, 110, 261, 331));
         loginButton = new QPushButton(centralwidget);
         loginButton->setObjectName(QString::fromUtf8("loginButton"));
-        loginButton->setGeometry(QRect(10, 10, 261, 51));
-        loginButton->setStyleSheet(QString::fromUtf8("font: 87 16pt \"SF Pro\";"));
+        loginButton->setGeometry(QRect(10, 10, 261, 41));
+        loginButton->setStyleSheet(QString::fromUtf8("font: 87 14pt \"SF Pro\";"));
         createCalendarButton = new QPushButton(centralwidget);
         createCalendarButton->setObjectName(QString::fromUtf8("createCalendarButton"));
         createCalendarButton->setEnabled(false);
-        createCalendarButton->setGeometry(QRect(960, 0, 121, 41));
+        createCalendarButton->setGeometry(QRect(10, 60, 261, 41));
+        createCalendarButton->setStyleSheet(QString::fromUtf8("font: 14pt \"Sans Serif\";"));
         createCalendarButton->setFlat(false);
+        listWidget_Events = new QListWidget(centralwidget);
+        listWidget_Events->setObjectName(QString::fromUtf8("listWidget_Events"));
+        listWidget_Events->setGeometry(QRect(1070, 50, 241, 421));
+        label = new QLabel(centralwidget);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(820, 10, 241, 31));
+        label->setLayoutDirection(Qt::LeftToRight);
+        label->setAutoFillBackground(false);
+        label->setStyleSheet(QString::fromUtf8("font: 12pt \"Lohit Telugu\";\n"
+"font: 14pt \"Sans Serif\";"));
+        label->setAlignment(Qt::AlignCenter);
+        label_2 = new QLabel(centralwidget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setGeometry(QRect(1070, 10, 241, 31));
+        label_2->setStyleSheet(QString::fromUtf8("font: 12pt \"Lohit Telugu\";\n"
+"font: 14pt \"Sans Serif\";"));
+        label_2->setAlignment(Qt::AlignCenter);
+        widget = new QWidget(centralwidget);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(10, 450, 261, 21));
+        horizontalLayout = new QHBoxLayout(widget);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        label_3 = new QLabel(widget);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+
+        horizontalLayout->addWidget(label_3);
+
+        textBrowser_calName = new QTextBrowser(widget);
+        textBrowser_calName->setObjectName(QString::fromUtf8("textBrowser_calName"));
+
+        horizontalLayout->addWidget(textBrowser_calName);
+
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -83,6 +120,9 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Calendar", nullptr));
         loginButton->setText(QApplication::translate("MainWindow", "Login", nullptr));
         createCalendarButton->setText(QApplication::translate("MainWindow", "Create a calendar", nullptr));
+        label->setText(QApplication::translate("MainWindow", "ToDo", nullptr));
+        label_2->setText(QApplication::translate("MainWindow", "Events", nullptr));
+        label_3->setText(QApplication::translate("MainWindow", "Current calendar", nullptr));
         toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", nullptr));
     } // retranslateUi
 

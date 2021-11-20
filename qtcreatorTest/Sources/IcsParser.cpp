@@ -7,6 +7,7 @@
 #include <utility>
 
 IcsParser::IcsParser(std::string icsFile): icsFile(std::move(icsFile)) { }
+IcsParser::IcsParser() { }
 
 enum CalendarAttributes {
     VERSION,
@@ -338,10 +339,6 @@ std::string IcsParser::getIcsFileVtodo(const Vcalendar &calendar, const std::str
     retValue.append("END:VTODO\r\n");
     retValue.append("END:VCALENDAR\r\n");
     return retValue;
-}
-
-IcsParser::IcsParser() {
-
 }
 
 

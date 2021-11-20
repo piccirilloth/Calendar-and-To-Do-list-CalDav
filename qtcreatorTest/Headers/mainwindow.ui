@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1505</width>
-    <height>707</height>
+    <width>1317</width>
+    <height>516</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,44 +19,28 @@
      <rect>
       <x>290</x>
       <y>0</y>
-      <width>641</width>
-      <height>631</height>
+      <width>521</width>
+      <height>471</height>
      </rect>
     </property>
    </widget>
    <widget class="QListWidget" name="listWidget">
     <property name="geometry">
      <rect>
-      <x>950</x>
-      <y>90</y>
-      <width>531</width>
-      <height>541</height>
+      <x>820</x>
+      <y>50</y>
+      <width>241</width>
+      <height>421</height>
      </rect>
-    </property>
-   </widget>
-   <widget class="QFrame" name="propic">
-    <property name="geometry">
-     <rect>
-      <x>1370</x>
-      <y>0</y>
-      <width>121</width>
-      <height>80</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
     </property>
    </widget>
    <widget class="QListWidget" name="listWidget_2">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>80</y>
+      <y>110</y>
       <width>261</width>
-      <height>551</height>
+      <height>331</height>
      </rect>
     </property>
    </widget>
@@ -66,11 +50,11 @@
       <x>10</x>
       <y>10</y>
       <width>261</width>
-      <height>51</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 87 16pt &quot;SF Pro&quot;;</string>
+     <string notr="true">font: 87 14pt &quot;SF Pro&quot;;</string>
     </property>
     <property name="text">
      <string>Login</string>
@@ -82,11 +66,14 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>960</x>
-      <y>0</y>
-      <width>121</width>
+      <x>10</x>
+      <y>60</y>
+      <width>261</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 14pt &quot;Sans Serif&quot;;</string>
     </property>
     <property name="text">
      <string>Create a calendar</string>
@@ -94,6 +81,84 @@
     <property name="flat">
      <bool>false</bool>
     </property>
+   </widget>
+   <widget class="QListWidget" name="listWidget_Events">
+    <property name="geometry">
+     <rect>
+      <x>1070</x>
+      <y>50</y>
+      <width>241</width>
+      <height>421</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>10</y>
+      <width>241</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;Lohit Telugu&quot;;
+font: 14pt &quot;Sans Serif&quot;;</string>
+    </property>
+    <property name="text">
+     <string>ToDo</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>1070</x>
+      <y>10</y>
+      <width>241</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;Lohit Telugu&quot;;
+font: 14pt &quot;Sans Serif&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Events</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>450</y>
+      <width>261</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Current calendar</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextBrowser" name="textBrowser_calName"/>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>

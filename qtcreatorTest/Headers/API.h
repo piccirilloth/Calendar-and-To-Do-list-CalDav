@@ -77,6 +77,7 @@ public:
     void createEmptyCalendar(std::string const &calendarName);
     Vcalendar downloadCalendarObjects(std::string const &calendarName);
     std::list<std::string> deleteCalendar(std::string const &name);
+    void deleteIcs(std::string const &uid, std::string const &calName);
 };
 
 

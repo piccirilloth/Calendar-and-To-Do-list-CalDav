@@ -132,6 +132,12 @@
 			null
 		],
 		[
+			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/event_information.h",
+			"MU",
+			"D2MWKIZDYH/moc_event_information.cpp",
+			null
+		],
+		[
 			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/loginwindow.h",
 			"MU",
 			"D2MWKIZDYH/moc_loginwindow.cpp",
@@ -141,6 +147,12 @@
 			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/mainwindow.h",
 			"MU",
 			"D2MWKIZDYH/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/todo_information.h",
+			"MU",
+			"D2MWKIZDYH/moc_todo_information.cpp",
 			null
 		]
 	],
@@ -233,12 +245,22 @@
 			null
 		],
 		[
+			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Sources/event_information.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Sources/loginwindow.cpp",
 			"MU",
 			null
 		],
 		[
 			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Sources/mainwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Sources/todo_information.cpp",
 			"MU",
 			null
 		],

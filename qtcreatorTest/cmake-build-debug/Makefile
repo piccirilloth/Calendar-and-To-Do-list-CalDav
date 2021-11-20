@@ -407,6 +407,30 @@ Sources/createcalendarform.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/createcalendarform.cpp.s
 .PHONY : Sources/createcalendarform.cpp.s
 
+Sources/event_information.o: Sources/event_information.cpp.o
+.PHONY : Sources/event_information.o
+
+# target to build an object file
+Sources/event_information.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/event_information.cpp.o
+.PHONY : Sources/event_information.cpp.o
+
+Sources/event_information.i: Sources/event_information.cpp.i
+.PHONY : Sources/event_information.i
+
+# target to preprocess a source file
+Sources/event_information.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/event_information.cpp.i
+.PHONY : Sources/event_information.cpp.i
+
+Sources/event_information.s: Sources/event_information.cpp.s
+.PHONY : Sources/event_information.s
+
+# target to generate assembly for a file
+Sources/event_information.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/event_information.cpp.s
+.PHONY : Sources/event_information.cpp.s
+
 Sources/loginwindow.o: Sources/loginwindow.cpp.o
 .PHONY : Sources/loginwindow.o
 
@@ -454,6 +478,30 @@ Sources/mainwindow.s: Sources/mainwindow.cpp.s
 Sources/mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/mainwindow.cpp.s
 .PHONY : Sources/mainwindow.cpp.s
+
+Sources/todo_information.o: Sources/todo_information.cpp.o
+.PHONY : Sources/todo_information.o
+
+# target to build an object file
+Sources/todo_information.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/todo_information.cpp.o
+.PHONY : Sources/todo_information.cpp.o
+
+Sources/todo_information.i: Sources/todo_information.cpp.i
+.PHONY : Sources/todo_information.i
+
+# target to preprocess a source file
+Sources/todo_information.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/todo_information.cpp.i
+.PHONY : Sources/todo_information.cpp.i
+
+Sources/todo_information.s: Sources/todo_information.cpp.s
+.PHONY : Sources/todo_information.s
+
+# target to generate assembly for a file
+Sources/todo_information.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/todo_information.cpp.s
+.PHONY : Sources/todo_information.cpp.s
 
 curlpp-0.8.1/src/curlpp/Easy.o: curlpp-0.8.1/src/curlpp/Easy.cpp.o
 .PHONY : curlpp-0.8.1/src/curlpp/Easy.o
@@ -914,12 +962,18 @@ help:
 	@echo "... Sources/createcalendarform.o"
 	@echo "... Sources/createcalendarform.i"
 	@echo "... Sources/createcalendarform.s"
+	@echo "... Sources/event_information.o"
+	@echo "... Sources/event_information.i"
+	@echo "... Sources/event_information.s"
 	@echo "... Sources/loginwindow.o"
 	@echo "... Sources/loginwindow.i"
 	@echo "... Sources/loginwindow.s"
 	@echo "... Sources/mainwindow.o"
 	@echo "... Sources/mainwindow.i"
 	@echo "... Sources/mainwindow.s"
+	@echo "... Sources/todo_information.o"
+	@echo "... Sources/todo_information.i"
+	@echo "... Sources/todo_information.s"
 	@echo "... curlpp-0.8.1/src/curlpp/Easy.o"
 	@echo "... curlpp-0.8.1/src/curlpp/Easy.i"
 	@echo "... curlpp-0.8.1/src/curlpp/Easy.s"

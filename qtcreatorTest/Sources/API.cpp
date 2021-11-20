@@ -236,5 +236,27 @@ Vcalendar API::downloadCalendarObjects(std::string const &calendarName) {
     IcsParser parser(str.str());
     Vcalendar ret;
     parser.getVCalendar(std::ref(ret));
+    ret.setName(calendarName);
     return ret;
+}
+
+void API::deleteIcs(const std::string &uid, std::string const &calName) {
+    curlpp::Cleanup init;
+    curlpp::Easy handle;
+    std::ostringstream str;
+    try {
+        handle.setOpt(curlpp::Options::Url(
+                std::string("http://" + IPADDRESS + "/progetto/calendarserver.php/calendars/" + username + "/" + calName + "/" + uid + ".ics")));
+        handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
+        handle.setOpt(new curlpp::options::UserPwd(username + ":" + password));
+        handle.setOpt(new curlpp::Options::CustomRequest("DELETE"));
+        handle.setOpt(curlpp::Options::WriteStream(&str));
+        handle.perform();
+    }
+    catch (cURLpp::RuntimeError &e) {
+        std::cout << e.what() << std::endl;
+    }
+    catch (cURLpp::LogicError &e) {
+        std::cout << e.what() << std::endl;
+    }
 }

@@ -5,7 +5,7 @@
 #include "Headers/Vtodo.h"
 
 
-Vtodo::Vtodo(string uid, string summary, Date dtstamp): uid(uid), summary(summary), dtstamp(dtstamp) { }
+Vtodo::Vtodo(string uid, string summary, Date dtstamp): uid(uid), summary(summary), dtstamp(dtstamp), priority(-1) { }
 
 const string &Vtodo::getUid() const {
     return uid;

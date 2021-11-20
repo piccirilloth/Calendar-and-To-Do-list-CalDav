@@ -7,7 +7,10 @@
 #include "API.h"
 #include "createcalendarform.h"
 #include <list>
+#include <map>
 #include "IcsParser.h"
+#include "event_information.h"
+#include "todo_information.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -27,14 +30,20 @@ private slots:
     void afterLogin();
     void on_createCalendarButton_clicked();
     void updateCalendars();
-    void ProvideContextMenu(const QPoint &pos);
+    void ProvideContextMenuCal(const QPoint &pos);
     void on_dbclick();
     void selectedDateChange();
+    void on_dbClickEvent();
+    void on_dbClickTodo();
+    void ProvideContextMenuTodo(const QPoint &pos);
+    void ProvideContextMenuEvents(const QPoint &pos);
 
 private:
     Ui::MainWindow *ui;
     loginwindow *login;
     API *api;
     Vcalendar currentCalendar;
+    std::map<int, std::string> eventMap;
+    std::map<int, std::string> todoMap;
 };
 #endif // MAINWINDOW_H
