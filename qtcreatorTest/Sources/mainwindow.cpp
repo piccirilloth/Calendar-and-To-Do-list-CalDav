@@ -91,11 +91,14 @@ void MainWindow::ProvideContextMenuCal(const QPoint &pos) {
 }
 
 void MainWindow::on_dbclick() {
+    std::string oldName = currentCalendar.getName();
     QString calendarName = ui->listWidget_2->currentItem()->text();
     currentCalendar = api->downloadCalendarObjects(calendarName.toStdString());
     ui->textBrowser_calName->setText(currentCalendar.getName().c_str());
-    ui->listWidget->clear();
-    ui->listWidget_Events->clear();
+    if(oldName != currentCalendar.getName()) {
+        ui->listWidget->clear();
+        ui->listWidget_Events->clear();
+    }
 }
 
 void MainWindow::selectedDateChange() {
