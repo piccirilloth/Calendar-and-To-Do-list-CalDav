@@ -20,6 +20,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->listWidget, SIGNAL(itemDoubleClicked(QListWidgetItem*)), this, SLOT(on_dbClickTodo()));
     connect(ui->listWidget, SIGNAL(customContextMenuRequested(const QPoint&)), this, SLOT(ProvideContextMenuTodo(const QPoint &)));
     connect(ui->listWidget_Events, SIGNAL(customContextMenuRequested(const QPoint&)), this, SLOT(ProvideContextMenuEvents(const QPoint &)));
+    connect(ui->pushButton_createEvent, SIGNAL(clicked(bool)), this, SLOT(on_createEvent()));
 }
 
 MainWindow::~MainWindow()
@@ -87,6 +88,7 @@ void MainWindow::ProvideContextMenuCal(const QPoint &pos) {
         for(std::string v : list)
             api->addCalendar(v);
         ui->listWidget_2->takeItem(ui->listWidget_2->indexAt(pos).row());
+        ui->textBrowser_calName->setText("");
     }
 }
 
@@ -209,4 +211,15 @@ void MainWindow::ProvideContextMenuEvents(const QPoint &pos) {
     } else if(rightClickItem && rightClickItem->text().contains("Update")) {
 
     }
+}
+
+void MainWindow::on_createEvent() {
+    createEvent mod(nullptr);
+    connect(&mod, SIGNAL(createEv()), SLOT(MainWindow::updateEvents()));
+    mod.setModal(true);
+    mod.exec();
+}
+
+void MainWindow::updateEvents() {
+    //todo: update event list
 }

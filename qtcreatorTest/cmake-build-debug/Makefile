@@ -407,6 +407,30 @@ Sources/createcalendarform.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/createcalendarform.cpp.s
 .PHONY : Sources/createcalendarform.cpp.s
 
+Sources/createevent.o: Sources/createevent.cpp.o
+.PHONY : Sources/createevent.o
+
+# target to build an object file
+Sources/createevent.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/createevent.cpp.o
+.PHONY : Sources/createevent.cpp.o
+
+Sources/createevent.i: Sources/createevent.cpp.i
+.PHONY : Sources/createevent.i
+
+# target to preprocess a source file
+Sources/createevent.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/createevent.cpp.i
+.PHONY : Sources/createevent.cpp.i
+
+Sources/createevent.s: Sources/createevent.cpp.s
+.PHONY : Sources/createevent.s
+
+# target to generate assembly for a file
+Sources/createevent.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/createevent.cpp.s
+.PHONY : Sources/createevent.cpp.s
+
 Sources/event_information.o: Sources/event_information.cpp.o
 .PHONY : Sources/event_information.o
 
@@ -962,6 +986,9 @@ help:
 	@echo "... Sources/createcalendarform.o"
 	@echo "... Sources/createcalendarform.i"
 	@echo "... Sources/createcalendarform.s"
+	@echo "... Sources/createevent.o"
+	@echo "... Sources/createevent.i"
+	@echo "... Sources/createevent.s"
 	@echo "... Sources/event_information.o"
 	@echo "... Sources/event_information.i"
 	@echo "... Sources/event_information.s"

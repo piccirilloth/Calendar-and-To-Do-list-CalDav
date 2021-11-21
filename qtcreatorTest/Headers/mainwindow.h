@@ -11,6 +11,7 @@
 #include "IcsParser.h"
 #include "event_information.h"
 #include "todo_information.h"
+#include "createevent.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -37,6 +38,8 @@ private slots:
     void on_dbClickTodo();
     void ProvideContextMenuTodo(const QPoint &pos);
     void ProvideContextMenuEvents(const QPoint &pos);
+    void on_createEvent();
+    void updateEvents();
 
 private:
     Ui::MainWindow *ui;
