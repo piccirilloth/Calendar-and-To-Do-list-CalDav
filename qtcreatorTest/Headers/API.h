@@ -13,6 +13,7 @@
 #include "../curlpp-0.8.1/include/curlpp/Exception.hpp"
 #include "Vcalendar.h"
 #include "IcsParser.h"
+#include <QDate>
 
 class API {
 private:
@@ -78,6 +79,7 @@ public:
     Vcalendar downloadCalendarObjects(std::string const &calendarName);
     std::list<std::string> deleteCalendar(std::string const &name);
     void deleteIcs(std::string const &uid, std::string const &calName);
+    void createEvent(std::string const &summary, Date const &startDate, Date const &endDate, Vcalendar const &cal);
 };
 
 

@@ -6,7 +6,8 @@
 #define QTCREATORTEST_CREATEEVENT_H
 
 #include <QDialog>
-
+#include <QMessageBox>
+#include "Date.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class createEvent; }
@@ -24,7 +25,7 @@ private:
     Ui::createEvent *ui;
 
 signals:
-    void createEv();
+    void createEv(std::string const &summary, Date const &createdOn, Date const &endDate);
 
 private slots:
     void on_createClicked();

@@ -4,7 +4,7 @@
 
 #include "Headers/API.h"
 
-std::string API::IPADDRESS = "192.168.1.7";
+std::string API::IPADDRESS = "192.168.1.6";
 std::string API::username = "";
 std::string API::password = "";
 bool API::loggedIn = false;
@@ -252,6 +252,50 @@ void API::deleteIcs(const std::string &uid, std::string const &calName) {
         handle.setOpt(new curlpp::Options::CustomRequest("DELETE"));
         handle.setOpt(curlpp::Options::WriteStream(&str));
         handle.perform();
+    }
+    catch (cURLpp::RuntimeError &e) {
+        std::cout << e.what() << std::endl;
+    }
+    catch (cURLpp::LogicError &e) {
+        std::cout << e.what() << std::endl;
+    }
+}
+
+void API::createEvent(const std::string &summary, const Date &startDate, const Date &endDate, Vcalendar const &cal) {
+    curlpp::Cleanup init;
+    curlpp::Easy handle;
+    std::list<std::string> headers;
+    std::string result;
+    std::string body;
+    std::ostringstream str;
+    headers.push_back("Content-Type: text/calendar; charset=utf-8");
+    Date now;
+    now.SetToNow();
+    body = "BEGIN:VCALENDAR\r\n"
+           "VERSION:" + cal.getVersion() + "\r\n"
+           "PRODID:" + cal.getProdid() +"\r\n"
+           "BEGIN:VEVENT\r\n"
+           "SEQUENCE:0\r\n"
+           "UID:" + std::to_string(cal.getNextUid()) + "\r\n"
+           "DTSTAMP:" + static_cast<std::string>(now) + "\r\n"
+           "DTSTART:" + static_cast<std::string>(startDate) +"\r\n"
+           "DTEND:" + static_cast<std::string>(endDate) + "\r\n"
+           "TRANSP:OPAQUE\r\n"
+           "SUMMARY:" + summary + "\r\n"
+           "END:VEVENT\r\n"
+           "END:VCALENDAR\r\n";
+    try {
+        handle.setOpt(curlpp::Options::Url(
+                std::string("http://" + IPADDRESS + "/progetto/calendarserver.php/calendars/" + username + "/" + cal.getName() + "/" + std::to_string(cal.getNextUid()) + ".ics")));
+        handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
+        handle.setOpt(new curlpp::options::UserPwd(username + ":" + password));
+        handle.setOpt(new curlpp::Options::CustomRequest("PUT"));
+        handle.setOpt(new curlpp::Options::PostFields(body));
+        handle.setOpt(new curlpp::Options::PostFieldSize(body.length()));
+        handle.setOpt(new curlpp::Options::HttpHeader(headers));
+        handle.setOpt(curlpp::Options::WriteStream(&str));
+        handle.perform();
+        std::cout << str.str() << '\n';
     }
     catch (cURLpp::RuntimeError &e) {
         std::cout << e.what() << std::endl;

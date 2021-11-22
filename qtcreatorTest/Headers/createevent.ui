@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>356</width>
-    <height>452</height>
+    <height>420</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
      <x>70</x>
      <y>100</y>
      <width>241</width>
-     <height>241</height>
+     <height>181</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -45,27 +45,6 @@
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_4">
-      <item>
-       <widget class="QLabel" name="label_4">
-        <property name="styleSheet">
-         <string notr="true">font: 12pt &quot;Sans Serif&quot;;</string>
-        </property>
-        <property name="text">
-         <string>Created on</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="lineEdit_createdOn">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item>
      <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
        <widget class="QLabel" name="label_2">
@@ -78,11 +57,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_start">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-       </widget>
+       <widget class="QDateTimeEdit" name="dateTimeEdit_startDate"/>
       </item>
      </layout>
     </item>
@@ -99,21 +74,17 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_end">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-       </widget>
+       <widget class="QDateTimeEdit" name="dateTimeEdit_endDate"/>
       </item>
      </layout>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>70</x>
-     <y>340</y>
+     <y>280</y>
      <width>241</width>
      <height>51</height>
     </rect>
@@ -134,6 +105,25 @@
      </widget>
     </item>
    </layout>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>40</y>
+     <width>191</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 16pt &quot;Sans Serif&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Create an event</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
  </widget>
  <resources/>

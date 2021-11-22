@@ -24,7 +24,8 @@ private:
 public:
     explicit Vcalendar(std::string const &name);
     Vcalendar();
-    std::string getName();
+
+    std::string getName() const;
 
     void addEvent(Vevent const &event);
 

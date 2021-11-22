@@ -35,7 +35,7 @@ void loginwindow::on_pushButton_login_clicked() {
         api->setUsername(username.toStdString());
         api->setPassword(password.toStdString());
         api->setLoggedIn(true);
-        api->clearCalendars();
+        api->clearCalendars(); //todo: add a function in api to set these parameters
         std::list<std::string> names = api->retrieveAllCalendars(); //return only calendar names
         for(std::string value : names) {
             api->addCalendar(value);

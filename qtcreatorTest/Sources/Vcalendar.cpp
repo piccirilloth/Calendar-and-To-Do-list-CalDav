@@ -19,7 +19,7 @@ void Vcalendar::addTodo(const Vtodo &todo) {
     todos.push_back(todo);
 }
 
-std::string Vcalendar::getName() {
+std::string Vcalendar::getName() const {
     return name;
 }
 

@@ -53,6 +53,8 @@ void MainWindow::afterLogin() {
         ui->listWidget_2->addItem(QString(value.c_str()));
     ui->loginButton->setText(QString("Change user"));
     ui->createCalendarButton->setEnabled(true);
+    ui->pushButton_createEvent->setEnabled(true);
+    ui->pushButton_createTodo->setEnabled(true);
 }
 
 void MainWindow::on_createCalendarButton_clicked() {
@@ -215,11 +217,11 @@ void MainWindow::ProvideContextMenuEvents(const QPoint &pos) {
 
 void MainWindow::on_createEvent() {
     createEvent mod(nullptr);
-    connect(&mod, SIGNAL(createEv()), SLOT(MainWindow::updateEvents()));
+    connect(&mod, SIGNAL(createEv(std::string const &, Date const &, Date const &)), SLOT(updateEvents(std::string const &, Date const &, Date const &)));
     mod.setModal(true);
     mod.exec();
 }
 
-void MainWindow::updateEvents() {
-    //todo: update event list
+void MainWindow::updateEvents(std::string const &summary, Date const &createdOn, Date const &endDate) {
+    api->createEvent(summary, createdOn, endDate, currentCalendar);
 }

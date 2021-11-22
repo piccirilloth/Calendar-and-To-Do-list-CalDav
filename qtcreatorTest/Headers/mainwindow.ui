@@ -144,7 +144,7 @@ font: 14pt &quot;Sans Serif&quot;;</string>
       <x>10</x>
       <y>440</y>
       <width>261</width>
-      <height>31</height>
+      <height>72</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
@@ -161,6 +161,9 @@ font: 14pt &quot;Sans Serif&quot;;</string>
     </layout>
    </widget>
    <widget class="QPushButton" name="pushButton_createTodo">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>820</x>
@@ -174,6 +177,9 @@ font: 14pt &quot;Sans Serif&quot;;</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_createEvent">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>1070</x>

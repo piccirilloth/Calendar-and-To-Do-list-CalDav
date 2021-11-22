@@ -90,7 +90,7 @@ public:
         label_2->setAlignment(Qt::AlignCenter);
         layoutWidget = new QWidget(centralwidget);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 440, 261, 31));
+        layoutWidget->setGeometry(QRect(10, 440, 261, 72));
         horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -106,9 +106,11 @@ public:
 
         pushButton_createTodo = new QPushButton(centralwidget);
         pushButton_createTodo->setObjectName(QString::fromUtf8("pushButton_createTodo"));
+        pushButton_createTodo->setEnabled(false);
         pushButton_createTodo->setGeometry(QRect(820, 440, 241, 31));
         pushButton_createEvent = new QPushButton(centralwidget);
         pushButton_createEvent->setObjectName(QString::fromUtf8("pushButton_createEvent"));
+        pushButton_createEvent->setEnabled(false);
         pushButton_createEvent->setGeometry(QRect(1070, 440, 241, 31));
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);

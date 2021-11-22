@@ -39,7 +39,7 @@ private slots:
     void ProvideContextMenuTodo(const QPoint &pos);
     void ProvideContextMenuEvents(const QPoint &pos);
     void on_createEvent();
-    void updateEvents();
+    void updateEvents(std::string const &summary, Date const &createdOn, Date const &endDate);
 
 private:
     Ui::MainWindow *ui;
