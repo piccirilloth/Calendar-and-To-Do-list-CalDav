@@ -18,6 +18,25 @@ createEvent::createEvent(QWidget *parent) :
     ui->dateTimeEdit_endDate->setCalendarPopup(true);
     ui->dateTimeEdit_startDate->setDate(QDate::currentDate());
     ui->dateTimeEdit_endDate->setDate(QDate::currentDate());
+    isUpdate = false;
+}
+
+createEvent::createEvent(const Vevent &event, const Vcalendar &cal, QWidget *parent): QDialog(parent), ui(new Ui::createEvent) {
+    ui->setupUi(this);
+    ui->dateTimeEdit_startDate->setCalendarPopup(true);
+    ui->dateTimeEdit_endDate->setCalendarPopup(true);
+    ui->lineEdit_summary->setText(QString(event.getSummary().c_str()));
+    Date startDate = event.getDtstart();
+    ui->dateTimeEdit_startDate->setDate(QDate(startDate[YEAR], startDate[MONTH], startDate[DAY]));
+    ui->dateTimeEdit_startDate->setTime(QTime(startDate[HOUR], startDate[MINUTE], startDate[SECOND]));
+    Date endDate = event.getDtend();
+    ui->dateTimeEdit_endDate->setDate(QDate(endDate[YEAR], endDate[MONTH], endDate[DAY]));
+    ui->dateTimeEdit_endDate->setTime(QTime(endDate[HOUR], endDate[MINUTE], endDate[SECOND]));
+    ui->createEvent_2->setText("Update");
+    ui->label->setText("Update an event");
+    this->setWindowTitle("updateEvent");
+    isUpdate = true;
+    this->event = event;
 }
 
 createEvent::~createEvent() {
@@ -26,17 +45,25 @@ createEvent::~createEvent() {
 
 void createEvent::on_pushButton_clear_clicked() {
     ui->lineEdit_summary->setText("");
-    std::cout << ui->dateTimeEdit_endDate->date().toString("yyyyMMddT").toStdString() + ui->dateTimeEdit_endDate->time().toString("hhmmssZ").toStdString() <<'\n';
 }
 
 void createEvent::on_createEvent_2_clicked() {
     if(ui->lineEdit_summary->text().isEmpty())
         QMessageBox::information(this, "Error", "The summary field must be filled");
-    Date endDate;
-    Date startDate;
-    endDate = ui->dateTimeEdit_endDate->date().toString("yyyyMMddT").toStdString() + ui->dateTimeEdit_endDate->time().toString("hhmmssZ").toStdString();
-    startDate = ui->dateTimeEdit_startDate->date().toString("yyyyMMddT").toStdString() + ui->dateTimeEdit_startDate->time().toString("hhmmssZ").toStdString();
-    emit createEv(ui->lineEdit_summary->text().toStdString(), startDate, endDate);
-    this->close();
+    else if(ui->dateTimeEdit_startDate->date() > ui->dateTimeEdit_endDate->date())
+        QMessageBox::information(this, "Error", "The start date must precede the end date");
+    else if(ui->dateTimeEdit_startDate->date() == ui->dateTimeEdit_endDate->date() && ui->dateTimeEdit_startDate->time() > ui->dateTimeEdit_endDate->time())
+        QMessageBox::information(this, "Error", "The start time must precede the end time");
+    else {
+        Date endDate;
+        Date startDate;
+        endDate = ui->dateTimeEdit_endDate->date().toString("yyyyMMddT").toStdString() + ui->dateTimeEdit_endDate->time().toString("hhmmssZ").toStdString();
+        startDate = ui->dateTimeEdit_startDate->date().toString("yyyyMMddT").toStdString() + ui->dateTimeEdit_startDate->time().toString("hhmmssZ").toStdString();
+        if(!isUpdate)
+                emit createEv(ui->lineEdit_summary->text().toStdString(), startDate, endDate, isUpdate);
+        else
+                emit createEv(ui->lineEdit_summary->text().toStdString(), startDate, endDate, isUpdate, event.getUid());
+        this->close();
+    }
 }
 

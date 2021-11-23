@@ -304,3 +304,133 @@ void API::createEvent(const std::string &summary, const Date &startDate, const D
         std::cout << e.what() << std::endl;
     }
 }
+
+void API::updateEvent(std::string const &summary, Date const &startDate, Date const &endDate, std::string const &uid, Vcalendar const &cal) {
+    curlpp::Cleanup init;
+    curlpp::Easy handle;
+    std::list<std::string> headers;
+    std::string result;
+    std::string body;
+    std::ostringstream str;
+    headers.push_back("Content-Type: text/calendar; charset=utf-8");
+    Date now;
+    now.SetToNow();
+    body =  "BEGIN:VCALENDAR\r\n"
+            "VERSION:" + cal.getVersion() + "\r\n"
+            "PRODID:" + cal.getProdid() +"\r\n"
+            "BEGIN:VEVENT\r\n"
+            "SEQUENCE:0\r\n"
+            "UID:" + uid + "\r\n"
+            "DTSTAMP:" + static_cast<std::string>(now) + "\r\n"
+            "DTSTART:" + static_cast<std::string>(startDate) +"\r\n"
+            "DTEND:" + static_cast<std::string>(endDate) + "\r\n"
+            "TRANSP:OPAQUE\r\n"
+            "SUMMARY:" + summary + "\r\n"
+            "END:VEVENT\r\n"
+            "END:VCALENDAR\r\n";
+    try {
+        handle.setOpt(curlpp::Options::Url(
+                std::string("http://" + IPADDRESS + "/progetto/calendarserver.php/calendars/" + username + "/" + cal.getName() + "/" + uid + ".ics")));
+        handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
+        handle.setOpt(new curlpp::options::UserPwd(username + ":" + password));
+        handle.setOpt(new curlpp::Options::CustomRequest("PUT"));
+        handle.setOpt(new curlpp::Options::PostFields(body));
+        handle.setOpt(new curlpp::Options::PostFieldSize(body.length()));
+        handle.setOpt(new curlpp::Options::HttpHeader(headers));
+        handle.setOpt(curlpp::Options::WriteStream(&str));
+        handle.perform();
+        std::cout << str.str() << '\n';
+    }
+    catch (cURLpp::RuntimeError &e) {
+        std::cout << e.what() << std::endl;
+    }
+    catch (cURLpp::LogicError &e) {
+        std::cout << e.what() << std::endl;
+    }
+}
+
+void API::createTodo(const std::string &summary, const std::string &dueDate, const Vcalendar &cal) {
+    curlpp::Cleanup init;
+    curlpp::Easy handle;
+    std::list<std::string> headers;
+    std::string result;
+    std::string body;
+    std::ostringstream str;
+    headers.push_back("Content-Type: text/calendar; charset=utf-8");
+    Date now;
+    now.SetToNow();
+    body = "BEGIN:VCALENDAR\r\n"
+           "VERSION:" + cal.getVersion() + "\r\n"
+           "PRODID:" + cal.getProdid() + "\r\n"
+           "BEGIN:VTODO\r\n"
+           "UID:" + std::to_string(cal.getNextUid()) + "\r\n"
+           "SUMMARY:" + summary + "\r\n"
+           "DUE:" + static_cast<std::string>(dueDate) + "\r\n"
+           "DTSTAMP:" + static_cast<std::string>(now) + "\r\n"
+           "END:VTODO\r\n"
+           "END:VCALENDAR\r\n";                                                                                                                                                                                                                                                            "END:VCALENDAR\r\n";
+    try {
+        handle.setOpt(curlpp::Options::Url(
+                std::string("http://" + IPADDRESS + "/progetto/calendarserver.php/calendars/" + username + "/" + cal.getName() + "/" + std::to_string(cal.getNextUid()) + ".ics")));
+        handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
+        handle.setOpt(new curlpp::options::UserPwd(username + ":" + password));
+        handle.setOpt(new curlpp::Options::CustomRequest("PUT"));
+        handle.setOpt(new curlpp::Options::PostFields(body));
+        handle.setOpt(new curlpp::Options::PostFieldSize(body.length()));
+        handle.setOpt(new curlpp::Options::HttpHeader(headers));
+        handle.setOpt(curlpp::Options::WriteStream(&str));
+        handle.perform();
+        std::cout << str.str() << '\n';
+    }
+    catch (cURLpp::RuntimeError &e) {
+        std::cout << e.what() << std::endl;
+    }
+    catch (cURLpp::LogicError &e) {
+        std::cout << e.what() << std::endl;
+    }
+}
+
+void API::updateTodo(const std::string &summary, const Date &dueDate, bool completed, const Vcalendar &cal, const Date &oldComplete, std::string const &uid) {
+    curlpp::Cleanup init;
+    curlpp::Easy handle;
+    std::list<std::string> headers;
+    std::string result;
+    std::string body;
+    std::ostringstream str;
+    headers.push_back("Content-Type: text/calendar; charset=utf-8");
+    Date now;
+    now.SetToNow();
+    body = "BEGIN:VCALENDAR\r\n"
+           "VERSION:" + cal.getVersion() + "\r\n"
+           "PRODID:" + cal.getProdid() + "\r\n"
+           "BEGIN:VTODO\r\n"
+           "UID:" + uid+ "\r\n"
+           "SUMMARY:" + summary + "\r\n"
+           "DUE:" + static_cast<std::string>(dueDate) + "\r\n"
+           "DTSTAMP:" + static_cast<std::string>(now) + "\r\n";
+    if(static_cast<std::string>(oldComplete) == "00000000" && completed)
+        body += "COMPLETED:" + static_cast<std::string>(now) + "\r\n";
+    else if(completed)
+        body += "COMPLETED:" + static_cast<std::string>(oldComplete) + "\r\n";
+    body += "END:VTODO\r\n"
+            "END:VCALENDAR\r\n";
+    try {
+        handle.setOpt(curlpp::Options::Url(
+                std::string("http://" + IPADDRESS + "/progetto/calendarserver.php/calendars/" + username + "/" + cal.getName() + "/" + uid + ".ics")));
+        handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
+        handle.setOpt(new curlpp::options::UserPwd(username + ":" + password));
+        handle.setOpt(new curlpp::Options::CustomRequest("PUT"));
+        handle.setOpt(new curlpp::Options::PostFields(body));
+        handle.setOpt(new curlpp::Options::PostFieldSize(body.length()));
+        handle.setOpt(new curlpp::Options::HttpHeader(headers));
+        handle.setOpt(curlpp::Options::WriteStream(&str));
+        handle.perform();
+        std::cout << str.str() << '\n';
+    }
+    catch (cURLpp::RuntimeError &e) {
+        std::cout << e.what() << std::endl;
+    }
+    catch (cURLpp::LogicError &e) {
+        std::cout << e.what() << std::endl;
+    }
+}

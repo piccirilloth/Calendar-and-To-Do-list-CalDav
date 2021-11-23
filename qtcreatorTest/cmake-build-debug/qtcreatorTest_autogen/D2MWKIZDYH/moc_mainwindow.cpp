@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[21];
-    char stringdata0[319];
+    QByteArrayData data[28];
+    char stringdata0[415];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -51,7 +51,14 @@ QT_MOC_LITERAL(16, 276, 11), // "std::string"
 QT_MOC_LITERAL(17, 288, 7), // "summary"
 QT_MOC_LITERAL(18, 296, 4), // "Date"
 QT_MOC_LITERAL(19, 301, 9), // "startDate"
-QT_MOC_LITERAL(20, 311, 7) // "endDate"
+QT_MOC_LITERAL(20, 311, 7), // "endDate"
+QT_MOC_LITERAL(21, 319, 8), // "isUpdate"
+QT_MOC_LITERAL(22, 328, 3), // "uid"
+QT_MOC_LITERAL(23, 332, 32), // "on_pushButton_createTodo_clicked"
+QT_MOC_LITERAL(24, 365, 15), // "createTodo_slot"
+QT_MOC_LITERAL(25, 381, 7), // "dueDate"
+QT_MOC_LITERAL(26, 389, 15), // "updateTodo_slot"
+QT_MOC_LITERAL(27, 405, 9) // "completed"
 
     },
     "MainWindow\0on_loginButton_clicked\0\0"
@@ -62,7 +69,10 @@ QT_MOC_LITERAL(20, 311, 7) // "endDate"
     "ProvideContextMenuTodo\0ProvideContextMenuEvents\0"
     "on_pushButton_createEvent_clicked\0"
     "updateEvents\0std::string\0summary\0Date\0"
-    "startDate\0endDate"
+    "startDate\0endDate\0isUpdate\0uid\0"
+    "on_pushButton_createTodo_clicked\0"
+    "createTodo_slot\0dueDate\0updateTodo_slot\0"
+    "completed"
 };
 #undef QT_MOC_LITERAL
 
@@ -72,7 +82,7 @@ static const uint qt_meta_data_MainWindow[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-      13,   14, // methods
+      17,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -80,19 +90,23 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   79,    2, 0x08 /* Private */,
-       3,    0,   80,    2, 0x08 /* Private */,
-       4,    0,   81,    2, 0x08 /* Private */,
-       5,    0,   82,    2, 0x08 /* Private */,
-       6,    1,   83,    2, 0x08 /* Private */,
-       8,    0,   86,    2, 0x08 /* Private */,
-       9,    0,   87,    2, 0x08 /* Private */,
-      10,    0,   88,    2, 0x08 /* Private */,
-      11,    0,   89,    2, 0x08 /* Private */,
-      12,    1,   90,    2, 0x08 /* Private */,
-      13,    1,   93,    2, 0x08 /* Private */,
-      14,    0,   96,    2, 0x08 /* Private */,
-      15,    3,   97,    2, 0x08 /* Private */,
+       1,    0,   99,    2, 0x08 /* Private */,
+       3,    0,  100,    2, 0x08 /* Private */,
+       4,    0,  101,    2, 0x08 /* Private */,
+       5,    0,  102,    2, 0x08 /* Private */,
+       6,    1,  103,    2, 0x08 /* Private */,
+       8,    0,  106,    2, 0x08 /* Private */,
+       9,    0,  107,    2, 0x08 /* Private */,
+      10,    0,  108,    2, 0x08 /* Private */,
+      11,    0,  109,    2, 0x08 /* Private */,
+      12,    1,  110,    2, 0x08 /* Private */,
+      13,    1,  113,    2, 0x08 /* Private */,
+      14,    0,  116,    2, 0x08 /* Private */,
+      15,    5,  117,    2, 0x08 /* Private */,
+      15,    4,  128,    2, 0x28 /* Private | MethodCloned */,
+      23,    0,  137,    2, 0x08 /* Private */,
+      24,    2,  138,    2, 0x08 /* Private */,
+      26,    3,  143,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -107,7 +121,11 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void, QMetaType::QPoint,    7,
     QMetaType::Void, QMetaType::QPoint,    7,
     QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 16, 0x80000000 | 18, 0x80000000 | 18,   17,   19,   20,
+    QMetaType::Void, 0x80000000 | 16, 0x80000000 | 18, 0x80000000 | 18, QMetaType::Bool, 0x80000000 | 16,   17,   19,   20,   21,   22,
+    QMetaType::Void, 0x80000000 | 16, 0x80000000 | 18, 0x80000000 | 18, QMetaType::Bool,   17,   19,   20,   21,
+    QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 16, 0x80000000 | 18,   17,   25,
+    QMetaType::Void, 0x80000000 | 16, 0x80000000 | 18, QMetaType::Bool,   17,   25,   27,
 
        0        // eod
 };
@@ -130,7 +148,11 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 9: _t->ProvideContextMenuTodo((*reinterpret_cast< const QPoint(*)>(_a[1]))); break;
         case 10: _t->ProvideContextMenuEvents((*reinterpret_cast< const QPoint(*)>(_a[1]))); break;
         case 11: _t->on_pushButton_createEvent_clicked(); break;
-        case 12: _t->updateEvents((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const Date(*)>(_a[2])),(*reinterpret_cast< const Date(*)>(_a[3]))); break;
+        case 12: _t->updateEvents((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const Date(*)>(_a[2])),(*reinterpret_cast< const Date(*)>(_a[3])),(*reinterpret_cast< bool(*)>(_a[4])),(*reinterpret_cast< const std::string(*)>(_a[5]))); break;
+        case 13: _t->updateEvents((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const Date(*)>(_a[2])),(*reinterpret_cast< const Date(*)>(_a[3])),(*reinterpret_cast< bool(*)>(_a[4]))); break;
+        case 14: _t->on_pushButton_createTodo_clicked(); break;
+        case 15: _t->createTodo_slot((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const Date(*)>(_a[2]))); break;
+        case 16: _t->updateTodo_slot((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const Date(*)>(_a[2])),(*reinterpret_cast< bool(*)>(_a[3]))); break;
         default: ;
         }
     }
@@ -165,13 +187,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 13)
+        if (_id < 17)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 13;
+        _id -= 17;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 13)
+        if (_id < 17)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 13;
+        _id -= 17;
     }
     return _id;
 }

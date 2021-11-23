@@ -7,6 +7,8 @@
 
 #include <QDialog>
 #include <QMessageBox>
+#include "Vevent.h"
+#include "Vcalendar.h"
 #include "Date.h"
 
 QT_BEGIN_NAMESPACE
@@ -19,13 +21,17 @@ Q_OBJECT
 public:
     explicit createEvent(QWidget *parent = nullptr);
 
+    explicit createEvent(Vevent const &event, Vcalendar const &cal, QWidget *parent = nullptr);
+
     ~createEvent() override;
 
 private:
     Ui::createEvent *ui;
+    bool isUpdate;
+    Vevent event;
 
 signals:
-    void createEv(std::string const &summary, Date const &createdOn, Date const &endDate);
+    void createEv(std::string const &summary, Date const &createdOn, Date const &endDate, bool isUpdate, std::string const &uid="");
 
 private slots:
     void on_createEvent_2_clicked();

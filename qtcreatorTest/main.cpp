@@ -164,7 +164,7 @@ void deleteIcs() {
     std::ostringstream str;
     try {
         handle.setOpt(curlpp::Options::Url(
-                std::string("http://192.168.1.7/progetto/calendarserver.php/calendars/oscar/calendar-1/cal2.ics")));
+                std::string("http://192.168.1.6/progetto/calendarserver.php/calendars/oscar/calendar-1/6.ics")));
         handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
         handle.setOpt(new curlpp::options::UserPwd("oscar:piccirillo"));
         handle.setOpt(new curlpp::Options::CustomRequest("DELETE"));

@@ -22,7 +22,7 @@ private:
     std::list<Vtodo> todos;
     long nextUid;
 public:
-    explicit Vcalendar(std::string const &name);
+    explicit Vcalendar(std::string const &name, std::string const &prodId, std::string const version);
     Vcalendar();
 
     std::string getName() const;

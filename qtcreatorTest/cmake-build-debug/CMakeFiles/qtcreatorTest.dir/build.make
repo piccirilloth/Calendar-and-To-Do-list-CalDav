@@ -248,6 +248,32 @@ CMakeFiles/qtcreatorTest.dir/Sources/createevent.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qtcreatorTest.dir/Sources/createevent.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Sources/createevent.cpp -o CMakeFiles/qtcreatorTest.dir/Sources/createevent.cpp.s
 
+CMakeFiles/qtcreatorTest.dir/Sources/createtodo.cpp.o: CMakeFiles/qtcreatorTest.dir/flags.make
+CMakeFiles/qtcreatorTest.dir/Sources/createtodo.cpp.o: ../Sources/createtodo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/qtcreatorTest.dir/Sources/createtodo.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest.dir/Sources/createtodo.cpp.o -c /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Sources/createtodo.cpp
+
+CMakeFiles/qtcreatorTest.dir/Sources/createtodo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qtcreatorTest.dir/Sources/createtodo.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Sources/createtodo.cpp > CMakeFiles/qtcreatorTest.dir/Sources/createtodo.cpp.i
+
+CMakeFiles/qtcreatorTest.dir/Sources/createtodo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qtcreatorTest.dir/Sources/createtodo.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Sources/createtodo.cpp -o CMakeFiles/qtcreatorTest.dir/Sources/createtodo.cpp.s
+
+CMakeFiles/qtcreatorTest.dir/Sources/updatetodo.cpp.o: CMakeFiles/qtcreatorTest.dir/flags.make
+CMakeFiles/qtcreatorTest.dir/Sources/updatetodo.cpp.o: ../Sources/updatetodo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/qtcreatorTest.dir/Sources/updatetodo.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/qtcreatorTest.dir/Sources/updatetodo.cpp.o -c /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Sources/updatetodo.cpp
+
+CMakeFiles/qtcreatorTest.dir/Sources/updatetodo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qtcreatorTest.dir/Sources/updatetodo.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Sources/updatetodo.cpp > CMakeFiles/qtcreatorTest.dir/Sources/updatetodo.cpp.i
+
+CMakeFiles/qtcreatorTest.dir/Sources/updatetodo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qtcreatorTest.dir/Sources/updatetodo.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Sources/updatetodo.cpp -o CMakeFiles/qtcreatorTest.dir/Sources/updatetodo.cpp.s
+
 # Object files for target qtcreatorTest
 qtcreatorTest_OBJECTS = \
 "CMakeFiles/qtcreatorTest.dir/qtcreatorTest_autogen/mocs_compilation.cpp.o" \
@@ -263,7 +289,9 @@ qtcreatorTest_OBJECTS = \
 "CMakeFiles/qtcreatorTest.dir/Sources/IcsParser.cpp.o" \
 "CMakeFiles/qtcreatorTest.dir/Sources/todo_information.cpp.o" \
 "CMakeFiles/qtcreatorTest.dir/Sources/event_information.cpp.o" \
-"CMakeFiles/qtcreatorTest.dir/Sources/createevent.cpp.o"
+"CMakeFiles/qtcreatorTest.dir/Sources/createevent.cpp.o" \
+"CMakeFiles/qtcreatorTest.dir/Sources/createtodo.cpp.o" \
+"CMakeFiles/qtcreatorTest.dir/Sources/updatetodo.cpp.o"
 
 # External object files for target qtcreatorTest
 qtcreatorTest_EXTERNAL_OBJECTS =
@@ -282,6 +310,8 @@ qtcreatorTest: CMakeFiles/qtcreatorTest.dir/Sources/IcsParser.cpp.o
 qtcreatorTest: CMakeFiles/qtcreatorTest.dir/Sources/todo_information.cpp.o
 qtcreatorTest: CMakeFiles/qtcreatorTest.dir/Sources/event_information.cpp.o
 qtcreatorTest: CMakeFiles/qtcreatorTest.dir/Sources/createevent.cpp.o
+qtcreatorTest: CMakeFiles/qtcreatorTest.dir/Sources/createtodo.cpp.o
+qtcreatorTest: CMakeFiles/qtcreatorTest.dir/Sources/updatetodo.cpp.o
 qtcreatorTest: CMakeFiles/qtcreatorTest.dir/build.make
 qtcreatorTest: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8
 qtcreatorTest: libqtcreatorTest_lib.so.1.0.0
@@ -289,7 +319,7 @@ qtcreatorTest: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8
 qtcreatorTest: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8
 qtcreatorTest: /usr/lib/x86_64-linux-gnu/libcurl.so
 qtcreatorTest: CMakeFiles/qtcreatorTest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable qtcreatorTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable qtcreatorTest"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/qtcreatorTest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

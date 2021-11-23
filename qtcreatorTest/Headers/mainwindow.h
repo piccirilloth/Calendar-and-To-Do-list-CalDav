@@ -12,6 +12,8 @@
 #include "event_information.h"
 #include "todo_information.h"
 #include "createevent.h"
+#include "createtodo.h"
+#include "updatetodo.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -39,7 +41,10 @@ private slots:
     void ProvideContextMenuTodo(const QPoint &pos);
     void ProvideContextMenuEvents(const QPoint &pos);
     void on_pushButton_createEvent_clicked();
-    void updateEvents(std::string const &summary, Date const &startDate, Date const &endDate);
+    void updateEvents(std::string const &summary, Date const &startDate, Date const &endDate, bool isUpdate, std::string const & uid="");
+    void on_pushButton_createTodo_clicked();
+    void createTodo_slot(std::string const &summary, Date const &dueDate);
+    void updateTodo_slot(std::string const &summary, Date const &dueDate, bool completed);
 
 private:
     Ui::MainWindow *ui;
@@ -48,5 +53,7 @@ private:
     Vcalendar currentCalendar;
     std::map<int, std::string> eventMap;
     std::map<int, std::string> todoMap;
+    std::optional<Vevent> getEvetByUid(std::string const &uid);
+    std::optional<Vtodo> getTodoByUid(std::string const &uid);
 };
 #endif // MAINWINDOW_H

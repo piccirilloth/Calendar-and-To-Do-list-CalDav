@@ -23,6 +23,7 @@ enum TodoAttributes {
     SUMMARY_TODO,
     DUE,
     DTSTAMP_TODO,
+    COMPLETED,
     ENDTODO,
     NOTODOATTR
 };
@@ -64,6 +65,8 @@ TodoAttributes resolveTodoOption(const std::string &input) {
         return DUE;
     else if (input == "DTSTAMP")
         return DTSTAMP_TODO;
+    else if (input == "COMPLETED")
+        return COMPLETED;
     else if (input == "END")
         return ENDTODO;
     return NOTODOATTR;
@@ -194,6 +197,10 @@ Vtodo getNextTodo(const std::string &resp, int *pos) {
                 res.setDtstamp(tmp);
                 break;
 
+            case COMPLETED:
+                tmp = getAttributeValue(resp, pos);
+                res.setCompleted(tmp);
+                break;
             case ENDTODO :
                 end = true;
                 getAttributeValue(resp, pos);

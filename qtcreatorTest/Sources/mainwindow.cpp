@@ -159,7 +159,7 @@ void MainWindow::on_dbClickTodo() {
     std::string uid = todoMap.at(index);
     Vtodo todo;
     for(Vtodo const &td : currentCalendar.getTodos()) {
-        if(td.getUid() == uid)
+        if(td.getUid() == uid) //todo: use getTodoByUid
             todo = td;
     }
     todo_information todoInfo(nullptr, todo.getSummary(), todo.getDtstamp().Format(), todo.getDue().Format(), todo.getCompleted().Format(), todo.getPriority());
@@ -182,13 +182,30 @@ void MainWindow::ProvideContextMenuTodo(const QPoint &pos) {
         todoMap.clear();
         int i=0;
         for(Vtodo const &td : currentCalendar.getTodos()) {
-            ui->listWidget->addItem(QString(td.getSummary().c_str()));
             todoMap.insert(std::pair<int, std::string>(i, td.getUid()));
             i++;
         }
+        selectedDateChange();
     } else if(rightClickItem && rightClickItem->text().contains("Update")) {
-
+        int index = ui->listWidget->currentIndex().row();
+        std::string uid = todoMap.at(index);
+        std::optional<Vtodo> todo = getTodoByUid(uid);
+        if(todo.has_value()) {
+            updateTodo td(todo.value().getSummary(), todo.value().getDue(), todo.value().getCompleted());
+            connect(&td, SIGNAL(updateTd(const std::string &, const Date &, bool)),
+                    SLOT(updateTodo_slot(const std::string &, const Date &, bool)));
+            td.setModal(true);
+            td.exec();
+        } else
+            QMessageBox::information(this, "Error", "The todo does not exist");
     }
+}
+
+std::optional<Vtodo> MainWindow::getTodoByUid(std::string const &uid) {
+    for(Vtodo const & td: currentCalendar.getTodos())
+        if(td.getUid() == uid)
+            return td;
+    return std::nullopt;
 }
 
 void MainWindow::ProvideContextMenuEvents(const QPoint &pos) {
@@ -202,28 +219,96 @@ void MainWindow::ProvideContextMenuEvents(const QPoint &pos) {
         std::string uid = eventMap.at(index);
         api->deleteIcs(uid, currentCalendar.getName());
         currentCalendar = api->downloadCalendarObjects(currentCalendar.getName());
-        ui->listWidget_Events->clear();
         eventMap.clear();
         int i=0;
         for(Vevent const &ev : currentCalendar.getEvents()) {
-            ui->listWidget_Events->addItem(QString(ev.getSummary().c_str()));
             eventMap.insert(std::pair<int, std::string>(i, ev.getUid()));
             i++;
         }
+        selectedDateChange();
     } else if(rightClickItem && rightClickItem->text().contains("Update")) {
-
+        int index = ui->listWidget_Events->currentIndex().row();
+        std::string uid = eventMap.at(index);
+        std::optional<Vevent> event = getEvetByUid(uid);
+        if(event.has_value()) {
+            createEvent update(event.value(), currentCalendar);
+            connect(&update, SIGNAL(createEv(std::string const &, Date const &, Date const &, bool, std::string const &)), SLOT(updateEvents(std::string const &, Date const &, Date const &, bool, std::string const &)));
+            update.setModal(true);
+            update.exec();
+        }
+        else
+            QMessageBox::information(this, "Error", "The event does not exist");
     }
+}
+
+std::optional<Vevent> MainWindow::getEvetByUid(std::string const &uid) {
+    for(Vevent const & ev: currentCalendar.getEvents())
+        if(ev.getUid() == uid)
+            return ev;
+    return std::nullopt;
 }
 
 void MainWindow::on_pushButton_createEvent_clicked() {
     createEvent mod(nullptr);
-    connect(&mod, SIGNAL(createEv(std::string const &, Date const &, Date const &)), SLOT(updateEvents(std::string const &, Date const &, Date const &)));
+    connect(&mod, SIGNAL(createEv(std::string const &, Date const &, Date const &, bool, std::string const &)), SLOT(updateEvents(std::string const &, Date const &, Date const &, bool, std::string const &)));
     mod.setModal(true);
     mod.exec();
 }
 
-void MainWindow::updateEvents(std::string const &summary, Date const &startDate, Date const &endDate) {
-    api->createEvent(summary, startDate, endDate, currentCalendar);
+void MainWindow::updateEvents(std::string const &summary, Date const &startDate, Date const &endDate, bool isUpdate, std::string const & uid) {
+    if(isUpdate)
+        api->updateEvent(summary, startDate, endDate, uid, currentCalendar);
+    else {
+        if(currentCalendar.getNextUid() == 0) { //first ics
+            currentCalendar.setProdid("-//Sabre//Sabre VObject 4.2.2//EN");
+            currentCalendar.setVersion("2.0");
+        }
+        api->createEvent(summary, startDate, endDate, currentCalendar);
+    }
+    int i=0;
+    eventMap.clear();
+    for(Vevent const &ev : currentCalendar.getEvents()) {
+        eventMap.insert(std::pair<int, std::string>(i, ev.getUid()));
+        i++;
+    }
+    currentCalendar = api->downloadCalendarObjects(currentCalendar.getName());
+    selectedDateChange();
+}
+
+void MainWindow::on_pushButton_createTodo_clicked() {
+    createTodo mod(nullptr);
+    connect(&mod, SIGNAL(createTd(std::string const &, Date const &)), SLOT(createTodo_slot(std::string const &, Date const &)));
+    mod.setModal(true);
+    mod.exec();
+}
+
+void MainWindow::createTodo_slot(const std::string &summary, const Date &dueDate) {
+    if(currentCalendar.getNextUid() == 0) { //first ics
+        currentCalendar.setProdid("-//Sabre//Sabre VObject 4.2.2//EN");
+        currentCalendar.setVersion("2.0");
+    }
+    api->createTodo(summary, dueDate, currentCalendar);
+    int i=0;
+    todoMap.clear();
+    for(Vtodo const &td : currentCalendar.getTodos()) {
+        todoMap.insert(std::pair<int, std::string>(i, td.getUid()));
+        i++;
+    }
+    currentCalendar = api->downloadCalendarObjects(currentCalendar.getName());
+    selectedDateChange();
+}
+
+void MainWindow::updateTodo_slot(const std::string &summary, const Date &dueDate, bool completed) {
+    int index = ui->listWidget->currentIndex().row();
+    std::string uid = todoMap.at(index);
+    std::optional<Vtodo> todo = getTodoByUid(uid);
+    api->updateTodo(summary, dueDate, completed, currentCalendar, todo.value().getCompleted(), uid);
+    todoMap.clear();
+    int i=0;
+    for(Vtodo const &td : currentCalendar.getTodos()) {
+        todoMap.insert(std::pair<int, std::string>(i, td.getUid()));
+        i++;
+    }
     currentCalendar = api->downloadCalendarObjects(currentCalendar.getName());
     selectedDateChange();
 }

@@ -9,7 +9,7 @@ Vcalendar::Vcalendar() {
     name = "";
 }
 
-Vcalendar::Vcalendar(std::string const &name): name(name) { }
+Vcalendar::Vcalendar(std::string const &name, std::string const &prodId, std::string const version): name(name), prodid(prodId), version(version) { }
 
 void Vcalendar::addEvent(const Vevent &event) {
     events.push_back(event);
