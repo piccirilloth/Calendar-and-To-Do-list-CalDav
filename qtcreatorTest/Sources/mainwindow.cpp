@@ -20,7 +20,6 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->listWidget, SIGNAL(itemDoubleClicked(QListWidgetItem*)), this, SLOT(on_dbClickTodo()));
     connect(ui->listWidget, SIGNAL(customContextMenuRequested(const QPoint&)), this, SLOT(ProvideContextMenuTodo(const QPoint &)));
     connect(ui->listWidget_Events, SIGNAL(customContextMenuRequested(const QPoint&)), this, SLOT(ProvideContextMenuEvents(const QPoint &)));
-    connect(ui->pushButton_createEvent, SIGNAL(clicked(bool)), this, SLOT(on_createEvent()));
 }
 
 MainWindow::~MainWindow()
@@ -53,8 +52,6 @@ void MainWindow::afterLogin() {
         ui->listWidget_2->addItem(QString(value.c_str()));
     ui->loginButton->setText(QString("Change user"));
     ui->createCalendarButton->setEnabled(true);
-    ui->pushButton_createEvent->setEnabled(true);
-    ui->pushButton_createTodo->setEnabled(true);
 }
 
 void MainWindow::on_createCalendarButton_clicked() {
@@ -103,6 +100,9 @@ void MainWindow::on_dbclick() {
         ui->listWidget->clear();
         ui->listWidget_Events->clear();
     }
+    ui->pushButton_createEvent->setEnabled(true);
+    ui->pushButton_createTodo->setEnabled(true);
+    selectedDateChange();
 }
 
 void MainWindow::selectedDateChange() {
@@ -215,13 +215,15 @@ void MainWindow::ProvideContextMenuEvents(const QPoint &pos) {
     }
 }
 
-void MainWindow::on_createEvent() {
+void MainWindow::on_pushButton_createEvent_clicked() {
     createEvent mod(nullptr);
     connect(&mod, SIGNAL(createEv(std::string const &, Date const &, Date const &)), SLOT(updateEvents(std::string const &, Date const &, Date const &)));
     mod.setModal(true);
     mod.exec();
 }
 
-void MainWindow::updateEvents(std::string const &summary, Date const &createdOn, Date const &endDate) {
-    api->createEvent(summary, createdOn, endDate, currentCalendar);
+void MainWindow::updateEvents(std::string const &summary, Date const &startDate, Date const &endDate) {
+    api->createEvent(summary, startDate, endDate, currentCalendar);
+    currentCalendar = api->downloadCalendarObjects(currentCalendar.getName());
+    selectedDateChange();
 }

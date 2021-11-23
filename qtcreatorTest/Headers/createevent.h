@@ -28,8 +28,8 @@ signals:
     void createEv(std::string const &summary, Date const &createdOn, Date const &endDate);
 
 private slots:
-    void on_createClicked();
-    void on_clear();
+    void on_createEvent_2_clicked();
+    void on_pushButton_clear_clicked();
 
 };
 

@@ -38,8 +38,8 @@ private slots:
     void on_dbClickTodo();
     void ProvideContextMenuTodo(const QPoint &pos);
     void ProvideContextMenuEvents(const QPoint &pos);
-    void on_createEvent();
-    void updateEvents(std::string const &summary, Date const &createdOn, Date const &endDate);
+    void on_pushButton_createEvent_clicked();
+    void updateEvents(std::string const &summary, Date const &startDate, Date const &endDate);
 
 private:
     Ui::MainWindow *ui;

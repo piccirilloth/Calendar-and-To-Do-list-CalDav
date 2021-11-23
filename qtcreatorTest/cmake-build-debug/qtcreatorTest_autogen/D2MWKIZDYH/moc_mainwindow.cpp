@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
     QByteArrayData data[21];
-    char stringdata0[300];
+    char stringdata0[319];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -45,13 +45,13 @@ QT_MOC_LITERAL(10, 150, 15), // "on_dbClickEvent"
 QT_MOC_LITERAL(11, 166, 14), // "on_dbClickTodo"
 QT_MOC_LITERAL(12, 181, 22), // "ProvideContextMenuTodo"
 QT_MOC_LITERAL(13, 204, 24), // "ProvideContextMenuEvents"
-QT_MOC_LITERAL(14, 229, 14), // "on_createEvent"
-QT_MOC_LITERAL(15, 244, 12), // "updateEvents"
-QT_MOC_LITERAL(16, 257, 11), // "std::string"
-QT_MOC_LITERAL(17, 269, 7), // "summary"
-QT_MOC_LITERAL(18, 277, 4), // "Date"
-QT_MOC_LITERAL(19, 282, 9), // "createdOn"
-QT_MOC_LITERAL(20, 292, 7) // "endDate"
+QT_MOC_LITERAL(14, 229, 33), // "on_pushButton_createEvent_cli..."
+QT_MOC_LITERAL(15, 263, 12), // "updateEvents"
+QT_MOC_LITERAL(16, 276, 11), // "std::string"
+QT_MOC_LITERAL(17, 288, 7), // "summary"
+QT_MOC_LITERAL(18, 296, 4), // "Date"
+QT_MOC_LITERAL(19, 301, 9), // "startDate"
+QT_MOC_LITERAL(20, 311, 7) // "endDate"
 
     },
     "MainWindow\0on_loginButton_clicked\0\0"
@@ -60,8 +60,9 @@ QT_MOC_LITERAL(20, 292, 7) // "endDate"
     "pos\0on_dbclick\0selectedDateChange\0"
     "on_dbClickEvent\0on_dbClickTodo\0"
     "ProvideContextMenuTodo\0ProvideContextMenuEvents\0"
-    "on_createEvent\0updateEvents\0std::string\0"
-    "summary\0Date\0createdOn\0endDate"
+    "on_pushButton_createEvent_clicked\0"
+    "updateEvents\0std::string\0summary\0Date\0"
+    "startDate\0endDate"
 };
 #undef QT_MOC_LITERAL
 
@@ -128,7 +129,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 8: _t->on_dbClickTodo(); break;
         case 9: _t->ProvideContextMenuTodo((*reinterpret_cast< const QPoint(*)>(_a[1]))); break;
         case 10: _t->ProvideContextMenuEvents((*reinterpret_cast< const QPoint(*)>(_a[1]))); break;
-        case 11: _t->on_createEvent(); break;
+        case 11: _t->on_pushButton_createEvent_clicked(); break;
         case 12: _t->updateEvents((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const Date(*)>(_a[2])),(*reinterpret_cast< const Date(*)>(_a[3]))); break;
         default: ;
         }
