@@ -48,10 +48,12 @@ void MainWindow::afterLogin() {
     ui->listWidget->clear();
     eventMap.clear();
     todoMap.clear();
+    currentCalendar.clear();
     for(std::string value : l)
         ui->listWidget_2->addItem(QString(value.c_str()));
     ui->loginButton->setText(QString("Change user"));
     ui->createCalendarButton->setEnabled(true);
+    ui->textBrowser_calName->setText("");
 }
 
 void MainWindow::on_createCalendarButton_clicked() {
