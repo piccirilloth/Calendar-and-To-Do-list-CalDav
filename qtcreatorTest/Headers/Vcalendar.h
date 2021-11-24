@@ -66,6 +66,8 @@ public:
     void setEvents(const list <Vevent> &events);
 
     void setTodos(const list <Vtodo> &todos);
+    
+    void clear();
 
 };
 
