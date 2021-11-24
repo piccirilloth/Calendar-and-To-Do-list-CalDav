@@ -4,7 +4,7 @@
 
 #include "Headers/API.h"
 
-std::string API::IPADDRESS = "192.168.1.6";
+std::string API::IPADDRESS = "192.168.1.7";
 std::string API::username = "";
 std::string API::password = "";
 bool API::loggedIn = false;
@@ -13,6 +13,7 @@ std::list<std::string> API::calendarNames;
 API::API() {}
 
 std::string API::login(std::string const &username, std::string const &password) {
+    std::lock_guard<std::mutex> lg(m);
     curlpp::Cleanup init;
     curlpp::Easy handle;
     std::list<std::string> headers;
@@ -50,7 +51,24 @@ std::string API::login(std::string const &username, std::string const &password)
     return str.str();
 }
 
+void API::setParamsAfterLogin(const std::string &user, const std::string &pwd, std::string const &response) {
+    {
+        std::lock_guard<std::mutex> lg(m);
+        IcsParser parser(response);
+        API::username = user;
+        API::password = pwd;
+        API::loggedIn = true;
+    }
+    clearCalendars(); //todo: add a function in api to set these parameters
+    std::list<std::string> names = retrieveAllCalendars(); //return only calendar names
+
+    for(std::string const &value : names) {
+        addCalendar(value);
+    }
+}
+
 std::list<std::string> API::retrieveAllCalendars() {
+    std::lock_guard<std::mutex> lg(m);
     curlpp::Cleanup init;
     curlpp::Easy handle;
     std::list<std::string> headers;
@@ -114,6 +132,7 @@ std::list<std::string> API::getNames(std::string const &result) {
 }
 
 void API::createEmptyCalendar(std::string const &calendarName) {
+    std::lock_guard<std::mutex> lg(m);
     curlpp::Cleanup init;
     curlpp::Easy handle;
     std::list<std::string> headers;
@@ -175,28 +194,34 @@ void API::createEmptyCalendar(std::string const &calendarName) {
 }*/
 
 std::list<std::string> API::deleteCalendar(const std::string &name) {
-    curlpp::Cleanup init;
-    curlpp::Easy handle;
-    std::ostringstream str;
-    try {
-        handle.setOpt(curlpp::Options::Url(
-                std::string("http://" + IPADDRESS + "/progetto/calendarserver.php/calendars/" + username + "/" + name + "/")));
-        handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
-        handle.setOpt(new curlpp::options::UserPwd(username + ":" + password));
-        handle.setOpt(new curlpp::Options::CustomRequest("DELETE"));
-        handle.setOpt(curlpp::Options::WriteStream(&str));
-        handle.perform();
-    }
-    catch (cURLpp::RuntimeError &e) {
-        std::cout << e.what() << std::endl;
-    }
-    catch (cURLpp::LogicError &e) {
-        std::cout << e.what() << std::endl;
+    {
+        std::lock_guard<std::mutex> lg(m);
+        curlpp::Cleanup init;
+        curlpp::Easy handle;
+        std::ostringstream str;
+        try {
+            handle.setOpt(curlpp::Options::Url(
+                    std::string(
+                            "http://" + IPADDRESS + "/progetto/calendarserver.php/calendars/" + username + "/" + name +
+                            "/")));
+            handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
+            handle.setOpt(new curlpp::options::UserPwd(username + ":" + password));
+            handle.setOpt(new curlpp::Options::CustomRequest("DELETE"));
+            handle.setOpt(curlpp::Options::WriteStream(&str));
+            handle.perform();
+        }
+        catch (cURLpp::RuntimeError &e) {
+            std::cout << e.what() << std::endl;
+        }
+        catch (cURLpp::LogicError &e) {
+            std::cout << e.what() << std::endl;
+        }
     }
     return retrieveAllCalendars();
 }
 
 Vcalendar API::downloadCalendarObjects(std::string const &calendarName) {
+    std::lock_guard<std::mutex> lg(m);
     curlpp::Cleanup init;
     curlpp::Easy handle;
     std::list<std::string> headers;
@@ -241,6 +266,7 @@ Vcalendar API::downloadCalendarObjects(std::string const &calendarName) {
 }
 
 void API::deleteIcs(const std::string &uid, std::string const &calName) {
+    std::lock_guard<std::mutex> lg(m);
     curlpp::Cleanup init;
     curlpp::Easy handle;
     std::ostringstream str;
@@ -262,6 +288,7 @@ void API::deleteIcs(const std::string &uid, std::string const &calName) {
 }
 
 void API::createEvent(const std::string &summary, const Date &startDate, const Date &endDate, Vcalendar const &cal) {
+    std::lock_guard<std::mutex> lg(m);
     curlpp::Cleanup init;
     curlpp::Easy handle;
     std::list<std::string> headers;
@@ -306,6 +333,7 @@ void API::createEvent(const std::string &summary, const Date &startDate, const D
 }
 
 void API::updateEvent(std::string const &summary, Date const &startDate, Date const &endDate, std::string const &uid, Vcalendar const &cal) {
+    std::lock_guard<std::mutex> lg(m);
     curlpp::Cleanup init;
     curlpp::Easy handle;
     std::list<std::string> headers;
@@ -350,6 +378,7 @@ void API::updateEvent(std::string const &summary, Date const &startDate, Date co
 }
 
 void API::createTodo(const std::string &summary, const std::string &dueDate, const Vcalendar &cal) {
+    std::lock_guard<std::mutex> lg(m);
     curlpp::Cleanup init;
     curlpp::Easy handle;
     std::list<std::string> headers;
@@ -391,6 +420,7 @@ void API::createTodo(const std::string &summary, const std::string &dueDate, con
 }
 
 void API::updateTodo(const std::string &summary, const Date &dueDate, bool completed, const Vcalendar &cal, const Date &oldComplete, std::string const &uid) {
+    std::lock_guard<std::mutex> lg(m);
     curlpp::Cleanup init;
     curlpp::Easy handle;
     std::list<std::string> headers;

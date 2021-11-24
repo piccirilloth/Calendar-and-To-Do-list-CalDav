@@ -53,6 +53,9 @@ private:
     Vcalendar currentCalendar;
     std::map<int, std::string> eventMap;
     std::map<int, std::string> todoMap;
+    std::mutex m;
+    //std::condition_variable cv;
+
     std::optional<Vevent> getEvetByUid(std::string const &uid);
     std::optional<Vtodo> getTodoByUid(std::string const &uid);
 };

@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow), login(nullptr)
 {
+    std::lock_guard<std::mutex> lg(m); //probably useless
     ui->setupUi(this);
     ui->listWidget_2->setContextMenuPolicy(Qt::CustomContextMenu);
     ui->listWidget->setContextMenuPolicy(Qt::CustomContextMenu);
@@ -38,20 +39,25 @@ void MainWindow::on_loginButton_clicked()
 }
 
 void MainWindow::setUpPage() {
-    connect(login, SIGNAL(&loginwindow::sendSignal), this, SLOT(&MainWindow::on_loginButton_clicked));
+    connect(login, SIGNAL(&loginwindow::sendSignal), this, SLOT(&MainWindow::on_loginButton_clicked)); //todo: maybe can be deleted
 }
 
 void MainWindow::afterLogin() {
-    std::list<std::string> l = api->getCalendars();
+    std::list<std::string> l = api->getCalendars(); //get calendar gets a safe access to calendars
+    std::lock_guard<std::mutex> lg(m);
     ui->listWidget_2->clear();
     ui->listWidget_Events->clear();
     ui->listWidget->clear();
     eventMap.clear();
     todoMap.clear();
-    for(std::string value : l)
+    currentCalendar.clear();
+    for(std::string const &value : l)
         ui->listWidget_2->addItem(QString(value.c_str()));
     ui->loginButton->setText(QString("Change user"));
     ui->createCalendarButton->setEnabled(true);
+    ui->textBrowser_calName->setText("");
+    ui->pushButton_createTodo->setEnabled(false);
+    ui->pushButton_createEvent->setEnabled(false);
 }
 
 void MainWindow::on_createCalendarButton_clicked() {
@@ -63,6 +69,7 @@ void MainWindow::on_createCalendarButton_clicked() {
 
 void MainWindow::updateCalendars() {
     std::list<std::string> l = api->getCalendars();
+    std::lock_guard<std::mutex> lg(m);
     ui->listWidget_2->clear();
     for(std::string value : l)
         ui->listWidget_2->addItem(QString(value.c_str()));
@@ -78,7 +85,9 @@ void MainWindow::ProvideContextMenuCal(const QPoint &pos) {
         std::string name = ui->listWidget_2->currentItem()->text().toStdString();
         std::list<std::string> list = api->deleteCalendar(name);
         api->clearCalendars();
-        if(name == currentCalendar.getName()) {
+
+        std::lock_guard<std::mutex> lg(m);
+        if (name == currentCalendar.getName()) {
             ui->listWidget->clear();
             ui->listWidget_Events->clear();
             eventMap.clear();
@@ -92,6 +101,7 @@ void MainWindow::ProvideContextMenuCal(const QPoint &pos) {
 }
 
 void MainWindow::on_dbclick() {
+    std::lock_guard<std::mutex> lg(m);
     std::string oldName = currentCalendar.getName();
     QString calendarName = ui->listWidget_2->currentItem()->text();
     currentCalendar = api->downloadCalendarObjects(calendarName.toStdString());
@@ -111,10 +121,10 @@ void MainWindow::selectedDateChange() {
     curDate = selectedDate;
     std::list<Vevent> events = currentCalendar.getEvents();
     std::list<Vtodo> todos = currentCalendar.getTodos();
-    if(events.empty() && todos.empty())
-        return;
     ui->listWidget->clear();
     ui->listWidget_Events->clear();
+    if(events.empty() && todos.empty())
+        return;
     eventMap.clear();
     int i=0;
     for(const Vevent &ev : events) {
@@ -127,8 +137,8 @@ void MainWindow::selectedDateChange() {
     todoMap.clear();
     i=0;
     for(const Vtodo &td : todos) {
-        if(static_cast<string>(td.getDtstart()) != "00000000") {
-            if (curDate >= td.getDtstart() && curDate <= td.getDue()) {
+        if(static_cast<string>(td.getDtstamp()) != "00000000") {
+            if (curDate <= td.getDue()) {
                 ui->listWidget->addItem((QString(td.getSummary().c_str())));
                 todoMap.insert(std::pair<int, std::string>(i, td.getUid()));
                 i++;
@@ -142,6 +152,7 @@ void MainWindow::selectedDateChange() {
 }
 
 void MainWindow::on_dbClickEvent() {
+    std::lock_guard<std::mutex> lg(m);
     int index = ui->listWidget_Events->currentIndex().row();
     std::string uid = eventMap.at(index);
     Vevent event;
@@ -155,6 +166,7 @@ void MainWindow::on_dbClickEvent() {
 }
 
 void MainWindow::on_dbClickTodo() {
+    std::lock_guard<std::mutex> lg(m);
     int index = ui->listWidget->currentIndex().row();
     std::string uid = todoMap.at(index);
     Vtodo todo;
@@ -174,19 +186,21 @@ void MainWindow::ProvideContextMenuTodo(const QPoint &pos) {
     subMenu.addAction("Update");
     QAction* rightClickItem = subMenu.exec(item);
     if (rightClickItem && rightClickItem->text().contains("Delete")) {
+        std::lock_guard<std::mutex> lg(m);
         int index = ui->listWidget->currentIndex().row();
         std::string uid = todoMap.at(index);
         api->deleteIcs(uid, currentCalendar.getName());
         currentCalendar = api->downloadCalendarObjects(currentCalendar.getName());
         ui->listWidget->clear();
         todoMap.clear();
-        int i=0;
+        /*int i=0;
         for(Vtodo const &td : currentCalendar.getTodos()) {
             todoMap.insert(std::pair<int, std::string>(i, td.getUid()));
             i++;
-        }
+        }*/
         selectedDateChange();
     } else if(rightClickItem && rightClickItem->text().contains("Update")) {
+        std::lock_guard<std::mutex> lg(m);
         int index = ui->listWidget->currentIndex().row();
         std::string uid = todoMap.at(index);
         std::optional<Vtodo> todo = getTodoByUid(uid);
@@ -215,6 +229,7 @@ void MainWindow::ProvideContextMenuEvents(const QPoint &pos) {
     subMenu.addAction("Update");
     QAction* rightClickItem = subMenu.exec(item);
     if (rightClickItem && rightClickItem->text().contains("Delete")) {
+        std::lock_guard<std::mutex> lg(m);
         int index = ui->listWidget_Events->currentIndex().row();
         std::string uid = eventMap.at(index);
         api->deleteIcs(uid, currentCalendar.getName());
@@ -227,6 +242,7 @@ void MainWindow::ProvideContextMenuEvents(const QPoint &pos) {
         }
         selectedDateChange();
     } else if(rightClickItem && rightClickItem->text().contains("Update")) {
+        std::lock_guard<std::mutex> lg(m);
         int index = ui->listWidget_Events->currentIndex().row();
         std::string uid = eventMap.at(index);
         std::optional<Vevent> event = getEvetByUid(uid);
@@ -265,12 +281,12 @@ void MainWindow::updateEvents(std::string const &summary, Date const &startDate,
         }
         api->createEvent(summary, startDate, endDate, currentCalendar);
     }
-    int i=0;
+    /*int i=0;
     eventMap.clear();
     for(Vevent const &ev : currentCalendar.getEvents()) {
         eventMap.insert(std::pair<int, std::string>(i, ev.getUid()));
         i++;
-    }
+    }*/
     currentCalendar = api->downloadCalendarObjects(currentCalendar.getName());
     selectedDateChange();
 }
@@ -288,12 +304,12 @@ void MainWindow::createTodo_slot(const std::string &summary, const Date &dueDate
         currentCalendar.setVersion("2.0");
     }
     api->createTodo(summary, dueDate, currentCalendar);
-    int i=0;
+    /*int i=0;
     todoMap.clear();
     for(Vtodo const &td : currentCalendar.getTodos()) {
         todoMap.insert(std::pair<int, std::string>(i, td.getUid()));
         i++;
-    }
+    }*/
     currentCalendar = api->downloadCalendarObjects(currentCalendar.getName());
     selectedDateChange();
 }
@@ -304,11 +320,11 @@ void MainWindow::updateTodo_slot(const std::string &summary, const Date &dueDate
     std::optional<Vtodo> todo = getTodoByUid(uid);
     api->updateTodo(summary, dueDate, completed, currentCalendar, todo.value().getCompleted(), uid);
     todoMap.clear();
-    int i=0;
+    /*int i=0;
     for(Vtodo const &td : currentCalendar.getTodos()) {
         todoMap.insert(std::pair<int, std::string>(i, td.getUid()));
         i++;
-    }
+    }*/
     currentCalendar = api->downloadCalendarObjects(currentCalendar.getName());
     selectedDateChange();
 }

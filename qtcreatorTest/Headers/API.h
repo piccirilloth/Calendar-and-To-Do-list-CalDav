@@ -14,6 +14,8 @@
 #include "Vcalendar.h"
 #include "IcsParser.h"
 #include <QDate>
+#include <mutex>
+#include <condition_variable>
 
 class API {
 private:
@@ -22,16 +24,21 @@ private:
     static std::string password;
     static bool loggedIn;
     static std::list<std::string> calendarNames;
+    std::mutex m;
+    //std::condition_variable cv;
 public:
     void addCalendar(std::string cal) {
+        std::lock_guard<std::mutex> lg(m);
         calendarNames.push_back(cal);
     }
 
     std::list<std::string> getCalendars() {
+        std::lock_guard<std::mutex> lg(m);
         return calendarNames;
     }
 
     void clearCalendars() {
+        std::lock_guard<std::mutex> lg(m);
         calendarNames.clear();
     }
 
@@ -74,6 +81,7 @@ public:
 public:
     API();
     std::string login(std::string const &username, std::string const &password);
+    void setParamsAfterLogin(std::string const &user, std::string const &pwd, std::string const &resposne);
     std::list<std::string> retrieveAllCalendars();
     void createEmptyCalendar(std::string const &calendarName);
     Vcalendar downloadCalendarObjects(std::string const &calendarName);

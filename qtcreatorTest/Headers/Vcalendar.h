@@ -67,6 +67,8 @@ public:
 
     void setTodos(const list <Vtodo> &todos);
 
+    void clear();
+
 };
 
 
