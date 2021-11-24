@@ -126,12 +126,12 @@ void shareCalendar() {
            "END:VEVENT\r\n"
            "END:VCALENDAR\r\n";*/
 
-    body = "<?icsText version=\"1.0\" encoding=\"utf-8\" ?>\n"
+    body =
            "<D:share-resource xmlns:D=\"DAV:\">\n"
            "    <D:sharee>\n"
            "        <D:href>mailto:piccipicc@gmail.com</D:href>\n"
            "        <D:prop>\n"
-           "            <D:displayname>oscar</D:displayname>\n"
+           "            <D:displayname>oscar-sharedcalendar</D:displayname>\n"
            "        </D:prop>\n"
            "        <D:comment>Shared workspace</D:comment>\n"
            "        <D:share-access>\n"
@@ -140,7 +140,7 @@ void shareCalendar() {
            "    </D:sharee>\n"
            "</D:share-resource>";
     try {
-        handle.setOpt(curlpp::Options::Url(std::string("http://192.168.1.8/progetto/calendarserver.php/calendars/lorenzo/home")));
+        handle.setOpt(curlpp::Options::Url(std::string("http://192.168.1.7/progetto/calendarserver.php/calendars/lorenzo/calendarLorenzo/")));
         handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
         handle.setOpt(new curlpp::options::UserPwd("lorenzo:pintaldi"));
         handle.setOpt(new curlpp::Options::CustomRequest("POST"));
@@ -262,12 +262,13 @@ std::string lockCalendar(std::string user) {
         return tmp;
     }
 
-
     catch (cURLpp::RuntimeError &e) {
         std::cout << e.what() << std::endl;
+        return "";
     }
     catch (cURLpp::LogicError &e) {
         std::cout << e.what() << std::endl;
+        return "";
     }
 }
 
@@ -304,12 +305,13 @@ void unlockCalendar(std::string const &locktoken) {
 
 int main(int argc, char *argv[]) {
     //updateCalendar();
-    /*QApplication a(argc, argv);
+    QApplication a(argc, argv);
     MainWindow w;
     w.show();
-    return a.exec();*/
+    return a.exec();
     //deleteIcs();
-    getEmail();
+    //getEmail();
+    //shareCalendar();
     /*Vcalendar tmp("prova");
     IcsParser parser(downloadCalendars());
     parser.getVCalendar(std::ref(tmp));

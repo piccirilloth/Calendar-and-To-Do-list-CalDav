@@ -464,3 +464,45 @@ void API::updateTodo(const std::string &summary, const Date &dueDate, bool compl
         std::cout << e.what() << std::endl;
     }
 }
+
+void API::shareCalendar(const std::string &displayName, const std::string &mail, const std::string &comment, const std::string &calendarName) {
+    std::lock_guard<std::mutex> lg(m);
+    curlpp::Cleanup init;
+    curlpp::Easy handle;
+    std::list<std::string> headers;
+    std::string result;
+    std::string body;
+    std::ostringstream str;
+    headers.push_back("Content-Type: application/davsharing+xml; charset=\"utf-8\"");
+
+    body =  "<?xml version=\"1.0\" encoding=\"utf-8\" ?>"
+            "<D:share-resource xmlns:D=\"DAV:\">\n"
+            "    <D:sharee>\n"
+            "        <D:href>mailto:" + mail + "</D:href>\n"
+            "        <D:prop>\n"
+            "            <D:displayname>" + displayName + "-shared by " + username + "</D:displayname>\n"
+            "        </D:prop>\n"
+            "        <D:comment>" + comment + "</D:comment>\n"
+            "        <D:share-access>\n"
+            "            <D:read-write />\n"
+            "        </D:share-access>\n"
+            "    </D:sharee>\n"
+            "</D:share-resource>";
+    try {
+        handle.setOpt(curlpp::Options::Url(std::string("http://" + IPADDRESS + "/progetto/calendarserver.php/calendars/" + username + "/" + calendarName + "/")));
+        handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
+        handle.setOpt(new curlpp::options::UserPwd(username + ":" + password));
+        handle.setOpt(new curlpp::Options::CustomRequest("POST"));
+        handle.setOpt(new curlpp::Options::PostFields(body));
+        handle.setOpt(new curlpp::Options::PostFieldSize(body.length()));
+        handle.setOpt(new curlpp::Options::HttpHeader(headers));
+        handle.setOpt(curlpp::Options::WriteStream(&str));
+        handle.perform();
+    }
+    catch (cURLpp::RuntimeError &e) {
+        std::cout << e.what() << std::endl;
+    }
+    catch (cURLpp::LogicError &e) {
+        std::cout << e.what() << std::endl;
+    }
+}

@@ -58,6 +58,7 @@ void MainWindow::afterLogin() {
     ui->textBrowser_calName->setText("");
     ui->pushButton_createTodo->setEnabled(false);
     ui->pushButton_createEvent->setEnabled(false);
+    ui->shareCalendarButton->setEnabled(false);
 }
 
 void MainWindow::on_createCalendarButton_clicked() {
@@ -92,6 +93,11 @@ void MainWindow::ProvideContextMenuCal(const QPoint &pos) {
             ui->listWidget_Events->clear();
             eventMap.clear();
             todoMap.clear(); //todo: create a function clear
+            ui->textBrowser_calName->setText("");
+            ui->pushButton_createEvent->setEnabled(false);
+            ui->pushButton_createTodo->setEnabled(false);
+            currentCalendar.clear();
+            ui->shareCalendarButton->setEnabled(false);
         }
         for(std::string v : list)
             api->addCalendar(v);
@@ -112,6 +118,7 @@ void MainWindow::on_dbclick() {
     }
     ui->pushButton_createEvent->setEnabled(true);
     ui->pushButton_createTodo->setEnabled(true);
+    ui->shareCalendarButton->setEnabled(true);
     selectedDateChange();
 }
 
@@ -327,4 +334,17 @@ void MainWindow::updateTodo_slot(const std::string &summary, const Date &dueDate
     }*/
     currentCalendar = api->downloadCalendarObjects(currentCalendar.getName());
     selectedDateChange();
+}
+
+void MainWindow::on_shareCalendarButton_clicked() {
+    shareCalendarForm mod;
+    connect(&mod, SIGNAL(shareCal(const std::string &, const std::string &, const std::string &)), this,
+            SLOT(shareCalendar_slot(const std::string &, const std::string &, const std::string &)));
+    mod.setModal(true);
+    mod.exec();
+}
+
+void MainWindow::shareCalendar_slot(const std::string &displayName, const std::string &email, const std::string &comment) {
+    std::lock_guard<std::mutex> lg(m);
+    api->shareCalendar(displayName, email, comment, currentCalendar.getName());
 }

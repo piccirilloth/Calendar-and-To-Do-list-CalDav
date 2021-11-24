@@ -527,6 +527,30 @@ Sources/mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/mainwindow.cpp.s
 .PHONY : Sources/mainwindow.cpp.s
 
+Sources/sharecalendarform.o: Sources/sharecalendarform.cpp.o
+.PHONY : Sources/sharecalendarform.o
+
+# target to build an object file
+Sources/sharecalendarform.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/sharecalendarform.cpp.o
+.PHONY : Sources/sharecalendarform.cpp.o
+
+Sources/sharecalendarform.i: Sources/sharecalendarform.cpp.i
+.PHONY : Sources/sharecalendarform.i
+
+# target to preprocess a source file
+Sources/sharecalendarform.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/sharecalendarform.cpp.i
+.PHONY : Sources/sharecalendarform.cpp.i
+
+Sources/sharecalendarform.s: Sources/sharecalendarform.cpp.s
+.PHONY : Sources/sharecalendarform.s
+
+# target to generate assembly for a file
+Sources/sharecalendarform.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/sharecalendarform.cpp.s
+.PHONY : Sources/sharecalendarform.cpp.s
+
 Sources/todo_information.o: Sources/todo_information.cpp.o
 .PHONY : Sources/todo_information.o
 
@@ -995,6 +1019,30 @@ qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.s
 .PHONY : qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.s
 
+synchronization.o: synchronization.cpp.o
+.PHONY : synchronization.o
+
+# target to build an object file
+synchronization.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/synchronization.cpp.o
+.PHONY : synchronization.cpp.o
+
+synchronization.i: synchronization.cpp.i
+.PHONY : synchronization.i
+
+# target to preprocess a source file
+synchronization.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/synchronization.cpp.i
+.PHONY : synchronization.cpp.i
+
+synchronization.s: synchronization.cpp.s
+.PHONY : synchronization.s
+
+# target to generate assembly for a file
+synchronization.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/synchronization.cpp.s
+.PHONY : synchronization.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1049,6 +1097,9 @@ help:
 	@echo "... Sources/mainwindow.o"
 	@echo "... Sources/mainwindow.i"
 	@echo "... Sources/mainwindow.s"
+	@echo "... Sources/sharecalendarform.o"
+	@echo "... Sources/sharecalendarform.i"
+	@echo "... Sources/sharecalendarform.s"
 	@echo "... Sources/todo_information.o"
 	@echo "... Sources/todo_information.i"
 	@echo "... Sources/todo_information.s"
@@ -1103,6 +1154,9 @@ help:
 	@echo "... qtcreatorTest_static_lib_autogen/mocs_compilation.o"
 	@echo "... qtcreatorTest_static_lib_autogen/mocs_compilation.i"
 	@echo "... qtcreatorTest_static_lib_autogen/mocs_compilation.s"
+	@echo "... synchronization.o"
+	@echo "... synchronization.i"
+	@echo "... synchronization.s"
 .PHONY : help
 
 

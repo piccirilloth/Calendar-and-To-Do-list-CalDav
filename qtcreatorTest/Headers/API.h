@@ -91,6 +91,7 @@ public:
     void updateEvent(std::string const &summary, Date const &startDate, Date const &endDate, std::string const &uid, Vcalendar const &cal);
     void createTodo(std::string const &summary, std::string const &dueDate, Vcalendar const &cal);
     void updateTodo(std::string const &summary, Date const &dueDate, bool completed, Vcalendar const &cal, Date const & oldComplete, std::string const &uid);
+    void shareCalendar(std::string const &displayName, std::string const &mail, std::string const &comment, const std::string &calendarName);
 };
 
 

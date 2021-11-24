@@ -162,6 +162,12 @@
 			null
 		],
 		[
+			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/sharecalendarform.h",
+			"MU",
+			"D2MWKIZDYH/moc_sharecalendarform.cpp",
+			null
+		],
+		[
 			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/todo_information.h",
 			"MU",
 			"D2MWKIZDYH/moc_todo_information.cpp",
@@ -171,6 +177,12 @@
 			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/updatetodo.h",
 			"MU",
 			"D2MWKIZDYH/moc_updatetodo.cpp",
+			null
+		],
+		[
+			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/synchronization.h",
+			"MU",
+			"EWIEGA46WW/moc_synchronization.cpp",
 			null
 		]
 	],
@@ -288,6 +300,11 @@
 			null
 		],
 		[
+			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Sources/sharecalendarform.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Sources/todo_information.cpp",
 			"MU",
 			null
@@ -299,6 +316,11 @@
 		],
 		[
 			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/main.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/synchronization.cpp",
 			"MU",
 			null
 		]

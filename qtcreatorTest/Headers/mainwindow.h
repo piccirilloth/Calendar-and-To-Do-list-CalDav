@@ -14,6 +14,7 @@
 #include "createevent.h"
 #include "createtodo.h"
 #include "updatetodo.h"
+#include "sharecalendarform.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -45,6 +46,8 @@ private slots:
     void on_pushButton_createTodo_clicked();
     void createTodo_slot(std::string const &summary, Date const &dueDate);
     void updateTodo_slot(std::string const &summary, Date const &dueDate, bool completed);
+    void on_shareCalendarButton_clicked();
+    void shareCalendar_slot(std::string const &displayName, std::string const &email, std::string const &comment);
 
 private:
     Ui::MainWindow *ui;
