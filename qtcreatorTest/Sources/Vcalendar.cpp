@@ -101,3 +101,8 @@ long Vcalendar::getNextUid() const {
 void Vcalendar::setNextUid(long nextUid) {
     Vcalendar::nextUid = nextUid;
 }
+
+void Vcalendar::clear() {
+    todos.clear();
+    events.clear();
+}
