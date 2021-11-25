@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow), login(nullptr)
 {
     std::lock_guard<std::mutex> lg(m); //probably useless
+    end = false;
     ui->setupUi(this);
     ui->listWidget_2->setContextMenuPolicy(Qt::CustomContextMenu);
     ui->listWidget->setContextMenuPolicy(Qt::CustomContextMenu);
@@ -25,6 +26,11 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow()
 {
+    {
+        std::lock_guard<std::mutex> lg(endMutex);
+        end = true;
+    }
+    timerThread.join();
     delete ui;
     delete login;
     delete api;
@@ -282,6 +288,7 @@ void MainWindow::updateEvents(std::string const &summary, Date const &startDate,
     if(isUpdate)
         api->updateEvent(summary, startDate, endDate, uid, currentCalendar);
     else {
+        currentCalendar = api->downloadCalendarObjects(currentCalendar.getName()); //to have the last uid updated
         if(currentCalendar.getNextUid() == 0) { //first ics
             currentCalendar.setProdid("-//Sabre//Sabre VObject 4.2.2//EN");
             currentCalendar.setVersion("2.0");
@@ -306,6 +313,7 @@ void MainWindow::on_pushButton_createTodo_clicked() {
 }
 
 void MainWindow::createTodo_slot(const std::string &summary, const Date &dueDate) {
+    currentCalendar = api->downloadCalendarObjects(currentCalendar.getName());
     if(currentCalendar.getNextUid() == 0) { //first ics
         currentCalendar.setProdid("-//Sabre//Sabre VObject 4.2.2//EN");
         currentCalendar.setVersion("2.0");
@@ -346,5 +354,54 @@ void MainWindow::on_shareCalendarButton_clicked() {
 
 void MainWindow::shareCalendar_slot(const std::string &displayName, const std::string &email, const std::string &comment) {
     std::lock_guard<std::mutex> lg(m);
-    api->shareCalendar(displayName, email, comment, currentCalendar.getName());
+    long status = api->shareCalendar(displayName, email, comment, currentCalendar.getName());
+    if(status == 403)
+        QMessageBox::information(this, "Error", "You are not allowed to share this calendar");
+    if(status == 500)
+        QMessageBox::information(this, "Error", "Internal server error");
+}
+
+void MainWindow::synchronizeCalendarList() {
+    timerThread = std::thread([this]() {
+        bool exit = false;
+        while(!exit) {
+            std::this_thread::sleep_for(std::chrono::milliseconds(5000));
+            if(api->isLoggedIn())
+                timerElapsed();
+            std::lock_guard<std::mutex> ul(endMutex);
+            if(end)
+                exit = true;
+        }
+    });
+}
+
+void MainWindow::timerElapsed() {
+    std::thread checkCalendarList([this](){
+        std::list<std::string> names = api->retrieveAllCalendars(); // retrieve the list of calendar names from the server
+        std::list<std::string> oldNames = api->getCalendars();
+        for(std::string const &newName : names) {
+            bool diff = true;
+            for(std::string const &oldName : oldNames) {
+                if(oldName == newName)
+                    diff = false;
+            }
+            if(diff) {
+                api->addCalendar(newName);
+                {
+                    std::lock_guard<std::mutex> lg(m);
+                    ui->listWidget_2->addItem(newName.c_str());
+                }
+            }
+        }
+    });
+
+    std::thread checkCurrentCalendar([this](){
+        std::lock_guard<std::mutex> lg(m);
+        if(!ui->textBrowser_calName->toPlainText().isEmpty()){
+            currentCalendar = api->downloadCalendarObjects(currentCalendar.getName());
+            selectedDateChange();
+        }
+    });
+    checkCalendarList.detach();
+    checkCurrentCalendar.detach();
 }

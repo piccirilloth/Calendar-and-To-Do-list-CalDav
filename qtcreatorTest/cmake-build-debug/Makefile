@@ -1019,30 +1019,6 @@ qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.s
 .PHONY : qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.s
 
-synchronization.o: synchronization.cpp.o
-.PHONY : synchronization.o
-
-# target to build an object file
-synchronization.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/synchronization.cpp.o
-.PHONY : synchronization.cpp.o
-
-synchronization.i: synchronization.cpp.i
-.PHONY : synchronization.i
-
-# target to preprocess a source file
-synchronization.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/synchronization.cpp.i
-.PHONY : synchronization.cpp.i
-
-synchronization.s: synchronization.cpp.s
-.PHONY : synchronization.s
-
-# target to generate assembly for a file
-synchronization.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/synchronization.cpp.s
-.PHONY : synchronization.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1154,9 +1130,6 @@ help:
 	@echo "... qtcreatorTest_static_lib_autogen/mocs_compilation.o"
 	@echo "... qtcreatorTest_static_lib_autogen/mocs_compilation.i"
 	@echo "... qtcreatorTest_static_lib_autogen/mocs_compilation.s"
-	@echo "... synchronization.o"
-	@echo "... synchronization.i"
-	@echo "... synchronization.s"
 .PHONY : help
 
 

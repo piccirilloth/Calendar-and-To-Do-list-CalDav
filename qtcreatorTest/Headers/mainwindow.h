@@ -15,6 +15,8 @@
 #include "createtodo.h"
 #include "updatetodo.h"
 #include "sharecalendarform.h"
+#include <QTimer>
+#include <thread>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -28,6 +30,7 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     void setUpPage();
+    void synchronizeCalendarList();
 
 private slots:
     void on_loginButton_clicked();
@@ -57,9 +60,12 @@ private:
     std::map<int, std::string> eventMap;
     std::map<int, std::string> todoMap;
     std::mutex m;
-    //std::condition_variable cv;
+    bool end;
+    std::mutex endMutex;
+    std::thread timerThread;
 
     std::optional<Vevent> getEvetByUid(std::string const &uid);
     std::optional<Vtodo> getTodoByUid(std::string const &uid);
+    void timerElapsed();
 };
 #endif // MAINWINDOW_H

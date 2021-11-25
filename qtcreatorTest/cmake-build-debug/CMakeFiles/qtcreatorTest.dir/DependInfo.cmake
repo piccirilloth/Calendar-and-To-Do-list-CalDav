@@ -25,7 +25,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Sources/updatetodo.cpp" "/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles/qtcreatorTest.dir/Sources/updatetodo.cpp.o"
   "/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/main.cpp" "/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles/qtcreatorTest.dir/main.cpp.o"
   "/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_autogen/mocs_compilation.cpp" "/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles/qtcreatorTest.dir/qtcreatorTest_autogen/mocs_compilation.cpp.o"
-  "/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/synchronization.cpp" "/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/CMakeFiles/qtcreatorTest.dir/synchronization.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

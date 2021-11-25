@@ -593,12 +593,6 @@
 		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/main.cpp">
 			<Option target="qtcreatorTest"/>
 		</Unit>
-		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/synchronization.cpp">
-			<Option target="qtcreatorTest"/>
-		</Unit>
-		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/synchronization.h">
-			<Option target="qtcreatorTest"/>
-		</Unit>
 		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

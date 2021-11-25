@@ -178,12 +178,6 @@
 			"MU",
 			"D2MWKIZDYH/moc_updatetodo.cpp",
 			null
-		],
-		[
-			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/synchronization.h",
-			"MU",
-			"EWIEGA46WW/moc_synchronization.cpp",
-			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -316,11 +310,6 @@
 		],
 		[
 			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/main.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/synchronization.cpp",
 			"MU",
 			null
 		]

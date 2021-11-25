@@ -19,7 +19,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/qtcreatorTest.dir/Sources/updatetodo.cpp.o"
   "CMakeFiles/qtcreatorTest.dir/main.cpp.o"
   "CMakeFiles/qtcreatorTest.dir/qtcreatorTest_autogen/mocs_compilation.cpp.o"
-  "CMakeFiles/qtcreatorTest.dir/synchronization.cpp.o"
   "qtcreatorTest"
   "qtcreatorTest.pdb"
 )

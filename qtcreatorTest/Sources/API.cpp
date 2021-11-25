@@ -465,7 +465,7 @@ void API::updateTodo(const std::string &summary, const Date &dueDate, bool compl
     }
 }
 
-void API::shareCalendar(const std::string &displayName, const std::string &mail, const std::string &comment, const std::string &calendarName) {
+long API::shareCalendar(const std::string &displayName, const std::string &mail, const std::string &comment, const std::string &calendarName) {
     std::lock_guard<std::mutex> lg(m);
     curlpp::Cleanup init;
     curlpp::Easy handle;
@@ -498,6 +498,8 @@ void API::shareCalendar(const std::string &displayName, const std::string &mail,
         handle.setOpt(new curlpp::Options::HttpHeader(headers));
         handle.setOpt(curlpp::Options::WriteStream(&str));
         handle.perform();
+        long http_code = curlpp::Infos::ResponseCode::get(handle);
+        std::cout << http_code << '\n';
     }
     catch (cURLpp::RuntimeError &e) {
         std::cout << e.what() << std::endl;

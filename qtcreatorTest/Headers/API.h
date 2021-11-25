@@ -11,6 +11,7 @@
 #include "../curlpp-0.8.1/include/curlpp/Easy.hpp"
 #include "../curlpp-0.8.1/include/curlpp/Options.hpp"
 #include "../curlpp-0.8.1/include/curlpp/Exception.hpp"
+#include "../curlpp-0.8.1/include/curlpp/Infos.hpp"
 #include "Vcalendar.h"
 #include "IcsParser.h"
 #include <QDate>
@@ -91,7 +92,7 @@ public:
     void updateEvent(std::string const &summary, Date const &startDate, Date const &endDate, std::string const &uid, Vcalendar const &cal);
     void createTodo(std::string const &summary, std::string const &dueDate, Vcalendar const &cal);
     void updateTodo(std::string const &summary, Date const &dueDate, bool completed, Vcalendar const &cal, Date const & oldComplete, std::string const &uid);
-    void shareCalendar(std::string const &displayName, std::string const &mail, std::string const &comment, const std::string &calendarName);
+    long shareCalendar(std::string const &displayName, std::string const &mail, std::string const &comment, const std::string &calendarName);
 };
 
 
