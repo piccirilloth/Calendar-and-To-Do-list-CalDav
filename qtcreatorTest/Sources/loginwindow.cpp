@@ -31,15 +31,7 @@ void loginwindow::on_pushButton_login_clicked() {
         QMessageBox::information(this, "Error", "Username or password are incorrect");
     else {
         //QMessageBox::information(this, "Error", res.c_str());
-        IcsParser parser(res);
-        api->setUsername(username.toStdString());
-        api->setPassword(password.toStdString());
-        api->setLoggedIn(true);
-        api->clearCalendars(); //todo: add a function in api to set these parameters
-        std::list<std::string> names = api->retrieveAllCalendars(); //return only calendar names
-        for(std::string value : names) {
-            api->addCalendar(value);
-        }
+        api->setParamsAfterLogin(username.toStdString(), password.toStdString(), res);
         emit changeUser();
         this->close();
     }

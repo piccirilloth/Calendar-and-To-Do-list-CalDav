@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1317</width>
-    <height>524</height>
+    <height>523</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,9 +28,9 @@
     <property name="geometry">
      <rect>
       <x>820</x>
-      <y>50</y>
+      <y>40</y>
       <width>241</width>
-      <height>381</height>
+      <height>391</height>
      </rect>
     </property>
    </widget>
@@ -68,7 +68,7 @@
      <rect>
       <x>10</x>
       <y>60</y>
-      <width>261</width>
+      <width>121</width>
       <height>41</height>
      </rect>
     </property>
@@ -76,7 +76,7 @@
      <string notr="true">font: 14pt &quot;Sans Serif&quot;;</string>
     </property>
     <property name="text">
-     <string>Create a calendar</string>
+     <string>Create</string>
     </property>
     <property name="flat">
      <bool>false</bool>
@@ -86,9 +86,9 @@
     <property name="geometry">
      <rect>
       <x>1070</x>
-      <y>50</y>
+      <y>40</y>
       <width>241</width>
-      <height>381</height>
+      <height>391</height>
      </rect>
     </property>
    </widget>
@@ -96,7 +96,7 @@
     <property name="geometry">
      <rect>
       <x>820</x>
-      <y>10</y>
+      <y>0</y>
       <width>241</width>
       <height>31</height>
      </rect>
@@ -122,7 +122,7 @@ font: 14pt &quot;Sans Serif&quot;;</string>
     <property name="geometry">
      <rect>
       <x>1070</x>
-      <y>10</y>
+      <y>0</y>
       <width>241</width>
       <height>31</height>
      </rect>
@@ -142,9 +142,9 @@ font: 14pt &quot;Sans Serif&quot;;</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>440</y>
+      <y>450</y>
       <width>261</width>
-      <height>31</height>
+      <height>21</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
@@ -190,6 +190,28 @@ font: 14pt &quot;Sans Serif&quot;;</string>
     </property>
     <property name="text">
      <string>Create a Event</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="shareCalendarButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>60</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 14pt &quot;Sans Serif&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Share</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
     </property>
    </widget>
   </widget>

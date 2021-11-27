@@ -527,6 +527,30 @@ Sources/mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/mainwindow.cpp.s
 .PHONY : Sources/mainwindow.cpp.s
 
+Sources/sharecalendarform.o: Sources/sharecalendarform.cpp.o
+.PHONY : Sources/sharecalendarform.o
+
+# target to build an object file
+Sources/sharecalendarform.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/sharecalendarform.cpp.o
+.PHONY : Sources/sharecalendarform.cpp.o
+
+Sources/sharecalendarform.i: Sources/sharecalendarform.cpp.i
+.PHONY : Sources/sharecalendarform.i
+
+# target to preprocess a source file
+Sources/sharecalendarform.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/sharecalendarform.cpp.i
+.PHONY : Sources/sharecalendarform.cpp.i
+
+Sources/sharecalendarform.s: Sources/sharecalendarform.cpp.s
+.PHONY : Sources/sharecalendarform.s
+
+# target to generate assembly for a file
+Sources/sharecalendarform.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/sharecalendarform.cpp.s
+.PHONY : Sources/sharecalendarform.cpp.s
+
 Sources/todo_information.o: Sources/todo_information.cpp.o
 .PHONY : Sources/todo_information.o
 
@@ -1049,6 +1073,9 @@ help:
 	@echo "... Sources/mainwindow.o"
 	@echo "... Sources/mainwindow.i"
 	@echo "... Sources/mainwindow.s"
+	@echo "... Sources/sharecalendarform.o"
+	@echo "... Sources/sharecalendarform.i"
+	@echo "... Sources/sharecalendarform.s"
 	@echo "... Sources/todo_information.o"
 	@echo "... Sources/todo_information.i"
 	@echo "... Sources/todo_information.s"

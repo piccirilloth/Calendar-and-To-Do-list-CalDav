@@ -69,6 +69,8 @@ public:
     
     void clear();
 
+    void clear();
+
 };
 
 

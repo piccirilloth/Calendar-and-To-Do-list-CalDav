@@ -126,12 +126,12 @@ void shareCalendar() {
            "END:VEVENT\r\n"
            "END:VCALENDAR\r\n";*/
 
-    body = "<?icsText version=\"1.0\" encoding=\"utf-8\" ?>\n"
+    body =
            "<D:share-resource xmlns:D=\"DAV:\">\n"
            "    <D:sharee>\n"
            "        <D:href>mailto:piccipicc@gmail.com</D:href>\n"
            "        <D:prop>\n"
-           "            <D:displayname>oscar</D:displayname>\n"
+           "            <D:displayname>oscar-sharedcalendar</D:displayname>\n"
            "        </D:prop>\n"
            "        <D:comment>Shared workspace</D:comment>\n"
            "        <D:share-access>\n"
@@ -140,7 +140,7 @@ void shareCalendar() {
            "    </D:sharee>\n"
            "</D:share-resource>";
     try {
-        handle.setOpt(curlpp::Options::Url(std::string("http://192.168.1.8/progetto/calendarserver.php/calendars/lorenzo/home")));
+        handle.setOpt(curlpp::Options::Url(std::string("http://192.168.1.7/progetto/calendarserver.php/calendars/lorenzo/calendarLorenzo/")));
         handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
         handle.setOpt(new curlpp::options::UserPwd("lorenzo:pintaldi"));
         handle.setOpt(new curlpp::Options::CustomRequest("POST"));
@@ -179,14 +179,140 @@ void deleteIcs() {
     }
 }
 
+void getEmail() {
+    curlpp::Cleanup init;
+    curlpp::Easy handle;
+    std::list<std::string> headers;
+    std::string result;
+    std::string body;
+    std::ostringstream str;
+    headers.push_back("Depth: 0");
+    headers.push_back("Prefer: return-minimal");
+    headers.push_back("Content-Type: application/xml; charset=utf-8");
+    body = "<d:propfind xmlns:d=\"DAV:\">\n"
+           "  <d:prop>\n"
+           "    <d:current-user-principal />"
+           "    <d:principal-URL />"
+           "  </d:prop>\n"
+           "</d:propfind>";
+    try {
+        handle.setOpt(curlpp::Options::Url(
+                std::string("http://192.168.1.7/progetto/calendarserver.php/")));
+        handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
+        handle.setOpt(new curlpp::options::UserPwd("oscar:piccirillo"));
+        handle.setOpt(new curlpp::Options::CustomRequest("PROPFIND"));
+        handle.setOpt(new curlpp::Options::PostFields(body));
+        handle.setOpt(new curlpp::Options::PostFieldSize(body.length()));
+        handle.setOpt(new curlpp::Options::HttpHeader(headers));
+        handle.setOpt(curlpp::Options::WriteStream(&str));
+        handle.perform();
+        std::cout << str.str() << '\n';
+    }
+    catch (cURLpp::RuntimeError &e) {
+        std::cout << e.what() << std::endl;
+    }
+    catch (cURLpp::LogicError &e) {
+        std::cout << e.what() << std::endl;
+    }
+}
+
+std::string lockCalendar(std::string user) {
+    curlpp::Cleanup init;
+    curlpp::Easy handle;
+    std::list<std::string> headers;
+    std::string result;
+    std::string body;
+    std::ostringstream str;
+    headers.push_back("Content-Type: text/xml; charset=\"utf-8\"");
+
+    body = "<?xml version=\"1.0\" encoding=\"utf-8\" ?>"
+           "<d:lockinfo xmlns:d=\"DAV:\">"
+           "<d:lockscope><d:exclusive/></d:lockscope>"
+           "<d:locktype><d:write/></d:locktype>"
+           "<d:owner>"
+           "<d:href>" + user + "</d:href>"
+                               "</d:owner>"
+                               "</d:lockinfo>";
+    try {
+        handle.setOpt(curlpp::Options::Url(
+                std::string("http://192.168.1.13/progetto/calendarserver.php/calendars/lorenzo/home/cal.ics")));
+        handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
+        handle.setOpt(new curlpp::options::UserPwd("lorenzo:pintaldi"));
+        handle.setOpt(new curlpp::Options::CustomRequest("LOCK"));
+        handle.setOpt(new curlpp::Options::PostFields(body));
+        handle.setOpt(new curlpp::Options::PostFieldSize(body.length()));
+        handle.setOpt(new curlpp::Options::HttpHeader(headers));
+        handle.setOpt(curlpp::Options::WriteStream(&str));
+        handle.perform();
+        std::cout << str.str() << '\n';
+
+
+        //searching token
+        std::string src = str.str();
+        int pos = str.str().find("opaquelocktoken");
+        pos += 16;
+        std::string tmp("");
+        bool end = false;
+        while (!end) {
+            tmp += src[pos++];
+            if (src[pos] == '<')
+                end = true;
+        }
+        std::cout << tmp << '\n';
+        return tmp;
+    }
+
+    catch (cURLpp::RuntimeError &e) {
+        std::cout << e.what() << std::endl;
+        return "";
+    }
+    catch (cURLpp::LogicError &e) {
+        std::cout << e.what() << std::endl;
+        return "";
+    }
+}
+
+void unlockCalendar(std::string const &locktoken) {
+    curlpp::Cleanup init;
+    curlpp::Easy handle;
+    std::list<std::string> headers;
+    std::string result;
+    std::string body;
+    std::ostringstream str;
+    headers.push_back("Content-Type: text/xml; charset=\"utf-8\"");
+    headers.push_back("Lock-Token: <opaquelocktoken:" + locktoken + ">");
+
+    try {
+        handle.setOpt(curlpp::Options::Url(
+                std::string("http://192.168.1.13/progetto/calendarserver.php/calendars/lorenzo/home/cal.ics")));
+        handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
+        handle.setOpt(new curlpp::options::UserPwd("lorenzo:pintaldi"));
+        handle.setOpt(new curlpp::Options::CustomRequest("UNLOCK"));
+        handle.setOpt(new curlpp::Options::PostFields(body));
+        handle.setOpt(new curlpp::Options::PostFieldSize(body.length()));
+        handle.setOpt(new curlpp::Options::HttpHeader(headers));
+        handle.setOpt(curlpp::Options::WriteStream(&str));
+        handle.perform();
+        std::cout << str.str() << '\n';
+    }
+    catch (cURLpp::RuntimeError &e) {
+        std::cout << e.what() << std::endl;
+    }
+    catch (cURLpp::LogicError &e) {
+        std::cout << e.what() << std::endl;
+    }
+}
+
 int main(int argc, char *argv[]) {
     //updateCalendar();
     QApplication a(argc, argv);
     MainWindow w;
     w.show();
+    w.synchronizeCalendarList();
     return a.exec();
     //deleteIcs();
-
+    //getEmail();
+    //shareCalendar();
     /*Vcalendar tmp("prova");
     IcsParser parser(downloadCalendars());
     parser.getVCalendar(std::ref(tmp));

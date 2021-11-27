@@ -6,5 +6,5 @@ CXX_DEFINES = -DqtcreatorTest_lib_EXPORTS
 
 CXX_INCLUDES = -I/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug -I/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest -I/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_lib_autogen/include -I/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/curlpp-0.8.1/include
 
-CXX_FLAGS = -g -fPIC -std=c++11
+CXX_FLAGS =  -pthread -g -fPIC -std=c++11
 

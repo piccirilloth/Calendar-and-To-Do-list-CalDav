@@ -14,6 +14,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/qtcreatorTest.dir/Sources/event_information.cpp.o"
   "CMakeFiles/qtcreatorTest.dir/Sources/loginwindow.cpp.o"
   "CMakeFiles/qtcreatorTest.dir/Sources/mainwindow.cpp.o"
+  "CMakeFiles/qtcreatorTest.dir/Sources/sharecalendarform.cpp.o"
   "CMakeFiles/qtcreatorTest.dir/Sources/todo_information.cpp.o"
   "CMakeFiles/qtcreatorTest.dir/Sources/updatetodo.cpp.o"
   "CMakeFiles/qtcreatorTest.dir/main.cpp.o"

@@ -11,6 +11,13 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+set(CMAKE_THREAD_LIBS_INIT "-lpthread")
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
+set(CMAKE_HAVE_THREADS_LIBRARY 1)
+set(CMAKE_USE_WIN32_THREADS_INIT 0)
+set(CMAKE_USE_PTHREADS_INIT 1)
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+
 
 # QtCreator supports the following variables for Android, which are identical to qmake Android variables.
 # Check https://doc.qt.io/qt/deployment-android.html for more information.
@@ -33,7 +40,7 @@ set(PROJECT_SOURCES
         Sources/mainwindow.cpp
         Headers/mainwindow.h
         Headers/mainwindow.ui
-        Sources/Date.cpp Headers/Date.h Sources/Vcalendar.cpp Headers/Vcalendar.h Sources/Vevent.cpp Headers/Vevent.h Sources/Vtodo.cpp Headers/Vtodo.h Sources/loginwindow.cpp Headers/loginwindow.h Headers/loginwindow.ui Sources/API.cpp Headers/API.h Sources/createcalendarform.cpp Headers/createcalendarform.h Headers/createcalendarform.ui Sources/IcsParser.cpp Headers/IcsParser.h Sources/todo_information.cpp Headers/todo_information.h Headers/todo_information.ui Sources/event_information.cpp Headers/event_information.h Headers/event_information.ui Sources/createevent.cpp Headers/createevent.h Headers/createevent.ui Sources/createtodo.cpp Headers/createtodo.h Headers/createtodo.ui Sources/updatetodo.cpp Headers/updatetodo.h Headers/updatetodo.ui)
+        Sources/Date.cpp Headers/Date.h Sources/Vcalendar.cpp Headers/Vcalendar.h Sources/Vevent.cpp Headers/Vevent.h Sources/Vtodo.cpp Headers/Vtodo.h Sources/loginwindow.cpp Headers/loginwindow.h Headers/loginwindow.ui Sources/API.cpp Headers/API.h Sources/createcalendarform.cpp Headers/createcalendarform.h Headers/createcalendarform.ui Sources/IcsParser.cpp Headers/IcsParser.h Sources/todo_information.cpp Headers/todo_information.h Headers/todo_information.ui Sources/event_information.cpp Headers/event_information.h Headers/event_information.ui Sources/createevent.cpp Headers/createevent.h Headers/createevent.ui Sources/createtodo.cpp Headers/createtodo.h Headers/createtodo.ui Sources/updatetodo.cpp Headers/updatetodo.h Headers/updatetodo.ui Sources/sharecalendarform.cpp Headers/sharecalendarform.h Headers/sharecalendarform.ui)
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(qtcreatorTest

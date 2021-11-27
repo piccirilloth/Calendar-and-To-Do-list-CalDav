@@ -5,5 +5,6 @@
 #include "D2MWKIZDYH/moc_event_information.cpp"
 #include "D2MWKIZDYH/moc_loginwindow.cpp"
 #include "D2MWKIZDYH/moc_mainwindow.cpp"
+#include "D2MWKIZDYH/moc_sharecalendarform.cpp"
 #include "D2MWKIZDYH/moc_todo_information.cpp"
 #include "D2MWKIZDYH/moc_updatetodo.cpp"

@@ -42,6 +42,7 @@ public:
     QTextBrowser *textBrowser_calName;
     QPushButton *pushButton_createTodo;
     QPushButton *pushButton_createEvent;
+    QPushButton *shareCalendarButton;
     QStatusBar *statusbar;
     QToolBar *toolBar;
 
@@ -49,7 +50,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1317, 524);
+        MainWindow->resize(1317, 523);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         calendarWidget = new QCalendarWidget(centralwidget);
@@ -57,7 +58,7 @@ public:
         calendarWidget->setGeometry(QRect(290, 0, 521, 471));
         listWidget = new QListWidget(centralwidget);
         listWidget->setObjectName(QString::fromUtf8("listWidget"));
-        listWidget->setGeometry(QRect(820, 50, 241, 381));
+        listWidget->setGeometry(QRect(820, 40, 241, 391));
         listWidget_2 = new QListWidget(centralwidget);
         listWidget_2->setObjectName(QString::fromUtf8("listWidget_2"));
         listWidget_2->setGeometry(QRect(10, 110, 261, 331));
@@ -68,15 +69,15 @@ public:
         createCalendarButton = new QPushButton(centralwidget);
         createCalendarButton->setObjectName(QString::fromUtf8("createCalendarButton"));
         createCalendarButton->setEnabled(false);
-        createCalendarButton->setGeometry(QRect(10, 60, 261, 41));
+        createCalendarButton->setGeometry(QRect(10, 60, 121, 41));
         createCalendarButton->setStyleSheet(QString::fromUtf8("font: 14pt \"Sans Serif\";"));
         createCalendarButton->setFlat(false);
         listWidget_Events = new QListWidget(centralwidget);
         listWidget_Events->setObjectName(QString::fromUtf8("listWidget_Events"));
-        listWidget_Events->setGeometry(QRect(1070, 50, 241, 381));
+        listWidget_Events->setGeometry(QRect(1070, 40, 241, 391));
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(820, 10, 241, 31));
+        label->setGeometry(QRect(820, 0, 241, 31));
         label->setLayoutDirection(Qt::LeftToRight);
         label->setAutoFillBackground(false);
         label->setStyleSheet(QString::fromUtf8("font: 12pt \"Lohit Telugu\";\n"
@@ -84,13 +85,13 @@ public:
         label->setAlignment(Qt::AlignCenter);
         label_2 = new QLabel(centralwidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(1070, 10, 241, 31));
+        label_2->setGeometry(QRect(1070, 0, 241, 31));
         label_2->setStyleSheet(QString::fromUtf8("font: 12pt \"Lohit Telugu\";\n"
 "font: 14pt \"Sans Serif\";"));
         label_2->setAlignment(Qt::AlignCenter);
         layoutWidget = new QWidget(centralwidget);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 440, 261, 31));
+        layoutWidget->setGeometry(QRect(10, 450, 261, 21));
         horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -112,6 +113,12 @@ public:
         pushButton_createEvent->setObjectName(QString::fromUtf8("pushButton_createEvent"));
         pushButton_createEvent->setEnabled(false);
         pushButton_createEvent->setGeometry(QRect(1070, 440, 241, 31));
+        shareCalendarButton = new QPushButton(centralwidget);
+        shareCalendarButton->setObjectName(QString::fromUtf8("shareCalendarButton"));
+        shareCalendarButton->setEnabled(false);
+        shareCalendarButton->setGeometry(QRect(150, 60, 121, 41));
+        shareCalendarButton->setStyleSheet(QString::fromUtf8("font: 14pt \"Sans Serif\";"));
+        shareCalendarButton->setFlat(false);
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -129,12 +136,13 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Calendar", nullptr));
         loginButton->setText(QApplication::translate("MainWindow", "Login", nullptr));
-        createCalendarButton->setText(QApplication::translate("MainWindow", "Create a calendar", nullptr));
+        createCalendarButton->setText(QApplication::translate("MainWindow", "Create", nullptr));
         label->setText(QApplication::translate("MainWindow", "ToDo", nullptr));
         label_2->setText(QApplication::translate("MainWindow", "Events", nullptr));
         label_3->setText(QApplication::translate("MainWindow", "Current calendar", nullptr));
         pushButton_createTodo->setText(QApplication::translate("MainWindow", "Create a Todo", nullptr));
         pushButton_createEvent->setText(QApplication::translate("MainWindow", "Create a Event", nullptr));
+        shareCalendarButton->setText(QApplication::translate("MainWindow", "Share", nullptr));
         toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", nullptr));
     } // retranslateUi
 
