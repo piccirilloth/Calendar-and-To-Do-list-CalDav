@@ -12,6 +12,93 @@ std::list<std::string> API::calendarNames;
 
 API::API() {}
 
+std::string API::lockResource(const std::string &calendarName, const std::string &icsName) {
+    std::lock_guard<std::mutex> lg(m);
+    curlpp::Cleanup init;
+    curlpp::Easy handle;
+    std::list<std::string> headers;
+    std::string result;
+    std::string body;
+    std::ostringstream str;
+    headers.push_back("Content-Type: text/xml; charset=\"utf-8\"");
+
+    body = "<?xml version=\"1.0\" encoding=\"utf-8\" ?>"
+           "<d:lockinfo xmlns:d=\"DAV:\">"
+           "<d:lockscope><d:exclusive/></d:lockscope>"
+           "<d:locktype><d:write/></d:locktype>"
+           "<d:owner>"
+           "<d:href>http://" + IPADDRESS + "/progetto/calendarserver.php/principals/" + username + "/</d:href>"
+           "</d:owner>"
+           "</d:lockinfo>";
+    try {
+        handle.setOpt(curlpp::Options::Url(
+                std::string("http://" + IPADDRESS + "/progetto/calendarserver.php/calendars/" + username + "/" + calendarName + "/" + icsName)));
+        handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
+        handle.setOpt(new curlpp::options::UserPwd(username + ":" + password));
+        handle.setOpt(new curlpp::Options::CustomRequest("LOCK"));
+        handle.setOpt(new curlpp::Options::PostFields(body));
+        handle.setOpt(new curlpp::Options::PostFieldSize(body.length()));
+        handle.setOpt(new curlpp::Options::HttpHeader(headers));
+        handle.setOpt(curlpp::Options::WriteStream(&str));
+        handle.perform();
+        std::cout << str.str() << '\n';
+        //searching token
+        std::string src = str.str();
+        int pos = str.str().find("opaquelocktoken");
+        pos += 16;
+        std::string tmp("");
+        bool end = false;
+        while (!end) {
+            tmp += src[pos++];
+            if (src[pos] == '<')
+                end = true;
+        }
+        std::cout << tmp << '\n';
+        return tmp;
+    }
+
+    catch (cURLpp::RuntimeError &e) {
+        std::cout << e.what() << std::endl;
+        return "";
+    }
+    catch (cURLpp::LogicError &e) {
+        std::cout << e.what() << std::endl;
+        return "";
+    }
+}
+
+void API::unlockResource(const std::string &calendarName, const std::string &token, const std::string &icsName) {
+    std::lock_guard<std::mutex> lg(m);
+    curlpp::Cleanup init;
+    curlpp::Easy handle;
+    std::list<std::string> headers;
+    std::string result;
+    std::string body;
+    std::ostringstream str;
+    headers.push_back("Content-Type: text/xml; charset=\"utf-8\"");
+    headers.push_back("Lock-Token: <opaquelocktoken:" + token + ">");
+
+    try {
+        handle.setOpt(curlpp::Options::Url(
+                std::string("http://" + IPADDRESS + "/progetto/calendarserver.php/calendars/" + username + "/" + calendarName + "/" + icsName)));
+        handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
+        handle.setOpt(new curlpp::options::UserPwd(username + ":" + password));
+        handle.setOpt(new curlpp::Options::CustomRequest("UNLOCK"));
+        handle.setOpt(new curlpp::Options::PostFields(body));
+        handle.setOpt(new curlpp::Options::PostFieldSize(body.length()));
+        handle.setOpt(new curlpp::Options::HttpHeader(headers));
+        handle.setOpt(curlpp::Options::WriteStream(&str));
+        handle.perform();
+        std::cout << str.str() << '\n';
+    }
+    catch (cURLpp::RuntimeError &e) {
+        std::cout << e.what() << std::endl;
+    }
+    catch (cURLpp::LogicError &e) {
+        std::cout << e.what() << std::endl;
+    }
+}
+
 std::string API::login(std::string const &username, std::string const &password) {
     std::lock_guard<std::mutex> lg(m);
     curlpp::Cleanup init;

@@ -402,6 +402,6 @@ void MainWindow::timerElapsed() {
             selectedDateChange();
         }
     });
-    checkCalendarList.detach();
-    checkCurrentCalendar.detach();
+    checkCalendarList.join();
+    checkCurrentCalendar.join();
 }

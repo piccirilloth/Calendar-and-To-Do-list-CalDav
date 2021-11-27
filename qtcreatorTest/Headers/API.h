@@ -78,6 +78,8 @@ public:
     //void createEmptyIcs(std::string const &calendarName);
 
     std::list<std::string> getNames(std::string const &result);
+    std::string lockResource(std::string const &calendarName, const std::string &icsName = "");
+    void unlockResource(std::string const &calendarName, std::string const &token, const std::string &icsName = "");
 
 public:
     API();
