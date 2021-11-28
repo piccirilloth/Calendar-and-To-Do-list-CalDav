@@ -34,13 +34,17 @@ void CreateCalendarForm::on_pushButton_create_clicked() {
             QMessageBox::information(this, "Error", "duplicated name");
         else
         {
-            api->createEmptyCalendar(name.toStdString());
-            std::list<std::string> names = api->retrieveAllCalendars();
-            api->clearCalendars();
-            for(std::string value : names)
-                api->addCalendar(value);
-            emit createCalendar();
-            this->close();
+            long status = api->createEmptyCalendar(name.toStdString());
+            if(status == 0) {
+                QMessageBox::information(this, "Error", "error in the communication with the server");
+            } else {
+                std::list<std::string> names = api->retrieveAllCalendars();
+                api->clearCalendars();
+                for (std::string value: names)
+                    api->addCalendar(value);
+                emit createCalendar();
+                this->close();
+            }
         }
     }
 }

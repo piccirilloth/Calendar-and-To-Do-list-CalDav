@@ -11,10 +11,10 @@
 event_information::event_information(QWidget *parent,  std::string summary, std::string createdOn, std::string startDate, std::string endDate) :
         QDialog(parent), ui(new Ui::event_information) {
     ui->setupUi(this);
-    ui->lineEdit_createdOn->setText(QString(createdOn.c_str()));
-    ui->lineEdit_end->setText(QString(endDate.c_str()));
-    ui->lineEdit_start->setText(QString(startDate.c_str()));
-    ui->lineEdit_summary->setText(QString(summary.c_str()));
+    ui->label_createdOn->setText(QString(createdOn.c_str()));
+    ui->label_endDate->setText(QString(endDate.c_str()));
+    ui->label_startDate->setText(QString(startDate.c_str()));
+    ui->label_summary->setText(QString(summary.c_str()));
 }
 
 event_information::~event_information() {

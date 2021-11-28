@@ -6,19 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>326</width>
+    <width>549</width>
     <height>328</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>event_information</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>70</x>
      <y>40</y>
-     <width>241</width>
+     <width>411</width>
      <height>241</height>
     </rect>
    </property>
@@ -26,7 +26,7 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_5">
       <item>
-       <widget class="QLabel" name="label_5">
+       <widget class="QLabel" name="label_6">
         <property name="styleSheet">
          <string notr="true">font: 12pt &quot;Sans Serif&quot;;</string>
         </property>
@@ -36,9 +36,12 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_summary">
-        <property name="enabled">
-         <bool>false</bool>
+       <widget class="QLabel" name="label_summary">
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;Sans Serif&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Summary</string>
         </property>
        </widget>
       </item>
@@ -57,9 +60,12 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_createdOn">
-        <property name="enabled">
-         <bool>false</bool>
+       <widget class="QLabel" name="label_createdOn">
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;Sans Serif&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Summary</string>
         </property>
        </widget>
       </item>
@@ -78,9 +84,12 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_start">
-        <property name="enabled">
-         <bool>false</bool>
+       <widget class="QLabel" name="label_startDate">
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;Sans Serif&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Summary</string>
         </property>
        </widget>
       </item>
@@ -89,19 +98,22 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
-       <widget class="QLabel" name="label_3">
+       <widget class="QLabel" name="label_startDate_2">
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;Sans Serif&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Summary</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_endDate">
         <property name="styleSheet">
          <string notr="true">font: 12pt &quot;Sans Serif&quot;;</string>
         </property>
         <property name="text">
          <string>End date</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="lineEdit_end">
-        <property name="enabled">
-         <bool>false</bool>
         </property>
        </widget>
       </item>

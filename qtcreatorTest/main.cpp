@@ -66,10 +66,10 @@ void updateCalendar() {
            "PRODID:-//Sabre//Sabre VObject 4.2.2//EN\r\n"
            "BEGIN:VEVENT\r\n"
            "SEQUENCE:0\r\n"
-           "UID:6\r\n"
+           "UID:0\r\n"
            "DTSTAMP:20090602T185254Z\r\n"
            "DTSTART:20090602T160000Z\r\n"
-           "DTEND:20090602T170000Z\r\n"
+           "DTEND:dhjfkdhs\r\n"
            "TRANSP:OPAQUE\r\n"
            "SUMMARY:Another event 6\r\n"
            "END:VEVENT\r\n"
@@ -81,7 +81,7 @@ void updateCalendar() {
            "END:VCALENDAR\r\n";
     try {
         handle.setOpt(curlpp::Options::Url(
-                std::string("http://192.168.1.7/progetto/calendarserver.php/calendars/oscar/calendar-1/6.ics")));
+                std::string("http://192.168.1.10/progetto/calendarserver.php/calendars/oscar/calendar1/0.ics")));
         handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
         handle.setOpt(new curlpp::options::UserPwd("oscar:piccirillo"));
         handle.setOpt(new curlpp::Options::CustomRequest("PUT"));
@@ -90,7 +90,7 @@ void updateCalendar() {
         handle.setOpt(new curlpp::Options::HttpHeader(headers));
         handle.setOpt(curlpp::Options::WriteStream(&str));
         handle.perform();
-        std::cout << str.str() << '\n';
+        std::cout << curlpp::infos::ResponseCode::get(handle) << '\n';
     }
     catch (cURLpp::RuntimeError &e) {
         std::cout << e.what() << std::endl;
@@ -164,12 +164,14 @@ void deleteIcs() {
     std::ostringstream str;
     try {
         handle.setOpt(curlpp::Options::Url(
-                std::string("http://192.168.1.6/progetto/calendarserver.php/calendars/oscar/calendar-1/6.ics")));
+                std::string("http://192.168.1.10/progetto/calendarserver.php/calendars/oscar/calendar-1/6.ics")));
         handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
         handle.setOpt(new curlpp::options::UserPwd("oscar:piccirillo"));
         handle.setOpt(new curlpp::Options::CustomRequest("DELETE"));
         handle.setOpt(curlpp::Options::WriteStream(&str));
+
         handle.perform();
+        std::cout << curlpp::infos::ResponseCode::get(handle) << '\n';
     }
     catch (cURLpp::RuntimeError &e) {
         std::cout << e.what() << std::endl;
@@ -201,93 +203,6 @@ void getEmail() {
         handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
         handle.setOpt(new curlpp::options::UserPwd("oscar:piccirillo"));
         handle.setOpt(new curlpp::Options::CustomRequest("PROPFIND"));
-        handle.setOpt(new curlpp::Options::PostFields(body));
-        handle.setOpt(new curlpp::Options::PostFieldSize(body.length()));
-        handle.setOpt(new curlpp::Options::HttpHeader(headers));
-        handle.setOpt(curlpp::Options::WriteStream(&str));
-        handle.perform();
-        std::cout << str.str() << '\n';
-    }
-    catch (cURLpp::RuntimeError &e) {
-        std::cout << e.what() << std::endl;
-    }
-    catch (cURLpp::LogicError &e) {
-        std::cout << e.what() << std::endl;
-    }
-}
-
-std::string lockCalendar(std::string user) {
-    curlpp::Cleanup init;
-    curlpp::Easy handle;
-    std::list<std::string> headers;
-    std::string result;
-    std::string body;
-    std::ostringstream str;
-    headers.push_back("Content-Type: text/xml; charset=\"utf-8\"");
-
-    body = "<?xml version=\"1.0\" encoding=\"utf-8\" ?>"
-           "<d:lockinfo xmlns:d=\"DAV:\">"
-           "<d:lockscope><d:exclusive/></d:lockscope>"
-           "<d:locktype><d:write/></d:locktype>"
-           "<d:owner>"
-           "<d:href>" + user + "</d:href>"
-                               "</d:owner>"
-                               "</d:lockinfo>";
-    try {
-        handle.setOpt(curlpp::Options::Url(
-                std::string("http://192.168.1.13/progetto/calendarserver.php/calendars/lorenzo/home/cal.ics")));
-        handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
-        handle.setOpt(new curlpp::options::UserPwd("lorenzo:pintaldi"));
-        handle.setOpt(new curlpp::Options::CustomRequest("LOCK"));
-        handle.setOpt(new curlpp::Options::PostFields(body));
-        handle.setOpt(new curlpp::Options::PostFieldSize(body.length()));
-        handle.setOpt(new curlpp::Options::HttpHeader(headers));
-        handle.setOpt(curlpp::Options::WriteStream(&str));
-        handle.perform();
-        std::cout << str.str() << '\n';
-
-
-        //searching token
-        std::string src = str.str();
-        int pos = str.str().find("opaquelocktoken");
-        pos += 16;
-        std::string tmp("");
-        bool end = false;
-        while (!end) {
-            tmp += src[pos++];
-            if (src[pos] == '<')
-                end = true;
-        }
-        std::cout << tmp << '\n';
-        return tmp;
-    }
-
-    catch (cURLpp::RuntimeError &e) {
-        std::cout << e.what() << std::endl;
-        return "";
-    }
-    catch (cURLpp::LogicError &e) {
-        std::cout << e.what() << std::endl;
-        return "";
-    }
-}
-
-void unlockCalendar(std::string const &locktoken) {
-    curlpp::Cleanup init;
-    curlpp::Easy handle;
-    std::list<std::string> headers;
-    std::string result;
-    std::string body;
-    std::ostringstream str;
-    headers.push_back("Content-Type: text/xml; charset=\"utf-8\"");
-    headers.push_back("Lock-Token: <opaquelocktoken:" + locktoken + ">");
-
-    try {
-        handle.setOpt(curlpp::Options::Url(
-                std::string("http://192.168.1.13/progetto/calendarserver.php/calendars/lorenzo/home/cal.ics")));
-        handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
-        handle.setOpt(new curlpp::options::UserPwd("lorenzo:pintaldi"));
-        handle.setOpt(new curlpp::Options::CustomRequest("UNLOCK"));
         handle.setOpt(new curlpp::Options::PostFields(body));
         handle.setOpt(new curlpp::Options::PostFieldSize(body.length()));
         handle.setOpt(new curlpp::Options::HttpHeader(headers));

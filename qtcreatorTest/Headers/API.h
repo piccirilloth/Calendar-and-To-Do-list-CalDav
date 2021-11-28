@@ -86,14 +86,14 @@ public:
     std::string login(std::string const &username, std::string const &password);
     void setParamsAfterLogin(std::string const &user, std::string const &pwd, std::string const &resposne);
     std::list<std::string> retrieveAllCalendars();
-    void createEmptyCalendar(std::string const &calendarName);
+    long createEmptyCalendar(std::string const &calendarName);
     Vcalendar downloadCalendarObjects(std::string const &calendarName);
     std::list<std::string> deleteCalendar(std::string const &name);
-    void deleteIcs(std::string const &uid, std::string const &calName);
-    void createEvent(std::string const &summary, Date const &startDate, Date const &endDate, Vcalendar const &cal);
-    void updateEvent(std::string const &summary, Date const &startDate, Date const &endDate, std::string const &uid, Vcalendar const &cal);
-    void createTodo(std::string const &summary, std::string const &dueDate, Vcalendar const &cal);
-    void updateTodo(std::string const &summary, Date const &dueDate, bool completed, Vcalendar const &cal, Date const & oldComplete, std::string const &uid);
+    long deleteIcs(std::string const &uid, std::string const &calName);
+    long createEvent(std::string const &summary, Date const &startDate, Date const &endDate, Vcalendar const &cal);
+    long updateEvent(std::string const &summary, Date const &startDate, Date const &endDate, std::string const &uid, Vcalendar const &cal);
+    long createTodo(std::string const &summary, std::string const &dueDate, Vcalendar const &cal);
+    long updateTodo(std::string const &summary, Date const &dueDate, bool completed, Vcalendar const &cal, Date const & oldComplete, std::string const &uid);
     long shareCalendar(std::string const &displayName, std::string const &mail, std::string const &comment, const std::string &calendarName);
 };
 

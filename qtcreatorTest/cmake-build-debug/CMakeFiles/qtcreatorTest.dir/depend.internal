@@ -655,16 +655,12 @@ CMakeFiles/qtcreatorTest.dir/Sources/event_information.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpalette.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextcursor.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextformat.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h
@@ -676,7 +672,6 @@ CMakeFiles/qtcreatorTest.dir/Sources/event_information.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h
@@ -688,7 +683,6 @@ CMakeFiles/qtcreatorTest.dir/Sources/event_information.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h
@@ -1317,16 +1311,12 @@ CMakeFiles/qtcreatorTest.dir/Sources/todo_information.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpalette.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextcursor.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextformat.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h
@@ -1338,7 +1328,6 @@ CMakeFiles/qtcreatorTest.dir/Sources/todo_information.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h
@@ -1350,7 +1339,6 @@ CMakeFiles/qtcreatorTest.dir/Sources/todo_information.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h

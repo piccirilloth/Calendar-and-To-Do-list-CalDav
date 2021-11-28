@@ -4,7 +4,7 @@
 
 #include "Headers/API.h"
 
-std::string API::IPADDRESS = "192.168.1.7";
+std::string API::IPADDRESS = "192.168.1.10";
 std::string API::username = "";
 std::string API::password = "";
 bool API::loggedIn = false;
@@ -218,7 +218,7 @@ std::list<std::string> API::getNames(std::string const &result) {
     return calendarNames;
 }
 
-void API::createEmptyCalendar(std::string const &calendarName) {
+long API::createEmptyCalendar(std::string const &calendarName) {
     std::lock_guard<std::mutex> lg(m);
     curlpp::Cleanup init;
     curlpp::Easy handle;
@@ -227,6 +227,7 @@ void API::createEmptyCalendar(std::string const &calendarName) {
     std::string body;
     std::ostringstream str;
     headers.push_back("Content-Type: application/xml; charset=utf-8");
+    long http_code = 0;
     try {
         handle.setOpt(curlpp::Options::Url(
                 std::string("http://" + IPADDRESS + "/progetto/calendarserver.php/calendars/" + username + "/" + calendarName)));
@@ -239,6 +240,7 @@ void API::createEmptyCalendar(std::string const &calendarName) {
         handle.setOpt(curlpp::Options::WriteStream(&str));
         handle.perform();
         std::cout << str.str() << '\n';
+        http_code = curlpp::infos::ResponseCode::get(handle);
     }
     catch (cURLpp::RuntimeError &e) {
         std::cout << e.what() << std::endl;
@@ -246,39 +248,8 @@ void API::createEmptyCalendar(std::string const &calendarName) {
     catch (cURLpp::LogicError &e) {
         std::cout << e.what() << std::endl;
     }
+    return http_code;
 }
-
-/*void API::createEmptyIcs(std::string const &calendarName) {
-    curlpp::Cleanup init;
-    curlpp::Easy handle;
-    std::list<std::string> headers;
-    std::string result;
-    std::string body;
-    std::ostringstream str;
-    headers.push_back("Content-Type: text/calendar; charset=utf-8");
-    body = "BEGIN:VCALENDAR\r\n"
-           "VERSION:2.0\r\n"
-           "CALSCALE:GREGORIAN\r\n"
-           "END:VCALENDAR\r\n";
-    try {
-        handle.setOpt(curlpp::Options::Url(
-                std::string("http://" + IPADDRESS + "/progetto/calendarserver.php/calendars/" + username + "/" + calendarName + "/cal.ics")));
-        handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
-        handle.setOpt(new curlpp::options::UserPwd(username + ":" + password));
-        handle.setOpt(new curlpp::Options::CustomRequest("PUT"));
-        handle.setOpt(new curlpp::Options::PostFields(body));
-        handle.setOpt(new curlpp::Options::PostFieldSize(body.length()));
-        handle.setOpt(new curlpp::Options::HttpHeader(headers));
-        handle.setOpt(curlpp::Options::WriteStream(&str));
-        handle.perform();
-    }
-    catch (cURLpp::RuntimeError &e) {
-        std::cout << e.what() << std::endl;
-    }
-    catch (cURLpp::LogicError &e) {
-        std::cout << e.what() << std::endl;
-    }
-}*/
 
 std::list<std::string> API::deleteCalendar(const std::string &name) {
     {
@@ -352,11 +323,12 @@ Vcalendar API::downloadCalendarObjects(std::string const &calendarName) {
     return ret;
 }
 
-void API::deleteIcs(const std::string &uid, std::string const &calName) {
+long API::deleteIcs(const std::string &uid, std::string const &calName) {
     std::lock_guard<std::mutex> lg(m);
     curlpp::Cleanup init;
     curlpp::Easy handle;
     std::ostringstream str;
+    long http_code = 0;
     try {
         handle.setOpt(curlpp::Options::Url(
                 std::string("http://" + IPADDRESS + "/progetto/calendarserver.php/calendars/" + username + "/" + calName + "/" + uid + ".ics")));
@@ -365,6 +337,7 @@ void API::deleteIcs(const std::string &uid, std::string const &calName) {
         handle.setOpt(new curlpp::Options::CustomRequest("DELETE"));
         handle.setOpt(curlpp::Options::WriteStream(&str));
         handle.perform();
+        http_code = curlpp::infos::ResponseCode::get(handle);
     }
     catch (cURLpp::RuntimeError &e) {
         std::cout << e.what() << std::endl;
@@ -372,9 +345,10 @@ void API::deleteIcs(const std::string &uid, std::string const &calName) {
     catch (cURLpp::LogicError &e) {
         std::cout << e.what() << std::endl;
     }
+    return http_code;
 }
 
-void API::createEvent(const std::string &summary, const Date &startDate, const Date &endDate, Vcalendar const &cal) {
+long API::createEvent(const std::string &summary, const Date &startDate, const Date &endDate, Vcalendar const &cal) {
     std::lock_guard<std::mutex> lg(m);
     curlpp::Cleanup init;
     curlpp::Easy handle;
@@ -385,6 +359,7 @@ void API::createEvent(const std::string &summary, const Date &startDate, const D
     headers.push_back("Content-Type: text/calendar; charset=utf-8");
     Date now;
     now.SetToNow();
+    long http_code = 0;
     body = "BEGIN:VCALENDAR\r\n"
            "VERSION:" + cal.getVersion() + "\r\n"
            "PRODID:" + cal.getProdid() +"\r\n"
@@ -410,6 +385,7 @@ void API::createEvent(const std::string &summary, const Date &startDate, const D
         handle.setOpt(curlpp::Options::WriteStream(&str));
         handle.perform();
         std::cout << str.str() << '\n';
+        http_code = curlpp::infos::ResponseCode::get(handle);
     }
     catch (cURLpp::RuntimeError &e) {
         std::cout << e.what() << std::endl;
@@ -417,9 +393,10 @@ void API::createEvent(const std::string &summary, const Date &startDate, const D
     catch (cURLpp::LogicError &e) {
         std::cout << e.what() << std::endl;
     }
+    return http_code;
 }
 
-void API::updateEvent(std::string const &summary, Date const &startDate, Date const &endDate, std::string const &uid, Vcalendar const &cal) {
+long API::updateEvent(std::string const &summary, Date const &startDate, Date const &endDate, std::string const &uid, Vcalendar const &cal) {
     std::lock_guard<std::mutex> lg(m);
     curlpp::Cleanup init;
     curlpp::Easy handle;
@@ -430,6 +407,7 @@ void API::updateEvent(std::string const &summary, Date const &startDate, Date co
     headers.push_back("Content-Type: text/calendar; charset=utf-8");
     Date now;
     now.SetToNow();
+    long http_code = 0;
     body =  "BEGIN:VCALENDAR\r\n"
             "VERSION:" + cal.getVersion() + "\r\n"
             "PRODID:" + cal.getProdid() +"\r\n"
@@ -454,6 +432,7 @@ void API::updateEvent(std::string const &summary, Date const &startDate, Date co
         handle.setOpt(new curlpp::Options::HttpHeader(headers));
         handle.setOpt(curlpp::Options::WriteStream(&str));
         handle.perform();
+        http_code = curlpp::infos::ResponseCode::get(handle);
         std::cout << str.str() << '\n';
     }
     catch (cURLpp::RuntimeError &e) {
@@ -462,9 +441,10 @@ void API::updateEvent(std::string const &summary, Date const &startDate, Date co
     catch (cURLpp::LogicError &e) {
         std::cout << e.what() << std::endl;
     }
+    return http_code;
 }
 
-void API::createTodo(const std::string &summary, const std::string &dueDate, const Vcalendar &cal) {
+long API::createTodo(const std::string &summary, const std::string &dueDate, const Vcalendar &cal) {
     std::lock_guard<std::mutex> lg(m);
     curlpp::Cleanup init;
     curlpp::Easy handle;
@@ -475,6 +455,7 @@ void API::createTodo(const std::string &summary, const std::string &dueDate, con
     headers.push_back("Content-Type: text/calendar; charset=utf-8");
     Date now;
     now.SetToNow();
+    long http_code = 0;
     body = "BEGIN:VCALENDAR\r\n"
            "VERSION:" + cal.getVersion() + "\r\n"
            "PRODID:" + cal.getProdid() + "\r\n"
@@ -496,6 +477,7 @@ void API::createTodo(const std::string &summary, const std::string &dueDate, con
         handle.setOpt(new curlpp::Options::HttpHeader(headers));
         handle.setOpt(curlpp::Options::WriteStream(&str));
         handle.perform();
+        http_code = curlpp::infos::ResponseCode::get(handle);
         std::cout << str.str() << '\n';
     }
     catch (cURLpp::RuntimeError &e) {
@@ -504,9 +486,10 @@ void API::createTodo(const std::string &summary, const std::string &dueDate, con
     catch (cURLpp::LogicError &e) {
         std::cout << e.what() << std::endl;
     }
+    return http_code;
 }
 
-void API::updateTodo(const std::string &summary, const Date &dueDate, bool completed, const Vcalendar &cal, const Date &oldComplete, std::string const &uid) {
+long API::updateTodo(const std::string &summary, const Date &dueDate, bool completed, const Vcalendar &cal, const Date &oldComplete, std::string const &uid) {
     std::lock_guard<std::mutex> lg(m);
     curlpp::Cleanup init;
     curlpp::Easy handle;
@@ -517,6 +500,7 @@ void API::updateTodo(const std::string &summary, const Date &dueDate, bool compl
     headers.push_back("Content-Type: text/calendar; charset=utf-8");
     Date now;
     now.SetToNow();
+    long http_code = 0;
     body = "BEGIN:VCALENDAR\r\n"
            "VERSION:" + cal.getVersion() + "\r\n"
            "PRODID:" + cal.getProdid() + "\r\n"
@@ -543,6 +527,7 @@ void API::updateTodo(const std::string &summary, const Date &dueDate, bool compl
         handle.setOpt(curlpp::Options::WriteStream(&str));
         handle.perform();
         std::cout << str.str() << '\n';
+        http_code = curlpp::infos::ResponseCode::get(handle);
     }
     catch (cURLpp::RuntimeError &e) {
         std::cout << e.what() << std::endl;
@@ -550,6 +535,7 @@ void API::updateTodo(const std::string &summary, const Date &dueDate, bool compl
     catch (cURLpp::LogicError &e) {
         std::cout << e.what() << std::endl;
     }
+    return http_code;
 }
 
 long API::shareCalendar(const std::string &displayName, const std::string &mail, const std::string &comment, const std::string &calendarName) {
@@ -561,7 +547,7 @@ long API::shareCalendar(const std::string &displayName, const std::string &mail,
     std::string body;
     std::ostringstream str;
     headers.push_back("Content-Type: application/davsharing+xml; charset=\"utf-8\"");
-
+    long http_code = 0;
     body =  "<?xml version=\"1.0\" encoding=\"utf-8\" ?>"
             "<D:share-resource xmlns:D=\"DAV:\">\n"
             "    <D:sharee>\n"
@@ -585,8 +571,7 @@ long API::shareCalendar(const std::string &displayName, const std::string &mail,
         handle.setOpt(new curlpp::Options::HttpHeader(headers));
         handle.setOpt(curlpp::Options::WriteStream(&str));
         handle.perform();
-        long http_code = curlpp::Infos::ResponseCode::get(handle);
-        std::cout << http_code << '\n';
+        http_code = curlpp::Infos::ResponseCode::get(handle);
     }
     catch (cURLpp::RuntimeError &e) {
         std::cout << e.what() << std::endl;
@@ -594,4 +579,5 @@ long API::shareCalendar(const std::string &displayName, const std::string &mail,
     catch (cURLpp::LogicError &e) {
         std::cout << e.what() << std::endl;
     }
+    return http_code;
 }

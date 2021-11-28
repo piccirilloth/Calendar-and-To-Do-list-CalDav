@@ -202,16 +202,22 @@ void MainWindow::ProvideContextMenuTodo(const QPoint &pos) {
         std::lock_guard<std::mutex> lg(m);
         int index = ui->listWidget->currentIndex().row();
         std::string uid = todoMap.at(index);
-        api->deleteIcs(uid, currentCalendar.getName());
-        currentCalendar = api->downloadCalendarObjects(currentCalendar.getName());
-        ui->listWidget->clear();
-        todoMap.clear();
-        /*int i=0;
-        for(Vtodo const &td : currentCalendar.getTodos()) {
-            todoMap.insert(std::pair<int, std::string>(i, td.getUid()));
-            i++;
-        }*/
-        selectedDateChange();
+        long status = api->deleteIcs(uid, currentCalendar.getName());
+        if(status == 0)
+            QMessageBox::information(this, "error", "failed to connect to the server");
+        else if(status == 404)
+            QMessageBox::information(this, "error", "the resource does not exist");
+        else {
+            currentCalendar = api->downloadCalendarObjects(currentCalendar.getName());
+            ui->listWidget->clear();
+            todoMap.clear();
+            /*int i=0;
+            for(Vtodo const &td : currentCalendar.getTodos()) {
+                todoMap.insert(std::pair<int, std::string>(i, td.getUid()));
+                i++;
+            }*/
+            selectedDateChange();
+        }
     } else if(rightClickItem && rightClickItem->text().contains("Update")) {
         std::lock_guard<std::mutex> lg(m);
         int index = ui->listWidget->currentIndex().row();
@@ -245,15 +251,21 @@ void MainWindow::ProvideContextMenuEvents(const QPoint &pos) {
         std::lock_guard<std::mutex> lg(m);
         int index = ui->listWidget_Events->currentIndex().row();
         std::string uid = eventMap.at(index);
-        api->deleteIcs(uid, currentCalendar.getName());
-        currentCalendar = api->downloadCalendarObjects(currentCalendar.getName());
-        eventMap.clear();
-        int i=0;
-        for(Vevent const &ev : currentCalendar.getEvents()) {
-            eventMap.insert(std::pair<int, std::string>(i, ev.getUid()));
-            i++;
+        long status = api->deleteIcs(uid, currentCalendar.getName());
+        if(status == 0)
+            QMessageBox::information(this, "error", "failed to connect to the server");
+        else if(status == 404)
+            QMessageBox::information(this, "error", "the resource does not exist");
+        else {
+            currentCalendar = api->downloadCalendarObjects(currentCalendar.getName());
+            eventMap.clear();
+            /*int i=0;
+            for(Vevent const &ev : currentCalendar.getEvents()) {
+                eventMap.insert(std::pair<int, std::string>(i, ev.getUid()));
+                i++;
+            }*/
+            selectedDateChange();
         }
-        selectedDateChange();
     } else if(rightClickItem && rightClickItem->text().contains("Update")) {
         std::lock_guard<std::mutex> lg(m);
         int index = ui->listWidget_Events->currentIndex().row();
@@ -285,15 +297,24 @@ void MainWindow::on_pushButton_createEvent_clicked() {
 }
 
 void MainWindow::updateEvents(std::string const &summary, Date const &startDate, Date const &endDate, bool isUpdate, std::string const & uid) {
-    if(isUpdate)
-        api->updateEvent(summary, startDate, endDate, uid, currentCalendar);
+    if(isUpdate) {
+        long status = api->updateEvent(summary, startDate, endDate, uid, currentCalendar);
+        if(status == 0)
+            QMessageBox::information(this, "Error", "connection with server failed");
+        else if(status == 404)
+            QMessageBox::information(this, "Error", "resource not found");
+        else if(status == 415)
+            QMessageBox::information(this, "Error", "request format not valid");
+    }
     else {
         currentCalendar = api->downloadCalendarObjects(currentCalendar.getName()); //to have the last uid updated
         if(currentCalendar.getNextUid() == 0) { //first ics
             currentCalendar.setProdid("-//Sabre//Sabre VObject 4.2.2//EN");
             currentCalendar.setVersion("2.0");
         }
-        api->createEvent(summary, startDate, endDate, currentCalendar);
+        long status = api->createEvent(summary, startDate, endDate, currentCalendar);
+        if(status == 0)
+            QMessageBox::information(this, "Error", "connection with server failed");
     }
     /*int i=0;
     eventMap.clear();
@@ -318,30 +339,41 @@ void MainWindow::createTodo_slot(const std::string &summary, const Date &dueDate
         currentCalendar.setProdid("-//Sabre//Sabre VObject 4.2.2//EN");
         currentCalendar.setVersion("2.0");
     }
-    api->createTodo(summary, dueDate, currentCalendar);
-    /*int i=0;
+    long status = api->createTodo(summary, dueDate, currentCalendar);
+    if(status == 0)
+        QMessageBox::information(this, "Error", "connection with server failed");
+    else {/*int i=0;
     todoMap.clear();
     for(Vtodo const &td : currentCalendar.getTodos()) {
         todoMap.insert(std::pair<int, std::string>(i, td.getUid()));
         i++;
     }*/
-    currentCalendar = api->downloadCalendarObjects(currentCalendar.getName());
-    selectedDateChange();
+        currentCalendar = api->downloadCalendarObjects(currentCalendar.getName());
+        selectedDateChange();
+    }
 }
 
 void MainWindow::updateTodo_slot(const std::string &summary, const Date &dueDate, bool completed) {
     int index = ui->listWidget->currentIndex().row();
     std::string uid = todoMap.at(index);
     std::optional<Vtodo> todo = getTodoByUid(uid);
-    api->updateTodo(summary, dueDate, completed, currentCalendar, todo.value().getCompleted(), uid);
-    todoMap.clear();
-    /*int i=0;
-    for(Vtodo const &td : currentCalendar.getTodos()) {
-        todoMap.insert(std::pair<int, std::string>(i, td.getUid()));
-        i++;
-    }*/
-    currentCalendar = api->downloadCalendarObjects(currentCalendar.getName());
-    selectedDateChange();
+    long status = api->updateTodo(summary, dueDate, completed, currentCalendar, todo.value().getCompleted(), uid);
+    if(status == 0)
+        QMessageBox::information(this, "Error", "connection with server failed");
+    else if(status == 404)
+        QMessageBox::information(this, "Error", "resource not found");
+    else if(status == 415)
+        QMessageBox::information(this, "Error", "request format not valid");
+    else {
+        todoMap.clear();
+        /*int i=0;
+        for(Vtodo const &td : currentCalendar.getTodos()) {
+            todoMap.insert(std::pair<int, std::string>(i, td.getUid()));
+            i++;
+        }*/
+        currentCalendar = api->downloadCalendarObjects(currentCalendar.getName());
+        selectedDateChange();
+    }
 }
 
 void MainWindow::on_shareCalendarButton_clicked() {
@@ -355,6 +387,8 @@ void MainWindow::on_shareCalendarButton_clicked() {
 void MainWindow::shareCalendar_slot(const std::string &displayName, const std::string &email, const std::string &comment) {
     std::lock_guard<std::mutex> lg(m);
     long status = api->shareCalendar(displayName, email, comment, currentCalendar.getName());
+    if(status == 0)
+        QMessageBox::information(this, "Error", "connection with the server failed");
     if(status == 403)
         QMessageBox::information(this, "Error", "You are not allowed to share this calendar");
     if(status == 500)
