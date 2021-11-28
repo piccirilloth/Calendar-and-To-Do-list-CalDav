@@ -218,6 +218,43 @@ void getEmail() {
     }
 }
 
+void isShared() {
+    curlpp::Cleanup init;
+    curlpp::Easy handle;
+    std::list<std::string> headers;
+    std::string result;
+    std::string body;
+    std::ostringstream str;
+    headers.push_back("Depth: 0");
+    headers.push_back("Prefer: return-minimal");
+    headers.push_back("Content-Type: application/xml; charset=utf-8");
+    body = "<d:propfind xmlns:d=\"DAV:\">\n"
+           "  <d:prop>\n"
+           "    <d:resourcetype />"
+           "    <d:displayname />"
+           "  </d:prop>\n"
+           "</d:propfind>";
+    try {
+        handle.setOpt(curlpp::Options::Url(
+                std::string("http://192.168.1.10/progetto/calendarserver.php/calendars/lorenzo/calendar1")));
+        handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
+        handle.setOpt(new curlpp::options::UserPwd("oscar:piccirillo"));
+        handle.setOpt(new curlpp::Options::CustomRequest("PROPFIND"));
+        handle.setOpt(new curlpp::Options::PostFields(body));
+        handle.setOpt(new curlpp::Options::PostFieldSize(body.length()));
+        handle.setOpt(new curlpp::Options::HttpHeader(headers));
+        handle.setOpt(curlpp::Options::WriteStream(&str));
+        handle.perform();
+        std::cout << str.str() << '\n';
+    }
+    catch (cURLpp::RuntimeError &e) {
+        std::cout << e.what() << std::endl;
+    }
+    catch (cURLpp::LogicError &e) {
+        std::cout << e.what() << std::endl;
+    }
+}
+
 int main(int argc, char *argv[]) {
     //updateCalendar();
     QApplication a(argc, argv);
@@ -225,6 +262,7 @@ int main(int argc, char *argv[]) {
     w.show();
     w.synchronizeCalendarList();
     return a.exec();
+    //isShared();
     //deleteIcs();
     //getEmail();
     //shareCalendar();
