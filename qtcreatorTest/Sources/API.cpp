@@ -581,3 +581,60 @@ long API::shareCalendar(const std::string &displayName, const std::string &mail,
     }
     return http_code;
 }
+
+bool API::isShared(const std::string &calendarName, std::string &displayName) {
+    std::lock_guard<std::mutex> lg(m);
+    curlpp::Cleanup init;
+    curlpp::Easy handle;
+    std::list<std::string> headers;
+    std::string result;
+    std::string body;
+    std::ostringstream str;
+    bool shared;
+    headers.push_back("Depth: 0");
+    headers.push_back("Prefer: return-minimal");
+    headers.push_back("Content-Type: application/xml; charset=utf-8");
+    body = "<d:propfind xmlns:d=\"DAV:\">\n"
+           "  <d:prop>\n"
+           "    <d:resourcetype />"
+           "    <d:displayname />"
+           "  </d:prop>\n"
+           "</d:propfind>";
+    try {
+        handle.setOpt(curlpp::Options::Url(
+                std::string("http://" + IPADDRESS + "/progetto/calendarserver.php/calendars/" + username + "/" + calendarName + "/")));
+        handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
+        handle.setOpt(new curlpp::options::UserPwd(username + ":" + password));
+        handle.setOpt(new curlpp::Options::CustomRequest("PROPFIND"));
+        handle.setOpt(new curlpp::Options::PostFields(body));
+        handle.setOpt(new curlpp::Options::PostFieldSize(body.length()));
+        handle.setOpt(new curlpp::Options::HttpHeader(headers));
+        handle.setOpt(curlpp::Options::WriteStream(&str));
+        handle.perform();
+        std::string res = str.str();
+        if(res.find("cs:shared-owner") == std::string::npos)
+            shared = true;
+        else
+            shared = false;
+        if(shared == true) {
+            std::string disName = "<d:displayname>";
+            int pos = res.find(disName);
+            pos += disName.length()+1; //+1 for the space
+            std::string result = "";
+            char c;
+            while((c = res[pos]) != '<') {
+                result.push_back(c);
+                pos++;
+            }
+            displayName = result;
+        } else
+            displayName = "";
+    }
+    catch (cURLpp::RuntimeError &e) {
+        std::cout << e.what() << std::endl;
+    }
+    catch (cURLpp::LogicError &e) {
+        std::cout << e.what() << std::endl;
+    }
+    return shared;
+}

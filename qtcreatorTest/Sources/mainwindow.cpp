@@ -48,17 +48,31 @@ void MainWindow::setUpPage() {
     connect(login, SIGNAL(&loginwindow::sendSignal), this, SLOT(&MainWindow::on_loginButton_clicked)); //todo: maybe can be deleted
 }
 
+void MainWindow::addCalendarNamesToGui() {
+    std::list<std::string> l = api->getCalendars(); //get calendar gets a safe access to calendars
+    for(std::string const &value : l) {
+        if(sharedNameMap.contains(value))
+            ui->listWidget_2->addItem(QString(sharedNameMap.at(value).c_str()));
+        else
+            ui->listWidget_2->addItem(QString(value.c_str()));
+    }
+}
+
 void MainWindow::afterLogin() {
     std::list<std::string> l = api->getCalendars(); //get calendar gets a safe access to calendars
     std::lock_guard<std::mutex> lg(m);
+    for(std::string const &name : l) {
+        std::string displayname;
+        if(api->isShared(name, std::ref(displayname)))
+            sharedNameMap.insert(std::pair<std::string,std::string>(name, displayname));
+    }
     ui->listWidget_2->clear();
     ui->listWidget_Events->clear();
     ui->listWidget->clear();
     eventMap.clear();
     todoMap.clear();
     currentCalendar.clear();
-    for(std::string const &value : l)
-        ui->listWidget_2->addItem(QString(value.c_str()));
+    addCalendarNamesToGui();
     ui->loginButton->setText(QString("Change user"));
     ui->createCalendarButton->setEnabled(true);
     ui->textBrowser_calName->setText("");
@@ -75,11 +89,17 @@ void MainWindow::on_createCalendarButton_clicked() {
 }
 
 void MainWindow::updateCalendars() {
-    std::list<std::string> l = api->getCalendars();
     std::lock_guard<std::mutex> lg(m);
     ui->listWidget_2->clear();
-    for(std::string value : l)
-        ui->listWidget_2->addItem(QString(value.c_str()));
+    addCalendarNamesToGui();
+}
+
+std::string MainWindow::getRealCalendarName(const std::string &displayname) {
+    for(auto const & value : sharedNameMap) {
+        if(value.second == displayname)
+            return value.first;
+    }
+    return "";
 }
 
 void MainWindow::ProvideContextMenuCal(const QPoint &pos) {
@@ -89,11 +109,17 @@ void MainWindow::ProvideContextMenuCal(const QPoint &pos) {
     QAction* rightClickItem = subMenu.exec(item);
     if (rightClickItem && rightClickItem->text().contains("Delete") )
     {
-        std::string name = ui->listWidget_2->currentItem()->text().toStdString();
+        std::string displayname = ui->listWidget_2->currentItem()->text().toStdString();
+        std::string name;
+        if((name = getRealCalendarName(displayname)).empty())
+            name = displayname;
         std::list<std::string> list = api->deleteCalendar(name);
         api->clearCalendars();
-
         std::lock_guard<std::mutex> lg(m);
+        std::string str;
+        if(!(str = getRealCalendarName(displayname)).empty())
+            sharedNameMap.erase(str);
+
         if (name == currentCalendar.getName()) {
             ui->listWidget->clear();
             ui->listWidget_Events->clear();
@@ -105,7 +131,7 @@ void MainWindow::ProvideContextMenuCal(const QPoint &pos) {
             currentCalendar.clear();
             ui->shareCalendarButton->setEnabled(false);
         }
-        for(std::string v : list)
+        for(std::string const &v : list)
             api->addCalendar(v);
         ui->listWidget_2->takeItem(ui->listWidget_2->indexAt(pos).row());
         ui->textBrowser_calName->setText("");
@@ -115,9 +141,12 @@ void MainWindow::ProvideContextMenuCal(const QPoint &pos) {
 void MainWindow::on_dbclick() {
     std::lock_guard<std::mutex> lg(m);
     std::string oldName = currentCalendar.getName();
-    QString calendarName = ui->listWidget_2->currentItem()->text();
-    currentCalendar = api->downloadCalendarObjects(calendarName.toStdString());
-    ui->textBrowser_calName->setText(currentCalendar.getName().c_str());
+    QString displayname = ui->listWidget_2->currentItem()->text(); //displayname
+    std::string calendarName;
+    if((calendarName = getRealCalendarName(displayname.toStdString())).empty())
+        calendarName = displayname.toStdString();
+    currentCalendar = api->downloadCalendarObjects(calendarName);
+    ui->textBrowser_calName->setText(calendarName.c_str());
     if(oldName != currentCalendar.getName()) {
         ui->listWidget->clear();
         ui->listWidget_Events->clear();
@@ -127,6 +156,8 @@ void MainWindow::on_dbclick() {
     ui->shareCalendarButton->setEnabled(true);
     selectedDateChange();
 }
+
+//todo: add a wrapper of selectedDateChange
 
 void MainWindow::selectedDateChange() {
     std::string selectedDate = ui->calendarWidget->selectedDate().toString("yyyyMMdd").toStdString();
@@ -399,7 +430,7 @@ void MainWindow::synchronizeCalendarList() {
     timerThread = std::thread([this]() {
         bool exit = false;
         while(!exit) {
-            std::this_thread::sleep_for(std::chrono::milliseconds(5000));
+            std::this_thread::sleep_for(std::chrono::milliseconds(500));
             if(api->isLoggedIn())
                 timerElapsed();
             std::lock_guard<std::mutex> ul(endMutex);
@@ -422,15 +453,18 @@ void MainWindow::timerElapsed() {
             if(diff) {
                 api->addCalendar(newName);
                 {
+                    std::string displayname;
+                    api->isShared(newName, std::ref(displayname));
                     std::lock_guard<std::mutex> lg(m);
-                    ui->listWidget_2->addItem(newName.c_str());
+                    sharedNameMap.insert(std::pair<std::string,std::string>(newName, displayname));
+                    ui->listWidget_2->addItem(displayname.c_str());
                 }
             }
         }
     });
 
     std::thread checkCurrentCalendar([this](){
-        std::lock_guard<std::mutex> lg(m);
+        std::lock_guard<std::mutex> lg(this->m);
         if(!ui->textBrowser_calName->toPlainText().isEmpty()){
             currentCalendar = api->downloadCalendarObjects(currentCalendar.getName());
             selectedDateChange();

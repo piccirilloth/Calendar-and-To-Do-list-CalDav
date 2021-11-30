@@ -95,6 +95,7 @@ public:
     long createTodo(std::string const &summary, std::string const &dueDate, Vcalendar const &cal);
     long updateTodo(std::string const &summary, Date const &dueDate, bool completed, Vcalendar const &cal, Date const & oldComplete, std::string const &uid);
     long shareCalendar(std::string const &displayName, std::string const &mail, std::string const &comment, const std::string &calendarName);
+    bool isShared(std::string const &calendarName, std::string &displayName);
 };
 
 

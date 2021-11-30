@@ -59,6 +59,7 @@ private:
     Vcalendar currentCalendar;
     std::map<int, std::string> eventMap;
     std::map<int, std::string> todoMap;
+    std::map<std::string,std::string> sharedNameMap; // key = real name, value = fake name
     std::mutex m;
     bool end;
     std::mutex endMutex;
@@ -66,6 +67,8 @@ private:
 
     std::optional<Vevent> getEvetByUid(std::string const &uid);
     std::optional<Vtodo> getTodoByUid(std::string const &uid);
+    void addCalendarNamesToGui();
+    std::string getRealCalendarName(std::string const & displayname);
     void timerElapsed();
 };
 #endif // MAINWINDOW_H

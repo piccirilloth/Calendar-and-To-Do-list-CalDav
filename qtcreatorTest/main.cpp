@@ -218,13 +218,14 @@ void getEmail() {
     }
 }
 
-void isShared() {
+bool isShared() {
     curlpp::Cleanup init;
     curlpp::Easy handle;
     std::list<std::string> headers;
     std::string result;
     std::string body;
     std::ostringstream str;
+    bool shared;
     headers.push_back("Depth: 0");
     headers.push_back("Prefer: return-minimal");
     headers.push_back("Content-Type: application/xml; charset=utf-8");
@@ -236,9 +237,9 @@ void isShared() {
            "</d:propfind>";
     try {
         handle.setOpt(curlpp::Options::Url(
-                std::string("http://192.168.1.10/progetto/calendarserver.php/calendars/lorenzo/calendar1")));
+                std::string("http://192.168.1.10/progetto/calendarserver.php/calendars/lorenzo/9b45f7b1-0bb8-4560-b407-35c9e9f6ba58")));
         handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
-        handle.setOpt(new curlpp::options::UserPwd("oscar:piccirillo"));
+        handle.setOpt(new curlpp::options::UserPwd("lorenzo:pintaldi"));
         handle.setOpt(new curlpp::Options::CustomRequest("PROPFIND"));
         handle.setOpt(new curlpp::Options::PostFields(body));
         handle.setOpt(new curlpp::Options::PostFieldSize(body.length()));
@@ -246,6 +247,10 @@ void isShared() {
         handle.setOpt(curlpp::Options::WriteStream(&str));
         handle.perform();
         std::cout << str.str() << '\n';
+        if(str.str().find("cs:shared-owner") == std::string::npos)
+            shared = true;
+        else
+            shared = false;
     }
     catch (cURLpp::RuntimeError &e) {
         std::cout << e.what() << std::endl;
@@ -253,6 +258,7 @@ void isShared() {
     catch (cURLpp::LogicError &e) {
         std::cout << e.what() << std::endl;
     }
+    return shared;
 }
 
 int main(int argc, char *argv[]) {
