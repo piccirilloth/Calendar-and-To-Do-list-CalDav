@@ -43,6 +43,10 @@ public:
     QPushButton *pushButton_createTodo;
     QPushButton *pushButton_createEvent;
     QPushButton *shareCalendarButton;
+    QWidget *layoutWidget_2;
+    QHBoxLayout *horizontalLayout_2;
+    QLabel *label_4;
+    QTextBrowser *textBrowser_currentUser;
     QStatusBar *statusbar;
     QToolBar *toolBar;
 
@@ -61,7 +65,7 @@ public:
         listWidget->setGeometry(QRect(820, 40, 241, 391));
         listWidget_2 = new QListWidget(centralwidget);
         listWidget_2->setObjectName(QString::fromUtf8("listWidget_2"));
-        listWidget_2->setGeometry(QRect(10, 110, 261, 331));
+        listWidget_2->setGeometry(QRect(10, 110, 261, 311));
         loginButton = new QPushButton(centralwidget);
         loginButton->setObjectName(QString::fromUtf8("loginButton"));
         loginButton->setGeometry(QRect(10, 10, 261, 41));
@@ -91,7 +95,7 @@ public:
         label_2->setAlignment(Qt::AlignCenter);
         layoutWidget = new QWidget(centralwidget);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 450, 261, 21));
+        layoutWidget->setGeometry(QRect(10, 420, 261, 21));
         horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -119,6 +123,22 @@ public:
         shareCalendarButton->setGeometry(QRect(150, 60, 121, 41));
         shareCalendarButton->setStyleSheet(QString::fromUtf8("font: 14pt \"Sans Serif\";"));
         shareCalendarButton->setFlat(false);
+        layoutWidget_2 = new QWidget(centralwidget);
+        layoutWidget_2->setObjectName(QString::fromUtf8("layoutWidget_2"));
+        layoutWidget_2->setGeometry(QRect(10, 450, 261, 21));
+        horizontalLayout_2 = new QHBoxLayout(layoutWidget_2);
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
+        label_4 = new QLabel(layoutWidget_2);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+
+        horizontalLayout_2->addWidget(label_4);
+
+        textBrowser_currentUser = new QTextBrowser(layoutWidget_2);
+        textBrowser_currentUser->setObjectName(QString::fromUtf8("textBrowser_currentUser"));
+
+        horizontalLayout_2->addWidget(textBrowser_currentUser);
+
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -143,6 +163,7 @@ public:
         pushButton_createTodo->setText(QApplication::translate("MainWindow", "Create a Todo", nullptr));
         pushButton_createEvent->setText(QApplication::translate("MainWindow", "Create a Event", nullptr));
         shareCalendarButton->setText(QApplication::translate("MainWindow", "Share", nullptr));
+        label_4->setText(QApplication::translate("MainWindow", "Current user", nullptr));
         toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", nullptr));
     } // retranslateUi
 

@@ -397,11 +397,92 @@
 		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Sources/updatetodo.cpp">
 			<Option target="qtcreatorTest"/>
 		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_autogen/Headers/ui_createcalendarform.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_autogen/Headers/ui_createevent.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_autogen/Headers/ui_createtodo.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_autogen/Headers/ui_event_information.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_autogen/Headers/ui_loginwindow.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_autogen/Headers/ui_mainwindow.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_autogen/Headers/ui_sharecalendarform.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_autogen/Headers/ui_todo_information.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_autogen/Headers/ui_updatetodo.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
 		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_autogen/mocs_compilation.cpp">
 			<Option target="qtcreatorTest"/>
 		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_lib_autogen/Headers/ui_createcalendarform.h">
+			<Option target="qtcreatorTest_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_lib_autogen/Headers/ui_createevent.h">
+			<Option target="qtcreatorTest_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_lib_autogen/Headers/ui_createtodo.h">
+			<Option target="qtcreatorTest_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_lib_autogen/Headers/ui_event_information.h">
+			<Option target="qtcreatorTest_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_lib_autogen/Headers/ui_loginwindow.h">
+			<Option target="qtcreatorTest_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_lib_autogen/Headers/ui_mainwindow.h">
+			<Option target="qtcreatorTest_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_lib_autogen/Headers/ui_sharecalendarform.h">
+			<Option target="qtcreatorTest_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_lib_autogen/Headers/ui_todo_information.h">
+			<Option target="qtcreatorTest_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_lib_autogen/Headers/ui_updatetodo.h">
+			<Option target="qtcreatorTest_lib"/>
+		</Unit>
 		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_lib_autogen/mocs_compilation.cpp">
 			<Option target="qtcreatorTest_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_static_lib_autogen/Headers/ui_createcalendarform.h">
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_static_lib_autogen/Headers/ui_createevent.h">
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_static_lib_autogen/Headers/ui_createtodo.h">
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_static_lib_autogen/Headers/ui_event_information.h">
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_static_lib_autogen/Headers/ui_loginwindow.h">
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_static_lib_autogen/Headers/ui_mainwindow.h">
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_static_lib_autogen/Headers/ui_sharecalendarform.h">
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_static_lib_autogen/Headers/ui_todo_information.h">
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_static_lib_autogen/Headers/ui_updatetodo.h">
+			<Option target="qtcreatorTest_static_lib"/>
 		</Unit>
 		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/cmake-build-debug/qtcreatorTest_static_lib_autogen/mocs_compilation.cpp">
 			<Option target="qtcreatorTest_static_lib"/>

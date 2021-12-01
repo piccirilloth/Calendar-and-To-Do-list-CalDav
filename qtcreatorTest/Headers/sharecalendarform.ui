@@ -98,16 +98,12 @@
          <string notr="true">font: 12pt &quot;Sans Serif&quot;;</string>
         </property>
         <property name="text">
-         <string>Display name</string>
+         <string>Access policy</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_displayName">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-       </widget>
+       <widget class="QComboBox" name="comboBox"/>
       </item>
      </layout>
     </item>

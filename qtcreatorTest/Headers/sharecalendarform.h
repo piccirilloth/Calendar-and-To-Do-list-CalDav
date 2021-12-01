@@ -24,7 +24,7 @@ private:
     Ui::shareCalendarForm *ui;
 
 signals:
-    void shareCal(std::string const &displayName, std::string const &email, std::string const &comment);
+    void shareCal(std::string const &email, std::string const &comment, std::string const &accessPolicy);
 
 private slots:
     void on_shareButton_clicked();

@@ -32,7 +32,7 @@ void loginwindow::on_pushButton_login_clicked() {
     else {
         //QMessageBox::information(this, "Error", res.c_str());
         api->setParamsAfterLogin(username.toStdString(), password.toStdString(), res);
-        emit changeUser();
+        emit changeUser(username.toStdString());
         this->close();
     }
 }

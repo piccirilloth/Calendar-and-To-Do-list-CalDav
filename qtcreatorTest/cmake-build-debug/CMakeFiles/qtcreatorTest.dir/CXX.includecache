@@ -169,6 +169,8 @@ QTimer
 -
 thread
 -
+QItemSelection
+-
 
 /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/qtcreatorTest/Headers/sharecalendarform.h
 QDialog
@@ -351,6 +353,10 @@ string
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QDate
 qdatetime.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QItemSelection
+qitemselectionmodel.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer
 qtimer.h

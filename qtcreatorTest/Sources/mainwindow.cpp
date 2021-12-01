@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow), login(nullptr)
 {
+    qRegisterMetaType<QItemSelection>();
     std::lock_guard<std::mutex> lg(m); //probably useless
     end = false;
     ui->setupUi(this);
@@ -17,7 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
     api = new API();
     connect(ui->listWidget_2, SIGNAL(customContextMenuRequested(const QPoint&)), this, SLOT(ProvideContextMenuCal(const QPoint &)));
     connect(ui->listWidget_2, SIGNAL(itemDoubleClicked(QListWidgetItem*)), this, SLOT(on_dbclick()));
-    connect(ui->calendarWidget, SIGNAL(selectionChanged()), this, SLOT(selectedDateChange()));
+    connect(ui->calendarWidget, SIGNAL(selectionChanged()), this, SLOT(selectedDateChange_wrapper()));
     connect(ui->listWidget_Events, SIGNAL(itemDoubleClicked(QListWidgetItem*)), this, SLOT(on_dbClickEvent()));
     connect(ui->listWidget, SIGNAL(itemDoubleClicked(QListWidgetItem*)), this, SLOT(on_dbClickTodo()));
     connect(ui->listWidget, SIGNAL(customContextMenuRequested(const QPoint&)), this, SLOT(ProvideContextMenuTodo(const QPoint &)));
@@ -39,7 +40,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_loginButton_clicked()
 {
     login = new loginwindow();
-    connect(login, SIGNAL(changeUser()), this, SLOT(afterLogin()));
+    connect(login, SIGNAL(changeUser(std::string)), this, SLOT(afterLogin(std::string)));
     login->setModal(true);
     login->exec();
 }
@@ -58,14 +59,16 @@ void MainWindow::addCalendarNamesToGui() {
     }
 }
 
-void MainWindow::afterLogin() {
+void MainWindow::afterLogin(std::string username) {
     std::list<std::string> l = api->getCalendars(); //get calendar gets a safe access to calendars
     std::lock_guard<std::mutex> lg(m);
+    sharedNameMap.clear();
     for(std::string const &name : l) {
         std::string displayname;
         if(api->isShared(name, std::ref(displayname)))
             sharedNameMap.insert(std::pair<std::string,std::string>(name, displayname));
     }
+    ui->textBrowser_currentUser->setText(QString(username.c_str()));
     ui->listWidget_2->clear();
     ui->listWidget_Events->clear();
     ui->listWidget->clear();
@@ -146,7 +149,7 @@ void MainWindow::on_dbclick() {
     if((calendarName = getRealCalendarName(displayname.toStdString())).empty())
         calendarName = displayname.toStdString();
     currentCalendar = api->downloadCalendarObjects(calendarName);
-    ui->textBrowser_calName->setText(calendarName.c_str());
+    ui->textBrowser_calName->setText(displayname);
     if(oldName != currentCalendar.getName()) {
         ui->listWidget->clear();
         ui->listWidget_Events->clear();
@@ -157,7 +160,10 @@ void MainWindow::on_dbclick() {
     selectedDateChange();
 }
 
-//todo: add a wrapper of selectedDateChange
+void MainWindow::selectedDateChange_wrapper() {
+    std::lock_guard<std::mutex> lg(m);
+    selectedDateChange();
+}
 
 void MainWindow::selectedDateChange() {
     std::string selectedDate = ui->calendarWidget->selectedDate().toString("yyyyMMdd").toStdString();
@@ -336,6 +342,8 @@ void MainWindow::updateEvents(std::string const &summary, Date const &startDate,
             QMessageBox::information(this, "Error", "resource not found");
         else if(status == 415)
             QMessageBox::information(this, "Error", "request format not valid");
+        else if(status == 403)
+            QMessageBox::information(this, "Error", "you are not allowed to perform this operation");
     }
     else {
         currentCalendar = api->downloadCalendarObjects(currentCalendar.getName()); //to have the last uid updated
@@ -346,6 +354,8 @@ void MainWindow::updateEvents(std::string const &summary, Date const &startDate,
         long status = api->createEvent(summary, startDate, endDate, currentCalendar);
         if(status == 0)
             QMessageBox::information(this, "Error", "connection with server failed");
+        else if(status == 403)
+            QMessageBox::information(this, "Error", "you are not allowed to perform this operation");
     }
     /*int i=0;
     eventMap.clear();
@@ -373,6 +383,8 @@ void MainWindow::createTodo_slot(const std::string &summary, const Date &dueDate
     long status = api->createTodo(summary, dueDate, currentCalendar);
     if(status == 0)
         QMessageBox::information(this, "Error", "connection with server failed");
+    else if(status == 403)
+        QMessageBox::information(this, "Error", "you are not allowed to perform this operation");
     else {/*int i=0;
     todoMap.clear();
     for(Vtodo const &td : currentCalendar.getTodos()) {
@@ -395,6 +407,8 @@ void MainWindow::updateTodo_slot(const std::string &summary, const Date &dueDate
         QMessageBox::information(this, "Error", "resource not found");
     else if(status == 415)
         QMessageBox::information(this, "Error", "request format not valid");
+    else if(status == 403)
+        QMessageBox::information(this, "Error", "you are not allowed to perform this operation");
     else {
         todoMap.clear();
         /*int i=0;
@@ -415,9 +429,9 @@ void MainWindow::on_shareCalendarButton_clicked() {
     mod.exec();
 }
 
-void MainWindow::shareCalendar_slot(const std::string &displayName, const std::string &email, const std::string &comment) {
+void MainWindow::shareCalendar_slot(const std::string &email, const std::string &comment, const std::string &accessPolicy) {
     std::lock_guard<std::mutex> lg(m);
-    long status = api->shareCalendar(displayName, email, comment, currentCalendar.getName());
+    long status = api->shareCalendar(email, comment, accessPolicy, currentCalendar.getName());
     if(status == 0)
         QMessageBox::information(this, "Error", "connection with the server failed");
     if(status == 403)

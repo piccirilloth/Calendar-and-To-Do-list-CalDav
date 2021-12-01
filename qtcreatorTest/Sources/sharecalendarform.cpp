@@ -11,6 +11,8 @@
 shareCalendarForm::shareCalendarForm(QWidget *parent) :
         QDialog(parent), ui(new Ui::shareCalendarForm) {
     ui->setupUi(this);
+    ui->comboBox->addItem(QString("read-write"));
+    ui->comboBox->addItem(QString("read"));
 }
 
 shareCalendarForm::~shareCalendarForm() {
@@ -18,10 +20,10 @@ shareCalendarForm::~shareCalendarForm() {
 }
 
 void shareCalendarForm::on_shareButton_clicked() {
-    if(ui->lineEdit_comment->text().isEmpty() || ui->lineEdit_displayName->text().isEmpty() || ui->lineEdit_mailTo->text().isEmpty())
-        QMessageBox::information(this, "Error", "All fields must be filled");
+    if(ui->lineEdit_mailTo->text().isEmpty())
+        QMessageBox::information(this, "Error", "mail field must be filled");
     else {
-        emit shareCal(ui->lineEdit_displayName->text().toStdString(), ui->lineEdit_mailTo->text().toStdString(), ui->lineEdit_comment->text().toStdString());
+        emit shareCal(ui->lineEdit_mailTo->text().toStdString(), ui->lineEdit_comment->text().toStdString(), ui->comboBox->currentText().toStdString());
         this->close();
     }
 }

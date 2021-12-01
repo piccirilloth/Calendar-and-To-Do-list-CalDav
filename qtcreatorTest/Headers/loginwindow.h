@@ -22,7 +22,7 @@ private:
     API *api;
 
 signals:
-    void changeUser();
+    void changeUser(std::string username);
 
 private slots:
     void on_pushButton_login_clicked();

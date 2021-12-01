@@ -17,6 +17,7 @@
 #include "sharecalendarform.h"
 #include <QTimer>
 #include <thread>
+#include <QItemSelection>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -34,7 +35,7 @@ public:
 
 private slots:
     void on_loginButton_clicked();
-    void afterLogin();
+    void afterLogin(std::string username);
     void on_createCalendarButton_clicked();
     void updateCalendars();
     void ProvideContextMenuCal(const QPoint &pos);
@@ -50,7 +51,8 @@ private slots:
     void createTodo_slot(std::string const &summary, Date const &dueDate);
     void updateTodo_slot(std::string const &summary, Date const &dueDate, bool completed);
     void on_shareCalendarButton_clicked();
-    void shareCalendar_slot(std::string const &displayName, std::string const &email, std::string const &comment);
+    void shareCalendar_slot(std::string const &email, std::string const &comment, std::string const &accessPolicy);
+    void selectedDateChange_wrapper();
 
 private:
     Ui::MainWindow *ui;

@@ -148,9 +148,9 @@ void API::setParamsAfterLogin(const std::string &user, const std::string &pwd, s
     }
     clearCalendars(); //todo: add a function in api to set these parameters
     std::list<std::string> names = retrieveAllCalendars(); //return only calendar names
-
+    std::lock_guard<std::mutex> lg(m);
     for(std::string const &value : names) {
-        addCalendar(value);
+        calendarNames.push_back(value);
     }
 }
 
@@ -224,7 +224,15 @@ long API::createEmptyCalendar(std::string const &calendarName) {
     curlpp::Easy handle;
     std::list<std::string> headers;
     std::string result;
-    std::string body;
+    std::string body = "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n"
+                       "   <C:mkcalendar xmlns:D=\"DAV:\"\n"
+                       "                 xmlns:C=\"urn:ietf:params:xml:ns:caldav\">\n"
+                       "     <D:set>\n"
+                       "       <D:prop>\n"
+                       "         <D:displayname>" + calendarName + "</D:displayname>\n"
+                       "       </D:prop>\n"
+                       "     </D:set>\n"
+                       "   </C:mkcalendar>";
     std::ostringstream str;
     headers.push_back("Content-Type: application/xml; charset=utf-8");
     long http_code = 0;
@@ -384,7 +392,7 @@ long API::createEvent(const std::string &summary, const Date &startDate, const D
         handle.setOpt(new curlpp::Options::HttpHeader(headers));
         handle.setOpt(curlpp::Options::WriteStream(&str));
         handle.perform();
-        std::cout << str.str() << '\n';
+        std::cout << http_code << '\n';
         http_code = curlpp::infos::ResponseCode::get(handle);
     }
     catch (cURLpp::RuntimeError &e) {
@@ -433,7 +441,7 @@ long API::updateEvent(std::string const &summary, Date const &startDate, Date co
         handle.setOpt(curlpp::Options::WriteStream(&str));
         handle.perform();
         http_code = curlpp::infos::ResponseCode::get(handle);
-        std::cout << str.str() << '\n';
+        std::cout << http_code << '\n';
     }
     catch (cURLpp::RuntimeError &e) {
         std::cout << e.what() << std::endl;
@@ -478,7 +486,7 @@ long API::createTodo(const std::string &summary, const std::string &dueDate, con
         handle.setOpt(curlpp::Options::WriteStream(&str));
         handle.perform();
         http_code = curlpp::infos::ResponseCode::get(handle);
-        std::cout << str.str() << '\n';
+        std::cout << http_code << '\n';
     }
     catch (cURLpp::RuntimeError &e) {
         std::cout << e.what() << std::endl;
@@ -526,7 +534,7 @@ long API::updateTodo(const std::string &summary, const Date &dueDate, bool compl
         handle.setOpt(new curlpp::Options::HttpHeader(headers));
         handle.setOpt(curlpp::Options::WriteStream(&str));
         handle.perform();
-        std::cout << str.str() << '\n';
+        std::cout << http_code << '\n';
         http_code = curlpp::infos::ResponseCode::get(handle);
     }
     catch (cURLpp::RuntimeError &e) {
@@ -538,7 +546,7 @@ long API::updateTodo(const std::string &summary, const Date &dueDate, bool compl
     return http_code;
 }
 
-long API::shareCalendar(const std::string &displayName, const std::string &mail, const std::string &comment, const std::string &calendarName) {
+long API::shareCalendar(const std::string &mail, const std::string &comment, const std::string &accessPolicy, const std::string &calendarName) {
     std::lock_guard<std::mutex> lg(m);
     curlpp::Cleanup init;
     curlpp::Easy handle;
@@ -553,13 +561,16 @@ long API::shareCalendar(const std::string &displayName, const std::string &mail,
             "    <D:sharee>\n"
             "        <D:href>mailto:" + mail + "</D:href>\n"
             "        <D:prop>\n"
-            "            <D:displayname>" + displayName + "-shared by " + username + "</D:displayname>\n"
+            "            <D:displayname>" + "shared by " + username + "</D:displayname>\n"
             "        </D:prop>\n"
             "        <D:comment>" + comment + "</D:comment>\n"
             "        <D:share-access>\n"
-            "            <D:read-write />\n"
+            "            <D:" + accessPolicy + " />\n"
             "        </D:share-access>\n"
             "    </D:sharee>\n"
+            "    <D:prop>"
+            "        <D:displayname />"
+            "    </D:prop>"
             "</D:share-resource>";
     try {
         handle.setOpt(curlpp::Options::Url(std::string("http://" + IPADDRESS + "/progetto/calendarserver.php/calendars/" + username + "/" + calendarName + "/")));
@@ -619,7 +630,7 @@ bool API::isShared(const std::string &calendarName, std::string &displayName) {
         if(shared == true) {
             std::string disName = "<d:displayname>";
             int pos = res.find(disName);
-            pos += disName.length()+1; //+1 for the space
+            pos += disName.length(); //+1 for the space
             std::string result = "";
             char c;
             while((c = res[pos]) != '<') {
