@@ -206,7 +206,12 @@ void MainWindow::selectedDateChange() {
 void MainWindow::on_dbClickEvent() {
     std::lock_guard<std::mutex> lg(m);
     int index = ui->listWidget_Events->currentIndex().row();
-    std::string uid = eventMap.at(index);
+    std::string uid;
+    try {
+        uid = eventMap.at(index);
+    } catch (std::out_of_range const &exp) {
+        return;
+    }
     Vevent event;
     for(Vevent const &ev : currentCalendar.getEvents()) {
         if(ev.getUid() == uid)
@@ -220,7 +225,12 @@ void MainWindow::on_dbClickEvent() {
 void MainWindow::on_dbClickTodo() {
     std::lock_guard<std::mutex> lg(m);
     int index = ui->listWidget->currentIndex().row();
-    std::string uid = todoMap.at(index);
+    std::string uid;
+    try {
+        uid = todoMap.at(index);
+    } catch (std::out_of_range const &exp) {
+        return;
+    }
     Vtodo todo;
     for(Vtodo const &td : currentCalendar.getTodos()) {
         if(td.getUid() == uid) //todo: use getTodoByUid
@@ -240,7 +250,12 @@ void MainWindow::ProvideContextMenuTodo(const QPoint &pos) {
     if (rightClickItem && rightClickItem->text().contains("Delete")) {
         std::lock_guard<std::mutex> lg(m);
         int index = ui->listWidget->currentIndex().row();
-        std::string uid = todoMap.at(index);
+        std::string uid;
+        try {
+            uid = todoMap.at(index);
+        } catch (std::out_of_range const & exp) {
+            return;
+        }
         long status = api->deleteIcs(uid, currentCalendar.getName());
         if(status == 0)
             QMessageBox::information(this, "error", "failed to connect to the server");
@@ -260,7 +275,12 @@ void MainWindow::ProvideContextMenuTodo(const QPoint &pos) {
     } else if(rightClickItem && rightClickItem->text().contains("Update")) {
         std::lock_guard<std::mutex> lg(m);
         int index = ui->listWidget->currentIndex().row();
-        std::string uid = todoMap.at(index);
+        std::string uid;
+        try {
+            uid = todoMap.at(index);
+        } catch (std::out_of_range const & exp) {
+            return;
+        }
         std::optional<Vtodo> todo = getTodoByUid(uid);
         if(todo.has_value()) {
             updateTodo td(todo.value().getSummary(), todo.value().getDue(), todo.value().getCompleted());
@@ -289,7 +309,12 @@ void MainWindow::ProvideContextMenuEvents(const QPoint &pos) {
     if (rightClickItem && rightClickItem->text().contains("Delete")) {
         std::lock_guard<std::mutex> lg(m);
         int index = ui->listWidget_Events->currentIndex().row();
-        std::string uid = eventMap.at(index);
+        std::string uid;
+        try {
+            uid = eventMap.at(index);
+        } catch (std::out_of_range const & exp) {
+            return;
+        }
         long status = api->deleteIcs(uid, currentCalendar.getName());
         if(status == 0)
             QMessageBox::information(this, "error", "failed to connect to the server");
@@ -308,7 +333,12 @@ void MainWindow::ProvideContextMenuEvents(const QPoint &pos) {
     } else if(rightClickItem && rightClickItem->text().contains("Update")) {
         std::lock_guard<std::mutex> lg(m);
         int index = ui->listWidget_Events->currentIndex().row();
-        std::string uid = eventMap.at(index);
+        std::string uid;
+        try {
+            uid = eventMap.at(index);
+        } catch (std::out_of_range const & exp) {
+            return;
+        }
         std::optional<Vevent> event = getEvetByUid(uid);
         if(event.has_value()) {
             createEvent update(event.value(), currentCalendar);
@@ -446,7 +476,7 @@ void MainWindow::synchronizeCalendarList() {
     timerThread = std::thread([this]() {
         bool exit = false;
         while(!exit) {
-            std::this_thread::sleep_for(std::chrono::milliseconds(500));
+            std::this_thread::sleep_for(std::chrono::milliseconds(500)); //todo: set the timer properly
             if(api->isLoggedIn())
                 timerElapsed();
             std::lock_guard<std::mutex> ul(endMutex);
