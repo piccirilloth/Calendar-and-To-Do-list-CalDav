@@ -47,6 +47,10 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_4;
     QTextBrowser *textBrowser_currentUser;
+    QWidget *layoutWidget_3;
+    QHBoxLayout *horizontalLayout_3;
+    QLabel *label_5;
+    QTextBrowser *textBrowser_organizer;
     QStatusBar *statusbar;
     QToolBar *toolBar;
 
@@ -54,7 +58,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1317, 523);
+        MainWindow->resize(1317, 515);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         calendarWidget = new QCalendarWidget(centralwidget);
@@ -65,7 +69,7 @@ public:
         listWidget->setGeometry(QRect(820, 40, 241, 391));
         listWidget_2 = new QListWidget(centralwidget);
         listWidget_2->setObjectName(QString::fromUtf8("listWidget_2"));
-        listWidget_2->setGeometry(QRect(10, 110, 261, 311));
+        listWidget_2->setGeometry(QRect(10, 110, 261, 291));
         loginButton = new QPushButton(centralwidget);
         loginButton->setObjectName(QString::fromUtf8("loginButton"));
         loginButton->setGeometry(QRect(10, 10, 261, 41));
@@ -95,7 +99,7 @@ public:
         label_2->setAlignment(Qt::AlignCenter);
         layoutWidget = new QWidget(centralwidget);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 420, 261, 21));
+        layoutWidget->setGeometry(QRect(10, 410, 261, 21));
         horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -139,6 +143,22 @@ public:
 
         horizontalLayout_2->addWidget(textBrowser_currentUser);
 
+        layoutWidget_3 = new QWidget(centralwidget);
+        layoutWidget_3->setObjectName(QString::fromUtf8("layoutWidget_3"));
+        layoutWidget_3->setGeometry(QRect(10, 430, 261, 21));
+        horizontalLayout_3 = new QHBoxLayout(layoutWidget_3);
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
+        label_5 = new QLabel(layoutWidget_3);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+
+        horizontalLayout_3->addWidget(label_5);
+
+        textBrowser_organizer = new QTextBrowser(layoutWidget_3);
+        textBrowser_organizer->setObjectName(QString::fromUtf8("textBrowser_organizer"));
+
+        horizontalLayout_3->addWidget(textBrowser_organizer);
+
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -164,6 +184,7 @@ public:
         pushButton_createEvent->setText(QApplication::translate("MainWindow", "Create a Event", nullptr));
         shareCalendarButton->setText(QApplication::translate("MainWindow", "Share", nullptr));
         label_4->setText(QApplication::translate("MainWindow", "Current user", nullptr));
+        label_5->setText(QApplication::translate("MainWindow", "Calendar organizer", nullptr));
         toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", nullptr));
     } // retranslateUi
 

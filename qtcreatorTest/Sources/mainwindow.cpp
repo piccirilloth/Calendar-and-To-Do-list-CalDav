@@ -69,6 +69,7 @@ void MainWindow::afterLogin(std::string username) {
             sharedNameMap.insert(std::pair<std::string,std::string>(name, displayname));
     }
     ui->textBrowser_currentUser->setText(QString(username.c_str()));
+    ui->textBrowser_organizer->setText("");
     ui->listWidget_2->clear();
     ui->listWidget_Events->clear();
     ui->listWidget->clear();
@@ -150,6 +151,7 @@ void MainWindow::on_dbclick() {
         calendarName = displayname.toStdString();
     currentCalendar = api->downloadCalendarObjects(calendarName);
     ui->textBrowser_calName->setText(displayname);
+    ui->textBrowser_organizer->setText(currentCalendar.getOrganizer().c_str());
     if(oldName != currentCalendar.getName()) {
         ui->listWidget->clear();
         ui->listWidget_Events->clear();
@@ -458,6 +460,7 @@ void MainWindow::timerElapsed() {
     std::thread checkCalendarList([this](){
         std::list<std::string> names = api->retrieveAllCalendars(); // retrieve the list of calendar names from the server
         std::list<std::string> oldNames = api->getCalendars();
+        std::lock_guard<std::mutex> lg(m);
         for(std::string const &newName : names) {
             bool diff = true;
             for(std::string const &oldName : oldNames) {
@@ -469,7 +472,6 @@ void MainWindow::timerElapsed() {
                 {
                     std::string displayname;
                     api->isShared(newName, std::ref(displayname));
-                    std::lock_guard<std::mutex> lg(m);
                     sharedNameMap.insert(std::pair<std::string,std::string>(newName, displayname));
                     ui->listWidget_2->addItem(displayname.c_str());
                 }

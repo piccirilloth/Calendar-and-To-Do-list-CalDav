@@ -327,7 +327,9 @@ Vcalendar API::downloadCalendarObjects(std::string const &calendarName) {
     IcsParser parser(str.str());
     Vcalendar ret;
     parser.getVCalendar(std::ref(ret));
+    std::string organizer = getOrganizer(calendarName);
     ret.setName(calendarName);
+    ret.setOrganizer(organizer);
     return ret;
 }
 
@@ -648,4 +650,52 @@ bool API::isShared(const std::string &calendarName, std::string &displayName) {
         std::cout << e.what() << std::endl;
     }
     return shared;
+}
+
+std::string API::getOrganizer(const std::string &calendarName) {
+    curlpp::Cleanup init;
+    curlpp::Easy handle;
+    std::list<std::string> headers;
+    std::string result;
+    std::string body;
+    std::ostringstream str;
+    bool shared;
+    headers.push_back("Depth: 0");
+    headers.push_back("Prefer: return-minimal");
+    headers.push_back("Content-Type: application/xml; charset=utf-8");
+    body = "<d:propfind xmlns:d=\"DAV:\" xmlns:cs=\"http://calendarserver.org/ns/\">\n"
+           "<d:prop>"
+           "    <cs:invite><cs:organizer /></cs:invite>"
+           "</d:prop>"
+           "</d:propfind>";
+    std::string organizer = "";
+    try {
+        handle.setOpt(curlpp::Options::Url(
+                std::string("http://" + IPADDRESS + "/progetto/calendarserver.php/calendars/" + username + "/" + calendarName + "/")));
+        handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
+        handle.setOpt(new curlpp::options::UserPwd(username + ":" + password));
+        handle.setOpt(new curlpp::Options::CustomRequest("PROPFIND"));
+        handle.setOpt(new curlpp::Options::PostFields(body));
+        handle.setOpt(new curlpp::Options::PostFieldSize(body.length()));
+        handle.setOpt(new curlpp::Options::HttpHeader(headers));
+        handle.setOpt(curlpp::Options::WriteStream(&str));
+        handle.perform();
+        std::string stringToSearch = "<cs:organizer><d:href>/progetto/calendarserver.php/principals/";
+        std::string res = str.str();
+        int pos = 0;
+        if((pos = res.find(stringToSearch)) != std::string::npos) {
+            pos += stringToSearch.length();
+            while(res[pos] != '<') {
+                organizer.push_back(res[pos]);
+                pos++;
+            }
+        }
+    }
+    catch (cURLpp::RuntimeError &e) {
+        std::cout << e.what() << std::endl;
+    }
+    catch (cURLpp::LogicError &e) {
+        std::cout << e.what() << std::endl;
+    }
+    return organizer;
 }

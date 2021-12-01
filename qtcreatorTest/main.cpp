@@ -261,6 +261,54 @@ bool isShared() {
     return shared;
 }
 
+std::string getOriganizer() {
+    curlpp::Cleanup init;
+    curlpp::Easy handle;
+    std::list<std::string> headers;
+    std::string result;
+    std::string body;
+    std::ostringstream str;
+    bool shared;
+    headers.push_back("Depth: 0");
+    headers.push_back("Prefer: return-minimal");
+    headers.push_back("Content-Type: application/xml; charset=utf-8");
+    body = "<d:propfind xmlns:d=\"DAV:\" xmlns:cs=\"http://calendarserver.org/ns/\">\n"
+           "<d:prop>"
+           "    <cs:invite><cs:organizer /></cs:invite>"
+           "</d:prop>"
+           "</d:propfind>";
+    std::string organizer = "";
+    try {
+        handle.setOpt(curlpp::Options::Url(
+                std::string("http://192.168.1.10/progetto/calendarserver.php/calendars/oscar/5eb04b90-1363-4534-9461-9440a96f31f1/")));
+        handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
+        handle.setOpt(new curlpp::options::UserPwd("oscar:piccirillo"));
+        handle.setOpt(new curlpp::Options::CustomRequest("PROPFIND"));
+        handle.setOpt(new curlpp::Options::PostFields(body));
+        handle.setOpt(new curlpp::Options::PostFieldSize(body.length()));
+        handle.setOpt(new curlpp::Options::HttpHeader(headers));
+        handle.setOpt(curlpp::Options::WriteStream(&str));
+        handle.perform();
+        std::string stringToSearch = "<cs:organizer><d:href>/progetto/calendarserver.php/principals/";
+        std::string res = str.str();
+        int pos = 0;
+        if((pos = res.find(stringToSearch)) != std::string::npos) {
+            pos += stringToSearch.length();
+            while(res[pos] != '<') {
+                organizer.push_back(res[pos]);
+                pos++;
+            }
+        }
+    }
+    catch (cURLpp::RuntimeError &e) {
+        std::cout << e.what() << std::endl;
+    }
+    catch (cURLpp::LogicError &e) {
+        std::cout << e.what() << std::endl;
+    }
+    return organizer;
+}
+
 int main(int argc, char *argv[]) {
     //updateCalendar();
     QApplication a(argc, argv);
@@ -268,6 +316,7 @@ int main(int argc, char *argv[]) {
     w.show();
     w.synchronizeCalendarList();
     return a.exec();
+    //std::cout << getOriganizer() << '\n';
     //isShared();
     //deleteIcs();
     //getEmail();

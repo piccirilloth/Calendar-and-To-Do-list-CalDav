@@ -20,6 +20,7 @@ private:
     std::string calscale;
     std::list<Vevent> events;
     std::list<Vtodo> todos;
+    std::string organizer;
     long nextUid;
 public:
     explicit Vcalendar(std::string const &name, std::string const &prodId, std::string const version);
@@ -58,6 +59,10 @@ public:
     void setEtag(const string &etag);
 
     void setVersion(const string &version);
+
+    const string &getOrganizer() const;
+
+    void setOrganizer(const string &organizer);
 
     void setProdid(const string &prodid);
 

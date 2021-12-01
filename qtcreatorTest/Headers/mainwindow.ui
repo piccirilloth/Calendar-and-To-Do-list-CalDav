@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1317</width>
-    <height>523</height>
+    <height>515</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -40,7 +40,7 @@
       <x>10</x>
       <y>110</y>
       <width>261</width>
-      <height>311</height>
+      <height>291</height>
      </rect>
     </property>
    </widget>
@@ -142,7 +142,7 @@ font: 14pt &quot;Sans Serif&quot;;</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>420</y>
+      <y>410</y>
       <width>261</width>
       <height>21</height>
      </rect>
@@ -233,6 +233,28 @@ font: 14pt &quot;Sans Serif&quot;;</string>
      </item>
      <item>
       <widget class="QTextBrowser" name="textBrowser_currentUser"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>430</y>
+      <width>261</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Calendar organizer</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextBrowser" name="textBrowser_organizer"/>
      </item>
     </layout>
    </widget>

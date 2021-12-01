@@ -106,3 +106,11 @@ void Vcalendar::clear() {
     todos.clear();
     events.clear();
 }
+
+const string &Vcalendar::getOrganizer() const {
+    return organizer;
+}
+
+void Vcalendar::setOrganizer(const string &organizer) {
+    Vcalendar::organizer = organizer;
+}
