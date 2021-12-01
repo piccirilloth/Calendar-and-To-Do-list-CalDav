@@ -72,5 +72,7 @@ private:
     void addCalendarNamesToGui();
     std::string getRealCalendarName(std::string const & displayname);
     void timerElapsed();
+    void threadUpdateEvents(Vcalendar const & newCal);
+    void threadUpdatetodos(Vcalendar const & newCal);
 };
 #endif // MAINWINDOW_H

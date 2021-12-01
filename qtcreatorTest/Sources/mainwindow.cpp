@@ -512,10 +512,63 @@ void MainWindow::timerElapsed() {
     std::thread checkCurrentCalendar([this](){
         std::lock_guard<std::mutex> lg(this->m);
         if(!ui->textBrowser_calName->toPlainText().isEmpty()){
-            currentCalendar = api->downloadCalendarObjects(currentCalendar.getName());
-            selectedDateChange();
+            Vcalendar newCal = api->downloadCalendarObjects(currentCalendar.getName());
+            threadUpdateEvents(newCal);
+            threadUpdatetodos(newCal);
         }
     });
     checkCalendarList.join();
     checkCurrentCalendar.join();
+}
+
+void MainWindow::threadUpdateEvents(const Vcalendar &newCal) {
+    bool update = false;
+    int eventMapSize = eventMap.size();
+    for(Vevent const &newev : newCal.getEvents()) {
+        bool newElement = true;
+        for(Vevent const &ev : currentCalendar.getEvents()) {
+            if(newev.getUid() == ev.getUid()) {
+                if(static_cast<std::string>(newev.getDtstart()) != static_cast<std::string>(ev.getDtstart()) ||
+                   (newev.getSummary()) != (ev.getSummary()) ||
+                   static_cast<std::string>(newev.getDtend()) != static_cast<std::string>(ev.getDtend())) {
+                    update = true;
+                }
+                newElement = false;
+            }
+        }
+        if(newElement) {
+            //add the event to the ui
+            update = true;
+            ui->listWidget_Events->addItem((newev.getSummary().c_str()));
+            eventMap.insert(std::pair<int,std::string>(eventMapSize++, newev.getUid()));
+        }
+    }
+    if(update)
+        currentCalendar = newCal;
+}
+
+void MainWindow::threadUpdatetodos(const Vcalendar &newCal) {
+    bool update = false;
+    int todoMapSize = todoMap.size();
+    for(Vtodo const &newtd : newCal.getTodos()) {
+        bool newElement = true;
+        for(Vtodo const &td : currentCalendar.getTodos()) {
+            if(newtd.getUid() == td.getUid()) {
+                if(static_cast<std::string>(newtd.getDtstart()) != static_cast<std::string>(td.getDtstart()) ||
+                   (newtd.getSummary()) != (td.getSummary()) ||
+                   static_cast<std::string>(newtd.getCompleted()) != static_cast<std::string>(td.getCompleted())) {
+                    update = true;
+                }
+                newElement = false;
+            }
+        }
+        if(newElement) {
+            //add the event to the ui
+            update = true;
+            ui->listWidget_2->addItem((newtd.getSummary().c_str()));
+            todoMap.insert(std::pair<int,std::string>(todoMapSize++, newtd.getUid()));
+        }
+    }
+    if(update)
+        currentCalendar = newCal;
 }
