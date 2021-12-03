@@ -616,7 +616,7 @@ void MainWindow::threadUpdatetodos(const Vcalendar &newCal) {
             if (newElement) {
                 //add the event to the ui
                 update = true;
-                ui->listWidget_2->addItem((newtd.getSummary().c_str()));
+                ui->listWidget->addItem((newtd.getSummary().c_str()));
                 todoMap.insert(std::pair<int, std::string>(todoMapSize++, newtd.getUid()));
             }
         }
