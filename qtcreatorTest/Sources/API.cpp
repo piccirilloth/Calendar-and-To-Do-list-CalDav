@@ -454,7 +454,7 @@ long API::updateEvent(std::string const &summary, Date const &startDate, Date co
     return http_code;
 }
 
-long API::createTodo(const std::string &summary, const std::string &dueDate, const Vcalendar &cal) {
+long API::createTodo(const std::string &summary, const std::string &now, const std::string &dueDate, const Vcalendar &cal) {
     std::lock_guard<std::mutex> lg(m);
     curlpp::Cleanup init;
     curlpp::Easy handle;
@@ -463,8 +463,6 @@ long API::createTodo(const std::string &summary, const std::string &dueDate, con
     std::string body;
     std::ostringstream str;
     headers.push_back("Content-Type: text/calendar; charset=utf-8");
-    Date now;
-    now.SetToNow();
     long http_code = 0;
     body = "BEGIN:VCALENDAR\r\n"
            "VERSION:" + cal.getVersion() + "\r\n"
@@ -499,7 +497,7 @@ long API::createTodo(const std::string &summary, const std::string &dueDate, con
     return http_code;
 }
 
-long API::updateTodo(const std::string &summary, const Date &dueDate, bool completed, const Vcalendar &cal, const Date &oldComplete, std::string const &uid) {
+long API::updateTodo(const std::string &summary, const Date &createdOn, const Date &dueDate, bool completed, const Vcalendar &cal, const Date &oldComplete, std::string const &uid) {
     std::lock_guard<std::mutex> lg(m);
     curlpp::Cleanup init;
     curlpp::Easy handle;
@@ -518,7 +516,7 @@ long API::updateTodo(const std::string &summary, const Date &dueDate, bool compl
            "UID:" + uid+ "\r\n"
            "SUMMARY:" + summary + "\r\n"
            "DUE:" + static_cast<std::string>(dueDate) + "\r\n"
-           "DTSTAMP:" + static_cast<std::string>(now) + "\r\n";
+           "DTSTAMP:" + static_cast<std::string>(createdOn) + "\r\n";
     if(static_cast<std::string>(oldComplete) == "00000000" && completed)
         body += "COMPLETED:" + static_cast<std::string>(now) + "\r\n";
     else if(completed)

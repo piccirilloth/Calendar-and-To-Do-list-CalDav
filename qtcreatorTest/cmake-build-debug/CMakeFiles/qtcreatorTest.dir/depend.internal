@@ -1018,17 +1018,12 @@ CMakeFiles/qtcreatorTest.dir/Sources/mainwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpalette.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextcursor.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextdocument.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextformat.h
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h
@@ -1048,8 +1043,8 @@ CMakeFiles/qtcreatorTest.dir/Sources/mainwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStatusBar
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTextBrowser
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QToolBar
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h
@@ -1083,8 +1078,6 @@ CMakeFiles/qtcreatorTest.dir/Sources/mainwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtextbrowser.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtextedit.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtoolbar.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h

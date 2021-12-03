@@ -19,12 +19,16 @@ void createTodo::on_pushButton_clear_clicked() {
 }
 
 void createTodo::on_createTodo_2_clicked() {
+    QDateTime now = QDateTime::currentDateTime();
     if(ui->lineEdit_summary->text().isEmpty())
         QMessageBox::information(this, "Error", "The summary field must be filled");
+    if(now >= ui->dateTimeEdit_dueDate->dateTime())
+        QMessageBox::information(this, "Error", "The endDate cannot be in the past!");
     else {
-        Date dueDate;
+        Date dueDate, nowD;
         dueDate = ui->dateTimeEdit_dueDate->date().toString("yyyyMMddT").toStdString() + ui->dateTimeEdit_dueDate->time().toString("hhmmssZ").toStdString();
-        emit createTd(ui->lineEdit_summary->text().toStdString(), dueDate);
+        nowD = now.date().toString("yyyyMMddT").toStdString() + now.time().toString("hhmmssZ").toStdString();
+        emit createTd(ui->lineEdit_summary->text().toStdString(), nowD, dueDate);
         this->close();
     }
 }

@@ -18,8 +18,8 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QToolBar>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -28,29 +28,36 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QCalendarWidget *calendarWidget;
-    QListWidget *listWidget;
-    QListWidget *listWidget_2;
+    QHBoxLayout *horizontalLayout_7;
+    QHBoxLayout *horizontalLayout_6;
+    QVBoxLayout *verticalLayout_6;
+    QVBoxLayout *verticalLayout_3;
+    QVBoxLayout *verticalLayout_2;
     QPushButton *loginButton;
+    QHBoxLayout *horizontalLayout_4;
     QPushButton *createCalendarButton;
-    QListWidget *listWidget_Events;
-    QLabel *label;
-    QLabel *label_2;
-    QWidget *layoutWidget;
+    QPushButton *shareCalendarButton;
+    QListWidget *listWidget_2;
+    QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
     QLabel *label_3;
-    QTextBrowser *textBrowser_calName;
-    QPushButton *pushButton_createTodo;
-    QPushButton *pushButton_createEvent;
-    QPushButton *shareCalendarButton;
-    QWidget *layoutWidget_2;
-    QHBoxLayout *horizontalLayout_2;
-    QLabel *label_4;
-    QTextBrowser *textBrowser_currentUser;
-    QWidget *layoutWidget_3;
+    QLabel *label_calendar;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_5;
-    QTextBrowser *textBrowser_organizer;
+    QLabel *label_organizer;
+    QHBoxLayout *horizontalLayout_2;
+    QLabel *label_4;
+    QLabel *label_user;
+    QCalendarWidget *calendarWidget;
+    QHBoxLayout *horizontalLayout_5;
+    QVBoxLayout *verticalLayout_4;
+    QLabel *label;
+    QListWidget *listWidget;
+    QPushButton *pushButton_createTodo;
+    QVBoxLayout *verticalLayout_5;
+    QLabel *label_2;
+    QListWidget *listWidget_Events;
+    QPushButton *pushButton_createEvent;
     QStatusBar *statusbar;
     QToolBar *toolBar;
 
@@ -58,106 +65,172 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1317, 515);
+        MainWindow->resize(1152, 419);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        calendarWidget = new QCalendarWidget(centralwidget);
-        calendarWidget->setObjectName(QString::fromUtf8("calendarWidget"));
-        calendarWidget->setGeometry(QRect(290, 0, 521, 471));
-        listWidget = new QListWidget(centralwidget);
-        listWidget->setObjectName(QString::fromUtf8("listWidget"));
-        listWidget->setGeometry(QRect(820, 40, 241, 391));
-        listWidget_2 = new QListWidget(centralwidget);
-        listWidget_2->setObjectName(QString::fromUtf8("listWidget_2"));
-        listWidget_2->setGeometry(QRect(10, 110, 261, 291));
+        horizontalLayout_7 = new QHBoxLayout(centralwidget);
+        horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
+        horizontalLayout_6 = new QHBoxLayout();
+        horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
+        verticalLayout_6 = new QVBoxLayout();
+        verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
+        verticalLayout_3 = new QVBoxLayout();
+        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
+        verticalLayout_2 = new QVBoxLayout();
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         loginButton = new QPushButton(centralwidget);
         loginButton->setObjectName(QString::fromUtf8("loginButton"));
-        loginButton->setGeometry(QRect(10, 10, 261, 41));
         loginButton->setStyleSheet(QString::fromUtf8("font: 87 14pt \"SF Pro\";"));
+
+        verticalLayout_2->addWidget(loginButton);
+
+        horizontalLayout_4 = new QHBoxLayout();
+        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
         createCalendarButton = new QPushButton(centralwidget);
         createCalendarButton->setObjectName(QString::fromUtf8("createCalendarButton"));
         createCalendarButton->setEnabled(false);
-        createCalendarButton->setGeometry(QRect(10, 60, 121, 41));
         createCalendarButton->setStyleSheet(QString::fromUtf8("font: 14pt \"Sans Serif\";"));
         createCalendarButton->setFlat(false);
-        listWidget_Events = new QListWidget(centralwidget);
-        listWidget_Events->setObjectName(QString::fromUtf8("listWidget_Events"));
-        listWidget_Events->setGeometry(QRect(1070, 40, 241, 391));
+
+        horizontalLayout_4->addWidget(createCalendarButton);
+
+        shareCalendarButton = new QPushButton(centralwidget);
+        shareCalendarButton->setObjectName(QString::fromUtf8("shareCalendarButton"));
+        shareCalendarButton->setEnabled(false);
+        shareCalendarButton->setStyleSheet(QString::fromUtf8("font: 14pt \"Sans Serif\";"));
+        shareCalendarButton->setFlat(false);
+
+        horizontalLayout_4->addWidget(shareCalendarButton);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_4);
+
+
+        verticalLayout_3->addLayout(verticalLayout_2);
+
+        listWidget_2 = new QListWidget(centralwidget);
+        listWidget_2->setObjectName(QString::fromUtf8("listWidget_2"));
+
+        verticalLayout_3->addWidget(listWidget_2);
+
+
+        verticalLayout_6->addLayout(verticalLayout_3);
+
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        label_3 = new QLabel(centralwidget);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+
+        horizontalLayout->addWidget(label_3);
+
+        label_calendar = new QLabel(centralwidget);
+        label_calendar->setObjectName(QString::fromUtf8("label_calendar"));
+
+        horizontalLayout->addWidget(label_calendar);
+
+
+        verticalLayout->addLayout(horizontalLayout);
+
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        label_5 = new QLabel(centralwidget);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+
+        horizontalLayout_3->addWidget(label_5);
+
+        label_organizer = new QLabel(centralwidget);
+        label_organizer->setObjectName(QString::fromUtf8("label_organizer"));
+
+        horizontalLayout_3->addWidget(label_organizer);
+
+
+        verticalLayout->addLayout(horizontalLayout_3);
+
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        label_4 = new QLabel(centralwidget);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+
+        horizontalLayout_2->addWidget(label_4);
+
+        label_user = new QLabel(centralwidget);
+        label_user->setObjectName(QString::fromUtf8("label_user"));
+
+        horizontalLayout_2->addWidget(label_user);
+
+
+        verticalLayout->addLayout(horizontalLayout_2);
+
+
+        verticalLayout_6->addLayout(verticalLayout);
+
+
+        horizontalLayout_6->addLayout(verticalLayout_6);
+
+        calendarWidget = new QCalendarWidget(centralwidget);
+        calendarWidget->setObjectName(QString::fromUtf8("calendarWidget"));
+
+        horizontalLayout_6->addWidget(calendarWidget);
+
+        horizontalLayout_5 = new QHBoxLayout();
+        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
+        verticalLayout_4 = new QVBoxLayout();
+        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(820, 0, 241, 31));
         label->setLayoutDirection(Qt::LeftToRight);
         label->setAutoFillBackground(false);
         label->setStyleSheet(QString::fromUtf8("font: 12pt \"Lohit Telugu\";\n"
 "font: 14pt \"Sans Serif\";"));
         label->setAlignment(Qt::AlignCenter);
-        label_2 = new QLabel(centralwidget);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(1070, 0, 241, 31));
-        label_2->setStyleSheet(QString::fromUtf8("font: 12pt \"Lohit Telugu\";\n"
-"font: 14pt \"Sans Serif\";"));
-        label_2->setAlignment(Qt::AlignCenter);
-        layoutWidget = new QWidget(centralwidget);
-        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 410, 261, 21));
-        horizontalLayout = new QHBoxLayout(layoutWidget);
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        label_3 = new QLabel(layoutWidget);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
 
-        horizontalLayout->addWidget(label_3);
+        verticalLayout_4->addWidget(label);
 
-        textBrowser_calName = new QTextBrowser(layoutWidget);
-        textBrowser_calName->setObjectName(QString::fromUtf8("textBrowser_calName"));
+        listWidget = new QListWidget(centralwidget);
+        listWidget->setObjectName(QString::fromUtf8("listWidget"));
 
-        horizontalLayout->addWidget(textBrowser_calName);
+        verticalLayout_4->addWidget(listWidget);
 
         pushButton_createTodo = new QPushButton(centralwidget);
         pushButton_createTodo->setObjectName(QString::fromUtf8("pushButton_createTodo"));
         pushButton_createTodo->setEnabled(false);
-        pushButton_createTodo->setGeometry(QRect(820, 440, 241, 31));
+
+        verticalLayout_4->addWidget(pushButton_createTodo);
+
+
+        horizontalLayout_5->addLayout(verticalLayout_4);
+
+        verticalLayout_5 = new QVBoxLayout();
+        verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
+        label_2 = new QLabel(centralwidget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setStyleSheet(QString::fromUtf8("font: 12pt \"Lohit Telugu\";\n"
+"font: 14pt \"Sans Serif\";"));
+        label_2->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_5->addWidget(label_2);
+
+        listWidget_Events = new QListWidget(centralwidget);
+        listWidget_Events->setObjectName(QString::fromUtf8("listWidget_Events"));
+
+        verticalLayout_5->addWidget(listWidget_Events);
+
         pushButton_createEvent = new QPushButton(centralwidget);
         pushButton_createEvent->setObjectName(QString::fromUtf8("pushButton_createEvent"));
         pushButton_createEvent->setEnabled(false);
-        pushButton_createEvent->setGeometry(QRect(1070, 440, 241, 31));
-        shareCalendarButton = new QPushButton(centralwidget);
-        shareCalendarButton->setObjectName(QString::fromUtf8("shareCalendarButton"));
-        shareCalendarButton->setEnabled(false);
-        shareCalendarButton->setGeometry(QRect(150, 60, 121, 41));
-        shareCalendarButton->setStyleSheet(QString::fromUtf8("font: 14pt \"Sans Serif\";"));
-        shareCalendarButton->setFlat(false);
-        layoutWidget_2 = new QWidget(centralwidget);
-        layoutWidget_2->setObjectName(QString::fromUtf8("layoutWidget_2"));
-        layoutWidget_2->setGeometry(QRect(10, 450, 261, 21));
-        horizontalLayout_2 = new QHBoxLayout(layoutWidget_2);
-        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        label_4 = new QLabel(layoutWidget_2);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
 
-        horizontalLayout_2->addWidget(label_4);
+        verticalLayout_5->addWidget(pushButton_createEvent);
 
-        textBrowser_currentUser = new QTextBrowser(layoutWidget_2);
-        textBrowser_currentUser->setObjectName(QString::fromUtf8("textBrowser_currentUser"));
 
-        horizontalLayout_2->addWidget(textBrowser_currentUser);
+        horizontalLayout_5->addLayout(verticalLayout_5);
 
-        layoutWidget_3 = new QWidget(centralwidget);
-        layoutWidget_3->setObjectName(QString::fromUtf8("layoutWidget_3"));
-        layoutWidget_3->setGeometry(QRect(10, 430, 261, 21));
-        horizontalLayout_3 = new QHBoxLayout(layoutWidget_3);
-        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
-        horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
-        label_5 = new QLabel(layoutWidget_3);
-        label_5->setObjectName(QString::fromUtf8("label_5"));
 
-        horizontalLayout_3->addWidget(label_5);
+        horizontalLayout_6->addLayout(horizontalLayout_5);
 
-        textBrowser_organizer = new QTextBrowser(layoutWidget_3);
-        textBrowser_organizer->setObjectName(QString::fromUtf8("textBrowser_organizer"));
 
-        horizontalLayout_3->addWidget(textBrowser_organizer);
+        horizontalLayout_7->addLayout(horizontalLayout_6);
 
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
@@ -177,14 +250,17 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Calendar", nullptr));
         loginButton->setText(QApplication::translate("MainWindow", "Login", nullptr));
         createCalendarButton->setText(QApplication::translate("MainWindow", "Create", nullptr));
-        label->setText(QApplication::translate("MainWindow", "ToDo", nullptr));
-        label_2->setText(QApplication::translate("MainWindow", "Events", nullptr));
-        label_3->setText(QApplication::translate("MainWindow", "Current calendar", nullptr));
-        pushButton_createTodo->setText(QApplication::translate("MainWindow", "Create a Todo", nullptr));
-        pushButton_createEvent->setText(QApplication::translate("MainWindow", "Create a Event", nullptr));
         shareCalendarButton->setText(QApplication::translate("MainWindow", "Share", nullptr));
-        label_4->setText(QApplication::translate("MainWindow", "Current user", nullptr));
+        label_3->setText(QApplication::translate("MainWindow", "Current calendar", nullptr));
+        label_calendar->setText(QString());
         label_5->setText(QApplication::translate("MainWindow", "Calendar organizer", nullptr));
+        label_organizer->setText(QString());
+        label_4->setText(QApplication::translate("MainWindow", "Current user", nullptr));
+        label_user->setText(QString());
+        label->setText(QApplication::translate("MainWindow", "ToDo", nullptr));
+        pushButton_createTodo->setText(QApplication::translate("MainWindow", "Create a Todo", nullptr));
+        label_2->setText(QApplication::translate("MainWindow", "Events", nullptr));
+        pushButton_createEvent->setText(QApplication::translate("MainWindow", "Create a Event", nullptr));
         toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", nullptr));
     } // retranslateUi
 

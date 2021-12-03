@@ -29,7 +29,7 @@ private slots:
     void on_pushButton_clear_clicked();
 
 signals:
-    void createTd(std::string const &summary, Date const &dueDate);
+    void createTd(std::string const &summary, Date const &createdOn, Date const &dueDate);
 };
 
 

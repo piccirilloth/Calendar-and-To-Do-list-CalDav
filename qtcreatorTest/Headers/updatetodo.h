@@ -17,12 +17,13 @@ class updateTodo : public QDialog {
 Q_OBJECT
 
 public:
-    explicit updateTodo(std::string const &summary, Date const &dueDate, Date const &completedDate, QWidget *parent = nullptr);
+    explicit updateTodo(std::string const &summary, Date const &dueDate, Date const &completedDate, Date const &createdOn, QWidget *parent = nullptr);
 
     ~updateTodo() override;
 
 private:
     Ui::updateTodo *ui;
+    Date createdOn;
 
 signals:
     void updateTd(std::string const & summary, Date const & dueDate, bool completed);

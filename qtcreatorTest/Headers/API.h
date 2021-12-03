@@ -92,8 +92,8 @@ public:
     long deleteIcs(std::string const &uid, std::string const &calName);
     long createEvent(std::string const &summary, Date const &startDate, Date const &endDate, Vcalendar const &cal);
     long updateEvent(std::string const &summary, Date const &startDate, Date const &endDate, std::string const &uid, Vcalendar const &cal);
-    long createTodo(std::string const &summary, std::string const &dueDate, Vcalendar const &cal);
-    long updateTodo(std::string const &summary, Date const &dueDate, bool completed, Vcalendar const &cal, Date const & oldComplete, std::string const &uid);
+    long createTodo(std::string const &summary, std::string const &now, std::string const &dueDate, Vcalendar const &cal);
+    long updateTodo(std::string const &summary, const Date &createdOn, Date const &dueDate, bool completed, Vcalendar const &cal, Date const & oldComplete, std::string const &uid);
     long shareCalendar(std::string const &mail, std::string const &comment, std::string const &accessPolicy, const std::string &calendarName);
     bool isShared(std::string const &calendarName, std::string &displayName);
     std::string getOrganizer(std::string const &calendarName);

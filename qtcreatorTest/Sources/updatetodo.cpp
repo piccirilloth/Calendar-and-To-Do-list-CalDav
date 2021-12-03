@@ -8,9 +8,10 @@
 #include "../Headers/ui_updatetodo.h"
 
 
-updateTodo::updateTodo(std::string const &summary, Date const &dueDate, Date const &completedDate, QWidget *parent) :
+updateTodo::updateTodo(std::string const &summary, Date const &dueDate, Date const &completedDate, Date const &createdOn, QWidget *parent) :
         QDialog(parent), ui(new Ui::updateTodo) {
     ui->setupUi(this);
+    this->createdOn = createdOn;
     ui->dateTimeEdit_dueDate->setCalendarPopup(true);
     Date temp = dueDate;
     ui->lineEdit_summary->setText(summary.c_str());
@@ -23,11 +24,13 @@ updateTodo::updateTodo(std::string const &summary, Date const &dueDate, Date con
 }
 
 void updateTodo::on_updateTodo_2_clicked() {
+    Date dueDate;
+    dueDate = ui->dateTimeEdit_dueDate->date().toString("yyyyMMddT").toStdString() + ui->dateTimeEdit_dueDate->time().toString("hhmmssZ").toStdString();
     if(ui->lineEdit_summary->text().isEmpty())
         QMessageBox::information(this, "Error", "The summary field must be filled");
+    if(createdOn >= dueDate)
+        QMessageBox::information(this, "Error", "The dueDate cannot be in the past!");
     else {
-        Date dueDate;
-        dueDate = ui->dateTimeEdit_dueDate->date().toString("yyyyMMddT").toStdString() + ui->dateTimeEdit_dueDate->time().toString("hhmmssZ").toStdString();
         emit updateTd(ui->lineEdit_summary->text().toStdString(), dueDate, ui->checkBox_completed->isChecked());
         this->close();
     }

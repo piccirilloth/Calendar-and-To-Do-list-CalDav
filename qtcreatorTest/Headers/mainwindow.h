@@ -48,7 +48,7 @@ private slots:
     void on_pushButton_createEvent_clicked();
     void updateEvents(std::string const &summary, Date const &startDate, Date const &endDate, bool isUpdate, std::string const & uid="");
     void on_pushButton_createTodo_clicked();
-    void createTodo_slot(std::string const &summary, Date const &dueDate);
+    void createTodo_slot(std::string const &summary, Date const &createdOn, Date const &dueDate);
     void updateTodo_slot(std::string const &summary, Date const &dueDate, bool completed);
     void on_shareCalendarButton_clicked();
     void shareCalendar_slot(std::string const &email, std::string const &comment, std::string const &accessPolicy);

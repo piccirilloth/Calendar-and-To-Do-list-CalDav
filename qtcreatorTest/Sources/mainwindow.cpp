@@ -14,7 +14,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->listWidget_2->setContextMenuPolicy(Qt::CustomContextMenu);
     ui->listWidget->setContextMenuPolicy(Qt::CustomContextMenu);
     ui->listWidget_Events->setContextMenuPolicy(Qt::CustomContextMenu);
-    ui->textBrowser_calName->setText("");
+    ui->label_calendar->setText("");
     api = new API();
     connect(ui->listWidget_2, SIGNAL(customContextMenuRequested(const QPoint&)), this, SLOT(ProvideContextMenuCal(const QPoint &)));
     connect(ui->listWidget_2, SIGNAL(itemDoubleClicked(QListWidgetItem*)), this, SLOT(on_dbclick()));
@@ -69,8 +69,8 @@ void MainWindow::afterLogin(std::string username) {
         if(api->isShared(name, std::ref(displayname)))
             sharedNameMap.insert(std::pair<std::string,std::string>(name, displayname));
     }
-    ui->textBrowser_currentUser->setText(QString(username.c_str()));
-    ui->textBrowser_organizer->setText("");
+    ui->label_user->setText(QString(username.c_str()));
+    ui->label_organizer->setText("");
     ui->listWidget_2->clear();
     ui->listWidget_Events->clear();
     ui->listWidget->clear();
@@ -80,7 +80,7 @@ void MainWindow::afterLogin(std::string username) {
     addCalendarNamesToGui();
     ui->loginButton->setText(QString("Change user"));
     ui->createCalendarButton->setEnabled(true);
-    ui->textBrowser_calName->setText("");
+    ui->label_calendar->setText("");
     ui->pushButton_createTodo->setEnabled(false);
     ui->pushButton_createEvent->setEnabled(false);
     ui->shareCalendarButton->setEnabled(false);
@@ -130,7 +130,7 @@ void MainWindow::ProvideContextMenuCal(const QPoint &pos) {
             ui->listWidget_Events->clear();
             eventMap.clear();
             todoMap.clear(); //todo: create a function clear
-            ui->textBrowser_calName->setText("");
+            ui->label_calendar->setText("");
             ui->pushButton_createEvent->setEnabled(false);
             ui->pushButton_createTodo->setEnabled(false);
             currentCalendar.clear();
@@ -139,7 +139,7 @@ void MainWindow::ProvideContextMenuCal(const QPoint &pos) {
         for(std::string const &v : list)
             api->addCalendar(v);
         ui->listWidget_2->takeItem(ui->listWidget_2->indexAt(pos).row());
-        ui->textBrowser_calName->setText("");
+        ui->label_calendar->setText("");
     }
 }
 
@@ -151,8 +151,8 @@ void MainWindow::on_dbclick() {
     if((calendarName = getRealCalendarName(displayname.toStdString())).empty())
         calendarName = displayname.toStdString();
     currentCalendar = api->downloadCalendarObjects(calendarName);
-    ui->textBrowser_calName->setText(displayname);
-    ui->textBrowser_organizer->setText(currentCalendar.getOrganizer().c_str());
+    ui->label_calendar->setText(displayname);
+    ui->label_organizer->setText(currentCalendar.getOrganizer().c_str());
     if(oldName != currentCalendar.getName()) {
         ui->listWidget->clear();
         ui->listWidget_Events->clear();
@@ -190,13 +190,8 @@ void MainWindow::selectedDateChange() {
     todoMap.clear();
     i=0;
     for(const Vtodo &td : todos) {
-        if(static_cast<string>(td.getDtstamp()) != "00000000") {
-            if (curDate <= td.getDue()) {
-                ui->listWidget->addItem((QString(td.getSummary().c_str())));
-                todoMap.insert(std::pair<int, std::string>(i, td.getUid()));
-                i++;
-            }
-        } else if (curDate <= td.getDue()) {
+        Date d = td.getDtstamp();
+        if((long)curDate.Difference(d, DAY, false) >= 0 && (long)td.getDue().Difference(curDate, DAY, false) >= 0) {
             ui->listWidget->addItem((QString(td.getSummary().c_str())));
             todoMap.insert(std::pair<int, std::string>(i, td.getUid()));
             i++;
@@ -284,7 +279,7 @@ void MainWindow::ProvideContextMenuTodo(const QPoint &pos) {
         }
         std::optional<Vtodo> todo = getTodoByUid(uid);
         if(todo.has_value()) {
-            updateTodo td(todo.value().getSummary(), todo.value().getDue(), todo.value().getCompleted());
+            updateTodo td(todo.value().getSummary(), todo.value().getDue(), todo.value().getCompleted(), todo.value().getDtstamp());
             connect(&td, SIGNAL(updateTd(const std::string &, const Date &, bool)),
                     SLOT(updateTodo_slot(const std::string &, const Date &, bool)));
             td.setModal(true);
@@ -402,18 +397,18 @@ void MainWindow::updateEvents(std::string const &summary, Date const &startDate,
 
 void MainWindow::on_pushButton_createTodo_clicked() {
     createTodo mod(nullptr);
-    connect(&mod, SIGNAL(createTd(std::string const &, Date const &)), SLOT(createTodo_slot(std::string const &, Date const &)));
+    connect(&mod, SIGNAL(createTd(std::string const &, Date const &,Date const &)), SLOT(createTodo_slot(std::string const &, Date const &, Date const &)));
     mod.setModal(true);
     mod.exec();
 }
 
-void MainWindow::createTodo_slot(const std::string &summary, const Date &dueDate) {
+void MainWindow::createTodo_slot(const std::string &summary, const Date &createdOn, const Date &dueDate) {
     currentCalendar = api->downloadCalendarObjects(currentCalendar.getName());
     if(currentCalendar.getNextUid() == 0) { //first ics
         currentCalendar.setProdid("-//Sabre//Sabre VObject 4.2.2//EN");
         currentCalendar.setVersion("2.0");
     }
-    long status = api->createTodo(summary, dueDate, currentCalendar);
+    long status = api->createTodo(summary, createdOn, dueDate, currentCalendar);
     if(status == 0)
         QMessageBox::information(this, "Error", "connection with server failed");
     else if(status == 403)
@@ -433,7 +428,7 @@ void MainWindow::updateTodo_slot(const std::string &summary, const Date &dueDate
     int index = ui->listWidget->currentIndex().row();
     std::string uid = todoMap.at(index);
     std::optional<Vtodo> todo = getTodoByUid(uid);
-    long status = api->updateTodo(summary, dueDate, completed, currentCalendar, todo.value().getCompleted(), uid);
+    long status = api->updateTodo(summary, todo->getDtstamp(), dueDate, completed, currentCalendar, todo.value().getCompleted(), uid);
     if(status == 0)
         QMessageBox::information(this, "Error", "connection with server failed");
     else if(status == 404)
@@ -492,19 +487,32 @@ void MainWindow::timerElapsed() {
         std::list<std::string> names = api->retrieveAllCalendars(); // retrieve the list of calendar names from the server
         std::list<std::string> oldNames = api->getCalendars();
         std::lock_guard<std::mutex> lg(m);
-        for(std::string const &newName : names) {
-            bool diff = true;
-            for(std::string const &oldName : oldNames) {
-                if(oldName == newName)
-                    diff = false;
+        if(names.size() < oldNames.size()) {
+            api->clearCalendars();
+            for(std::string const & name : names) {
+                std::string displayname;
+                ui->listWidget_2->clear();
+                if(api->isShared(name, std::ref(displayname))) {
+                    sharedNameMap.insert(std::pair<std::string,std::string>(name, displayname));
+                    ui->listWidget_2->addItem(displayname.c_str());
+                }
+                api->addCalendar(name);
             }
-            if(diff) {
-                api->addCalendar(newName);
-                {
-                    std::string displayname;
-                    if(api->isShared(newName, std::ref(displayname))) {
-                        sharedNameMap.insert(std::pair<std::string,std::string>(newName, displayname));
-                        ui->listWidget_2->addItem(displayname.c_str());
+        } else {
+            for(std::string const &newName : names) {
+                bool diff = true;
+                for(std::string const &oldName : oldNames) {
+                    if(oldName == newName)
+                        diff = false;
+                }
+                if(diff) {
+                    api->addCalendar(newName);
+                    {
+                        std::string displayname;
+                        if(api->isShared(newName, std::ref(displayname))) {
+                            sharedNameMap.insert(std::pair<std::string,std::string>(newName, displayname));
+                            ui->listWidget_2->addItem(displayname.c_str());
+                        }
                     }
                 }
             }
@@ -513,7 +521,7 @@ void MainWindow::timerElapsed() {
 
     std::thread checkCurrentCalendar([this](){
         std::lock_guard<std::mutex> lg(this->m);
-        if(!ui->textBrowser_calName->toPlainText().isEmpty()){
+        if(!ui->label_calendar->text().isEmpty()){
             Vcalendar newCal = api->downloadCalendarObjects(currentCalendar.getName());
             threadUpdateEvents(newCal);
             threadUpdatetodos(newCal);

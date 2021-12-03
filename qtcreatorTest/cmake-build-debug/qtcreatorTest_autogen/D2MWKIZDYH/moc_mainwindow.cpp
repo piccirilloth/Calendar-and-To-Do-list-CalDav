@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[35];
-    char stringdata0[528];
+    QByteArrayData data[36];
+    char stringdata0[538];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -57,15 +57,16 @@ QT_MOC_LITERAL(22, 328, 8), // "isUpdate"
 QT_MOC_LITERAL(23, 337, 3), // "uid"
 QT_MOC_LITERAL(24, 341, 32), // "on_pushButton_createTodo_clicked"
 QT_MOC_LITERAL(25, 374, 15), // "createTodo_slot"
-QT_MOC_LITERAL(26, 390, 7), // "dueDate"
-QT_MOC_LITERAL(27, 398, 15), // "updateTodo_slot"
-QT_MOC_LITERAL(28, 414, 9), // "completed"
-QT_MOC_LITERAL(29, 424, 30), // "on_shareCalendarButton_clicked"
-QT_MOC_LITERAL(30, 455, 18), // "shareCalendar_slot"
-QT_MOC_LITERAL(31, 474, 5), // "email"
-QT_MOC_LITERAL(32, 480, 7), // "comment"
-QT_MOC_LITERAL(33, 488, 12), // "accessPolicy"
-QT_MOC_LITERAL(34, 501, 26) // "selectedDateChange_wrapper"
+QT_MOC_LITERAL(26, 390, 9), // "createdOn"
+QT_MOC_LITERAL(27, 400, 7), // "dueDate"
+QT_MOC_LITERAL(28, 408, 15), // "updateTodo_slot"
+QT_MOC_LITERAL(29, 424, 9), // "completed"
+QT_MOC_LITERAL(30, 434, 30), // "on_shareCalendarButton_clicked"
+QT_MOC_LITERAL(31, 465, 18), // "shareCalendar_slot"
+QT_MOC_LITERAL(32, 484, 5), // "email"
+QT_MOC_LITERAL(33, 490, 7), // "comment"
+QT_MOC_LITERAL(34, 498, 12), // "accessPolicy"
+QT_MOC_LITERAL(35, 511, 26) // "selectedDateChange_wrapper"
 
     },
     "MainWindow\0on_loginButton_clicked\0\0"
@@ -79,8 +80,9 @@ QT_MOC_LITERAL(34, 501, 26) // "selectedDateChange_wrapper"
     "updateEvents\0summary\0Date\0startDate\0"
     "endDate\0isUpdate\0uid\0"
     "on_pushButton_createTodo_clicked\0"
-    "createTodo_slot\0dueDate\0updateTodo_slot\0"
-    "completed\0on_shareCalendarButton_clicked\0"
+    "createTodo_slot\0createdOn\0dueDate\0"
+    "updateTodo_slot\0completed\0"
+    "on_shareCalendarButton_clicked\0"
     "shareCalendar_slot\0email\0comment\0"
     "accessPolicy\0selectedDateChange_wrapper"
 };
@@ -115,11 +117,11 @@ static const uint qt_meta_data_MainWindow[] = {
       17,    5,  134,    2, 0x08 /* Private */,
       17,    4,  145,    2, 0x28 /* Private | MethodCloned */,
       24,    0,  154,    2, 0x08 /* Private */,
-      25,    2,  155,    2, 0x08 /* Private */,
-      27,    3,  160,    2, 0x08 /* Private */,
-      29,    0,  167,    2, 0x08 /* Private */,
-      30,    3,  168,    2, 0x08 /* Private */,
-      34,    0,  175,    2, 0x08 /* Private */,
+      25,    3,  155,    2, 0x08 /* Private */,
+      28,    3,  162,    2, 0x08 /* Private */,
+      30,    0,  169,    2, 0x08 /* Private */,
+      31,    3,  170,    2, 0x08 /* Private */,
+      35,    0,  177,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -137,10 +139,10 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void, 0x80000000 | 4, 0x80000000 | 19, 0x80000000 | 19, QMetaType::Bool, 0x80000000 | 4,   18,   20,   21,   22,   23,
     QMetaType::Void, 0x80000000 | 4, 0x80000000 | 19, 0x80000000 | 19, QMetaType::Bool,   18,   20,   21,   22,
     QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 4, 0x80000000 | 19,   18,   26,
-    QMetaType::Void, 0x80000000 | 4, 0x80000000 | 19, QMetaType::Bool,   18,   26,   28,
+    QMetaType::Void, 0x80000000 | 4, 0x80000000 | 19, 0x80000000 | 19,   18,   26,   27,
+    QMetaType::Void, 0x80000000 | 4, 0x80000000 | 19, QMetaType::Bool,   18,   27,   29,
     QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 4, 0x80000000 | 4, 0x80000000 | 4,   31,   32,   33,
+    QMetaType::Void, 0x80000000 | 4, 0x80000000 | 4, 0x80000000 | 4,   32,   33,   34,
     QMetaType::Void,
 
        0        // eod
@@ -167,7 +169,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 12: _t->updateEvents((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const Date(*)>(_a[2])),(*reinterpret_cast< const Date(*)>(_a[3])),(*reinterpret_cast< bool(*)>(_a[4])),(*reinterpret_cast< const std::string(*)>(_a[5]))); break;
         case 13: _t->updateEvents((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const Date(*)>(_a[2])),(*reinterpret_cast< const Date(*)>(_a[3])),(*reinterpret_cast< bool(*)>(_a[4]))); break;
         case 14: _t->on_pushButton_createTodo_clicked(); break;
-        case 15: _t->createTodo_slot((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const Date(*)>(_a[2]))); break;
+        case 15: _t->createTodo_slot((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const Date(*)>(_a[2])),(*reinterpret_cast< const Date(*)>(_a[3]))); break;
         case 16: _t->updateTodo_slot((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const Date(*)>(_a[2])),(*reinterpret_cast< bool(*)>(_a[3]))); break;
         case 17: _t->on_shareCalendarButton_clicked(); break;
         case 18: _t->shareCalendar_slot((*reinterpret_cast< const std::string(*)>(_a[1])),(*reinterpret_cast< const std::string(*)>(_a[2])),(*reinterpret_cast< const std::string(*)>(_a[3]))); break;
