@@ -14,7 +14,7 @@ event_information::event_information(QWidget *parent,  std::string summary, std:
     ui->label_createdOn->setText(QString(createdOn.c_str()));
     ui->label_endDate->setText(QString(endDate.c_str()));
     ui->label_startDate->setText(QString(startDate.c_str()));
-    ui->label_summary->setText(QString(summary.c_str()));
+    ui->textBrowser->setText(QString(summary.c_str()));
 }
 
 event_information::~event_information() {

@@ -24,6 +24,8 @@ void CreateCalendarForm::on_pushButton_create_clicked() {
         QMessageBox::information(this, "Error", "the name cannot be left empty");
     if(name.toStdString().size() > 30)
         QMessageBox::information(this, "Error", "maximum name size: 30");
+    if(name.toStdString().find(' ') != std::string::npos ||  name.toStdString().find('<') != std::string::npos || name.toStdString().find('>') != std::string::npos)
+        QMessageBox::information(this, "Error", "the name cannot contain spaces, '<' or '>'");
     else {
         std::list<std::string> l = api->getCalendars();
         bool flag = false;

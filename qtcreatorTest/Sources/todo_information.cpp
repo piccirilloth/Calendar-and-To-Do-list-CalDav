@@ -11,7 +11,7 @@
 todo_information::todo_information(QWidget *parent, std::string summary, std::string createdOn, std::string expDate, std::string completed, int priority) :
         QDialog(parent), ui(new Ui::todo_information) {
     ui->setupUi(this);
-    ui->label_summary->setText(QString(summary.c_str()));
+    ui->textBrowser->setText(QString(summary.c_str()));
     ui->label_createdOn->setText(QString(createdOn.c_str()));
     ui->label_expDate->setText(QString(expDate.c_str()));
     if(completed == "0000/00/00")

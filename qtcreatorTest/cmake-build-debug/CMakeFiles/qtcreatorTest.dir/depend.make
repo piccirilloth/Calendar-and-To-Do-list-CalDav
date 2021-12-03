@@ -655,12 +655,17 @@ CMakeFiles/qtcreatorTest.dir/Sources/event_information.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpalette.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextcursor.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextdocument.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextformat.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h \
@@ -672,8 +677,10 @@ CMakeFiles/qtcreatorTest.dir/Sources/event_information.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTextBrowser \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdesktopwidget.h \
@@ -684,6 +691,8 @@ CMakeFiles/qtcreatorTest.dir/Sources/event_information.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtextbrowser.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtextedit.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
@@ -1326,12 +1335,17 @@ CMakeFiles/qtcreatorTest.dir/Sources/todo_information.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpalette.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextcursor.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextdocument.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextformat.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h \
@@ -1343,8 +1357,10 @@ CMakeFiles/qtcreatorTest.dir/Sources/todo_information.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTextBrowser \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdesktopwidget.h \
@@ -1355,6 +1371,8 @@ CMakeFiles/qtcreatorTest.dir/Sources/todo_information.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtextbrowser.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtextedit.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \

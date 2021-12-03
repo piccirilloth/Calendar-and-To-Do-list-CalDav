@@ -36,14 +36,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="label_summary">
-        <property name="styleSheet">
-         <string notr="true">font: 12pt &quot;Sans Serif&quot;;</string>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-       </widget>
+       <widget class="QTextBrowser" name="textBrowser"/>
       </item>
      </layout>
     </item>

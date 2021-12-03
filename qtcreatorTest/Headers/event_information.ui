@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>549</width>
-    <height>328</height>
+    <height>337</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -36,14 +36,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="label_summary">
-        <property name="styleSheet">
-         <string notr="true">font: 12pt &quot;Sans Serif&quot;;</string>
-        </property>
-        <property name="text">
-         <string>Summary</string>
-        </property>
-       </widget>
+       <widget class="QTextBrowser" name="textBrowser"/>
       </item>
      </layout>
     </item>
@@ -65,7 +58,7 @@
          <string notr="true">font: 12pt &quot;Sans Serif&quot;;</string>
         </property>
         <property name="text">
-         <string>Summary</string>
+         <string/>
         </property>
        </widget>
       </item>
@@ -89,7 +82,7 @@
          <string notr="true">font: 12pt &quot;Sans Serif&quot;;</string>
         </property>
         <property name="text">
-         <string>Summary</string>
+         <string/>
         </property>
        </widget>
       </item>
@@ -103,7 +96,7 @@
          <string notr="true">font: 12pt &quot;Sans Serif&quot;;</string>
         </property>
         <property name="text">
-         <string>Summary</string>
+         <string>End date</string>
         </property>
        </widget>
       </item>
@@ -113,7 +106,7 @@
          <string notr="true">font: 12pt &quot;Sans Serif&quot;;</string>
         </property>
         <property name="text">
-         <string>End date</string>
+         <string/>
         </property>
        </widget>
       </item>
