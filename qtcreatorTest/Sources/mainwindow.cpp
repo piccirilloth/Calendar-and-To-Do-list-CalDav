@@ -489,14 +489,16 @@ void MainWindow::timerElapsed() {
         std::lock_guard<std::mutex> lg(m);
         if(names.size() < oldNames.size()) {
             api->clearCalendars();
+            ui->listWidget_2->clear();
             for(std::string const & name : names) {
                 std::string displayname;
-                ui->listWidget_2->clear();
                 if(api->isShared(name, std::ref(displayname))) {
                     sharedNameMap.insert(std::pair<std::string,std::string>(name, displayname));
                     ui->listWidget_2->addItem(displayname.c_str());
+                } else {
+                    api->addCalendar(name);
+                    ui->listWidget_2->addItem(name.c_str());
                 }
-                api->addCalendar(name);
             }
         } else {
             for(std::string const &newName : names) {
@@ -550,6 +552,7 @@ void MainWindow::threadUpdateEvents(const Vcalendar &newCal) {
         if(update) {
             ui->listWidget_Events->clear();
             eventMap.clear();
+            currentCalendar = newCal;
             selectedDateChange();
         }
     } else {
@@ -573,10 +576,11 @@ void MainWindow::threadUpdateEvents(const Vcalendar &newCal) {
                 eventMap.insert(std::pair<int,std::string>(eventMapSize++, newev.getUid()));
             }
         }
-        if(update)
+        if(update) {
             currentCalendar = newCal;
+            selectedDateChange();
+        }
     }
-
 }
 
 void MainWindow::threadUpdatetodos(const Vcalendar &newCal) {
@@ -598,6 +602,7 @@ void MainWindow::threadUpdatetodos(const Vcalendar &newCal) {
         if(update) {
             ui->listWidget->clear();
             todoMap.clear();
+            currentCalendar = newCal;
             selectedDateChange();
         }
     } else {
@@ -620,7 +625,9 @@ void MainWindow::threadUpdatetodos(const Vcalendar &newCal) {
                 todoMap.insert(std::pair<int, std::string>(todoMapSize++, newtd.getUid()));
             }
         }
-        if (update)
+        if (update) {
             currentCalendar = newCal;
+            selectedDateChange();
+        }
     }
 }
