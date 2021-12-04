@@ -490,11 +490,13 @@ void MainWindow::timerElapsed() {
         if(names.size() < oldNames.size()) {
             api->clearCalendars();
             ui->listWidget_2->clear();
+            sharedNameMap.clear();
             for(std::string const & name : names) {
                 std::string displayname;
                 if(api->isShared(name, std::ref(displayname))) {
                     sharedNameMap.insert(std::pair<std::string,std::string>(name, displayname));
                     ui->listWidget_2->addItem(displayname.c_str());
+                    api->addCalendar(name);
                 } else {
                     api->addCalendar(name);
                     ui->listWidget_2->addItem(name.c_str());
