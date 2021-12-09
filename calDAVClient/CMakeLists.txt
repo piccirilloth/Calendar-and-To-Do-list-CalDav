@@ -14,7 +14,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_THREAD_LIBS_INIT "-lpthread")
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 set(CMAKE_HAVE_THREADS_LIBRARY 1)
-set(CMAKE_USE_WIN32_THREADS_INIT 0)
+set(CMAKE_USE_WIN32_THREADS_INIT 1)
 set(CMAKE_USE_PTHREADS_INIT 1)
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 
@@ -22,15 +22,6 @@ set(THREADS_PREFER_PTHREAD_FLAG ON)
 # QtCreator supports the following variables for Android, which are identical to qmake Android variables.
 # Check https://doc.qt.io/qt/deployment-android.html for more information.
 # They need to be set before the find_package( ...) calls below.
-
-#if(ANDROID)
-#    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
-#    if (ANDROID_ABI STREQUAL "armeabi-v7a")
-#        set(ANDROID_EXTRA_LIBS
-#            ${CMAKE_CURRENT_SOURCE_DIR}/path/to/libcrypto.so
-#            ${CMAKE_CURRENT_SOURCE_DIR}/path/to/libssl.so)
-#    endif()
-#endif()
 
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
@@ -88,7 +79,6 @@ if(WIN32)
     set(CMAKE_CXX_STANDARD 11) # C++11...
     set(CMAKE_CXX_STANDARD_REQUIRED ON) #...is required...
     set(CMAKE_CXX_EXTENSIONS OFF) #...without compiler extensions like gnu++11
-
     set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 else()
     if (${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION} VERSION_LESS 3.1)
@@ -107,38 +97,14 @@ else()
 endif()
 
 
+####################################### CURL ###########################################
 
-# Conan.io integration
-if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/conanbuildinfo.cmake)
-    include(${CMAKE_CURRENT_SOURCE_DIR}/conanbuildinfo.cmake)
-    conan_basic_setup()
-endif()
 
-# extra (pkg-config-related files)
-add_subdirectory(curlpp-0.8.1/extras)
-
-#########################################################################################
-# Look for dependencies
-
-# Documented at https://cmake.org/cmake/help/v3.0/module/FindCURL.html?highlight=curlpp
-# Seems simple.
-
-message(STATUS "Looking for CURL")
-include(FindCURL)
-find_package(CURL REQUIRED)
-
-if(CURL_FOUND)
-    message(STATUS "Found CURL version: ${CURL_VERSION_STRING}")
-    message(STATUS "Using CURL include dir(s): ${CURL_INCLUDE_DIRS}")
-    message(STATUS "Using CURL lib(s): ${CURL_LIBRARIES}")
-else()
-    message(FATAL_ERROR "Could not find CURL")
-endif()
 
 # All following targets should search these directories for headers
 include_directories(
         curlpp-0.8.1/include
-        ${CURL_INCLUDE_DIRS}
+
 )
 
 #########################################################################################
@@ -152,28 +118,35 @@ endif()
 file(GLOB_RECURSE HeaderFileList "curlpp-0.8.1/include/*")
 file(GLOB_RECURSE SourceFileList "curlpp-0.8.1/src/*")
 add_library(${PROJECT_NAME}_lib SHARED ${HeaderFileList} ${SourceFileList})
-target_link_libraries(${PROJECT_NAME}_lib ${CURL_LIBRARIES} ${CONAN_LIBS})
-set_target_properties(${PROJECT_NAME}_lib PROPERTIES SOVERSION 1 VERSION 1.0.0)
+if(CMAKE_SYSTEM MATCHES "Windows")
+    include_directories(C:/Users/lorep/Desktop/curl/builds/libcurl-vc-x64-release-dll-ipv6-sspi-schannel/include) #change the path
+    target_link_libraries(${PROJECT_NAME}_lib
+            "C:/Users/lorep/Desktop/curl/builds/libcurl-vc-x64-release-dll-ipv6-sspi-schannel-obj-lib/libcurl.lib"
+            )
+else()
+    message(STATUS "Looking for CURL")
+    include(FindCURL)
+    find_package(CURL REQUIRED)
 
-add_library(${PROJECT_NAME}_static_lib STATIC ${HeaderFileList} ${SourceFileList})
+    if(CURL_FOUND)
+        message(STATUS "Found CURL version: ${CURL_VERSION_STRING}")
+        message(STATUS "Using CURL include dir(s): ${CURL_INCLUDE_DIRS}")
+        message(STATUS "Using CURL lib(s): ${CURL_LIBRARIES}")
+        target_link_libraries(${PROJECT_NAME}_lib ${CURL_LIBRARIES})
+    else()
+        message(FATAL_ERROR "Could not find CURL")
+    endif()
 
-# Make sure that on unix-platforms shared and static libraries have
-# the same root name, but different suffixes.
-#
-#  (solution taken from https://cmake.org/Wiki/CMake_FAQ#How_do_I_make_my_shared_and_static_libraries_have_the_same_root_name.2C_but_different_suffixes.3F)
-#
-# Making shared and static libraries have the same root name, but different suffixes
-SET_TARGET_PROPERTIES(${PROJECT_NAME}_static_lib PROPERTIES OUTPUT_NAME ${PROJECT_NAME}_static_lib)
-# Now the library target "curlpp_static" will be named "curlpp.lib" with MS tools.
-# This conflicts with the "curlpp.lib" import library corresponding to "curlpp.dll",
-# so we add a "lib" prefix (which is default on other platforms anyway):
-SET_TARGET_PROPERTIES(${PROJECT_NAME}_static_lib PROPERTIES PREFIX "lib")
-target_link_libraries(${PROJECT_NAME}_static_lib ${CURL_LIBRARIES} ${CONAN_LIBS})
-# install headers
+    # All following targets should search these directories for headers
+    include_directories(
+            ${CURL_INCLUDE_DIRS}
+    )
+endif()
+
 install(DIRECTORY include/utilspp/ DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/utilspp")
 install(DIRECTORY include/curlpp/ DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/curlpp")
 
-install(TARGETS ${PROJECT_NAME}_lib ${PROJECT_NAME}_static_lib
+install(TARGETS ${PROJECT_NAME}_lib
         RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
         LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
         ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR})

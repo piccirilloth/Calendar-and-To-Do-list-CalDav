@@ -365,7 +365,7 @@ qtcreatorTest: CMakeFiles/qtcreatorTest.dir/Sources/sharecalendarform.cpp.o
 qtcreatorTest: CMakeFiles/qtcreatorTest.dir/Sources/ipaddressform.cpp.o
 qtcreatorTest: CMakeFiles/qtcreatorTest.dir/build.make
 qtcreatorTest: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8
-qtcreatorTest: libqtcreatorTest_lib.so.1.0.0
+qtcreatorTest: libqtcreatorTest_lib.so
 qtcreatorTest: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8
 qtcreatorTest: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8
 qtcreatorTest: /usr/lib/x86_64-linux-gnu/libcurl.so

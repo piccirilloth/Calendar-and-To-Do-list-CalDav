@@ -188,19 +188,6 @@ qtcreatorTest_lib/fast:
 .PHONY : qtcreatorTest_lib/fast
 
 #=============================================================================
-# Target rules for targets named qtcreatorTest_static_lib
-
-# Build rule for target.
-qtcreatorTest_static_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 qtcreatorTest_static_lib
-.PHONY : qtcreatorTest_static_lib
-
-# fast build rule for target.
-qtcreatorTest_static_lib/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/build
-.PHONY : qtcreatorTest_static_lib/fast
-
-#=============================================================================
 # Target rules for targets named qtcreatorTest_autogen
 
 # Build rule for target.
@@ -225,19 +212,6 @@ qtcreatorTest_lib_autogen: cmake_check_build_system
 qtcreatorTest_lib_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib_autogen.dir/build.make CMakeFiles/qtcreatorTest_lib_autogen.dir/build
 .PHONY : qtcreatorTest_lib_autogen/fast
-
-#=============================================================================
-# Target rules for targets named qtcreatorTest_static_lib_autogen
-
-# Build rule for target.
-qtcreatorTest_static_lib_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 qtcreatorTest_static_lib_autogen
-.PHONY : qtcreatorTest_static_lib_autogen
-
-# fast build rule for target.
-qtcreatorTest_static_lib_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib_autogen.dir/build.make CMakeFiles/qtcreatorTest_static_lib_autogen.dir/build
-.PHONY : qtcreatorTest_static_lib_autogen/fast
 
 Sources/API.o: Sources/API.cpp.o
 .PHONY : Sources/API.o
@@ -629,7 +603,6 @@ curlpp-0.8.1/src/curlpp/Easy.o: curlpp-0.8.1/src/curlpp/Easy.cpp.o
 # target to build an object file
 curlpp-0.8.1/src/curlpp/Easy.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Easy.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Easy.cpp.o
 .PHONY : curlpp-0.8.1/src/curlpp/Easy.cpp.o
 
 curlpp-0.8.1/src/curlpp/Easy.i: curlpp-0.8.1/src/curlpp/Easy.cpp.i
@@ -638,7 +611,6 @@ curlpp-0.8.1/src/curlpp/Easy.i: curlpp-0.8.1/src/curlpp/Easy.cpp.i
 # target to preprocess a source file
 curlpp-0.8.1/src/curlpp/Easy.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Easy.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Easy.cpp.i
 .PHONY : curlpp-0.8.1/src/curlpp/Easy.cpp.i
 
 curlpp-0.8.1/src/curlpp/Easy.s: curlpp-0.8.1/src/curlpp/Easy.cpp.s
@@ -647,7 +619,6 @@ curlpp-0.8.1/src/curlpp/Easy.s: curlpp-0.8.1/src/curlpp/Easy.cpp.s
 # target to generate assembly for a file
 curlpp-0.8.1/src/curlpp/Easy.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Easy.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Easy.cpp.s
 .PHONY : curlpp-0.8.1/src/curlpp/Easy.cpp.s
 
 curlpp-0.8.1/src/curlpp/Exception.o: curlpp-0.8.1/src/curlpp/Exception.cpp.o
@@ -656,7 +627,6 @@ curlpp-0.8.1/src/curlpp/Exception.o: curlpp-0.8.1/src/curlpp/Exception.cpp.o
 # target to build an object file
 curlpp-0.8.1/src/curlpp/Exception.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Exception.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Exception.cpp.o
 .PHONY : curlpp-0.8.1/src/curlpp/Exception.cpp.o
 
 curlpp-0.8.1/src/curlpp/Exception.i: curlpp-0.8.1/src/curlpp/Exception.cpp.i
@@ -665,7 +635,6 @@ curlpp-0.8.1/src/curlpp/Exception.i: curlpp-0.8.1/src/curlpp/Exception.cpp.i
 # target to preprocess a source file
 curlpp-0.8.1/src/curlpp/Exception.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Exception.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Exception.cpp.i
 .PHONY : curlpp-0.8.1/src/curlpp/Exception.cpp.i
 
 curlpp-0.8.1/src/curlpp/Exception.s: curlpp-0.8.1/src/curlpp/Exception.cpp.s
@@ -674,7 +643,6 @@ curlpp-0.8.1/src/curlpp/Exception.s: curlpp-0.8.1/src/curlpp/Exception.cpp.s
 # target to generate assembly for a file
 curlpp-0.8.1/src/curlpp/Exception.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Exception.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Exception.cpp.s
 .PHONY : curlpp-0.8.1/src/curlpp/Exception.cpp.s
 
 curlpp-0.8.1/src/curlpp/Form.o: curlpp-0.8.1/src/curlpp/Form.cpp.o
@@ -683,7 +651,6 @@ curlpp-0.8.1/src/curlpp/Form.o: curlpp-0.8.1/src/curlpp/Form.cpp.o
 # target to build an object file
 curlpp-0.8.1/src/curlpp/Form.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Form.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Form.cpp.o
 .PHONY : curlpp-0.8.1/src/curlpp/Form.cpp.o
 
 curlpp-0.8.1/src/curlpp/Form.i: curlpp-0.8.1/src/curlpp/Form.cpp.i
@@ -692,7 +659,6 @@ curlpp-0.8.1/src/curlpp/Form.i: curlpp-0.8.1/src/curlpp/Form.cpp.i
 # target to preprocess a source file
 curlpp-0.8.1/src/curlpp/Form.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Form.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Form.cpp.i
 .PHONY : curlpp-0.8.1/src/curlpp/Form.cpp.i
 
 curlpp-0.8.1/src/curlpp/Form.s: curlpp-0.8.1/src/curlpp/Form.cpp.s
@@ -701,7 +667,6 @@ curlpp-0.8.1/src/curlpp/Form.s: curlpp-0.8.1/src/curlpp/Form.cpp.s
 # target to generate assembly for a file
 curlpp-0.8.1/src/curlpp/Form.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Form.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Form.cpp.s
 .PHONY : curlpp-0.8.1/src/curlpp/Form.cpp.s
 
 curlpp-0.8.1/src/curlpp/Info.o: curlpp-0.8.1/src/curlpp/Info.cpp.o
@@ -710,7 +675,6 @@ curlpp-0.8.1/src/curlpp/Info.o: curlpp-0.8.1/src/curlpp/Info.cpp.o
 # target to build an object file
 curlpp-0.8.1/src/curlpp/Info.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Info.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Info.cpp.o
 .PHONY : curlpp-0.8.1/src/curlpp/Info.cpp.o
 
 curlpp-0.8.1/src/curlpp/Info.i: curlpp-0.8.1/src/curlpp/Info.cpp.i
@@ -719,7 +683,6 @@ curlpp-0.8.1/src/curlpp/Info.i: curlpp-0.8.1/src/curlpp/Info.cpp.i
 # target to preprocess a source file
 curlpp-0.8.1/src/curlpp/Info.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Info.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Info.cpp.i
 .PHONY : curlpp-0.8.1/src/curlpp/Info.cpp.i
 
 curlpp-0.8.1/src/curlpp/Info.s: curlpp-0.8.1/src/curlpp/Info.cpp.s
@@ -728,7 +691,6 @@ curlpp-0.8.1/src/curlpp/Info.s: curlpp-0.8.1/src/curlpp/Info.cpp.s
 # target to generate assembly for a file
 curlpp-0.8.1/src/curlpp/Info.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Info.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Info.cpp.s
 .PHONY : curlpp-0.8.1/src/curlpp/Info.cpp.s
 
 curlpp-0.8.1/src/curlpp/Multi.o: curlpp-0.8.1/src/curlpp/Multi.cpp.o
@@ -737,7 +699,6 @@ curlpp-0.8.1/src/curlpp/Multi.o: curlpp-0.8.1/src/curlpp/Multi.cpp.o
 # target to build an object file
 curlpp-0.8.1/src/curlpp/Multi.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Multi.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Multi.cpp.o
 .PHONY : curlpp-0.8.1/src/curlpp/Multi.cpp.o
 
 curlpp-0.8.1/src/curlpp/Multi.i: curlpp-0.8.1/src/curlpp/Multi.cpp.i
@@ -746,7 +707,6 @@ curlpp-0.8.1/src/curlpp/Multi.i: curlpp-0.8.1/src/curlpp/Multi.cpp.i
 # target to preprocess a source file
 curlpp-0.8.1/src/curlpp/Multi.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Multi.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Multi.cpp.i
 .PHONY : curlpp-0.8.1/src/curlpp/Multi.cpp.i
 
 curlpp-0.8.1/src/curlpp/Multi.s: curlpp-0.8.1/src/curlpp/Multi.cpp.s
@@ -755,7 +715,6 @@ curlpp-0.8.1/src/curlpp/Multi.s: curlpp-0.8.1/src/curlpp/Multi.cpp.s
 # target to generate assembly for a file
 curlpp-0.8.1/src/curlpp/Multi.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Multi.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Multi.cpp.s
 .PHONY : curlpp-0.8.1/src/curlpp/Multi.cpp.s
 
 curlpp-0.8.1/src/curlpp/OptionBase.o: curlpp-0.8.1/src/curlpp/OptionBase.cpp.o
@@ -764,7 +723,6 @@ curlpp-0.8.1/src/curlpp/OptionBase.o: curlpp-0.8.1/src/curlpp/OptionBase.cpp.o
 # target to build an object file
 curlpp-0.8.1/src/curlpp/OptionBase.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/OptionBase.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/OptionBase.cpp.o
 .PHONY : curlpp-0.8.1/src/curlpp/OptionBase.cpp.o
 
 curlpp-0.8.1/src/curlpp/OptionBase.i: curlpp-0.8.1/src/curlpp/OptionBase.cpp.i
@@ -773,7 +731,6 @@ curlpp-0.8.1/src/curlpp/OptionBase.i: curlpp-0.8.1/src/curlpp/OptionBase.cpp.i
 # target to preprocess a source file
 curlpp-0.8.1/src/curlpp/OptionBase.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/OptionBase.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/OptionBase.cpp.i
 .PHONY : curlpp-0.8.1/src/curlpp/OptionBase.cpp.i
 
 curlpp-0.8.1/src/curlpp/OptionBase.s: curlpp-0.8.1/src/curlpp/OptionBase.cpp.s
@@ -782,7 +739,6 @@ curlpp-0.8.1/src/curlpp/OptionBase.s: curlpp-0.8.1/src/curlpp/OptionBase.cpp.s
 # target to generate assembly for a file
 curlpp-0.8.1/src/curlpp/OptionBase.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/OptionBase.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/OptionBase.cpp.s
 .PHONY : curlpp-0.8.1/src/curlpp/OptionBase.cpp.s
 
 curlpp-0.8.1/src/curlpp/Options.o: curlpp-0.8.1/src/curlpp/Options.cpp.o
@@ -791,7 +747,6 @@ curlpp-0.8.1/src/curlpp/Options.o: curlpp-0.8.1/src/curlpp/Options.cpp.o
 # target to build an object file
 curlpp-0.8.1/src/curlpp/Options.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Options.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Options.cpp.o
 .PHONY : curlpp-0.8.1/src/curlpp/Options.cpp.o
 
 curlpp-0.8.1/src/curlpp/Options.i: curlpp-0.8.1/src/curlpp/Options.cpp.i
@@ -800,7 +755,6 @@ curlpp-0.8.1/src/curlpp/Options.i: curlpp-0.8.1/src/curlpp/Options.cpp.i
 # target to preprocess a source file
 curlpp-0.8.1/src/curlpp/Options.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Options.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Options.cpp.i
 .PHONY : curlpp-0.8.1/src/curlpp/Options.cpp.i
 
 curlpp-0.8.1/src/curlpp/Options.s: curlpp-0.8.1/src/curlpp/Options.cpp.s
@@ -809,7 +763,6 @@ curlpp-0.8.1/src/curlpp/Options.s: curlpp-0.8.1/src/curlpp/Options.cpp.s
 # target to generate assembly for a file
 curlpp-0.8.1/src/curlpp/Options.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Options.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/Options.cpp.s
 .PHONY : curlpp-0.8.1/src/curlpp/Options.cpp.s
 
 curlpp-0.8.1/src/curlpp/cURLpp.o: curlpp-0.8.1/src/curlpp/cURLpp.cpp.o
@@ -818,7 +771,6 @@ curlpp-0.8.1/src/curlpp/cURLpp.o: curlpp-0.8.1/src/curlpp/cURLpp.cpp.o
 # target to build an object file
 curlpp-0.8.1/src/curlpp/cURLpp.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/cURLpp.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/cURLpp.cpp.o
 .PHONY : curlpp-0.8.1/src/curlpp/cURLpp.cpp.o
 
 curlpp-0.8.1/src/curlpp/cURLpp.i: curlpp-0.8.1/src/curlpp/cURLpp.cpp.i
@@ -827,7 +779,6 @@ curlpp-0.8.1/src/curlpp/cURLpp.i: curlpp-0.8.1/src/curlpp/cURLpp.cpp.i
 # target to preprocess a source file
 curlpp-0.8.1/src/curlpp/cURLpp.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/cURLpp.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/cURLpp.cpp.i
 .PHONY : curlpp-0.8.1/src/curlpp/cURLpp.cpp.i
 
 curlpp-0.8.1/src/curlpp/cURLpp.s: curlpp-0.8.1/src/curlpp/cURLpp.cpp.s
@@ -836,7 +787,6 @@ curlpp-0.8.1/src/curlpp/cURLpp.s: curlpp-0.8.1/src/curlpp/cURLpp.cpp.s
 # target to generate assembly for a file
 curlpp-0.8.1/src/curlpp/cURLpp.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/cURLpp.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/cURLpp.cpp.s
 .PHONY : curlpp-0.8.1/src/curlpp/cURLpp.cpp.s
 
 curlpp-0.8.1/src/curlpp/internal/CurlHandle.o: curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.o
@@ -845,7 +795,6 @@ curlpp-0.8.1/src/curlpp/internal/CurlHandle.o: curlpp-0.8.1/src/curlpp/internal/
 # target to build an object file
 curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.o
 .PHONY : curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.o
 
 curlpp-0.8.1/src/curlpp/internal/CurlHandle.i: curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.i
@@ -854,7 +803,6 @@ curlpp-0.8.1/src/curlpp/internal/CurlHandle.i: curlpp-0.8.1/src/curlpp/internal/
 # target to preprocess a source file
 curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.i
 .PHONY : curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.i
 
 curlpp-0.8.1/src/curlpp/internal/CurlHandle.s: curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.s
@@ -863,7 +811,6 @@ curlpp-0.8.1/src/curlpp/internal/CurlHandle.s: curlpp-0.8.1/src/curlpp/internal/
 # target to generate assembly for a file
 curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.s
 .PHONY : curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.s
 
 curlpp-0.8.1/src/curlpp/internal/OptionList.o: curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.o
@@ -872,7 +819,6 @@ curlpp-0.8.1/src/curlpp/internal/OptionList.o: curlpp-0.8.1/src/curlpp/internal/
 # target to build an object file
 curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.o
 .PHONY : curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.o
 
 curlpp-0.8.1/src/curlpp/internal/OptionList.i: curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.i
@@ -881,7 +827,6 @@ curlpp-0.8.1/src/curlpp/internal/OptionList.i: curlpp-0.8.1/src/curlpp/internal/
 # target to preprocess a source file
 curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.i
 .PHONY : curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.i
 
 curlpp-0.8.1/src/curlpp/internal/OptionList.s: curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.s
@@ -890,7 +835,6 @@ curlpp-0.8.1/src/curlpp/internal/OptionList.s: curlpp-0.8.1/src/curlpp/internal/
 # target to generate assembly for a file
 curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.s
 .PHONY : curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.s
 
 curlpp-0.8.1/src/curlpp/internal/OptionSetter.o: curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.o
@@ -899,7 +843,6 @@ curlpp-0.8.1/src/curlpp/internal/OptionSetter.o: curlpp-0.8.1/src/curlpp/interna
 # target to build an object file
 curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.o
 .PHONY : curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.o
 
 curlpp-0.8.1/src/curlpp/internal/OptionSetter.i: curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.i
@@ -908,7 +851,6 @@ curlpp-0.8.1/src/curlpp/internal/OptionSetter.i: curlpp-0.8.1/src/curlpp/interna
 # target to preprocess a source file
 curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.i
 .PHONY : curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.i
 
 curlpp-0.8.1/src/curlpp/internal/OptionSetter.s: curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.s
@@ -917,7 +859,6 @@ curlpp-0.8.1/src/curlpp/internal/OptionSetter.s: curlpp-0.8.1/src/curlpp/interna
 # target to generate assembly for a file
 curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.s
 .PHONY : curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.s
 
 curlpp-0.8.1/src/curlpp/internal/SList.o: curlpp-0.8.1/src/curlpp/internal/SList.cpp.o
@@ -926,7 +867,6 @@ curlpp-0.8.1/src/curlpp/internal/SList.o: curlpp-0.8.1/src/curlpp/internal/SList
 # target to build an object file
 curlpp-0.8.1/src/curlpp/internal/SList.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/internal/SList.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/SList.cpp.o
 .PHONY : curlpp-0.8.1/src/curlpp/internal/SList.cpp.o
 
 curlpp-0.8.1/src/curlpp/internal/SList.i: curlpp-0.8.1/src/curlpp/internal/SList.cpp.i
@@ -935,7 +875,6 @@ curlpp-0.8.1/src/curlpp/internal/SList.i: curlpp-0.8.1/src/curlpp/internal/SList
 # target to preprocess a source file
 curlpp-0.8.1/src/curlpp/internal/SList.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/internal/SList.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/SList.cpp.i
 .PHONY : curlpp-0.8.1/src/curlpp/internal/SList.cpp.i
 
 curlpp-0.8.1/src/curlpp/internal/SList.s: curlpp-0.8.1/src/curlpp/internal/SList.cpp.s
@@ -944,7 +883,6 @@ curlpp-0.8.1/src/curlpp/internal/SList.s: curlpp-0.8.1/src/curlpp/internal/SList
 # target to generate assembly for a file
 curlpp-0.8.1/src/curlpp/internal/SList.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/internal/SList.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/curlpp-0.8.1/src/curlpp/internal/SList.cpp.s
 .PHONY : curlpp-0.8.1/src/curlpp/internal/SList.cpp.s
 
 main.o: main.cpp.o
@@ -1019,30 +957,6 @@ qtcreatorTest_lib_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/qtcreatorTest_lib_autogen/mocs_compilation.cpp.s
 .PHONY : qtcreatorTest_lib_autogen/mocs_compilation.cpp.s
 
-qtcreatorTest_static_lib_autogen/mocs_compilation.o: qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.o
-.PHONY : qtcreatorTest_static_lib_autogen/mocs_compilation.o
-
-# target to build an object file
-qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.o
-.PHONY : qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.o
-
-qtcreatorTest_static_lib_autogen/mocs_compilation.i: qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.i
-.PHONY : qtcreatorTest_static_lib_autogen/mocs_compilation.i
-
-# target to preprocess a source file
-qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.i
-.PHONY : qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.i
-
-qtcreatorTest_static_lib_autogen/mocs_compilation.s: qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.s
-.PHONY : qtcreatorTest_static_lib_autogen/mocs_compilation.s
-
-# target to generate assembly for a file
-qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.s
-.PHONY : qtcreatorTest_static_lib_autogen/mocs_compilation.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1057,10 +971,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... qtcreatorTest_autogen"
 	@echo "... qtcreatorTest_lib_autogen"
-	@echo "... qtcreatorTest_static_lib_autogen"
 	@echo "... qtcreatorTest"
 	@echo "... qtcreatorTest_lib"
-	@echo "... qtcreatorTest_static_lib"
 	@echo "... Sources/API.o"
 	@echo "... Sources/API.i"
 	@echo "... Sources/API.s"
@@ -1154,9 +1066,6 @@ help:
 	@echo "... qtcreatorTest_lib_autogen/mocs_compilation.o"
 	@echo "... qtcreatorTest_lib_autogen/mocs_compilation.i"
 	@echo "... qtcreatorTest_lib_autogen/mocs_compilation.s"
-	@echo "... qtcreatorTest_static_lib_autogen/mocs_compilation.o"
-	@echo "... qtcreatorTest_static_lib_autogen/mocs_compilation.i"
-	@echo "... qtcreatorTest_static_lib_autogen/mocs_compilation.s"
 .PHONY : help
 
 

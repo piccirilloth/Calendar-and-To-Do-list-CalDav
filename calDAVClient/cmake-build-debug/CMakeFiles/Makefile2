@@ -65,38 +65,18 @@ CMAKE_BINARY_DIR = /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-Cal
 # The main recursive "all" target.
 all: CMakeFiles/qtcreatorTest.dir/all
 all: CMakeFiles/qtcreatorTest_lib.dir/all
-all: CMakeFiles/qtcreatorTest_static_lib.dir/all
-all: curlpp-0.8.1/extras/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: curlpp-0.8.1/extras/preinstall
+preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/qtcreatorTest.dir/clean
 clean: CMakeFiles/qtcreatorTest_lib.dir/clean
-clean: CMakeFiles/qtcreatorTest_static_lib.dir/clean
 clean: CMakeFiles/qtcreatorTest_autogen.dir/clean
 clean: CMakeFiles/qtcreatorTest_lib_autogen.dir/clean
-clean: CMakeFiles/qtcreatorTest_static_lib_autogen.dir/clean
-clean: curlpp-0.8.1/extras/clean
 .PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory curlpp-0.8.1/extras
-
-# Recursive "all" directory target.
-curlpp-0.8.1/extras/all:
-.PHONY : curlpp-0.8.1/extras/all
-
-# Recursive "preinstall" directory target.
-curlpp-0.8.1/extras/preinstall:
-.PHONY : curlpp-0.8.1/extras/preinstall
-
-# Recursive "clean" directory target.
-curlpp-0.8.1/extras/clean:
-.PHONY : curlpp-0.8.1/extras/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/qtcreatorTest.dir
@@ -152,32 +132,6 @@ CMakeFiles/qtcreatorTest_lib.dir/clean:
 .PHONY : CMakeFiles/qtcreatorTest_lib.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/qtcreatorTest_static_lib.dir
-
-# All Build rule for target.
-CMakeFiles/qtcreatorTest_static_lib.dir/all: CMakeFiles/qtcreatorTest_static_lib_autogen.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/CMakeFiles --progress-num=36,37,38,39,40,41,42,43,44,45,46,47,48,49 "Built target qtcreatorTest_static_lib"
-.PHONY : CMakeFiles/qtcreatorTest_static_lib.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/qtcreatorTest_static_lib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/CMakeFiles 15
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/qtcreatorTest_static_lib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/qtcreatorTest_static_lib.dir/rule
-
-# Convenience name for target.
-qtcreatorTest_static_lib: CMakeFiles/qtcreatorTest_static_lib.dir/rule
-.PHONY : qtcreatorTest_static_lib
-
-# clean rule for target.
-CMakeFiles/qtcreatorTest_static_lib.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib.dir/build.make CMakeFiles/qtcreatorTest_static_lib.dir/clean
-.PHONY : CMakeFiles/qtcreatorTest_static_lib.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/qtcreatorTest_autogen.dir
 
 # All Build rule for target.
@@ -228,32 +182,6 @@ qtcreatorTest_lib_autogen: CMakeFiles/qtcreatorTest_lib_autogen.dir/rule
 CMakeFiles/qtcreatorTest_lib_autogen.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib_autogen.dir/build.make CMakeFiles/qtcreatorTest_lib_autogen.dir/clean
 .PHONY : CMakeFiles/qtcreatorTest_lib_autogen.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/qtcreatorTest_static_lib_autogen.dir
-
-# All Build rule for target.
-CMakeFiles/qtcreatorTest_static_lib_autogen.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib_autogen.dir/build.make CMakeFiles/qtcreatorTest_static_lib_autogen.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib_autogen.dir/build.make CMakeFiles/qtcreatorTest_static_lib_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/CMakeFiles --progress-num=50 "Built target qtcreatorTest_static_lib_autogen"
-.PHONY : CMakeFiles/qtcreatorTest_static_lib_autogen.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/qtcreatorTest_static_lib_autogen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/CMakeFiles 1
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/qtcreatorTest_static_lib_autogen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/qtcreatorTest_static_lib_autogen.dir/rule
-
-# Convenience name for target.
-qtcreatorTest_static_lib_autogen: CMakeFiles/qtcreatorTest_static_lib_autogen.dir/rule
-.PHONY : qtcreatorTest_static_lib_autogen
-
-# clean rule for target.
-CMakeFiles/qtcreatorTest_static_lib_autogen.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_static_lib_autogen.dir/build.make CMakeFiles/qtcreatorTest_static_lib_autogen.dir/clean
-.PHONY : CMakeFiles/qtcreatorTest_static_lib_autogen.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

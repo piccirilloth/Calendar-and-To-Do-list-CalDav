@@ -30,8 +30,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/qtcreatorTest_lib.dir/qtcreatorTest_lib_autogen/mocs_compilation.cpp.o.d"
   "libqtcreatorTest_lib.pdb"
   "libqtcreatorTest_lib.so"
-  "libqtcreatorTest_lib.so.1"
-  "libqtcreatorTest_lib.so.1.0.0"
 )
 
 # Per-language clean rules from dependency scanning.
