@@ -110,16 +110,6 @@ list_install_components:
 list_install_components/fast: list_install_components
 .PHONY : list_install_components/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/175/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -129,6 +119,16 @@ edit_cache:
 # Special rule for the target edit_cache
 edit_cache/fast: edit_cache
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/snap/clion/175/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -162,63 +162,63 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named qtcreatorTest
+# Target rules for targets named calDAVClient
 
 # Build rule for target.
-qtcreatorTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 qtcreatorTest
-.PHONY : qtcreatorTest
+calDAVClient: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calDAVClient
+.PHONY : calDAVClient
 
 # fast build rule for target.
-qtcreatorTest/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/build
-.PHONY : qtcreatorTest/fast
+calDAVClient/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/build
+.PHONY : calDAVClient/fast
 
 #=============================================================================
-# Target rules for targets named qtcreatorTest_lib
+# Target rules for targets named calDAVClient_lib
 
 # Build rule for target.
-qtcreatorTest_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 qtcreatorTest_lib
-.PHONY : qtcreatorTest_lib
+calDAVClient_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calDAVClient_lib
+.PHONY : calDAVClient_lib
 
 # fast build rule for target.
-qtcreatorTest_lib/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/build
-.PHONY : qtcreatorTest_lib/fast
+calDAVClient_lib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/build
+.PHONY : calDAVClient_lib/fast
 
 #=============================================================================
-# Target rules for targets named qtcreatorTest_autogen
+# Target rules for targets named calDAVClient_autogen
 
 # Build rule for target.
-qtcreatorTest_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 qtcreatorTest_autogen
-.PHONY : qtcreatorTest_autogen
+calDAVClient_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calDAVClient_autogen
+.PHONY : calDAVClient_autogen
 
 # fast build rule for target.
-qtcreatorTest_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_autogen.dir/build.make CMakeFiles/qtcreatorTest_autogen.dir/build
-.PHONY : qtcreatorTest_autogen/fast
+calDAVClient_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_autogen.dir/build.make CMakeFiles/calDAVClient_autogen.dir/build
+.PHONY : calDAVClient_autogen/fast
 
 #=============================================================================
-# Target rules for targets named qtcreatorTest_lib_autogen
+# Target rules for targets named calDAVClient_lib_autogen
 
 # Build rule for target.
-qtcreatorTest_lib_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 qtcreatorTest_lib_autogen
-.PHONY : qtcreatorTest_lib_autogen
+calDAVClient_lib_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calDAVClient_lib_autogen
+.PHONY : calDAVClient_lib_autogen
 
 # fast build rule for target.
-qtcreatorTest_lib_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib_autogen.dir/build.make CMakeFiles/qtcreatorTest_lib_autogen.dir/build
-.PHONY : qtcreatorTest_lib_autogen/fast
+calDAVClient_lib_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib_autogen.dir/build.make CMakeFiles/calDAVClient_lib_autogen.dir/build
+.PHONY : calDAVClient_lib_autogen/fast
 
 Sources/API.o: Sources/API.cpp.o
 .PHONY : Sources/API.o
 
 # target to build an object file
 Sources/API.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/API.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/API.cpp.o
 .PHONY : Sources/API.cpp.o
 
 Sources/API.i: Sources/API.cpp.i
@@ -226,7 +226,7 @@ Sources/API.i: Sources/API.cpp.i
 
 # target to preprocess a source file
 Sources/API.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/API.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/API.cpp.i
 .PHONY : Sources/API.cpp.i
 
 Sources/API.s: Sources/API.cpp.s
@@ -234,7 +234,7 @@ Sources/API.s: Sources/API.cpp.s
 
 # target to generate assembly for a file
 Sources/API.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/API.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/API.cpp.s
 .PHONY : Sources/API.cpp.s
 
 Sources/Date.o: Sources/Date.cpp.o
@@ -242,7 +242,7 @@ Sources/Date.o: Sources/Date.cpp.o
 
 # target to build an object file
 Sources/Date.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/Date.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/Date.cpp.o
 .PHONY : Sources/Date.cpp.o
 
 Sources/Date.i: Sources/Date.cpp.i
@@ -250,7 +250,7 @@ Sources/Date.i: Sources/Date.cpp.i
 
 # target to preprocess a source file
 Sources/Date.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/Date.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/Date.cpp.i
 .PHONY : Sources/Date.cpp.i
 
 Sources/Date.s: Sources/Date.cpp.s
@@ -258,7 +258,7 @@ Sources/Date.s: Sources/Date.cpp.s
 
 # target to generate assembly for a file
 Sources/Date.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/Date.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/Date.cpp.s
 .PHONY : Sources/Date.cpp.s
 
 Sources/IcsParser.o: Sources/IcsParser.cpp.o
@@ -266,7 +266,7 @@ Sources/IcsParser.o: Sources/IcsParser.cpp.o
 
 # target to build an object file
 Sources/IcsParser.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/IcsParser.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/IcsParser.cpp.o
 .PHONY : Sources/IcsParser.cpp.o
 
 Sources/IcsParser.i: Sources/IcsParser.cpp.i
@@ -274,7 +274,7 @@ Sources/IcsParser.i: Sources/IcsParser.cpp.i
 
 # target to preprocess a source file
 Sources/IcsParser.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/IcsParser.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/IcsParser.cpp.i
 .PHONY : Sources/IcsParser.cpp.i
 
 Sources/IcsParser.s: Sources/IcsParser.cpp.s
@@ -282,7 +282,7 @@ Sources/IcsParser.s: Sources/IcsParser.cpp.s
 
 # target to generate assembly for a file
 Sources/IcsParser.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/IcsParser.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/IcsParser.cpp.s
 .PHONY : Sources/IcsParser.cpp.s
 
 Sources/Vcalendar.o: Sources/Vcalendar.cpp.o
@@ -290,7 +290,7 @@ Sources/Vcalendar.o: Sources/Vcalendar.cpp.o
 
 # target to build an object file
 Sources/Vcalendar.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/Vcalendar.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/Vcalendar.cpp.o
 .PHONY : Sources/Vcalendar.cpp.o
 
 Sources/Vcalendar.i: Sources/Vcalendar.cpp.i
@@ -298,7 +298,7 @@ Sources/Vcalendar.i: Sources/Vcalendar.cpp.i
 
 # target to preprocess a source file
 Sources/Vcalendar.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/Vcalendar.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/Vcalendar.cpp.i
 .PHONY : Sources/Vcalendar.cpp.i
 
 Sources/Vcalendar.s: Sources/Vcalendar.cpp.s
@@ -306,7 +306,7 @@ Sources/Vcalendar.s: Sources/Vcalendar.cpp.s
 
 # target to generate assembly for a file
 Sources/Vcalendar.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/Vcalendar.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/Vcalendar.cpp.s
 .PHONY : Sources/Vcalendar.cpp.s
 
 Sources/Vevent.o: Sources/Vevent.cpp.o
@@ -314,7 +314,7 @@ Sources/Vevent.o: Sources/Vevent.cpp.o
 
 # target to build an object file
 Sources/Vevent.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/Vevent.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/Vevent.cpp.o
 .PHONY : Sources/Vevent.cpp.o
 
 Sources/Vevent.i: Sources/Vevent.cpp.i
@@ -322,7 +322,7 @@ Sources/Vevent.i: Sources/Vevent.cpp.i
 
 # target to preprocess a source file
 Sources/Vevent.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/Vevent.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/Vevent.cpp.i
 .PHONY : Sources/Vevent.cpp.i
 
 Sources/Vevent.s: Sources/Vevent.cpp.s
@@ -330,7 +330,7 @@ Sources/Vevent.s: Sources/Vevent.cpp.s
 
 # target to generate assembly for a file
 Sources/Vevent.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/Vevent.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/Vevent.cpp.s
 .PHONY : Sources/Vevent.cpp.s
 
 Sources/Vtodo.o: Sources/Vtodo.cpp.o
@@ -338,7 +338,7 @@ Sources/Vtodo.o: Sources/Vtodo.cpp.o
 
 # target to build an object file
 Sources/Vtodo.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/Vtodo.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/Vtodo.cpp.o
 .PHONY : Sources/Vtodo.cpp.o
 
 Sources/Vtodo.i: Sources/Vtodo.cpp.i
@@ -346,7 +346,7 @@ Sources/Vtodo.i: Sources/Vtodo.cpp.i
 
 # target to preprocess a source file
 Sources/Vtodo.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/Vtodo.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/Vtodo.cpp.i
 .PHONY : Sources/Vtodo.cpp.i
 
 Sources/Vtodo.s: Sources/Vtodo.cpp.s
@@ -354,7 +354,7 @@ Sources/Vtodo.s: Sources/Vtodo.cpp.s
 
 # target to generate assembly for a file
 Sources/Vtodo.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/Vtodo.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/Vtodo.cpp.s
 .PHONY : Sources/Vtodo.cpp.s
 
 Sources/createcalendarform.o: Sources/createcalendarform.cpp.o
@@ -362,7 +362,7 @@ Sources/createcalendarform.o: Sources/createcalendarform.cpp.o
 
 # target to build an object file
 Sources/createcalendarform.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/createcalendarform.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/createcalendarform.cpp.o
 .PHONY : Sources/createcalendarform.cpp.o
 
 Sources/createcalendarform.i: Sources/createcalendarform.cpp.i
@@ -370,7 +370,7 @@ Sources/createcalendarform.i: Sources/createcalendarform.cpp.i
 
 # target to preprocess a source file
 Sources/createcalendarform.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/createcalendarform.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/createcalendarform.cpp.i
 .PHONY : Sources/createcalendarform.cpp.i
 
 Sources/createcalendarform.s: Sources/createcalendarform.cpp.s
@@ -378,7 +378,7 @@ Sources/createcalendarform.s: Sources/createcalendarform.cpp.s
 
 # target to generate assembly for a file
 Sources/createcalendarform.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/createcalendarform.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/createcalendarform.cpp.s
 .PHONY : Sources/createcalendarform.cpp.s
 
 Sources/createevent.o: Sources/createevent.cpp.o
@@ -386,7 +386,7 @@ Sources/createevent.o: Sources/createevent.cpp.o
 
 # target to build an object file
 Sources/createevent.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/createevent.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/createevent.cpp.o
 .PHONY : Sources/createevent.cpp.o
 
 Sources/createevent.i: Sources/createevent.cpp.i
@@ -394,7 +394,7 @@ Sources/createevent.i: Sources/createevent.cpp.i
 
 # target to preprocess a source file
 Sources/createevent.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/createevent.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/createevent.cpp.i
 .PHONY : Sources/createevent.cpp.i
 
 Sources/createevent.s: Sources/createevent.cpp.s
@@ -402,7 +402,7 @@ Sources/createevent.s: Sources/createevent.cpp.s
 
 # target to generate assembly for a file
 Sources/createevent.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/createevent.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/createevent.cpp.s
 .PHONY : Sources/createevent.cpp.s
 
 Sources/createtodo.o: Sources/createtodo.cpp.o
@@ -410,7 +410,7 @@ Sources/createtodo.o: Sources/createtodo.cpp.o
 
 # target to build an object file
 Sources/createtodo.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/createtodo.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/createtodo.cpp.o
 .PHONY : Sources/createtodo.cpp.o
 
 Sources/createtodo.i: Sources/createtodo.cpp.i
@@ -418,7 +418,7 @@ Sources/createtodo.i: Sources/createtodo.cpp.i
 
 # target to preprocess a source file
 Sources/createtodo.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/createtodo.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/createtodo.cpp.i
 .PHONY : Sources/createtodo.cpp.i
 
 Sources/createtodo.s: Sources/createtodo.cpp.s
@@ -426,7 +426,7 @@ Sources/createtodo.s: Sources/createtodo.cpp.s
 
 # target to generate assembly for a file
 Sources/createtodo.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/createtodo.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/createtodo.cpp.s
 .PHONY : Sources/createtodo.cpp.s
 
 Sources/event_information.o: Sources/event_information.cpp.o
@@ -434,7 +434,7 @@ Sources/event_information.o: Sources/event_information.cpp.o
 
 # target to build an object file
 Sources/event_information.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/event_information.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/event_information.cpp.o
 .PHONY : Sources/event_information.cpp.o
 
 Sources/event_information.i: Sources/event_information.cpp.i
@@ -442,7 +442,7 @@ Sources/event_information.i: Sources/event_information.cpp.i
 
 # target to preprocess a source file
 Sources/event_information.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/event_information.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/event_information.cpp.i
 .PHONY : Sources/event_information.cpp.i
 
 Sources/event_information.s: Sources/event_information.cpp.s
@@ -450,7 +450,7 @@ Sources/event_information.s: Sources/event_information.cpp.s
 
 # target to generate assembly for a file
 Sources/event_information.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/event_information.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/event_information.cpp.s
 .PHONY : Sources/event_information.cpp.s
 
 Sources/ipaddressform.o: Sources/ipaddressform.cpp.o
@@ -458,7 +458,7 @@ Sources/ipaddressform.o: Sources/ipaddressform.cpp.o
 
 # target to build an object file
 Sources/ipaddressform.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/ipaddressform.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/ipaddressform.cpp.o
 .PHONY : Sources/ipaddressform.cpp.o
 
 Sources/ipaddressform.i: Sources/ipaddressform.cpp.i
@@ -466,7 +466,7 @@ Sources/ipaddressform.i: Sources/ipaddressform.cpp.i
 
 # target to preprocess a source file
 Sources/ipaddressform.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/ipaddressform.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/ipaddressform.cpp.i
 .PHONY : Sources/ipaddressform.cpp.i
 
 Sources/ipaddressform.s: Sources/ipaddressform.cpp.s
@@ -474,7 +474,7 @@ Sources/ipaddressform.s: Sources/ipaddressform.cpp.s
 
 # target to generate assembly for a file
 Sources/ipaddressform.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/ipaddressform.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/ipaddressform.cpp.s
 .PHONY : Sources/ipaddressform.cpp.s
 
 Sources/loginwindow.o: Sources/loginwindow.cpp.o
@@ -482,7 +482,7 @@ Sources/loginwindow.o: Sources/loginwindow.cpp.o
 
 # target to build an object file
 Sources/loginwindow.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/loginwindow.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/loginwindow.cpp.o
 .PHONY : Sources/loginwindow.cpp.o
 
 Sources/loginwindow.i: Sources/loginwindow.cpp.i
@@ -490,7 +490,7 @@ Sources/loginwindow.i: Sources/loginwindow.cpp.i
 
 # target to preprocess a source file
 Sources/loginwindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/loginwindow.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/loginwindow.cpp.i
 .PHONY : Sources/loginwindow.cpp.i
 
 Sources/loginwindow.s: Sources/loginwindow.cpp.s
@@ -498,7 +498,7 @@ Sources/loginwindow.s: Sources/loginwindow.cpp.s
 
 # target to generate assembly for a file
 Sources/loginwindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/loginwindow.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/loginwindow.cpp.s
 .PHONY : Sources/loginwindow.cpp.s
 
 Sources/mainwindow.o: Sources/mainwindow.cpp.o
@@ -506,7 +506,7 @@ Sources/mainwindow.o: Sources/mainwindow.cpp.o
 
 # target to build an object file
 Sources/mainwindow.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/mainwindow.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/mainwindow.cpp.o
 .PHONY : Sources/mainwindow.cpp.o
 
 Sources/mainwindow.i: Sources/mainwindow.cpp.i
@@ -514,7 +514,7 @@ Sources/mainwindow.i: Sources/mainwindow.cpp.i
 
 # target to preprocess a source file
 Sources/mainwindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/mainwindow.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/mainwindow.cpp.i
 .PHONY : Sources/mainwindow.cpp.i
 
 Sources/mainwindow.s: Sources/mainwindow.cpp.s
@@ -522,7 +522,7 @@ Sources/mainwindow.s: Sources/mainwindow.cpp.s
 
 # target to generate assembly for a file
 Sources/mainwindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/mainwindow.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/mainwindow.cpp.s
 .PHONY : Sources/mainwindow.cpp.s
 
 Sources/sharecalendarform.o: Sources/sharecalendarform.cpp.o
@@ -530,7 +530,7 @@ Sources/sharecalendarform.o: Sources/sharecalendarform.cpp.o
 
 # target to build an object file
 Sources/sharecalendarform.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/sharecalendarform.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/sharecalendarform.cpp.o
 .PHONY : Sources/sharecalendarform.cpp.o
 
 Sources/sharecalendarform.i: Sources/sharecalendarform.cpp.i
@@ -538,7 +538,7 @@ Sources/sharecalendarform.i: Sources/sharecalendarform.cpp.i
 
 # target to preprocess a source file
 Sources/sharecalendarform.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/sharecalendarform.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/sharecalendarform.cpp.i
 .PHONY : Sources/sharecalendarform.cpp.i
 
 Sources/sharecalendarform.s: Sources/sharecalendarform.cpp.s
@@ -546,7 +546,7 @@ Sources/sharecalendarform.s: Sources/sharecalendarform.cpp.s
 
 # target to generate assembly for a file
 Sources/sharecalendarform.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/sharecalendarform.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/sharecalendarform.cpp.s
 .PHONY : Sources/sharecalendarform.cpp.s
 
 Sources/todo_information.o: Sources/todo_information.cpp.o
@@ -554,7 +554,7 @@ Sources/todo_information.o: Sources/todo_information.cpp.o
 
 # target to build an object file
 Sources/todo_information.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/todo_information.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/todo_information.cpp.o
 .PHONY : Sources/todo_information.cpp.o
 
 Sources/todo_information.i: Sources/todo_information.cpp.i
@@ -562,7 +562,7 @@ Sources/todo_information.i: Sources/todo_information.cpp.i
 
 # target to preprocess a source file
 Sources/todo_information.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/todo_information.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/todo_information.cpp.i
 .PHONY : Sources/todo_information.cpp.i
 
 Sources/todo_information.s: Sources/todo_information.cpp.s
@@ -570,7 +570,7 @@ Sources/todo_information.s: Sources/todo_information.cpp.s
 
 # target to generate assembly for a file
 Sources/todo_information.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/todo_information.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/todo_information.cpp.s
 .PHONY : Sources/todo_information.cpp.s
 
 Sources/updatetodo.o: Sources/updatetodo.cpp.o
@@ -578,7 +578,7 @@ Sources/updatetodo.o: Sources/updatetodo.cpp.o
 
 # target to build an object file
 Sources/updatetodo.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/updatetodo.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/updatetodo.cpp.o
 .PHONY : Sources/updatetodo.cpp.o
 
 Sources/updatetodo.i: Sources/updatetodo.cpp.i
@@ -586,7 +586,7 @@ Sources/updatetodo.i: Sources/updatetodo.cpp.i
 
 # target to preprocess a source file
 Sources/updatetodo.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/updatetodo.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/updatetodo.cpp.i
 .PHONY : Sources/updatetodo.cpp.i
 
 Sources/updatetodo.s: Sources/updatetodo.cpp.s
@@ -594,15 +594,63 @@ Sources/updatetodo.s: Sources/updatetodo.cpp.s
 
 # target to generate assembly for a file
 Sources/updatetodo.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/Sources/updatetodo.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/Sources/updatetodo.cpp.s
 .PHONY : Sources/updatetodo.cpp.s
+
+calDAVClient_autogen/mocs_compilation.o: calDAVClient_autogen/mocs_compilation.cpp.o
+.PHONY : calDAVClient_autogen/mocs_compilation.o
+
+# target to build an object file
+calDAVClient_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/calDAVClient_autogen/mocs_compilation.cpp.o
+.PHONY : calDAVClient_autogen/mocs_compilation.cpp.o
+
+calDAVClient_autogen/mocs_compilation.i: calDAVClient_autogen/mocs_compilation.cpp.i
+.PHONY : calDAVClient_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+calDAVClient_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/calDAVClient_autogen/mocs_compilation.cpp.i
+.PHONY : calDAVClient_autogen/mocs_compilation.cpp.i
+
+calDAVClient_autogen/mocs_compilation.s: calDAVClient_autogen/mocs_compilation.cpp.s
+.PHONY : calDAVClient_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+calDAVClient_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/calDAVClient_autogen/mocs_compilation.cpp.s
+.PHONY : calDAVClient_autogen/mocs_compilation.cpp.s
+
+calDAVClient_lib_autogen/mocs_compilation.o: calDAVClient_lib_autogen/mocs_compilation.cpp.o
+.PHONY : calDAVClient_lib_autogen/mocs_compilation.o
+
+# target to build an object file
+calDAVClient_lib_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/calDAVClient_lib_autogen/mocs_compilation.cpp.o
+.PHONY : calDAVClient_lib_autogen/mocs_compilation.cpp.o
+
+calDAVClient_lib_autogen/mocs_compilation.i: calDAVClient_lib_autogen/mocs_compilation.cpp.i
+.PHONY : calDAVClient_lib_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+calDAVClient_lib_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/calDAVClient_lib_autogen/mocs_compilation.cpp.i
+.PHONY : calDAVClient_lib_autogen/mocs_compilation.cpp.i
+
+calDAVClient_lib_autogen/mocs_compilation.s: calDAVClient_lib_autogen/mocs_compilation.cpp.s
+.PHONY : calDAVClient_lib_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+calDAVClient_lib_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/calDAVClient_lib_autogen/mocs_compilation.cpp.s
+.PHONY : calDAVClient_lib_autogen/mocs_compilation.cpp.s
 
 curlpp-0.8.1/src/curlpp/Easy.o: curlpp-0.8.1/src/curlpp/Easy.cpp.o
 .PHONY : curlpp-0.8.1/src/curlpp/Easy.o
 
 # target to build an object file
 curlpp-0.8.1/src/curlpp/Easy.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Easy.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/Easy.cpp.o
 .PHONY : curlpp-0.8.1/src/curlpp/Easy.cpp.o
 
 curlpp-0.8.1/src/curlpp/Easy.i: curlpp-0.8.1/src/curlpp/Easy.cpp.i
@@ -610,7 +658,7 @@ curlpp-0.8.1/src/curlpp/Easy.i: curlpp-0.8.1/src/curlpp/Easy.cpp.i
 
 # target to preprocess a source file
 curlpp-0.8.1/src/curlpp/Easy.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Easy.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/Easy.cpp.i
 .PHONY : curlpp-0.8.1/src/curlpp/Easy.cpp.i
 
 curlpp-0.8.1/src/curlpp/Easy.s: curlpp-0.8.1/src/curlpp/Easy.cpp.s
@@ -618,7 +666,7 @@ curlpp-0.8.1/src/curlpp/Easy.s: curlpp-0.8.1/src/curlpp/Easy.cpp.s
 
 # target to generate assembly for a file
 curlpp-0.8.1/src/curlpp/Easy.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Easy.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/Easy.cpp.s
 .PHONY : curlpp-0.8.1/src/curlpp/Easy.cpp.s
 
 curlpp-0.8.1/src/curlpp/Exception.o: curlpp-0.8.1/src/curlpp/Exception.cpp.o
@@ -626,7 +674,7 @@ curlpp-0.8.1/src/curlpp/Exception.o: curlpp-0.8.1/src/curlpp/Exception.cpp.o
 
 # target to build an object file
 curlpp-0.8.1/src/curlpp/Exception.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Exception.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/Exception.cpp.o
 .PHONY : curlpp-0.8.1/src/curlpp/Exception.cpp.o
 
 curlpp-0.8.1/src/curlpp/Exception.i: curlpp-0.8.1/src/curlpp/Exception.cpp.i
@@ -634,7 +682,7 @@ curlpp-0.8.1/src/curlpp/Exception.i: curlpp-0.8.1/src/curlpp/Exception.cpp.i
 
 # target to preprocess a source file
 curlpp-0.8.1/src/curlpp/Exception.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Exception.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/Exception.cpp.i
 .PHONY : curlpp-0.8.1/src/curlpp/Exception.cpp.i
 
 curlpp-0.8.1/src/curlpp/Exception.s: curlpp-0.8.1/src/curlpp/Exception.cpp.s
@@ -642,7 +690,7 @@ curlpp-0.8.1/src/curlpp/Exception.s: curlpp-0.8.1/src/curlpp/Exception.cpp.s
 
 # target to generate assembly for a file
 curlpp-0.8.1/src/curlpp/Exception.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Exception.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/Exception.cpp.s
 .PHONY : curlpp-0.8.1/src/curlpp/Exception.cpp.s
 
 curlpp-0.8.1/src/curlpp/Form.o: curlpp-0.8.1/src/curlpp/Form.cpp.o
@@ -650,7 +698,7 @@ curlpp-0.8.1/src/curlpp/Form.o: curlpp-0.8.1/src/curlpp/Form.cpp.o
 
 # target to build an object file
 curlpp-0.8.1/src/curlpp/Form.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Form.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/Form.cpp.o
 .PHONY : curlpp-0.8.1/src/curlpp/Form.cpp.o
 
 curlpp-0.8.1/src/curlpp/Form.i: curlpp-0.8.1/src/curlpp/Form.cpp.i
@@ -658,7 +706,7 @@ curlpp-0.8.1/src/curlpp/Form.i: curlpp-0.8.1/src/curlpp/Form.cpp.i
 
 # target to preprocess a source file
 curlpp-0.8.1/src/curlpp/Form.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Form.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/Form.cpp.i
 .PHONY : curlpp-0.8.1/src/curlpp/Form.cpp.i
 
 curlpp-0.8.1/src/curlpp/Form.s: curlpp-0.8.1/src/curlpp/Form.cpp.s
@@ -666,7 +714,7 @@ curlpp-0.8.1/src/curlpp/Form.s: curlpp-0.8.1/src/curlpp/Form.cpp.s
 
 # target to generate assembly for a file
 curlpp-0.8.1/src/curlpp/Form.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Form.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/Form.cpp.s
 .PHONY : curlpp-0.8.1/src/curlpp/Form.cpp.s
 
 curlpp-0.8.1/src/curlpp/Info.o: curlpp-0.8.1/src/curlpp/Info.cpp.o
@@ -674,7 +722,7 @@ curlpp-0.8.1/src/curlpp/Info.o: curlpp-0.8.1/src/curlpp/Info.cpp.o
 
 # target to build an object file
 curlpp-0.8.1/src/curlpp/Info.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Info.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/Info.cpp.o
 .PHONY : curlpp-0.8.1/src/curlpp/Info.cpp.o
 
 curlpp-0.8.1/src/curlpp/Info.i: curlpp-0.8.1/src/curlpp/Info.cpp.i
@@ -682,7 +730,7 @@ curlpp-0.8.1/src/curlpp/Info.i: curlpp-0.8.1/src/curlpp/Info.cpp.i
 
 # target to preprocess a source file
 curlpp-0.8.1/src/curlpp/Info.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Info.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/Info.cpp.i
 .PHONY : curlpp-0.8.1/src/curlpp/Info.cpp.i
 
 curlpp-0.8.1/src/curlpp/Info.s: curlpp-0.8.1/src/curlpp/Info.cpp.s
@@ -690,7 +738,7 @@ curlpp-0.8.1/src/curlpp/Info.s: curlpp-0.8.1/src/curlpp/Info.cpp.s
 
 # target to generate assembly for a file
 curlpp-0.8.1/src/curlpp/Info.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Info.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/Info.cpp.s
 .PHONY : curlpp-0.8.1/src/curlpp/Info.cpp.s
 
 curlpp-0.8.1/src/curlpp/Multi.o: curlpp-0.8.1/src/curlpp/Multi.cpp.o
@@ -698,7 +746,7 @@ curlpp-0.8.1/src/curlpp/Multi.o: curlpp-0.8.1/src/curlpp/Multi.cpp.o
 
 # target to build an object file
 curlpp-0.8.1/src/curlpp/Multi.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Multi.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/Multi.cpp.o
 .PHONY : curlpp-0.8.1/src/curlpp/Multi.cpp.o
 
 curlpp-0.8.1/src/curlpp/Multi.i: curlpp-0.8.1/src/curlpp/Multi.cpp.i
@@ -706,7 +754,7 @@ curlpp-0.8.1/src/curlpp/Multi.i: curlpp-0.8.1/src/curlpp/Multi.cpp.i
 
 # target to preprocess a source file
 curlpp-0.8.1/src/curlpp/Multi.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Multi.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/Multi.cpp.i
 .PHONY : curlpp-0.8.1/src/curlpp/Multi.cpp.i
 
 curlpp-0.8.1/src/curlpp/Multi.s: curlpp-0.8.1/src/curlpp/Multi.cpp.s
@@ -714,7 +762,7 @@ curlpp-0.8.1/src/curlpp/Multi.s: curlpp-0.8.1/src/curlpp/Multi.cpp.s
 
 # target to generate assembly for a file
 curlpp-0.8.1/src/curlpp/Multi.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Multi.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/Multi.cpp.s
 .PHONY : curlpp-0.8.1/src/curlpp/Multi.cpp.s
 
 curlpp-0.8.1/src/curlpp/OptionBase.o: curlpp-0.8.1/src/curlpp/OptionBase.cpp.o
@@ -722,7 +770,7 @@ curlpp-0.8.1/src/curlpp/OptionBase.o: curlpp-0.8.1/src/curlpp/OptionBase.cpp.o
 
 # target to build an object file
 curlpp-0.8.1/src/curlpp/OptionBase.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/OptionBase.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/OptionBase.cpp.o
 .PHONY : curlpp-0.8.1/src/curlpp/OptionBase.cpp.o
 
 curlpp-0.8.1/src/curlpp/OptionBase.i: curlpp-0.8.1/src/curlpp/OptionBase.cpp.i
@@ -730,7 +778,7 @@ curlpp-0.8.1/src/curlpp/OptionBase.i: curlpp-0.8.1/src/curlpp/OptionBase.cpp.i
 
 # target to preprocess a source file
 curlpp-0.8.1/src/curlpp/OptionBase.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/OptionBase.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/OptionBase.cpp.i
 .PHONY : curlpp-0.8.1/src/curlpp/OptionBase.cpp.i
 
 curlpp-0.8.1/src/curlpp/OptionBase.s: curlpp-0.8.1/src/curlpp/OptionBase.cpp.s
@@ -738,7 +786,7 @@ curlpp-0.8.1/src/curlpp/OptionBase.s: curlpp-0.8.1/src/curlpp/OptionBase.cpp.s
 
 # target to generate assembly for a file
 curlpp-0.8.1/src/curlpp/OptionBase.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/OptionBase.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/OptionBase.cpp.s
 .PHONY : curlpp-0.8.1/src/curlpp/OptionBase.cpp.s
 
 curlpp-0.8.1/src/curlpp/Options.o: curlpp-0.8.1/src/curlpp/Options.cpp.o
@@ -746,7 +794,7 @@ curlpp-0.8.1/src/curlpp/Options.o: curlpp-0.8.1/src/curlpp/Options.cpp.o
 
 # target to build an object file
 curlpp-0.8.1/src/curlpp/Options.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Options.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/Options.cpp.o
 .PHONY : curlpp-0.8.1/src/curlpp/Options.cpp.o
 
 curlpp-0.8.1/src/curlpp/Options.i: curlpp-0.8.1/src/curlpp/Options.cpp.i
@@ -754,7 +802,7 @@ curlpp-0.8.1/src/curlpp/Options.i: curlpp-0.8.1/src/curlpp/Options.cpp.i
 
 # target to preprocess a source file
 curlpp-0.8.1/src/curlpp/Options.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Options.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/Options.cpp.i
 .PHONY : curlpp-0.8.1/src/curlpp/Options.cpp.i
 
 curlpp-0.8.1/src/curlpp/Options.s: curlpp-0.8.1/src/curlpp/Options.cpp.s
@@ -762,7 +810,7 @@ curlpp-0.8.1/src/curlpp/Options.s: curlpp-0.8.1/src/curlpp/Options.cpp.s
 
 # target to generate assembly for a file
 curlpp-0.8.1/src/curlpp/Options.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/Options.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/Options.cpp.s
 .PHONY : curlpp-0.8.1/src/curlpp/Options.cpp.s
 
 curlpp-0.8.1/src/curlpp/cURLpp.o: curlpp-0.8.1/src/curlpp/cURLpp.cpp.o
@@ -770,7 +818,7 @@ curlpp-0.8.1/src/curlpp/cURLpp.o: curlpp-0.8.1/src/curlpp/cURLpp.cpp.o
 
 # target to build an object file
 curlpp-0.8.1/src/curlpp/cURLpp.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/cURLpp.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/cURLpp.cpp.o
 .PHONY : curlpp-0.8.1/src/curlpp/cURLpp.cpp.o
 
 curlpp-0.8.1/src/curlpp/cURLpp.i: curlpp-0.8.1/src/curlpp/cURLpp.cpp.i
@@ -778,7 +826,7 @@ curlpp-0.8.1/src/curlpp/cURLpp.i: curlpp-0.8.1/src/curlpp/cURLpp.cpp.i
 
 # target to preprocess a source file
 curlpp-0.8.1/src/curlpp/cURLpp.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/cURLpp.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/cURLpp.cpp.i
 .PHONY : curlpp-0.8.1/src/curlpp/cURLpp.cpp.i
 
 curlpp-0.8.1/src/curlpp/cURLpp.s: curlpp-0.8.1/src/curlpp/cURLpp.cpp.s
@@ -786,7 +834,7 @@ curlpp-0.8.1/src/curlpp/cURLpp.s: curlpp-0.8.1/src/curlpp/cURLpp.cpp.s
 
 # target to generate assembly for a file
 curlpp-0.8.1/src/curlpp/cURLpp.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/cURLpp.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/cURLpp.cpp.s
 .PHONY : curlpp-0.8.1/src/curlpp/cURLpp.cpp.s
 
 curlpp-0.8.1/src/curlpp/internal/CurlHandle.o: curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.o
@@ -794,7 +842,7 @@ curlpp-0.8.1/src/curlpp/internal/CurlHandle.o: curlpp-0.8.1/src/curlpp/internal/
 
 # target to build an object file
 curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.o
 .PHONY : curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.o
 
 curlpp-0.8.1/src/curlpp/internal/CurlHandle.i: curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.i
@@ -802,7 +850,7 @@ curlpp-0.8.1/src/curlpp/internal/CurlHandle.i: curlpp-0.8.1/src/curlpp/internal/
 
 # target to preprocess a source file
 curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.i
 .PHONY : curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.i
 
 curlpp-0.8.1/src/curlpp/internal/CurlHandle.s: curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.s
@@ -810,7 +858,7 @@ curlpp-0.8.1/src/curlpp/internal/CurlHandle.s: curlpp-0.8.1/src/curlpp/internal/
 
 # target to generate assembly for a file
 curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.s
 .PHONY : curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp.s
 
 curlpp-0.8.1/src/curlpp/internal/OptionList.o: curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.o
@@ -818,7 +866,7 @@ curlpp-0.8.1/src/curlpp/internal/OptionList.o: curlpp-0.8.1/src/curlpp/internal/
 
 # target to build an object file
 curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.o
 .PHONY : curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.o
 
 curlpp-0.8.1/src/curlpp/internal/OptionList.i: curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.i
@@ -826,7 +874,7 @@ curlpp-0.8.1/src/curlpp/internal/OptionList.i: curlpp-0.8.1/src/curlpp/internal/
 
 # target to preprocess a source file
 curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.i
 .PHONY : curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.i
 
 curlpp-0.8.1/src/curlpp/internal/OptionList.s: curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.s
@@ -834,7 +882,7 @@ curlpp-0.8.1/src/curlpp/internal/OptionList.s: curlpp-0.8.1/src/curlpp/internal/
 
 # target to generate assembly for a file
 curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.s
 .PHONY : curlpp-0.8.1/src/curlpp/internal/OptionList.cpp.s
 
 curlpp-0.8.1/src/curlpp/internal/OptionSetter.o: curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.o
@@ -842,7 +890,7 @@ curlpp-0.8.1/src/curlpp/internal/OptionSetter.o: curlpp-0.8.1/src/curlpp/interna
 
 # target to build an object file
 curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.o
 .PHONY : curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.o
 
 curlpp-0.8.1/src/curlpp/internal/OptionSetter.i: curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.i
@@ -850,7 +898,7 @@ curlpp-0.8.1/src/curlpp/internal/OptionSetter.i: curlpp-0.8.1/src/curlpp/interna
 
 # target to preprocess a source file
 curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.i
 .PHONY : curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.i
 
 curlpp-0.8.1/src/curlpp/internal/OptionSetter.s: curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.s
@@ -858,7 +906,7 @@ curlpp-0.8.1/src/curlpp/internal/OptionSetter.s: curlpp-0.8.1/src/curlpp/interna
 
 # target to generate assembly for a file
 curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.s
 .PHONY : curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp.s
 
 curlpp-0.8.1/src/curlpp/internal/SList.o: curlpp-0.8.1/src/curlpp/internal/SList.cpp.o
@@ -866,7 +914,7 @@ curlpp-0.8.1/src/curlpp/internal/SList.o: curlpp-0.8.1/src/curlpp/internal/SList
 
 # target to build an object file
 curlpp-0.8.1/src/curlpp/internal/SList.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/internal/SList.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/internal/SList.cpp.o
 .PHONY : curlpp-0.8.1/src/curlpp/internal/SList.cpp.o
 
 curlpp-0.8.1/src/curlpp/internal/SList.i: curlpp-0.8.1/src/curlpp/internal/SList.cpp.i
@@ -874,7 +922,7 @@ curlpp-0.8.1/src/curlpp/internal/SList.i: curlpp-0.8.1/src/curlpp/internal/SList
 
 # target to preprocess a source file
 curlpp-0.8.1/src/curlpp/internal/SList.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/internal/SList.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/internal/SList.cpp.i
 .PHONY : curlpp-0.8.1/src/curlpp/internal/SList.cpp.i
 
 curlpp-0.8.1/src/curlpp/internal/SList.s: curlpp-0.8.1/src/curlpp/internal/SList.cpp.s
@@ -882,7 +930,7 @@ curlpp-0.8.1/src/curlpp/internal/SList.s: curlpp-0.8.1/src/curlpp/internal/SList
 
 # target to generate assembly for a file
 curlpp-0.8.1/src/curlpp/internal/SList.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/curlpp-0.8.1/src/curlpp/internal/SList.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient_lib.dir/build.make CMakeFiles/calDAVClient_lib.dir/curlpp-0.8.1/src/curlpp/internal/SList.cpp.s
 .PHONY : curlpp-0.8.1/src/curlpp/internal/SList.cpp.s
 
 main.o: main.cpp.o
@@ -890,7 +938,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -898,7 +946,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -906,56 +954,8 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calDAVClient.dir/build.make CMakeFiles/calDAVClient.dir/main.cpp.s
 .PHONY : main.cpp.s
-
-qtcreatorTest_autogen/mocs_compilation.o: qtcreatorTest_autogen/mocs_compilation.cpp.o
-.PHONY : qtcreatorTest_autogen/mocs_compilation.o
-
-# target to build an object file
-qtcreatorTest_autogen/mocs_compilation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/qtcreatorTest_autogen/mocs_compilation.cpp.o
-.PHONY : qtcreatorTest_autogen/mocs_compilation.cpp.o
-
-qtcreatorTest_autogen/mocs_compilation.i: qtcreatorTest_autogen/mocs_compilation.cpp.i
-.PHONY : qtcreatorTest_autogen/mocs_compilation.i
-
-# target to preprocess a source file
-qtcreatorTest_autogen/mocs_compilation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/qtcreatorTest_autogen/mocs_compilation.cpp.i
-.PHONY : qtcreatorTest_autogen/mocs_compilation.cpp.i
-
-qtcreatorTest_autogen/mocs_compilation.s: qtcreatorTest_autogen/mocs_compilation.cpp.s
-.PHONY : qtcreatorTest_autogen/mocs_compilation.s
-
-# target to generate assembly for a file
-qtcreatorTest_autogen/mocs_compilation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest.dir/build.make CMakeFiles/qtcreatorTest.dir/qtcreatorTest_autogen/mocs_compilation.cpp.s
-.PHONY : qtcreatorTest_autogen/mocs_compilation.cpp.s
-
-qtcreatorTest_lib_autogen/mocs_compilation.o: qtcreatorTest_lib_autogen/mocs_compilation.cpp.o
-.PHONY : qtcreatorTest_lib_autogen/mocs_compilation.o
-
-# target to build an object file
-qtcreatorTest_lib_autogen/mocs_compilation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/qtcreatorTest_lib_autogen/mocs_compilation.cpp.o
-.PHONY : qtcreatorTest_lib_autogen/mocs_compilation.cpp.o
-
-qtcreatorTest_lib_autogen/mocs_compilation.i: qtcreatorTest_lib_autogen/mocs_compilation.cpp.i
-.PHONY : qtcreatorTest_lib_autogen/mocs_compilation.i
-
-# target to preprocess a source file
-qtcreatorTest_lib_autogen/mocs_compilation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/qtcreatorTest_lib_autogen/mocs_compilation.cpp.i
-.PHONY : qtcreatorTest_lib_autogen/mocs_compilation.cpp.i
-
-qtcreatorTest_lib_autogen/mocs_compilation.s: qtcreatorTest_lib_autogen/mocs_compilation.cpp.s
-.PHONY : qtcreatorTest_lib_autogen/mocs_compilation.s
-
-# target to generate assembly for a file
-qtcreatorTest_lib_autogen/mocs_compilation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/qtcreatorTest_lib.dir/build.make CMakeFiles/qtcreatorTest_lib.dir/qtcreatorTest_lib_autogen/mocs_compilation.cpp.s
-.PHONY : qtcreatorTest_lib_autogen/mocs_compilation.cpp.s
 
 # Help Target
 help:
@@ -969,10 +969,10 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... qtcreatorTest_autogen"
-	@echo "... qtcreatorTest_lib_autogen"
-	@echo "... qtcreatorTest"
-	@echo "... qtcreatorTest_lib"
+	@echo "... calDAVClient_autogen"
+	@echo "... calDAVClient_lib_autogen"
+	@echo "... calDAVClient"
+	@echo "... calDAVClient_lib"
 	@echo "... Sources/API.o"
 	@echo "... Sources/API.i"
 	@echo "... Sources/API.s"
@@ -1021,6 +1021,12 @@ help:
 	@echo "... Sources/updatetodo.o"
 	@echo "... Sources/updatetodo.i"
 	@echo "... Sources/updatetodo.s"
+	@echo "... calDAVClient_autogen/mocs_compilation.o"
+	@echo "... calDAVClient_autogen/mocs_compilation.i"
+	@echo "... calDAVClient_autogen/mocs_compilation.s"
+	@echo "... calDAVClient_lib_autogen/mocs_compilation.o"
+	@echo "... calDAVClient_lib_autogen/mocs_compilation.i"
+	@echo "... calDAVClient_lib_autogen/mocs_compilation.s"
 	@echo "... curlpp-0.8.1/src/curlpp/Easy.o"
 	@echo "... curlpp-0.8.1/src/curlpp/Easy.i"
 	@echo "... curlpp-0.8.1/src/curlpp/Easy.s"
@@ -1060,12 +1066,6 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... qtcreatorTest_autogen/mocs_compilation.o"
-	@echo "... qtcreatorTest_autogen/mocs_compilation.i"
-	@echo "... qtcreatorTest_autogen/mocs_compilation.s"
-	@echo "... qtcreatorTest_lib_autogen/mocs_compilation.o"
-	@echo "... qtcreatorTest_lib_autogen/mocs_compilation.i"
-	@echo "... qtcreatorTest_lib_autogen/mocs_compilation.s"
 .PHONY : help
 
 

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 
-project(qtcreatorTest VERSION 0.1 LANGUAGES CXX)
+project(calDAVClient VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -34,31 +34,31 @@ set(PROJECT_SOURCES
         Sources/Date.cpp Headers/Date.h Sources/Vcalendar.cpp Headers/Vcalendar.h Sources/Vevent.cpp Headers/Vevent.h Sources/Vtodo.cpp Headers/Vtodo.h Sources/loginwindow.cpp Headers/loginwindow.h Headers/loginwindow.ui Sources/API.cpp Headers/API.h Sources/createcalendarform.cpp Headers/createcalendarform.h Headers/createcalendarform.ui Sources/IcsParser.cpp Headers/IcsParser.h Sources/todo_information.cpp Headers/todo_information.h Headers/todo_information.ui Sources/event_information.cpp Headers/event_information.h Headers/event_information.ui Sources/createevent.cpp Headers/createevent.h Headers/createevent.ui Sources/createtodo.cpp Headers/createtodo.h Headers/createtodo.ui Sources/updatetodo.cpp Headers/updatetodo.h Headers/updatetodo.ui Sources/sharecalendarform.cpp Headers/sharecalendarform.h Headers/sharecalendarform.ui Sources/ipaddressform.cpp Headers/ipaddressform.h Headers/ipaddressform.ui)
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-    qt_add_executable(qtcreatorTest
+    qt_add_executable(calDAVClient
             MANUAL_FINALIZATION
             ${PROJECT_SOURCES}
             )
 else()
     if(ANDROID)
-        add_library(qtcreatorTest SHARED
+        add_library(calDAVClient SHARED
                 ${PROJECT_SOURCES}
                 )
     else()
-        add_executable(qtcreatorTest
+        add_executable(calDAVClient
                 ${PROJECT_SOURCES}
                 )
     endif()
 endif()
 
 
-set_target_properties(qtcreatorTest PROPERTIES
+set_target_properties(calDAVClient PROPERTIES
         MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
         MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
         MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
         )
 
 if(QT_VERSION_MAJOR EQUAL 6)
-    qt_finalize_executable(qtcreatorTest)
+    qt_finalize_executable(calDAVClient)
 endif()
 
 ########### CURL/CURLPP ############
@@ -152,4 +152,4 @@ install(TARGETS ${PROJECT_NAME}_lib
         ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR})
 
 
-target_link_libraries(qtcreatorTest PRIVATE Qt${QT_VERSION_MAJOR}::Widgets ${PROJECT_NAME}_lib)
+target_link_libraries(calDAVClient PRIVATE Qt${QT_VERSION_MAJOR}::Widgets ${PROJECT_NAME}_lib)

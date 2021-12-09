@@ -83,15 +83,15 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "CMakeFiles/qtcreatorTest_autogen.dir/AutogenInfo.json"
-  "CMakeFiles/qtcreatorTest_lib_autogen.dir/AutogenInfo.json"
+  "CMakeFiles/calDAVClient_autogen.dir/AutogenInfo.json"
+  "CMakeFiles/calDAVClient_lib_autogen.dir/AutogenInfo.json"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/qtcreatorTest.dir/DependInfo.cmake"
-  "CMakeFiles/qtcreatorTest_lib.dir/DependInfo.cmake"
-  "CMakeFiles/qtcreatorTest_autogen.dir/DependInfo.cmake"
-  "CMakeFiles/qtcreatorTest_lib_autogen.dir/DependInfo.cmake"
+  "CMakeFiles/calDAVClient.dir/DependInfo.cmake"
+  "CMakeFiles/calDAVClient_lib.dir/DependInfo.cmake"
+  "CMakeFiles/calDAVClient_autogen.dir/DependInfo.cmake"
+  "CMakeFiles/calDAVClient_lib_autogen.dir/DependInfo.cmake"
   )
