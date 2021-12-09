@@ -9,9 +9,9 @@ MainWindow::MainWindow(QWidget *parent)
 {
     qRegisterMetaType<QItemSelection>();
     std::lock_guard<std::mutex> lg(m); //probably useless
-    IpAddressForm ipaddr;
-    ipaddr.setModal(true);
-    ipaddr.exec();
+    IpAddressForm ipAddr;
+    ipAddr.setModal(true);
+    ipAddr.exec();
     end = false;
     ui->setupUi(this);
     ui->listWidget_2->setContextMenuPolicy(Qt::CustomContextMenu);

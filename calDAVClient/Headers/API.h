@@ -97,6 +97,7 @@ public:
     long shareCalendar(std::string const &mail, std::string const &comment, std::string const &accessPolicy, const std::string &calendarName);
     bool isShared(std::string const &calendarName, std::string &displayName);
     std::string getOrganizer(std::string const &calendarName);
+    bool isReachable(std::string ipAddress);
 };
 
 

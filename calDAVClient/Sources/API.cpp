@@ -697,3 +697,44 @@ std::string API::getOrganizer(const std::string &calendarName) {
     }
     return organizer;
 }
+
+bool API::isReachable(std::string ipAddress) {
+    std::lock_guard<std::mutex> lg(m);
+    curlpp::Cleanup init;
+    curlpp::Easy handle;
+    std::list<std::string> headers;
+    std::string result;
+    std::string body;
+    std::ostringstream str;
+    headers.push_back("Depth: 1");
+    headers.push_back("Prefer: return-minimal");
+    headers.push_back("Content-Type: application/xml; charset=utf-8");
+    body = "<d:propfind xmlns:d=\"DAV:\" xmlns:cs=\"http://calendarserver.org/ns/\" xmlns:c=\"urn:ietf:params:icsText:ns:caldav\">\n"
+           "  <d:prop>\n"
+           "     <d:resourcetype />\n"
+           "     <d:displayname />\n"
+           "     <cs:getctag />\n"
+           "     <c:supported-calendar-component-set />\n"
+           "  </d:prop>\n"
+           "</d:propfind>";
+    try {
+        handle.setOpt(curlpp::Options::Url(std::string("http://" + ipAddress + "/progetto/calendarserver.php/calendars/admin/")));
+        handle.setOpt(new curlpp::Options::HttpAuth(CURLAUTH_ANY));
+        handle.setOpt(new curlpp::options::UserPwd("admin:admin"));
+        handle.setOpt(new curlpp::Options::CustomRequest("PROPFIND"));
+        handle.setOpt(new curlpp::Options::PostFields(body));
+        handle.setOpt(new curlpp::Options::PostFieldSize(body.length()));
+        handle.setOpt(new curlpp::Options::HttpHeader(headers));
+        handle.setOpt(curlpp::Options::WriteStream(&str));
+        handle.perform();
+    }
+    catch (cURLpp::RuntimeError &e) {
+        return false;
+        std::cout << e.what() << std::endl;
+    }
+    catch (cURLpp::LogicError &e) {
+        return false;
+        std::cout << e.what() << std::endl;
+    }
+    return true;
+}

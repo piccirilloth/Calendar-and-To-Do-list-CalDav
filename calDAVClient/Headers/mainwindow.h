@@ -19,6 +19,7 @@
 #include <thread>
 #include <QItemSelection>
 #include "ipaddressform.h"
+#include "ipaddressform.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

@@ -11,6 +11,7 @@
 IpAddressForm::IpAddressForm(QWidget *parent) :
         QDialog(parent), ui(new Ui::IpAddressForm) {
     ui->setupUi(this);
+    this->setWindowFlags( (Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowMinMaxButtonsHint) & ~Qt::WindowCloseButtonHint );
     ui->lineEdit->setText("192.168.1.10");
 }
 
@@ -20,12 +21,13 @@ IpAddressForm::~IpAddressForm() {
 
 void IpAddressForm::on_pushButton_insert_clicked() {
     std::regex regex("^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$");
-    if(!std::regex_match(ui->lineEdit->text().toStdString(), regex)) {
+    API *api = new API;
+    if(!std::regex_match(ui->lineEdit->text().toStdString(), regex))
         QMessageBox::information(this, "Error", "A valid IP address must be inserted");
-    } else {
-        API *api = new API;
+    else if(!api->isReachable(ui->lineEdit->text().toStdString()))
+            QMessageBox::information(this, "Error", "The host is unreachable");
+    else {
         api->setIpaddress(ui->lineEdit->text().toStdString());
         this->close();
     }
 }
-
