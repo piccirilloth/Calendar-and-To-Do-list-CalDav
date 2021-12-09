@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="qtcreatorTest"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\;CMake Files\curlpp-0.8.1\;CMake Files\curlpp-0.8.1\extras\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="qtcreatorTest">
+				<Option output="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add directory="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug"/>
+					<Add directory="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient"/>
+					<Add directory="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_autogen/include"/>
+					<Add directory="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 qtcreatorTest"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="qtcreatorTest/fast">
+				<Option output="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add directory="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug"/>
+					<Add directory="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient"/>
+					<Add directory="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_autogen/include"/>
+					<Add directory="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 qtcreatorTest/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="qtcreatorTest_lib">
+				<Option output="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/libqtcreatorTest_lib.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug"/>
+					<Add directory="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient"/>
+					<Add directory="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_lib_autogen/include"/>
+					<Add directory="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 qtcreatorTest_lib"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="qtcreatorTest_lib/fast">
+				<Option output="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/libqtcreatorTest_lib.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug"/>
+					<Add directory="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient"/>
+					<Add directory="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_lib_autogen/include"/>
+					<Add directory="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 qtcreatorTest_lib/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="qtcreatorTest_static_lib">
+				<Option output="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/libqtcreatorTest_static_lib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug"/>
+					<Add directory="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient"/>
+					<Add directory="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_static_lib_autogen/include"/>
+					<Add directory="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 qtcreatorTest_static_lib"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="qtcreatorTest_static_lib/fast">
+				<Option output="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/libqtcreatorTest_static_lib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug"/>
+					<Add directory="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient"/>
+					<Add directory="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_static_lib_autogen/include"/>
+					<Add directory="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 qtcreatorTest_static_lib/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="qtcreatorTest_autogen">
+				<Option working_dir="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 qtcreatorTest_autogen"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="qtcreatorTest_lib_autogen">
+				<Option working_dir="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 qtcreatorTest_lib_autogen"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="qtcreatorTest_static_lib_autogen">
+				<Option working_dir="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 qtcreatorTest_static_lib_autogen"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/API.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/Date.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/IcsParser.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/Vcalendar.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/Vevent.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/Vtodo.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/createcalendarform.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/createcalendarform.ui">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/createevent.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/createevent.ui">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/createtodo.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/createtodo.ui">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/event_information.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/event_information.ui">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/ipaddressform.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/ipaddressform.ui">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/loginwindow.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/loginwindow.ui">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/mainwindow.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/mainwindow.ui">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/sharecalendarform.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/sharecalendarform.ui">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/todo_information.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/todo_information.ui">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/updatetodo.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/updatetodo.ui">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/API.cpp">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/Date.cpp">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/IcsParser.cpp">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/Vcalendar.cpp">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/Vevent.cpp">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/Vtodo.cpp">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/createcalendarform.cpp">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/createevent.cpp">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/createtodo.cpp">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/event_information.cpp">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/ipaddressform.cpp">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/loginwindow.cpp">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/mainwindow.cpp">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/sharecalendarform.cpp">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/todo_information.cpp">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/updatetodo.cpp">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_autogen/Headers/ui_createcalendarform.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_autogen/Headers/ui_createevent.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_autogen/Headers/ui_createtodo.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_autogen/Headers/ui_event_information.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_autogen/Headers/ui_ipaddressform.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_autogen/Headers/ui_loginwindow.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_autogen/Headers/ui_mainwindow.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_autogen/Headers/ui_sharecalendarform.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_autogen/Headers/ui_todo_information.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_autogen/Headers/ui_updatetodo.h">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_autogen/mocs_compilation.cpp">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_lib_autogen/Headers/ui_createcalendarform.h">
+			<Option target="qtcreatorTest_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_lib_autogen/Headers/ui_createevent.h">
+			<Option target="qtcreatorTest_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_lib_autogen/Headers/ui_createtodo.h">
+			<Option target="qtcreatorTest_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_lib_autogen/Headers/ui_event_information.h">
+			<Option target="qtcreatorTest_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_lib_autogen/Headers/ui_ipaddressform.h">
+			<Option target="qtcreatorTest_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_lib_autogen/Headers/ui_loginwindow.h">
+			<Option target="qtcreatorTest_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_lib_autogen/Headers/ui_mainwindow.h">
+			<Option target="qtcreatorTest_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_lib_autogen/Headers/ui_sharecalendarform.h">
+			<Option target="qtcreatorTest_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_lib_autogen/Headers/ui_todo_information.h">
+			<Option target="qtcreatorTest_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_lib_autogen/Headers/ui_updatetodo.h">
+			<Option target="qtcreatorTest_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_lib_autogen/mocs_compilation.cpp">
+			<Option target="qtcreatorTest_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_static_lib_autogen/Headers/ui_createcalendarform.h">
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_static_lib_autogen/Headers/ui_createevent.h">
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_static_lib_autogen/Headers/ui_createtodo.h">
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_static_lib_autogen/Headers/ui_event_information.h">
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_static_lib_autogen/Headers/ui_ipaddressform.h">
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_static_lib_autogen/Headers/ui_loginwindow.h">
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_static_lib_autogen/Headers/ui_mainwindow.h">
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_static_lib_autogen/Headers/ui_sharecalendarform.h">
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_static_lib_autogen/Headers/ui_todo_information.h">
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_static_lib_autogen/Headers/ui_updatetodo.h">
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/qtcreatorTest_static_lib_autogen/mocs_compilation.cpp">
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/curlpp/Easy.hpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/curlpp/Easy.inl">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/curlpp/Exception.hpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/curlpp/Form.hpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/curlpp/Info.hpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/curlpp/Info.inl">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/curlpp/Infos.hpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/curlpp/Multi.hpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/curlpp/Option.hpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/curlpp/Option.inl">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/curlpp/OptionBase.hpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/curlpp/Options.hpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/curlpp/Types.hpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/curlpp/cURLpp.hpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/curlpp/internal/CurlHandle.hpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/curlpp/internal/CurlHandle.inl">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/curlpp/internal/OptionContainer.hpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/curlpp/internal/OptionContainer.inl">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/curlpp/internal/OptionContainerType.hpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/curlpp/internal/OptionList.hpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/curlpp/internal/OptionSetter.hpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/curlpp/internal/OptionSetter.inl">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/curlpp/internal/SList.hpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/utilspp/EmptyType.hpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/utilspp/NonCopyable.hpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/utilspp/NullType.hpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/utilspp/SmartPtr.hpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/utilspp/ThreadingFactoryMutex.hpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/utilspp/ThreadingFactoryMutex.inl">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/utilspp/ThreadingSingle.hpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/utilspp/ThreadingSingle.inl">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/utilspp/TypeList.hpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/utilspp/TypeTrait.hpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include/utilspp/clone_ptr.hpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/src/curlpp/Easy.cpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/src/curlpp/Exception.cpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/src/curlpp/Form.cpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/src/curlpp/Info.cpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/src/curlpp/Multi.cpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/src/curlpp/OptionBase.cpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/src/curlpp/Options.cpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/src/curlpp/cURLpp.cpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/src/curlpp/internal/CurlHandle.cpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/src/curlpp/internal/OptionList.cpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/src/curlpp/internal/OptionSetter.cpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/src/curlpp/internal/SList.cpp">
+			<Option target="qtcreatorTest_lib"/>
+			<Option target="qtcreatorTest_static_lib"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/main.cpp">
+			<Option target="qtcreatorTest"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSEmulatorIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsEglDeviceIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsGbmIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLibInputPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/extras/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\curlpp-0.8.1\extras\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/extras/curlpp-config.in">
+			<Option virtualFolder="CMake Files\curlpp-0.8.1\extras\"/>
+		</Unit>
+		<Unit filename="/home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/extras/curlpp.pc.in">
+			<Option virtualFolder="CMake Files\curlpp-0.8.1\extras\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,17 @@
+/snap/clion/175/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient
+-- The CXX compiler identification is GNU 9.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- curlpp version=[0.8.1]
+-- curlpp version num=[000801]
+-- Looking for CURL
+-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.68.0")  
+-- Found CURL version: 7.68.0
+-- Using CURL include dir(s): /usr/include/x86_64-linux-gnu
+-- Using CURL lib(s): /usr/lib/x86_64-linux-gnu/libcurl.so
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/oscar/Scrivania/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug
