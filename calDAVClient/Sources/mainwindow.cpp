@@ -194,7 +194,7 @@ void MainWindow::selectedDateChange() {
     i=0;
     for(const Vtodo &td : todos) {
         Date d = td.getDtstamp();
-        if((long)curDate.Difference(d, DAY, false) >= 0 && (long)td.getDue().Difference(curDate, DAY, false) >= 0) {
+        if(curDate >= td.getDtstamp() && curDate <= td.getDue()) {
             ui->listWidget->addItem((QString(td.getSummary().c_str())));
             todoMap.insert(std::pair<int, std::string>(i, td.getUid()));
             i++;
@@ -534,8 +534,13 @@ void MainWindow::timerElapsed() {
         std::lock_guard<std::mutex> lg(this->m);
         if(!ui->label_calendar->text().isEmpty()){
             Vcalendar newCal = api->downloadCalendarObjects(currentCalendar.getName());
-            threadUpdateEvents(newCal);
-            threadUpdatetodos(newCal);
+            if(newCal.getName() == "") {
+                ui->label_calendar->setText("");
+                ui->label_organizer->setText("");
+            } else {
+                threadUpdateEvents(newCal);
+                threadUpdatetodos(newCal);
+            }
         }
     });
     checkCalendarList.join();
@@ -621,7 +626,8 @@ void MainWindow::threadUpdatetodos(const Vcalendar &newCal) {
                 if (newtd.getUid() == td.getUid()) {
                     if (static_cast<std::string>(newtd.getDtstart()) != static_cast<std::string>(td.getDtstart()) ||
                         (newtd.getSummary()) != (td.getSummary()) ||
-                        static_cast<std::string>(newtd.getCompleted()) != static_cast<std::string>(td.getCompleted())) {
+                        static_cast<std::string>(newtd.getCompleted()) != static_cast<std::string>(td.getCompleted())
+                        || static_cast<std::string>(newtd.getDue()) != static_cast<std::string>(td.getDue())) {
                         update = true;
                     }
                     newElement = false;

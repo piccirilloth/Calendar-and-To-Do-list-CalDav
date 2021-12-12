@@ -24,6 +24,8 @@ void createTodo::on_createTodo_2_clicked() {
         QMessageBox::information(this, "Error", "The summary field must be filled");
     if(now >= ui->dateTimeEdit_dueDate->dateTime())
         QMessageBox::information(this, "Error", "The endDate cannot be in the past!");
+    else if(ui->textEdit_summary->toPlainText().contains('\n'))
+        QMessageBox::information(this, "Error", "The summary cannot contain return characters");
     else {
         Date dueDate, nowD;
         dueDate = ui->dateTimeEdit_dueDate->date().toString("yyyyMMddT").toStdString() + ui->dateTimeEdit_dueDate->time().toString("hhmmssZ").toStdString();

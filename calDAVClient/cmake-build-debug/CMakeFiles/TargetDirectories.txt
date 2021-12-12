@@ -1,0 +1,10 @@
+/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/CMakeFiles/install/strip.dir
+/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/CMakeFiles/install/local.dir
+/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/CMakeFiles/install.dir
+/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/CMakeFiles/list_install_components.dir
+/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/CMakeFiles/calDAVClient.dir
+/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/CMakeFiles/calDAVClient_lib.dir
+/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/CMakeFiles/calDAVClient_autogen.dir
+/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/CMakeFiles/calDAVClient_lib_autogen.dir

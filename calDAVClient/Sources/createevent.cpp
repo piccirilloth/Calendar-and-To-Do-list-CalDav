@@ -54,6 +54,8 @@ void createEvent::on_createEvent_2_clicked() {
         QMessageBox::information(this, "Error", "The start date must precede the end date");
     else if(ui->dateTimeEdit_startDate->date() == ui->dateTimeEdit_endDate->date() && ui->dateTimeEdit_startDate->time() > ui->dateTimeEdit_endDate->time())
         QMessageBox::information(this, "Error", "The start time must precede the end time");
+    else if(ui->textEdit_summary->toPlainText().contains('\n'))
+        QMessageBox::information(this, "Error", "The summary cannot contain return characters");
     else {
         Date endDate;
         Date startDate;
