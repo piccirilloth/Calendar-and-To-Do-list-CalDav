@@ -294,6 +294,7 @@ Vcalendar API::downloadCalendarObjects(std::string const &calendarName) {
     std::string result;
     std::string body;
     std::ostringstream str;
+    long status;
     headers.push_back("Content-Type: application/xml; charset=utf-8");
     headers.push_back("Depth: 1");
     headers.push_back("Prefer: return-minimal");
@@ -317,6 +318,7 @@ Vcalendar API::downloadCalendarObjects(std::string const &calendarName) {
         handle.setOpt(new curlpp::Options::HttpHeader(headers));
         handle.setOpt(curlpp::Options::WriteStream(&str));
         handle.perform();
+        status = curlpp::infos::ResponseCode::get(handle);
     }
     catch (cURLpp::RuntimeError &e) {
         std::cout << e.what() << std::endl;
@@ -326,10 +328,14 @@ Vcalendar API::downloadCalendarObjects(std::string const &calendarName) {
     }
     IcsParser parser(str.str());
     Vcalendar ret;
-    parser.getVCalendar(std::ref(ret));
-    std::string organizer = getOrganizer(calendarName);
-    ret.setName(calendarName);
-    ret.setOrganizer(organizer);
+    if(status == 404) {
+        ret.setName("");
+    } else {
+        parser.getVCalendar(std::ref(ret));
+        std::string organizer = getOrganizer(calendarName);
+        ret.setName(calendarName);
+        ret.setOrganizer(organizer);
+    }
     return ret;
 }
 
