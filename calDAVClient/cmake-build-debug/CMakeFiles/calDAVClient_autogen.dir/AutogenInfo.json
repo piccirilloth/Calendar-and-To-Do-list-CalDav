@@ -1,0 +1,397 @@
+{
+	"BUILD_DIR" : "/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/calDAVClient_autogen",
+	"CMAKE_BINARY_DIR" : "/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient",
+	"CMAKE_EXECUTABLE" : "/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/bin/cmake",
+	"CMAKE_LIST_FILES" : 
+	[
+		"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/CMakeLists.txt",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeDetermineSystem.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeSystem.cmake.in",
+		"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/CMakeFiles/3.21.1/CMakeSystem.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeUnixFindMake.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeDetermineCXXCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeDetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Platform/Linux-Determine-CXX.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeDetermineCompilerId.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCompilerIdDetection.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/ADSP-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/ARMCC-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/ARMClang-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/AppleClang-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/Clang-DetermineCompilerInternal.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/Borland-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/Clang-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/Clang-DetermineCompilerInternal.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/Cray-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/Embarcadero-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/Fujitsu-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/GHS-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/HP-CXX-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/IAR-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/Intel-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/MSVC-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/NVHPC-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/NVIDIA-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/PGI-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/PathScale-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/ROCMClang-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/SCO-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/TI-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/Watcom-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/XL-CXX-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeFindBinUtils.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/Clang-FindBinUtils.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCXXCompiler.cmake.in",
+		"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/CMakeFiles/3.21.1/CMakeCXXCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeGenericSystem.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Platform/Linux.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Platform/UnixPaths.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeFindCodeBlocks.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/ProcessorCount.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCXXInformation.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/Clang-CXX.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/Clang.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/GNU.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Platform/Linux-Clang-CXX.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Platform/Linux-GNU-CXX.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Platform/Linux-GNU.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeTestCXXCompiler.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeTestCompilerCommon.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeDetermineCompilerABI.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeParseImplicitIncludeInfo.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeParseImplicitLinkInfo.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeParseLibraryArchitecture.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeTestCompilerCommon.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCXXCompilerABI.cpp",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeDetermineCompileFeatures.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/Internal/FeatureTesting.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCXXCompiler.cmake.in",
+		"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/CMakeFiles/3.21.1/CMakeCXXCompiler.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeParseArguments.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSEmulatorIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsEglDeviceIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsGbmIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLibInputPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeParseArguments.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/GNUInstallDirs.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/FindCURL.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/FindPackageMessage.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/FindPkgConfig.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/FindPackageMessage.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/SelectLibraryConfigurations.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/FindCURL.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/FindPackageMessage.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/FindPkgConfig.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/FindPackageMessage.cmake"
+	],
+	"CMAKE_SOURCE_DIR" : "/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient",
+	"DEP_FILE" : "",
+	"DEP_FILE_RULE_NAME" : "",
+	"HEADERS" : 
+	[
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/API.h",
+			"MU",
+			"D2MWKIZDYH/moc_API.cpp",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/Date.h",
+			"MU",
+			"D2MWKIZDYH/moc_Date.cpp",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/IcsParser.h",
+			"MU",
+			"D2MWKIZDYH/moc_IcsParser.cpp",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/Vcalendar.h",
+			"MU",
+			"D2MWKIZDYH/moc_Vcalendar.cpp",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/Vevent.h",
+			"MU",
+			"D2MWKIZDYH/moc_Vevent.cpp",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/Vtodo.h",
+			"MU",
+			"D2MWKIZDYH/moc_Vtodo.cpp",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/createcalendarform.h",
+			"MU",
+			"D2MWKIZDYH/moc_createcalendarform.cpp",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/createevent.h",
+			"MU",
+			"D2MWKIZDYH/moc_createevent.cpp",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/createtodo.h",
+			"MU",
+			"D2MWKIZDYH/moc_createtodo.cpp",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/event_information.h",
+			"MU",
+			"D2MWKIZDYH/moc_event_information.cpp",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/ipaddressform.h",
+			"MU",
+			"D2MWKIZDYH/moc_ipaddressform.cpp",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/loginwindow.h",
+			"MU",
+			"D2MWKIZDYH/moc_loginwindow.cpp",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/mainwindow.h",
+			"MU",
+			"D2MWKIZDYH/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/sharecalendarform.h",
+			"MU",
+			"D2MWKIZDYH/moc_sharecalendarform.cpp",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/todo_information.h",
+			"MU",
+			"D2MWKIZDYH/moc_todo_information.cpp",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Headers/updatetodo.h",
+			"MU",
+			"D2MWKIZDYH/moc_updatetodo.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/calDAVClient_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/calDAVClient_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB" ],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug",
+		"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient",
+		"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/curlpp-0.8.1/include",
+		"/usr/include/x86_64-linux-gnu/qt5",
+		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
+		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
+		"/usr/include/x86_64-linux-gnu/qt5/QtCore",
+		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
+		"/usr/include/x86_64-linux-gnu",
+		"/usr/include/c++/9",
+		"/usr/include/x86_64-linux-gnu/c++/9",
+		"/usr/include/c++/9/backward",
+		"/usr/local/include",
+		"/usr/lib/llvm-10/lib/clang/10.0.0/include",
+		"/usr/include"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/c++",
+		"-dM",
+		"-E",
+		"-c",
+		"/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/share/cmake-3.21/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/calDAVClient_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 1,
+	"PARSE_CACHE_FILE" : "/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/CMakeFiles/calDAVClient_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
+	"QT_UIC_EXECUTABLE" : "/usr/lib/qt5/bin/uic",
+	"QT_VERSION_MAJOR" : 5,
+	"QT_VERSION_MINOR" : 12,
+	"SETTINGS_FILE" : "/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug/CMakeFiles/calDAVClient_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/API.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/Date.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/IcsParser.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/Vcalendar.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/Vevent.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/Vtodo.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/createcalendarform.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/createevent.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/createtodo.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/event_information.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/ipaddressform.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/loginwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/mainwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/sharecalendarform.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/todo_information.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/Sources/updatetodo.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/main.cpp",
+			"MU",
+			null
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}
