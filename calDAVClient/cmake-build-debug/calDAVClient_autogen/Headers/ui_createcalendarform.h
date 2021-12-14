@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'createcalendarform.ui'
 **
-** Created by: Qt User Interface Compiler version 5.12.8
+** Created by: Qt User Interface Compiler version 5.15.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -70,9 +70,9 @@ public:
 
     void retranslateUi(QDialog *CreateCalendarForm)
     {
-        CreateCalendarForm->setWindowTitle(QApplication::translate("CreateCalendarForm", "CreateCalendarForm", nullptr));
-        label->setText(QApplication::translate("CreateCalendarForm", "Name:", nullptr));
-        pushButton_create->setText(QApplication::translate("CreateCalendarForm", "Create", nullptr));
+        CreateCalendarForm->setWindowTitle(QCoreApplication::translate("CreateCalendarForm", "CreateCalendarForm", nullptr));
+        label->setText(QCoreApplication::translate("CreateCalendarForm", "Name:", nullptr));
+        pushButton_create->setText(QCoreApplication::translate("CreateCalendarForm", "Create", nullptr));
     } // retranslateUi
 
 };

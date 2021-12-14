@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'todo_information.ui'
 **
-** Created by: Qt User Interface Compiler version 5.12.8
+** Created by: Qt User Interface Compiler version 5.15.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -124,14 +124,14 @@ public:
 
     void retranslateUi(QDialog *todo_information)
     {
-        todo_information->setWindowTitle(QApplication::translate("todo_information", "todo_information", nullptr));
-        label_5->setText(QApplication::translate("todo_information", "Summary", nullptr));
-        label_4->setText(QApplication::translate("todo_information", "Created on", nullptr));
-        label_createdOn->setText(QApplication::translate("todo_information", "TextLabel", nullptr));
-        label_2->setText(QApplication::translate("todo_information", "Expiration date", nullptr));
-        label_expDate->setText(QApplication::translate("todo_information", "TextLabel", nullptr));
-        label_3->setText(QApplication::translate("todo_information", "Completed on", nullptr));
-        label_completedOn->setText(QApplication::translate("todo_information", "TextLabel", nullptr));
+        todo_information->setWindowTitle(QCoreApplication::translate("todo_information", "todo_information", nullptr));
+        label_5->setText(QCoreApplication::translate("todo_information", "Summary", nullptr));
+        label_4->setText(QCoreApplication::translate("todo_information", "Created on", nullptr));
+        label_createdOn->setText(QCoreApplication::translate("todo_information", "TextLabel", nullptr));
+        label_2->setText(QCoreApplication::translate("todo_information", "Expiration date", nullptr));
+        label_expDate->setText(QCoreApplication::translate("todo_information", "TextLabel", nullptr));
+        label_3->setText(QCoreApplication::translate("todo_information", "Completed on", nullptr));
+        label_completedOn->setText(QCoreApplication::translate("todo_information", "TextLabel", nullptr));
     } // retranslateUi
 
 };

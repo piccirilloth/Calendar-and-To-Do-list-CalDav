@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ipaddressform.ui'
 **
-** Created by: Qt User Interface Compiler version 5.12.8
+** Created by: Qt User Interface Compiler version 5.15.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -64,9 +64,9 @@ public:
 
     void retranslateUi(QDialog *IpAddressForm)
     {
-        IpAddressForm->setWindowTitle(QApplication::translate("IpAddressForm", "IpAddressForm", nullptr));
-        label->setText(QApplication::translate("IpAddressForm", "IP address of the server", nullptr));
-        pushButton_insert->setText(QApplication::translate("IpAddressForm", "insert", nullptr));
+        IpAddressForm->setWindowTitle(QCoreApplication::translate("IpAddressForm", "IpAddressForm", nullptr));
+        label->setText(QCoreApplication::translate("IpAddressForm", "IP address of the server", nullptr));
+        pushButton_insert->setText(QCoreApplication::translate("IpAddressForm", "insert", nullptr));
     } // retranslateUi
 
 };

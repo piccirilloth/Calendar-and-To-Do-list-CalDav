@@ -134,6 +134,7 @@ void MainWindow::ProvideContextMenuCal(const QPoint &pos) {
             eventMap.clear();
             todoMap.clear(); //todo: create a function clear
             ui->label_calendar->setText("");
+            ui->label_organizer->setText("");
             ui->pushButton_createEvent->setEnabled(false);
             ui->pushButton_createTodo->setEnabled(false);
             currentCalendar.clear();

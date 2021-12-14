@@ -1,15 +1,9 @@
-/home/oscar/Desktop/CLion-2021.3/clion-2021.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient
--- The CXX compiler identification is Clang 10.0.0
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: /usr/bin/c++ - skipped
--- Detecting CXX compile features
--- Detecting CXX compile features - done
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /Users/leonardoperugini/Desktop/Calendar-and-To-Do-list-CalDav/calDAVClient
 -- Looking for CURL
--- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.68.0")  
--- Found CURL version: 7.68.0
--- Using CURL include dir(s): /usr/include/x86_64-linux-gnu
--- Using CURL lib(s): /usr/lib/x86_64-linux-gnu/libcurl.so
+-- Found CURL: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/lib/libcurl.tbd (found version "7.64.1")  
+-- Found CURL version: 7.64.1
+-- Using CURL include dir(s): /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include
+-- Using CURL lib(s): /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/lib/libcurl.tbd
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/oscar/Desktop/PDS_Project/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug
+-- Build files have been written to: /Users/leonardoperugini/Desktop/Calendar-and-To-Do-list-CalDav/calDAVClient/cmake-build-debug

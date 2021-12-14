@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'updatetodo.ui'
 **
-** Created by: Qt User Interface Compiler version 5.12.8
+** Created by: Qt User Interface Compiler version 5.15.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -129,12 +129,12 @@ public:
 
     void retranslateUi(QDialog *updateTodo)
     {
-        updateTodo->setWindowTitle(QApplication::translate("updateTodo", "updateTodo", nullptr));
-        label_5->setText(QApplication::translate("updateTodo", "Summary", nullptr));
-        label_2->setText(QApplication::translate("updateTodo", "Due", nullptr));
-        label->setText(QApplication::translate("updateTodo", "Update a todo", nullptr));
-        updateTodo_2->setText(QApplication::translate("updateTodo", "Update", nullptr));
-        label_3->setText(QApplication::translate("updateTodo", "Completed", nullptr));
+        updateTodo->setWindowTitle(QCoreApplication::translate("updateTodo", "updateTodo", nullptr));
+        label_5->setText(QCoreApplication::translate("updateTodo", "Summary", nullptr));
+        label_2->setText(QCoreApplication::translate("updateTodo", "Due", nullptr));
+        label->setText(QCoreApplication::translate("updateTodo", "Update a todo", nullptr));
+        updateTodo_2->setText(QCoreApplication::translate("updateTodo", "Update", nullptr));
+        label_3->setText(QCoreApplication::translate("updateTodo", "Completed", nullptr));
         checkBox_completed->setText(QString());
     } // retranslateUi
 

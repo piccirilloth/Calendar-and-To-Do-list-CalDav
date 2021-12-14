@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'createtodo.ui'
 **
-** Created by: Qt User Interface Compiler version 5.12.8
+** Created by: Qt User Interface Compiler version 5.15.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -111,17 +111,17 @@ public:
 
     void retranslateUi(QDialog *createTodo)
     {
-        createTodo->setWindowTitle(QApplication::translate("createTodo", "createTodo", nullptr));
-        label_5->setText(QApplication::translate("createTodo", "Summary", nullptr));
-        textEdit_summary->setHtml(QApplication::translate("createTodo", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        createTodo->setWindowTitle(QCoreApplication::translate("createTodo", "createTodo", nullptr));
+        label_5->setText(QCoreApplication::translate("createTodo", "Summary", nullptr));
+        textEdit_summary->setHtml(QCoreApplication::translate("createTodo", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
-        label_2->setText(QApplication::translate("createTodo", "Due", nullptr));
-        createTodo_2->setText(QApplication::translate("createTodo", "Create", nullptr));
-        pushButton_clear->setText(QApplication::translate("createTodo", "Clear", nullptr));
-        label->setText(QApplication::translate("createTodo", "Create a todo", nullptr));
+        label_2->setText(QCoreApplication::translate("createTodo", "Due", nullptr));
+        createTodo_2->setText(QCoreApplication::translate("createTodo", "Create", nullptr));
+        pushButton_clear->setText(QCoreApplication::translate("createTodo", "Clear", nullptr));
+        label->setText(QCoreApplication::translate("createTodo", "Create a todo", nullptr));
     } // retranslateUi
 
 };

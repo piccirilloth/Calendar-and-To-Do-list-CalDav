@@ -28,7 +28,7 @@ void updateTodo::on_updateTodo_2_clicked() {
     dueDate = ui->dateTimeEdit_dueDate->date().toString("yyyyMMddT").toStdString() + ui->dateTimeEdit_dueDate->time().toString("hhmmssZ").toStdString();
     if(ui->lineEdit_summary->text().isEmpty())
         QMessageBox::information(this, "Error", "The summary field must be filled");
-    if(createdOn >= dueDate)
+    else if(createdOn >= dueDate)
         QMessageBox::information(this, "Error", "The dueDate cannot be in the past!");
     else {
         emit updateTd(ui->lineEdit_summary->text().toStdString(), dueDate, ui->checkBox_completed->isChecked());

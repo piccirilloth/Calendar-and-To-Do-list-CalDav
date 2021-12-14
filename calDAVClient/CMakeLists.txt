@@ -23,6 +23,7 @@ set(THREADS_PREFER_PTHREAD_FLAG ON)
 # Check https://doc.qt.io/qt/deployment-android.html for more information.
 # They need to be set before the find_package( ...) calls below.
 
+set(CMAKE_PREFIX_PATH "/Users/leonardoperugini/Qt/5.15.2/clang_64")
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 

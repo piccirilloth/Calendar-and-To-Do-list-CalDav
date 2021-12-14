@@ -4,7 +4,7 @@
 
 #include "Headers/API.h"
 
-std::string API::IPADDRESS = "192.168.1.10";
+std::string API::IPADDRESS = "192.168.1.160";
 std::string API::username = "";
 std::string API::password = "";
 bool API::loggedIn = false;
@@ -319,6 +319,7 @@ Vcalendar API::downloadCalendarObjects(std::string const &calendarName) {
         handle.setOpt(curlpp::Options::WriteStream(&str));
         handle.perform();
         status = curlpp::infos::ResponseCode::get(handle);
+        //std::cout << status << '\n';
     }
     catch (cURLpp::RuntimeError &e) {
         std::cout << e.what() << std::endl;
@@ -328,14 +329,15 @@ Vcalendar API::downloadCalendarObjects(std::string const &calendarName) {
     }
     IcsParser parser(str.str());
     Vcalendar ret;
-    if(status == 404) {
-        ret.setName("");
-    } else {
+    //if(status == 404) {
+        //ret.setName("");
+        //ret.setOrganizer("");
+    //} else {
         parser.getVCalendar(std::ref(ret));
         std::string organizer = getOrganizer(calendarName);
         ret.setName(calendarName);
         ret.setOrganizer(organizer);
-    }
+    //}
     return ret;
 }
 
