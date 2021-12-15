@@ -219,7 +219,7 @@ void IcsParser::getVCalendar(Vcalendar &calendar) {
     bool end = false;
     int pos = icsFile.find("VCALENDAR");
 
-    if (pos != std::string::npos) { //ToDo fixare while anzichè if
+    if (pos != std::string::npos) {
         pos += 10;
         while (!end) {
             attribute = "";
@@ -340,7 +340,7 @@ std::string IcsParser::getIcsFileVtodo(const Vcalendar &calendar, const std::str
     if(static_cast<std::string>(todo.getDue()) != "00000000")
         retValue.append("DTDUE:" + static_cast<std::string>(todo.getDtstart()) + "\r\n");
     if(static_cast<std::string>(todo.getCompleted()) != "00000000")
-        retValue.append("DTCOMPLETED:" + static_cast<std::string>(todo.getCompleted()) + "\r\n"); //todo: check completed
+        retValue.append("DTCOMPLETED:" + static_cast<std::string>(todo.getCompleted()) + "\r\n");
     if(!todo.getSummary().empty())
         retValue.append("SUMMARY:" + todo.getSummary() + "\r\n");
     retValue.append("END:VTODO\r\n");

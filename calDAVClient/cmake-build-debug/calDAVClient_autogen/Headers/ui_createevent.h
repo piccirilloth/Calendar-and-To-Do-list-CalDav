@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'createevent.ui'
 **
-** Created by: Qt User Interface Compiler version 5.15.2
+** Created by: Qt User Interface Compiler version 5.12.8
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -131,13 +131,13 @@ public:
 
     void retranslateUi(QDialog *createEvent)
     {
-        createEvent->setWindowTitle(QCoreApplication::translate("createEvent", "createEvent", nullptr));
-        label_5->setText(QCoreApplication::translate("createEvent", "Summary", nullptr));
-        label_2->setText(QCoreApplication::translate("createEvent", "Start date", nullptr));
-        label_3->setText(QCoreApplication::translate("createEvent", "End date", nullptr));
-        createEvent_2->setText(QCoreApplication::translate("createEvent", "Create", nullptr));
-        pushButton_clear->setText(QCoreApplication::translate("createEvent", "Clear", nullptr));
-        label->setText(QCoreApplication::translate("createEvent", "Create an event", nullptr));
+        createEvent->setWindowTitle(QApplication::translate("createEvent", "createEvent", nullptr));
+        label_5->setText(QApplication::translate("createEvent", "Summary", nullptr));
+        label_2->setText(QApplication::translate("createEvent", "Start date", nullptr));
+        label_3->setText(QApplication::translate("createEvent", "End date", nullptr));
+        createEvent_2->setText(QApplication::translate("createEvent", "Create", nullptr));
+        pushButton_clear->setText(QApplication::translate("createEvent", "Clear", nullptr));
+        label->setText(QApplication::translate("createEvent", "Create an event", nullptr));
     } // retranslateUi
 
 };

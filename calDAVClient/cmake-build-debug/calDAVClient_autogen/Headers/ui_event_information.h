@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'event_information.ui'
 **
-** Created by: Qt User Interface Compiler version 5.15.2
+** Created by: Qt User Interface Compiler version 5.12.8
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -124,13 +124,13 @@ public:
 
     void retranslateUi(QDialog *event_information)
     {
-        event_information->setWindowTitle(QCoreApplication::translate("event_information", "event_information", nullptr));
-        label_6->setText(QCoreApplication::translate("event_information", "Summary", nullptr));
-        label_4->setText(QCoreApplication::translate("event_information", "Created on", nullptr));
+        event_information->setWindowTitle(QApplication::translate("event_information", "event_information", nullptr));
+        label_6->setText(QApplication::translate("event_information", "Summary", nullptr));
+        label_4->setText(QApplication::translate("event_information", "Created on", nullptr));
         label_createdOn->setText(QString());
-        label_2->setText(QCoreApplication::translate("event_information", "Start date", nullptr));
+        label_2->setText(QApplication::translate("event_information", "Start date", nullptr));
         label_startDate->setText(QString());
-        label_startDate_2->setText(QCoreApplication::translate("event_information", "End date", nullptr));
+        label_startDate_2->setText(QApplication::translate("event_information", "End date", nullptr));
         label_endDate->setText(QString());
     } // retranslateUi
 

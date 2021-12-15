@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.15.2
+** Created by: Qt User Interface Compiler version 5.12.8
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -247,21 +247,21 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Calendar", nullptr));
-        loginButton->setText(QCoreApplication::translate("MainWindow", "Login", nullptr));
-        createCalendarButton->setText(QCoreApplication::translate("MainWindow", "Create", nullptr));
-        shareCalendarButton->setText(QCoreApplication::translate("MainWindow", "Share", nullptr));
-        label_3->setText(QCoreApplication::translate("MainWindow", "Current calendar", nullptr));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Calendar", nullptr));
+        loginButton->setText(QApplication::translate("MainWindow", "Login", nullptr));
+        createCalendarButton->setText(QApplication::translate("MainWindow", "Create", nullptr));
+        shareCalendarButton->setText(QApplication::translate("MainWindow", "Share", nullptr));
+        label_3->setText(QApplication::translate("MainWindow", "Current calendar", nullptr));
         label_calendar->setText(QString());
-        label_5->setText(QCoreApplication::translate("MainWindow", "Calendar organizer", nullptr));
+        label_5->setText(QApplication::translate("MainWindow", "Calendar organizer", nullptr));
         label_organizer->setText(QString());
-        label_4->setText(QCoreApplication::translate("MainWindow", "Current user", nullptr));
+        label_4->setText(QApplication::translate("MainWindow", "Current user", nullptr));
         label_user->setText(QString());
-        label->setText(QCoreApplication::translate("MainWindow", "ToDo", nullptr));
-        pushButton_createTodo->setText(QCoreApplication::translate("MainWindow", "Create a Todo", nullptr));
-        label_2->setText(QCoreApplication::translate("MainWindow", "Events", nullptr));
-        pushButton_createEvent->setText(QCoreApplication::translate("MainWindow", "Create a Event", nullptr));
-        toolBar->setWindowTitle(QCoreApplication::translate("MainWindow", "toolBar", nullptr));
+        label->setText(QApplication::translate("MainWindow", "ToDo", nullptr));
+        pushButton_createTodo->setText(QApplication::translate("MainWindow", "Create a Todo", nullptr));
+        label_2->setText(QApplication::translate("MainWindow", "Events", nullptr));
+        pushButton_createEvent->setText(QApplication::translate("MainWindow", "Create a Event", nullptr));
+        toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", nullptr));
     } // retranslateUi
 
 };

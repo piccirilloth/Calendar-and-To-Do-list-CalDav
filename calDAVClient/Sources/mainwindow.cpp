@@ -49,7 +49,7 @@ void MainWindow::on_loginButton_clicked()
 }
 
 void MainWindow::setUpPage() {
-    connect(login, SIGNAL(&loginwindow::sendSignal), this, SLOT(&MainWindow::on_loginButton_clicked)); //todo: maybe can be deleted
+    connect(login, SIGNAL(&loginwindow::sendSignal), this, SLOT(&MainWindow::on_loginButton_clicked));
 }
 
 void MainWindow::addCalendarNamesToGui() {
@@ -132,7 +132,7 @@ void MainWindow::ProvideContextMenuCal(const QPoint &pos) {
             ui->listWidget->clear();
             ui->listWidget_Events->clear();
             eventMap.clear();
-            todoMap.clear(); //todo: create a function clear
+            todoMap.clear();
             ui->label_calendar->setText("");
             ui->label_organizer->setText("");
             ui->pushButton_createEvent->setEnabled(false);
@@ -143,7 +143,6 @@ void MainWindow::ProvideContextMenuCal(const QPoint &pos) {
         for(std::string const &v : list)
             api->addCalendar(v);
         ui->listWidget_2->takeItem(ui->listWidget_2->indexAt(pos).row());
-        ui->label_calendar->setText("");
     }
 }
 
@@ -233,7 +232,7 @@ void MainWindow::on_dbClickTodo() {
     }
     Vtodo todo;
     for(Vtodo const &td : currentCalendar.getTodos()) {
-        if(td.getUid() == uid) //todo: use getTodoByUid
+        if(td.getUid() == uid)
             todo = td;
     }
     todo_information todoInfo(nullptr, todo.getSummary(), todo.getDtstamp().Format(), todo.getDue().Format(), todo.getCompleted().Format());
@@ -480,7 +479,7 @@ void MainWindow::synchronizeCalendarList() {
     timerThread = std::thread([this]() {
         bool exit = false;
         while(!exit) {
-            std::this_thread::sleep_for(std::chrono::milliseconds(500)); //todo: set the timer properly
+            std::this_thread::sleep_for(std::chrono::milliseconds(1000));
             if(api->isLoggedIn())
                 timerElapsed();
             std::lock_guard<std::mutex> ul(endMutex);
@@ -538,6 +537,9 @@ void MainWindow::timerElapsed() {
             if(newCal.getName() == "") {
                 ui->label_calendar->setText("");
                 ui->label_organizer->setText("");
+                currentCalendar.clear();
+                ui->listWidget->clear();
+                ui->listWidget_Events->clear();
             } else {
                 threadUpdateEvents(newCal);
                 threadUpdatetodos(newCal);
@@ -602,7 +604,6 @@ void MainWindow::threadUpdatetodos(const Vcalendar &newCal) {
     bool update = false;
     int todoMapSize = todoMap.size();
     if(newCal.getTodos().size() < currentCalendar.getTodos().size()) {
-        // a todo has been deleted
         for (Vtodo const &td : currentCalendar.getTodos()) {
             bool found = true;
             for(Vtodo const &newtd : newCal.getTodos()) {

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'loginwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.15.2
+** Created by: Qt User Interface Compiler version 5.12.8
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -111,12 +111,12 @@ public:
 
     void retranslateUi(QDialog *loginwindow)
     {
-        loginwindow->setWindowTitle(QCoreApplication::translate("loginwindow", "Log In", nullptr));
-        groupBox->setTitle(QCoreApplication::translate("loginwindow", "LogIn", nullptr));
-        pushButton_login->setText(QCoreApplication::translate("loginwindow", "LogIn", nullptr));
-        label->setText(QCoreApplication::translate("loginwindow", "UserName", nullptr));
-        label_2->setText(QCoreApplication::translate("loginwindow", "Password", nullptr));
-        toolBar->setWindowTitle(QCoreApplication::translate("loginwindow", "toolBar", nullptr));
+        loginwindow->setWindowTitle(QApplication::translate("loginwindow", "Log In", nullptr));
+        groupBox->setTitle(QApplication::translate("loginwindow", "LogIn", nullptr));
+        pushButton_login->setText(QApplication::translate("loginwindow", "LogIn", nullptr));
+        label->setText(QApplication::translate("loginwindow", "UserName", nullptr));
+        label_2->setText(QApplication::translate("loginwindow", "Password", nullptr));
+        toolBar->setWindowTitle(QApplication::translate("loginwindow", "toolBar", nullptr));
     } // retranslateUi
 
 };

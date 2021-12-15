@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'sharecalendarform.ui'
 **
-** Created by: Qt User Interface Compiler version 5.15.2
+** Created by: Qt User Interface Compiler version 5.12.8
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -128,12 +128,12 @@ public:
 
     void retranslateUi(QDialog *shareCalendarForm)
     {
-        shareCalendarForm->setWindowTitle(QCoreApplication::translate("shareCalendarForm", "shareCalendarForm", nullptr));
-        label->setText(QCoreApplication::translate("shareCalendarForm", "Share a calendar", nullptr));
-        shareButton->setText(QCoreApplication::translate("shareCalendarForm", "Share", nullptr));
-        label_3->setText(QCoreApplication::translate("shareCalendarForm", "Comment", nullptr));
-        label_5->setText(QCoreApplication::translate("shareCalendarForm", "Access policy", nullptr));
-        label_2->setText(QCoreApplication::translate("shareCalendarForm", "Share with", nullptr));
+        shareCalendarForm->setWindowTitle(QApplication::translate("shareCalendarForm", "shareCalendarForm", nullptr));
+        label->setText(QApplication::translate("shareCalendarForm", "Share a calendar", nullptr));
+        shareButton->setText(QApplication::translate("shareCalendarForm", "Share", nullptr));
+        label_3->setText(QApplication::translate("shareCalendarForm", "Comment", nullptr));
+        label_5->setText(QApplication::translate("shareCalendarForm", "Access policy", nullptr));
+        label_2->setText(QApplication::translate("shareCalendarForm", "Share with", nullptr));
     } // retranslateUi
 
 };
