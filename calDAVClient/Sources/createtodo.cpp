@@ -22,7 +22,7 @@ void createTodo::on_createTodo_2_clicked() {
     QDateTime now = QDateTime::currentDateTime();
     if(ui->textEdit_summary->toPlainText().isEmpty())
         QMessageBox::information(this, "Error", "The summary field must be filled");
-    if(now >= ui->dateTimeEdit_dueDate->dateTime())
+    else if(now >= ui->dateTimeEdit_dueDate->dateTime())
         QMessageBox::information(this, "Error", "The endDate cannot be in the past!");
     else if(ui->textEdit_summary->toPlainText().contains('\n'))
         QMessageBox::information(this, "Error", "The summary cannot contain return characters");
