@@ -12,7 +12,7 @@ cURLpp è già presente all'interno del progetto
   - <code> sudo apt-get install qt5-default </code>
 
 ### MacOS
-- CURL è incluso nella command line tools del sistema operativo, che può essere installata con il comando:
+- CURL è incluso nella command line tools del sistema operativo, che puoi installarla con il comando:
   - <code> xcode-select --install </code>
 - Puoi installare QT dalla pagina web: https://www.qt.io/download
 - Aggiungere nelle prime righe del file <code>CMakeList.txt</code> la riga <code>set(CMAKE_PREFIX_PATH "__QTDir__/__version__/clang_64/")</code>
