@@ -1,31 +1,31 @@
 # Calendar-and-To-Do-list-CalDav
 
-## Come buildare questo progetto
+## Build
 
-Sono necessarie le librerie CURL, cURLpp e QT.<br/>
-cURLpp è già presente all'interno del progetto
+You need CURL, cURLpp e QT libraries.<br/>
+cURLpp is already present in the project folder
 
 ### Linux:
-- Hai bisogno di installare la libreria CURL, a tale scopo esegui questo comando:
+- run the following command to install CURL lib:
   - <code> sudo apt-get install libcurl4-openssl-dev </code>
-- Per installare QT, esegui questo comando:
+- run the following command to install QT:
   - <code> sudo apt-get install qt5-default </code>
 
 ### MacOS
-- CURL è incluso nella command line tools del sistema operativo, che puoi installarla con il comando:
+- CURL is present in the command line tools, install it by running the following command:
   - <code> xcode-select --install </code>
-- Puoi installare QT dalla pagina web: https://www.qt.io/download
-- Aggiungere nelle prime righe del file <code>CMakeList.txt</code> la riga <code>set(CMAKE_PREFIX_PATH "__QTDir__/__version__/clang_64/")</code>
+- install QT from [here](https://www.qt.io/download) 
+- add to <code>CMakeList.txt</code> the following row: <code>set(CMAKE_PREFIX_PATH "__QTDir__/__version__/clang_64/")</code>
 
 ### Windows
-- Per installare CURL digitare i seguenti comandi:
+- to install CURL run:
   - <code>git clone https://github.com/curl/curl.git</code>
   - <code>cd curl</code>
   - <code>buildconf.bat</code>
   - <code>“__pathForVisualStudio__\vc\Auxiliary\Build\vcvarsall.bat” x64</code>
   - <code>nmake /f Makefile.vc mode=dll MACHINE=x64</code>
-  - alla riga 123 del file <code>CMakeList.txt</code> modificare il path con <code>__CURLBuildPath__/builds/libcurl-vc-x64-release-dll-ipv6-sspschannel/include</code> 
-  - alla riga 125 del file <code>CMakeList.txt</code> modificare il path con <code>__CURLBuildPath__/builds/libcurl-vc-x64-release-dll-ipv6-sspi-schannel-obj-lib/libcurl.lib</code>
-- Puoi installare QT dalla pagina web: https://www.qt.io/download
-- Impostare come compilatore <b>VisualStudio</b> su CLion
+  - at row 123 of <code>CMakeList.txt</code> modify the path with <code>__CURLBuildPath__/builds/libcurl-vc-x64-release-dll-ipv6-sspschannel/include</code> 
+  - at row 125 of <code>CMakeList.txt</code> modify the path with <code>__CURLBuildPath__/builds/libcurl-vc-x64-release-dll-ipv6-sspi-schannel-obj-lib/libcurl.lib</code>
+- install QT from [here](https://www.qt.io/download)
+- set <b>VisualStudio</b> compiler on CLion
   
