@@ -1,4 +1,5 @@
-# Calendar-and-To-Do-list-CalDav
+# Calendar and ToDo list (based on CalDAV standard)
+This is a simple C++ application for managing calendar events and ToDo lists simultaneously, by leveraging QT Framework for GUI and multi-threading for the application logic (one of the focus points was also about dealing with concurrent access). This project was part of the final evaluation for the 2022 System Programming course of Computer Engineering Master's Degree in Politecnico di Torino.
 
 ## Build
 
